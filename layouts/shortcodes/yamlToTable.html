@@ -1,0 +1,29 @@
+{{ $arg := .Get 0 }}
+{{ $data := .Inner | transform.Unmarshal }}
+
+{{ with $data }}
+<table>
+  {{ range .format }}
+  <col
+    {{ range $key, $val := . }}
+    {{ $key }}="{{ $val}}"
+    {{ end }}
+  >
+  {{ end }}
+
+  {{ range .headers }}
+  <th>{{ . | markdownify }}</th>
+  {{ end }}
+
+  {{ range $row := .rows }}
+  <tr>
+    {{ range $col := .columns }}
+    <td>
+      {{ . | markdownify }}
+    </td>
+    {{ end }}
+  </tr>
+  {{ end }}
+
+</table>
+{{ end }}
