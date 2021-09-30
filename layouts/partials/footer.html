@@ -1,12 +1,15 @@
+{{- $title          := .Site.Params.title }}
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
 {{- $quickLinks  := index $footer "quicklinks" }}
 {{- $socialMedia := index $footer "socialmedia" }}
+{{- $navbarLogo     := .Site.Params.navbarlogo }}
+
 <footer id="footer" class="footer">
   <div class="container">
     <div id="footer-columns" class="columns">
       <div class="footer-logo-column">
-        <img id="footer-logo" src="{{ printf "/images/logos/%s" $logo | relURL }}" alt="SciPy logo.">
+        <img id="footer-logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
       </div>
       {{- range $quickLinks }}
         <div class="link-column">
@@ -26,7 +29,7 @@
         </div>
       {{- end }}
         <div class="footer-actions">
-            <p>Sign up for the latest SciPy news, resources, <br> and more</p>
+            <p>Sign up for the latest {{ $title }} news, resources, <br> and more</p>
             <!-- Begin Mailchimp -->
             <form action="https://numpy.us4.list-manage.com/subscribe/post?u=5ddd0d1d6e807900a8212481a&amp;id=287fa4253c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate sign-up-container" target="_blank" novalidate>
                 <div class="sign-up-image">
@@ -57,7 +60,7 @@
                     {{- end }}
                 </div>
             </nav>
-            <div class="copyright">&copy; 2021 SciPy. All rights reserved.</div>
+            <div class="copyright">&copy; 2021 {{ $title }}. All rights reserved.</div>
         </div>
     </div>
   </div>
