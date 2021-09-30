@@ -1,3 +1,4 @@
+{{- $title          := .Site.Params.title }}
 {{- $navbar         := .Site.Params.navbar }}
 {{- $sidebarVisible := .Site.Params.sidebar }}
 {{ if .Params.sidebar }}
@@ -11,7 +12,7 @@
       {{ if not .IsHome }}
         {{- if $navbarLogo}}
             <a id="navbar-item" class="navbar-item" href="{{ $navbarLogo.link }}">
-                <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="Numpy logo. A three-dimensional blue cube with the letter 'N' highlighted in yellow." width="112" height="28" alt="Numpy logo. A three-dimensional blue cube with the letter 'N' highlighted in yellow.">
+                <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}" width="112" height="28" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
             </a>
         {{- end}}
       {{ end }}
