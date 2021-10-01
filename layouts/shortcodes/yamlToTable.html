@@ -18,9 +18,15 @@
   {{ range $row := .rows }}
   <tr>
     {{ range $col := .columns }}
-    <td>
-      {{ . | markdownify }}
-    </td>
+      {{ if reflect.IsMap $col }}
+      <td colspan="{{ $col.colspan }}" rowspan="{{ $col.rowspan }}">
+        {{ $col.text | markdownify }}
+      </td>
+      {{ else }}
+      <td>
+        {{ . | markdownify }}
+      </td>
+      {{ end }}
     {{ end }}
   </tr>
   {{ end }}
