@@ -2,6 +2,7 @@ baseURL: "https://scientific-python.org/scientific-python-hugo-theme"
 languageCode: "en-us"
 title: "Scientific Python Hugo Theme documentation"
 theme: scientific-python-hugo-theme
+themesdir: "../.."
 
 params:
   images:
