@@ -4,6 +4,7 @@ title: "Scientific Python Hugo Theme documentation"
 theme: scientific-python-hugo-theme
 themesdir: "../.."
 
+
 params:
   images:
   - /images/logo.svg
