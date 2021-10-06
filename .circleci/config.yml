@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/scientific-python-hugo-theme
     docker:
       - image: cibuilds/hugo:latest
 
@@ -16,10 +16,10 @@ jobs:
       - run:
           name: Build site
           command: |
-            sed -i '/theme/a uglyurls: true' doc/config.yaml
-            sed -i '/uglyurls/a relativeURLs: true' doc/config.yaml
-            sed -i 's/\"\/\"/\"\/index.html\"/g' doc/config.yaml
-            sed -i 's/\/getstarted/\/getstarted.html/g' doc/config.yaml
+            sed -i '/^theme/a relativeURLs: true' doc/config.yml
+            sed -i '/^theme/a themesdir: "../.."' doc/config.yml
+            sed -i 's/getstarted/getstarted\/index.html/g' doc/config.yml
+            sed -i 's/link: \//link: \/index.html/g' doc/config.yml
             cd doc ; hugo
 
       - store_artifacts:
