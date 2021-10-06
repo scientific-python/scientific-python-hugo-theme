@@ -1,0 +1,25 @@
+baseURL: "https://scientific-python.org/scientific-python-hugo-theme"
+languageCode: "en-us"
+title: "Scientific Python Hugo Theme documentation"
+theme: scientific-python-hugo-theme
+themesdir: "../.."
+
+params:
+  images:
+  - /images/logo.svg
+  navbarlogo:
+    image: logo.svg
+    link: /scientific-python-hugo-theme
+  font:
+    name: "Lato"
+    sizes: [400,900]
+  hero:
+    title: Hugo Theme
+    subtitle: Used by core projects in the scientific Python ecosystem.
+    buttontext: Go to docs
+    buttonlink: getstarted
+    image: logo.svg
+  navbar:
+  - title: GitHub
+    url: https://github.com/scientific-python/scientific-python-hugo-theme
+    button: true

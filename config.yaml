@@ -1,2 +1,10 @@
 theme:
   - scientific-python-hugo-theme/themes/hugo-fresh
+
+params:
+  images:
+  - /images/logo.svg
+  navColor: blue
+  font:
+    name: "Lato"
+    sizes: [400,900]
