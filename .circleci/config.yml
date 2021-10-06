@@ -1,0 +1,26 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: cibuilds/hugo:latest
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install hugo theme
+          command: git submodule update --init --recursive
+
+      - run:
+          name: Build site
+          command: |
+            sed -i '/theme/a uglyurls: true' doc/config.yaml
+            sed -i '/uglyurls/a relativeURLs: true' doc/config.yaml
+            sed -i 's/\"\/\"/\"\/index.html\"/g' doc/config.yaml
+            sed -i 's/\/getstarted/\/getstarted.html/g' doc/config.yaml
+            cd doc ; hugo
+
+      - store_artifacts:
+          path: doc/public/

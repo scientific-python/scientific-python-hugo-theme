@@ -4,6 +4,8 @@ title: "Scientific Python Hugo Theme documentation"
 theme: scientific-python-hugo-theme
 
 params:
+  images:
+  - /images/logo.svg
   navbarlogo:
     image: logo.svg
     link: /scientific-python-hugo-theme
@@ -11,11 +13,11 @@ params:
     name: "Lato"
     sizes: [400,900]
   hero:
-    title: Scientific Python Hugo Theme documentation
+    title: Hugo Theme
     subtitle: Used by core projects in the scientific Python ecosystem.
     buttontext: Go to docs
     buttonlink: getstarted
-    image: illustrations/worker.svg
+    image: logo.svg
   navbar:
   - title: GitHub
     url: https://github.com/scientific-python/scientific-python-hugo-theme
