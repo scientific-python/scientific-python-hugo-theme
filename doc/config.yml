@@ -1,15 +1,14 @@
-baseURL: "https://scientific-python.org/scientific-python-hugo-theme"
+baseURL: "https://theme.scientific-python.org/"
 languageCode: "en-us"
 title: "Scientific Python Hugo Theme documentation"
 theme: scientific-python-hugo-theme
-themesdir: "../.."
 
 params:
   images:
   - /images/logo.svg
   navbarlogo:
     image: logo.svg
-    link: /scientific-python-hugo-theme
+    link: /
   font:
     name: "Lato"
     sizes: [400,900]
