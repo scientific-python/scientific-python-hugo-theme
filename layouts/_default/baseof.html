@@ -3,7 +3,12 @@
   <head>
     {{ partial "meta.html" . }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    <!-- Render theme css -->
     {{ partial "css.html" . }}
+
+    <!-- Render site css -->
+    {{ partial "scientific-python-theme-css.html" . }}
 
     <!-- Refer: https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/ -->
     {{ if .IsTranslated }}
