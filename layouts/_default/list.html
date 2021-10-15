@@ -1,1 +1,10 @@
-<!-- Ignore this file. This quiets a hugo server warning. -->
+<!-- We have to customize this page still to give a reasonable list of subpages -->
+{{ define "main" }}
+  <h1>Posts</h1>
+  {{ range .Pages }}
+    <article>
+      <h2>{{ .Title }}</h2>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}
