@@ -3,6 +3,8 @@
     {{ partial "hero.html" . }}
     {{ end }}
 
+    {{ partial "single/content.html" . }}
+
     {{ if .Site.Params.news }}
     {{ partial "news.html" . }}
     {{ end }}
