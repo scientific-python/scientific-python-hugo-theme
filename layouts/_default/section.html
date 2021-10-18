@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    <!-- Render theme css -->
+    {{ partial "css.html" . }}
+
+    <!-- Render site css -->
+    {{ partial "scientific-python-theme-css.html" . }}
+
+    <!-- Refer: https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/ -->
+    {{ if .IsTranslated }}
+      {{ range .Translations }}
+      <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}" />
+      {{ end }}
+    {{ end }}
+    {{ template "_internal/twitter_cards.html" . }}
+  </head>
+  <body>
+    <!-- Preloader. Set to true for front-page fade-in animation -->
+    {{ if .IsHome }}
+    <div id="preloader"></div>
+    {{ end }}
+
+    {{ block "main" . }}
+
+    <section class="content-padding flex-row">
+    <div class="shortcuts-container">
+      <div class="shortcuts-title">Shortcuts</div>
+      <div id="shortcuts"></div>
+      <div class="sidebar-links">
+        <a href="/gethelp">Get Help</a>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="columns">
+        <div class="column is-centered-tablet-portrait">
+          <h1 class="title section-title">{{ .Title }}</h1>
+          <h5 class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</h5>
+          <div class="divider"></div>
+        </div>
+      </div>
+      {{ if .Content }}
+      {{ .Content }}
+      {{ else }}
+      <h1>Posts</h1>
+      {{ range .Pages }}
+      <article>
+        <h2>{{ .Title }}</h2>
+      </article>
+      {{ end }}
+      {{ end }}
+    </div>
+    </section>
+
+    {{ end }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#" id="backtotop-color"></a></div>
+
+    {{ if .Site.Params.sidebar }}
+    {{ partial "sidebar.html" . }}
+    {{ end }}
+
+    {{ partial "javascript.html" . }}
+    {{ template "_internal/google_analytics_async.html" . }}
+
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+  </body>
+</html>
