@@ -34,6 +34,10 @@
     {{ partial "sidebar.html" . }}
     {{ end }}
 
+    {{ if .Site.Params.footer }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
     {{ partial "javascript.html" . }}
     {{ template "_internal/google_analytics_async.html" . }}
   </body>
