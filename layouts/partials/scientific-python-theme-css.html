@@ -10,7 +10,15 @@
 <link rel="stylesheet" type="text/css" href="{{ "css/tables.css" | relURL }}" />
 
 <!-- Custom CSS -->
-{{ if resources.Get "css/custom.css" }}
-{{ $custom_style := resources.Get "css/custom.css" | resources.ExecuteAsTemplate "css/custom.css" . -}}
+<!-- All CSS files under assets/css are compiled (as templates) and then included -->
+{{ $cssDir := "assets/css" }}
+{{ if (fileExists $cssDir) }}
+
+{{ $page := . }}
+{{ range (readDir $cssDir) }}
+{{ $fileName := printf "css/%s" .Name }}
+{{ $custom_style := resources.Get $fileName | resources.ExecuteAsTemplate $fileName $page -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
+{{ end }}
+
 {{ end }}
