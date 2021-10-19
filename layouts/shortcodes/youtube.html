@@ -1,0 +1,32 @@
+{{ $title := .Get "title" }}
+{{ $venue := .Get "venue" }}
+{{ $author := .Get "author" }}
+{{ $date := .Get "date" }}
+{{ $transcript := .Inner | markdownify }}
+
+<div class="youtube">
+  <h2 class="video-title">
+    {{ $title }}
+  </h2>
+  <iframe src="https://www.youtube.com/embed/{{ .Get "id" }}?enablejsapi=1{{ with .Get "color" }}{{ if eq . "white" }}&color=white{{ end }}{{ end }}{{ with .Get "autoplay" }}{{ if eq . "true" }}&autoplay=1{{ end }}{{ end }}{{ if isset .Params "yt_start" }}&start={{ .Get "yt_start" }}{{ end }}{{ if isset .Params "yt_end" }}&end={{ .Get "yt_end" }}{{ end }}&modestbranding=0" allowfullscreen class="youtube"></iframe>
+  <div class="video-meta">
+    {{if $author }}
+    <div class="video-author">
+      {{ $author }}
+    </div>
+    {{ end }}
+    {{ if $venue }}
+    <div class="video-venue">
+      {{ $venue }}
+    </div>
+    {{ end }}
+    {{ if $date }}
+    <div class="video-date">
+      {{ $date }}
+    </div>
+    {{ end }}
+  </div>
+  <div class="video-transcript">
+    {{ $transcript }}
+  </div>
+</div>
