@@ -24,6 +24,11 @@
     <div id="preloader"></div>
     {{ end }}
 
+    {{ block "navbar" . }}
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+    {{ end }}
+
     {{ block "main" . }}
     {{ end }}
 
