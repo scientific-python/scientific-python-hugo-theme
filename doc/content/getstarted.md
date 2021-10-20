@@ -1,8 +1,6 @@
 ---
 title: Get Started
 sidebar: true
-sidebarlogo: fresh-white
-include_footer: false
 ---
 
 ## The Scientific Python theme for Hugo
@@ -11,9 +9,9 @@ The **Scientific Python Hugo Theme** is a theme for the
 [Hugo](https://gohugo.io) static site generator built on the
 [Fresh](https://github.com/StefMa/hugo-fresh) theme.
 
-To use the theme, you will need to [download
-hugo](https://github.com/gohugoio/hugo/releases) and place it on your
-path.
+To use the theme, you will need to
+[download hugo](https://github.com/gohugoio/hugo/releases)
+and place it on your path.
 
 ## Getting started
 
@@ -56,6 +54,10 @@ Edit `config.yaml` to your liking.
 
 To customize CSS, add a `custom.css` (or `anything-you-want.css`) file in the `assets/css` directory.
 These files can be plain CSS, or can use Hugo templating constructs.
+
+## Shortcodes
+
+See [shortcodes]({{< relref "shortcodes" >}}).
 
 ## Example sites
 
