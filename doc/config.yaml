@@ -2,6 +2,8 @@ baseURL: "https://theme.scientific-python.org/"
 languageCode: "en-us"
 title: "Scientific Python Hugo Theme documentation"
 theme: scientific-python-hugo-theme
+relativeURLs: true
+disableKinds: ["term", "taxonomy"]
 
 params:
   images:
@@ -16,7 +18,7 @@ params:
     title: Hugo Theme
     subtitle: Used by core projects in the scientific Python ecosystem.
     buttontext: Go to docs
-    buttonlink: getstarted
+    buttonlink: /getstarted/
     image: logo.svg
   navbar:
   - title: GitHub
