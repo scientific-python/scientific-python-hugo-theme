@@ -14,6 +14,11 @@ jobs:
           command: git submodule update --init --recursive
 
       - run:
+          name: Generate shortcode docs
+          command: |
+            python3 tools/render_shortcode_docs.py > doc/content/shortcodes.md
+
+      - run:
           name: Build site
           command: |
             (cd doc ;
