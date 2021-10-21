@@ -18,7 +18,7 @@ params:
     title: Hugo Theme
     subtitle: Used by core projects in the scientific Python ecosystem.
     buttontext: Go to docs
-    buttonlink: getstarted
+    buttonlink: /getstarted/
     image: logo.svg
   navbar:
   - title: GitHub
