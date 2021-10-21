@@ -253,21 +253,14 @@ figcaption {
 }
 
 blockquote {
-    margin: 10px;
+    border-left: 6px solid rgb(238, 238, 238);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 blockquote p {
-    padding: 15px;
-    background: var(--colorSecondary);
-    border-radius: 5px;
-}
-
-blockquote p::before {
-    content: '\201C';
-}
-
-blockquote p::after {
-    content: '\201D';
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 @media only screen and (max-width: 850px) {
