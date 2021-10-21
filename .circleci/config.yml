@@ -15,7 +15,9 @@ jobs:
 
       - run:
           name: Generate shortcode docs
-          command: python tools/render_shortcode_docs.py > doc/content/shortcodes.md
+          command: |
+            apk add --update python
+            python tools/render_shortcode_docs.py > doc/content/shortcodes.md
           
       - run:
           name: Build site
