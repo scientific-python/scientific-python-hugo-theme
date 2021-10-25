@@ -19,11 +19,6 @@
     {{ template "_internal/twitter_cards.html" . }}
   </head>
   <body>
-    <!-- Preloader. Set to true for front-page fade-in animation -->
-    {{ if .IsHome }}
-    <div id="preloader"></div>
-    {{ end }}
-
     {{ block "navbar" . }}
     {{ partial "navbar.html" . }}
     {{ partial "navbar-clone.html" . }}
@@ -50,11 +45,21 @@
       {{ if .Content }}
       {{ .Content }}
       {{ else }}
-      <h1>Posts</h1>
       {{ range .Pages }}
-      <article>
-        <h2>{{ .Title }}</h2>
-      </article>
+      <div class="post-list">
+        <article>
+          <div class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+          <div class="post-authors">
+            {{- range .Params.Authors -}}
+            <div class="post-author">{{ . }}</div>
+            {{- end -}}
+          </div>
+          {{ if .Date }}
+          <div class="post-date">{{.Date.Format "January 2, 2006"}}</div>
+          {{ end }}
+          <div class="post-summary">{{ .Summary }}</div>
+        </article>
+      </div>
       {{ end }}
       {{ end }}
     </div>
