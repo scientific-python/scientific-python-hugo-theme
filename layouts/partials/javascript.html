@@ -22,6 +22,24 @@
 <!-- app.js -->
 <script src="{{ "js/app.js" | relURL }}"></script>
 
+
+<!-- Custom JS -->
+<!-- All JS files under static/js are included -->
+{{ $jsDir := "static/js" }}
+{{ if (fileExists $jsDir) }}
+
+{{ range (readDir $jsDir) }}
+
+{{ if (strings.HasSuffix .Name ".js") }}
+{{ $fileName := printf "js/%s" .Name }}
+<script type="text/javascript" src="{{ $fileName | relURL }}"></script>
+{{ end }}
+
+{{ end }}
+
+{{ end }}
+
+
 {{ if .HasShortcode "youtube" }}
 <script type="text/javascript">
   var buttons = document.getElementsByClassName("video-transcript-button");

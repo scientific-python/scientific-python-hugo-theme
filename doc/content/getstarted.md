@@ -55,6 +55,8 @@ Edit `config.yaml` to your liking.
 To customize CSS, add a `custom.css` (or `anything-you-want.css`) file in the `assets/css` directory.
 These files can be plain CSS, or can use Hugo templating constructs.
 
+Add custom Javascript to `static/js/*.js`.
+
 ## Shortcodes
 
 See [shortcodes]({{< relref "shortcodes" >}}).
