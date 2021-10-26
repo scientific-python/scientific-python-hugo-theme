@@ -18,9 +18,11 @@
 
 {{ $page := . }}
 {{ range (readDir $cssDir) }}
+{{ if (strings.HasSuffix .Name ".css") }}
 {{ $fileName := printf "css/%s" .Name }}
 {{ $custom_style := resources.Get $fileName | resources.ExecuteAsTemplate $fileName $page -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
+{{ end }}
 {{ end }}
 
 {{ end }}
