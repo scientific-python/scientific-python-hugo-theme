@@ -52,10 +52,11 @@ Run `hugo` and find the output in `public`.
 
 Edit `config.yaml` to your liking.
 
-To customize CSS, add a `custom.css` (or `anything-you-want.css`) file in the `assets/css` directory.
-These files can be plain CSS, or can use Hugo templating constructs.
+To customize styling, add one or more `*.css` or `*.scss` files to the `assets/css` directory.
+These files (CSS or SASS format) can also make use of Hugo templating,
+e.g. to access configuration variables as `{{ .Params.somevar }}`.
 
-Add custom Javascript to `static/js/*.js`.
+Add custom JavaScript to `static/js/*.js`.
 
 ## Shortcodes
 
