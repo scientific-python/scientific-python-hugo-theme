@@ -1,18 +1,19 @@
-/* NumPy Color Palette */
-/* rgb(255, 197, 83) NumPy Yellow */
-/* rgb(77, 171, 207) NumPy Ndarray Blue */
-/* rgb(77, 119, 207) NumPy Deep Blue */
-/* rgb(255, 255, 255) White */
-/* rgb(238, 238, 238) NumPy Cloud Gray */
-/* rgb(108, 122, 137) NumPy Slate Gray */
-/* rgb(1, 50, 67) NumPy Warm Black */
+$fontFamily: {{ .Site.Params.font.name }};
+
+$colorBackToTop: rgb(255, 197, 83);
+$colorPrimaryDark: rgb(1, 50, 67);
+$colorPrimaryLight: rgb(238, 238, 238);
+$colorSecondaryLight: rgb(77, 171, 207);
+$colorTertiaryLight: rgb(255, 255, 255);
+$colorEmphasis: rgb(0, 0, 0);
+$colorShadow: rgba(0, 0, 0, 0.1);
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: $fontFamily, sans-serif;
 }
 
 em {
-    color: rgb(0, 0, 0) !important;
+    color: $colorEmphasis !important;
 }
 
 .flex-row {
@@ -55,10 +56,10 @@ em {
 
 .hero-title {
     display: flex;
-    font-family: 'Lato', sans-serif;
+    font-family: $fontFamily, sans-serif;
     font-weight: 900;
     font-size: 6em;
-    color: rgb(1, 50, 67);
+    color: $colorPrimaryDark;
 }
 
 .hero-logo {
@@ -82,30 +83,30 @@ em {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
-    color:rgb(255, 255, 255);
-    background-color: rgb(1, 50, 67);
+    color: $colorTertiaryLight;
+    background-color: $colorPrimaryDark;
     border: none;
     border-radius: 25px;
     outline: none;
     /* Black, with 10% opacity */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px $colorShadow;
     cursor: pointer;
 }
 
 #navbar-item {
-    color: rgb(1, 50, 67);
+    color: $colorPrimaryDark;
     text-decoration: none;
 }
 
 #navbar-item:hover {
-    color: rgb(77, 171, 207) !important;
+    color: $colorSecondaryLight !important;
 }
 
 #feature-card {
     height: 475px;
 }
 #backtotop.visible #backtotop-color:hover {
-    background: rgb(255, 197, 83);
+    background: $colorBackToTop;
 }
 
 .mt-30 {
@@ -180,7 +181,7 @@ p {
 
 /* Footer */
 #footer {
-    background-color: rgb(1, 50, 67);
+    background-color: $colorPrimaryDark;
 }
 
 .footer-logo-column {
@@ -203,7 +204,7 @@ p {
 
 .footer-link, .footer-link:hover {
     font-size: 1rem;
-    color: rgb(238, 238, 238);
+    color: $colorPrimaryLight;
 }
 
 .footer-actions {
@@ -217,51 +218,7 @@ p {
 
 .footer-actions p {
     margin: 0;
-    color: rgb(238, 238, 238);
-}
-
-.sign-up-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    height: 75px;
-}
-
-.sign-up-image {
-    padding: 5px 10px 6px 10px;
-    border-right: 1px solid rgb(238, 238, 238);
-    background-color: rgb(238, 238, 238);
-    border-radius: 5px 0 0 5px;
-}
-
-.sign-up-input {
-    background-color: rgb(238, 238, 238);
-    border-radius: 0 5px 5px 0;
-    border: none;
-    width: 75%;
-    height: 35px;
-    padding-left: 5px;
-    font-size: 14px;
-    color: rgb(1, 50, 67);
-}
-
-.submission-instructions {
-    position: absolute;
-    right: 18%;
-    font-size: 10px;
-    color: rgb(108, 122, 137);
-}
-
-.signup-button {
-    display: none;
-}
-
-.thank-you {
-    display: none;
-    height: 75px;
-    color: rgb(238, 238, 238);
-    align-items: center;
+    color: $colorPrimaryLight;
 }
 
 .social-media-icons {
@@ -270,7 +227,7 @@ p {
 
 .copyright {
     font-size: 12px;
-    color: rgb(238, 238, 238);
+    color: $colorPrimaryLight;
 }
 
 figcaption {
@@ -295,7 +252,7 @@ blockquote {
 
 blockquote p {
     padding: 15px;
-    background: rgb(238, 238, 238);
+    background: $colorPrimaryLight;
     border-radius: 5px;
 }
 
@@ -305,12 +262,6 @@ blockquote p::before {
 
 blockquote p::after {
     content: '\201D';
-}
-
-@media only screen and (max-width: 1150px) {
-    .sign-up-input {
-        font-size: 12px;
-    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -325,30 +276,7 @@ blockquote p::after {
         max-width: 50vw;
     }
 
-    .sign-up-input {
-        width: 100%;
-    }
-
-    .thank-you {
-        justify-content: center;
-    }
-
     .social-media-icons {
         width: 100%;
-    }
-
-    .submission-instructions {
-        display: none;
-    }
-
-    .signup-button {
-        display: block;
-        height: 35px;
-        border-radius: 5px;
-        margin-left: 5px;
-        width: 60px;
-        color: rgb(0, 0, 0);
-        border:none;
-        outline:none;
     }
 }
