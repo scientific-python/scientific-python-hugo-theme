@@ -5,7 +5,7 @@
 <!-- Theme CSS -->
 {{ $cssFiles := (slice
                    "styles" "content" "news" "keyfeatures"
-                   "tables" "videos" "posts"
+                   "tables" "videos" "posts" "teams"
                 ) }}
 {{- range $cssFiles -}}
 {{- $sassFile := printf "sass/%s.scss" . -}}
