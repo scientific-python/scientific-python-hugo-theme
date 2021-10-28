@@ -54,7 +54,7 @@ Edit `config.yaml` to your liking.
 
 To customize styling, add one or more `*.css` or `*.scss` files to the `assets/css` directory.
 These files (CSS or SASS format) can also make use of Hugo templating,
-e.g. to access configuration variables as `{{ .Params.somevar }}`.
+e.g. to access configuration variables as `{{ .Site.Params.somevar }}`.
 
 Add custom JavaScript to `static/js/*.js`.
 
