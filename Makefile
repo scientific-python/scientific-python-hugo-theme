@@ -1,4 +1,4 @@
-.PHONY: doc-serve shortcode-docs
+.PHONY: doc-serve shortcode-docs docs
 .DEFAULT_GOAL := doc-serve
 
 shortcode-docs:
@@ -6,3 +6,6 @@ shortcode-docs:
 
 doc-serve: shortcode-docs
 	(cd doc && hugo serve --themesDir="../..")
+
+docs: shortcode-docs
+	(cd doc ; hugo --themesDir="../..")
