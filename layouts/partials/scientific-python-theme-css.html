@@ -4,26 +4,26 @@
 
 <!-- Theme CSS -->
 {{ $cssFiles := (slice
-                   "styles" "content" "news" "keyfeatures"
+                   "vars" "styles" "content" "news" "keyfeatures"
                    "tables" "videos" "posts" "teams"
                 ) }}
 {{- range $cssFiles -}}
-{{- $sassFile := printf "sass/%s.scss" . -}}
+{{- $cssFile := printf "css/%s.css" . -}}
 {{- $targetFile := printf "css/scientific-python-hugo-theme/%s.css" . -}}
-{{- $style := resources.Get $sassFile | resources.ExecuteAsTemplate $targetFile $page | resources.ToCSS -}}
+{{- $style := resources.Get $cssFile | resources.ExecuteAsTemplate $targetFile $page -}}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end -}}
 
 <!-- Custom CSS -->
-<!-- All CSS files under assets/css are compiled (as templates) and parsed as SASS -->
+<!-- All CSS files under assets/css are compiled as templates -->
 {{ $cssDir := "assets/css" }}
 {{ if (fileExists $cssDir) }}
 
 {{- range (readDir $cssDir) -}}
 {{- $fileName := printf "css/%s" .Name -}}
-{{ if (or (strings.HasSuffix .Name ".css") (strings.HasSuffix .Name ".scss")) }}
+{{ if (strings.HasSuffix .Name ".css") }}
 {{- $targetFile := printf "css/user/%s" .Name -}}
-{{- $custom_style := resources.Get $fileName | resources.ExecuteAsTemplate $targetFile $page | resources.ToCSS -}}
+{{- $custom_style := resources.Get $fileName | resources.ExecuteAsTemplate $targetFile $page -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
 {{ end }}
 {{ end -}}
