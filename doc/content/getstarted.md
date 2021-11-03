@@ -62,6 +62,14 @@ Add custom JavaScript to `static/js/*.js`.
 
 See [shortcodes]({{< relref "shortcodes" >}}).
 
+## Partials
+
+The following partials are meant to be overridden:
+
+- `post_meta.html`: Render meta-data under a post title.
+                    We have not yet defined this template, but you can use it to add author information, date, etc.
+- `footer_actions`: This appears in the right-hand side of the footer.  E.g., numpy.org uses it for mailing list subscriptions.
+
 ## Example sites
 
 See the
