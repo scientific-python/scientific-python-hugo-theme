@@ -7,24 +7,22 @@
 }
 
 .team .member {
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  width: 11rem;
   text-align: center;
   vertical-align: top;
 }
 
-.team .member .photo {
-  display: block;
-}
-
 .team .member .photo img {
-    width: 60px;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
 }
 
 .team .member .name {
-    font-weight: bold;
+  font-weight: bold;
 }
