@@ -44,13 +44,13 @@ args = parser.parse_args()
 
 org = args.org
 team = args.team
-title = args.title if args.title else args.team 
+title = args.title if args.title else args.team
 
 
 token = os.environ.get('GH_TOKEN', None)
 if token is None:
     print("No token found.  Please export a GH_TOKEN with permissions "
-          "to read team members.")
+          "to read team members.", file=sys.stderr)
     sys.exit(-1)
 
 
@@ -58,13 +58,15 @@ resp = api(team_query.substitute(org=org, team=team))
 members = resp['data']['organization']['team']['members']['nodes']
 
 print('---')
+print(f'title: {title}')
+print(f'org: {org}')
 print('---')
 print(f'{{{{< team org="{org}" name="{title}" >}}}}')
 for m in members:
     print('  ' + textwrap.dedent(f'''\
       {{{{< team_member
             login="{m["login"]}"
-            name="{m["name"]}"
+            name="{m["name"] or m["login"]}"
             url="{m["url"]}"
             avatarUrl="{m["avatarUrl"]}" >}}}}
     '''))
