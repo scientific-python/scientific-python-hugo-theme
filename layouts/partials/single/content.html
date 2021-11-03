@@ -14,7 +14,13 @@
                 <div class="divider"></div>
             </div>
         </div>
-        {{ .Content }}
+        {{ with partial "post_meta.html" . -}}
+        <div class="post_meta">{{ . }}</div>
+        {{- end }}
+
+        <div class="post_content">
+          {{ .Content }}
+        </div>
     </div>
   </div>
 </section>
