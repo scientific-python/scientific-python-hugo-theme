@@ -1,19 +1,9 @@
-$fontFamily: {{ .Site.Params.font.name }};
-
-$colorBackToTop: rgb(255, 197, 83);
-$colorPrimaryDark: rgb(1, 50, 67);
-$colorPrimaryLight: rgb(238, 238, 238);
-$colorSecondaryLight: rgb(77, 171, 207);
-$colorTertiaryLight: rgb(255, 255, 255);
-$colorEmphasis: rgb(0, 0, 0);
-$colorShadow: rgba(0, 0, 0, 0.1);
-
 body {
-    font-family: $fontFamily, sans-serif;
+    font-family: var(--fontFamily), sans-serif;
 }
 
 em {
-    color: $colorEmphasis !important;
+    color: var(--colorPrimaryDark) !important;
 }
 
 .flex-row {
@@ -56,10 +46,10 @@ em {
 
 .hero-title {
     display: flex;
-    font-family: $fontFamily, sans-serif;
+    font-family: var(--fontFamily), sans-serif;
     font-weight: 900;
     font-size: 6em;
-    color: $colorPrimaryDark;
+    color: var(--colorPrimaryDark);
 }
 
 .hero-logo {
@@ -83,30 +73,30 @@ em {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
-    color: $colorTertiaryLight;
-    background-color: $colorPrimaryDark;
+    color: var(--colorSecondaryLight);
+    background-color: var(--colorPrimaryDark);
     border: none;
     border-radius: 25px;
     outline: none;
     /* Black, with 10% opacity */
-    box-shadow: 0px 8px 15px $colorShadow;
+    box-shadow: 0px 8px 15px var(--colorShadow);
     cursor: pointer;
 }
 
 #navbar-item {
-    color: $colorPrimaryDark;
+    color: var(--colorPrimaryDark);
     text-decoration: none;
 }
 
 #navbar-item:hover {
-    color: $colorSecondaryLight !important;
+    color: var(--colorPrimaryLight) !important;
 }
 
 #feature-card {
     height: 475px;
 }
 #backtotop.visible #backtotop-color:hover {
-    background: $colorBackToTop;
+    background: var(--colorHighlight);
 }
 
 .mt-30 {
@@ -181,7 +171,7 @@ p {
 
 /* Footer */
 #footer {
-    background-color: $colorPrimaryDark;
+    background-color: var(--colorPrimaryDark);
 }
 
 .footer-logo-column {
@@ -204,7 +194,7 @@ p {
 
 .footer-link, .footer-link:hover {
     font-size: 1rem;
-    color: $colorPrimaryLight;
+    color: var(--colorSecondary);
 }
 
 .footer-actions {
@@ -218,7 +208,7 @@ p {
 
 .footer-actions p {
     margin: 0;
-    color: $colorPrimaryLight;
+    color: var(--colorSecondary);
 }
 
 .social-media-icons {
@@ -227,7 +217,7 @@ p {
 
 .copyright {
     font-size: 12px;
-    color: $colorPrimaryLight;
+    color: var(--colorSecondary);
 }
 
 figcaption {
@@ -252,7 +242,7 @@ blockquote {
 
 blockquote p {
     padding: 15px;
-    background: $colorPrimaryLight;
+    background: var(--colorSecondary);
     border-radius: 5px;
 }
 
