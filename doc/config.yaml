@@ -11,6 +11,7 @@ params:
   - /images/logo.svg
   navbarlogo:
     image: logo.svg
+    text: Scientific Python Hugo Theme
     link: /
   hero:
     title: Hugo Theme

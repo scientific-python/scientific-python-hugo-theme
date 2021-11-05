@@ -92,6 +92,16 @@ em {
     color: var(--colorPrimaryLight) !important;
 }
 
+#navbar-logo {
+  height: 28px;
+  padding-right: 1rem;
+}
+
+#navbar-logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 #feature-card {
     height: 475px;
 }
