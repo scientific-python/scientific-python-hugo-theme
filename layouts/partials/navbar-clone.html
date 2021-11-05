@@ -8,9 +8,11 @@
 <nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
+
       {{- if $navbarLogo}}
       <a id="navbar-item" class="navbar-item" href="{{ $navbarLogo.link }}">
-        <img src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}" width="112" height="28">
+        <img id="navbar-logo" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
+        <div id="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
       </a>
       {{- end}}
 
@@ -79,6 +81,7 @@
         </a>
         {{- end }}
         {{- end }}
+
         {{- if .IsTranslated }}
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">{{ .Language.LanguageName }}</a>
@@ -100,5 +103,5 @@
         {{- end }}
       </div>
     </div>
-</div>
+  </div>
 </nav>
