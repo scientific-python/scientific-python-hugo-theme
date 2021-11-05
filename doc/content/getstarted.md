@@ -76,6 +76,11 @@ The depths of the shortcut list on the left of each post can be
 controlled by setting the `shortcutDepth` parameter in the post
 preamble.  It defaults to 2.
 
+## Page information
+
+Each page should contain a `summary` in the preamble, otherwise the
+site description is provided as metadata.
+
 ## Example sites
 
 See the
