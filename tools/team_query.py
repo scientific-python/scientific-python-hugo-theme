@@ -1,10 +1,9 @@
 import os
 import sys
-import requests
-import string
-import textwrap
 import argparse
 import string
+
+import requests
 
 
 team_query = string.Template("""
@@ -81,8 +80,12 @@ member_template = string.Template('''
     </div>
 ''')
 
+members_list = []
+for m in members:
+    m["name"] = m["name"] or m["login"]
+    members_list.append(member_template.substitute(**m))
 
-members_str = ''.join([member_template.substitute(**m) for m in members])
+members_str = ''.join(members_list)
 team_str = team_template.substitute(members=members_str, team_name=team_name)
 
 print(team_str)
