@@ -70,6 +70,12 @@ The following partials are meant to be overridden:
                     We have not yet defined this template, but you can use it to add author information, date, etc.
 - `footer_actions`: This appears in the right-hand side of the footer.  E.g., numpy.org uses it for mailing list subscriptions.
 
+## Shortcut list
+
+The depths of the shortcut list on the left of each post can be
+controlled by setting the `shortcutDepth` parameter in the post
+preamble.  It defaults to 2.
+
 ## Example sites
 
 See the
