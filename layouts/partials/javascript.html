@@ -1,7 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
 <script src="{{ "js/fresh.js" | relURL }}"></script>
-<script src="{{ "js/shortcuts.js" | relURL }}"></script>
 <script src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <!-- Font Awesome -->
@@ -23,6 +22,8 @@
 <!-- app.js -->
 <script src="{{ "js/app.js" | relURL }}"></script>
 
+<script src="{{ "js/shortcuts.js" | relURL }}"></script>
+<script type="text/javascript">setupShortcuts(maxLevel={{ default 2 .Page.Params.shortcutDepth }});</script>
 
 <!-- Custom JS -->
 <!-- All JS files under static/js are included -->
