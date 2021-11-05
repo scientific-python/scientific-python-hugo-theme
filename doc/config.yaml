@@ -6,6 +6,7 @@ relativeURLs: true
 disableKinds: ["term", "taxonomy"]
 
 params:
+  description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
   - /images/logo.svg
   navbarlogo:
