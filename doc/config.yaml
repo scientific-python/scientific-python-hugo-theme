@@ -22,6 +22,14 @@ params:
   navbar:
     - title: GitHub
       url: https://github.com/scientific-python/scientific-python-hugo-theme
+  keyfeatures:
+    features:
+      - title: Documented
+        text: The theme is documented at https://theme.scientific-python.org.
+      - title: Reusable
+        text: The theme is being used by NumPy, SciPy, ...
+      - title: Community Maintained
+        text: The theme is maintained by the [Theme Team](https://github.com/orgs/scientific-python/teams/theme-team)
   footer:
     logo: logo.svg
     socialmediatitle: ""

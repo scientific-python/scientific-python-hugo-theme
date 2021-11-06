@@ -12,7 +12,7 @@
 }
 
 .post-author {
-  font-weight: bold;
+  color: var(--colorSecondaryDark);
   display: inline;
 }
 
@@ -21,10 +21,9 @@
 }
 
 .post-list .post-date {
-  color: #999;
+  color: var(--colorSecondaryDark);
 }
 
 .post-list .post-summary {
   padding-top: 0.5rem;
-  font-style: italic;
 }
