@@ -81,6 +81,12 @@ preamble.  It defaults to 2.
 Each page should contain a `summary` in the preamble, otherwise the
 site description is provided as metadata.
 
+## News
+
+The first post from `/content/en/news` will be highlighted on the
+front page.  If you don't want that, remove the `/content/en/news`
+folder.
+
 ## Example sites
 
 See the

@@ -7,9 +7,7 @@
     {{ partial "single/content.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.news }}
     {{ partial "news.html" . }}
-    {{ end }}
 
     {{ if .Site.Params.keyfeatures }}
     {{ partial "keyfeatures.html" . }}

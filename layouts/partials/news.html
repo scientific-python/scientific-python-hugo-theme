@@ -1,9 +1,6 @@
-{{- $news       := .Site.Params.news }}
-{{- $title      := index $news "title" }}
-{{- $content      := index $news "content" }}
-{{- $url      := index $news "url" }}
-
+{{ range first 1 (where .Site.RegularPages "Section" "news") }}
 <div class="news-container">
-    <div class="news-title"> <a href="{{ $url}}"> {{ $title }} </a></div>
-    <div class="news-content"> <a href="{{ $url}}"> {{ $content }} </a></div>
+    <div class="news-title"><a href="{{ relURL "/news" }}"> {{ .Title }}</a></div>
+    <div class="news-date"><a href="{{ relURL "/news" }}">{{ .Date.Format "2006-01-02" }}</a></div>
 </div>
+{{ end }}
