@@ -13,7 +13,7 @@ def shortcode_doc(fn):
     with open(fn, 'r') as f:
         data = f.read()
 
-    match = re.match('^{{/\*.*doc: ([^\n]*)(.*)^\*/}}$', data, re.MULTILINE | re.DOTALL)
+    match = re.match('^{{/\*.*doc: ([^\n]*)(.*?)^\*/}}$', data, re.MULTILINE | re.DOTALL)
 
     if not match:
         return None, None, None
