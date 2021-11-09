@@ -20,18 +20,22 @@ params:
   hero:
     title: Hugo Theme
     subtitle: Used by core projects in the scientific Python ecosystem.
-    buttontext: Go to docs
+    buttontext: Get started
     buttonlink: /getstarted/
     image: logo.svg
   navbar:
-    - title: GitHub
-      url: https://github.com/scientific-python/scientific-python-hugo-theme
+   - title: Features
+     url: /features/
+   - title: Shortcodes
+     url: /shortcodes/
   keyfeatures:
     features:
       - title: Documented
         text: The theme is documented at https://theme.scientific-python.org.
       - title: Reusable
-        text: The theme is being used by NumPy, SciPy, ...
+        text: "The theme is being used by [scientific-python.org](https://github.com/scientific-python/scientific-python.org),
+[numpy.org](https://github.com/numpy/numpy.org), and
+[scipy.org](https://github.com/scipy/scipy.org)."
       - title: Community Maintained
         text: The theme is maintained by the [Theme Team](https://github.com/orgs/scientific-python/teams/theme-team)
   footer:

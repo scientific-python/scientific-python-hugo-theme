@@ -58,72 +58,9 @@ e.g. to access configuration variables as `{{ .Site.Params.somevar }}`.
 
 Add custom JavaScript to `static/js/*.js`.
 
-## Shortcodes
+## Next steps
 
-See [shortcodes]({{< relref "shortcodes" >}}).
-
-## Partials
-
-The following partials are meant to be overridden:
-
-- `post_meta.html`: Render meta-data under a post title.
-                    We have not yet defined this template, but you can use it to add author information, date, etc.
-- `footer_actions`: This appears in the right-hand side of the footer.  E.g., numpy.org uses it for mailing list subscriptions.
-
-## Shortcut list
-
-The depths of the shortcut list on the left of each post can be
-controlled by setting the `shortcutDepth` parameter in the post
-preamble.  It defaults to 2.
-
-## Page information
-
-Each page should contain a `summary` in the preamble, otherwise the
-site description is provided as metadata.
-
-## News
-
-The first post from `/content/en/news` will be highlighted on the
-front page.  If you don't want that, remove the `/content/en/news`
-folder.
-
-By default, news items link to the `/news` category page (which lists all news items).
-You can override that by setting `newsLink` in the preamble of any news post.
-
-## Code styling
-
-To enable code styling, add the following to your config file:
-
-```yaml
-markup:
-  highlight:
-    noClasses: false
-```
-
-The default theme is [Witch
-Hazel](https://github.com/theacodes/witchhazel), but with a blue
-background.  To use a different theme, [generate a new
-stylesheet](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode)
-using:
-
-```bash
-hugo gen chromastyles --style=monokai > /assets/css/code-highlight.css
-```
-
-You can replace `monokai` with any of the themes supported by
-[Chroma](https://github.com/alecthomas/chroma), as listed [in their
-gallery](https://xyproto.github.io/splash/docs/).
-
-Then, use fenced code blocks and remember to specify the language:
-
-````md
-```python
-def foo(x):
-    return x**2
-```
-````
-
-## Example sites
+See [features]({{< relref "features" >}}) and [shortcodes]({{< relref "shortcodes" >}}).
 
 See the
 [scientific-python.org](https://github.com/scientific-python/scientific-python.org),
