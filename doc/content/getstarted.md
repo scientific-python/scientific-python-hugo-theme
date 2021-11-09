@@ -13,7 +13,7 @@ To use the theme, you will need to
 [download hugo](https://github.com/gohugoio/hugo/releases)
 and place it on your path.
 
-## Getting started
+## Download and install
 
 1. Download [the theme ZIP file](https://github.com/scientific-python/scientific-python-hugo-theme/archive/refs/heads/main.zip) and extract it.
 2. Copy the `doc` folder as a template of your new website:
