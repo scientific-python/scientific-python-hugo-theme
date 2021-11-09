@@ -5,6 +5,10 @@ theme: scientific-python-hugo-theme
 relativeURLs: true
 disableKinds: ["term", "taxonomy"]
 
+markup:
+  highlight:
+    noClasses: false
+
 params:
   description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
