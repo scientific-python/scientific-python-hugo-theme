@@ -1,8 +1,8 @@
 {{/*
 
-doc: Embed YouTube videos, with foldable captions.
+doc: Embed YouTube videos, with foldable captions. The levelOffset parameter can be used to control the depth of the video heading and content.
 
-{{< youtube id="EmGSSbwdCZQ" class="talk" title="Open Data Science" venue="CU Denver Data Science Symposium 2020" author="Stefan van der Walt" >}}
+{{< youtube id="EmGSSbwdCZQ" class="talk" title="Open Data Science" venue="CU Denver Data Science Symposium 2020" author="Stefan van der Walt" levelOffset=3 >}}
 
 Here, I will give a transcript of the whole video, and say some things about it that you cannot know otherwise without watching the **video**.
 
@@ -18,12 +18,44 @@ This is it!
 {{ $venue := .Get "venue" }}
 {{ $author := .Get "author" }}
 {{ $date := .Get "date" }}
-{{ $transcript := .Inner | markdownify }}
+{{ $transcript := .Inner }}
+
+{{/* Adjust the indentation of the transcript according to levelOffset */}}
+{{/* See https://discourse.gohugo.io/t/option-to-shift-headings/6136/2 */}}
+
+{{ $levelOffset := default 2 (.Get "levelOffset") }}
+
+{{/* get the Markdown without front matter  */}}
+{{ $s := $transcript }}
+
+{{/* the regex of start of line `^` doesn't work. (GoLang has a subset of regex)
+     Need to specify newlines via `\n`
+     Need to ensure  newlines at start and end of content */}}
+{{ $s :=  delimit (slice "\n" $s "\n") "" }}
+
+{{/*
+Search for any Markdown headings `#` at start of line
+and add (levelOffset - 2) `#`s to start of line.
+
+Why -1? Because the offsetLevel specifies the level for the title.
+Other headings start with ##, ###, etc.
+We want to shift the content so that it is one deeper than the title,
+and since there are already two, we need to add a further
+(levelOffset - 1) hashes.
+*/}}
+
+{{ $header_padding := (strings.Repeat (sub $levelOffset 1) "#") }}
+{{ $new_header := (printf "\n%s$1 " $header_padding) }}
+{{ $s := $s | replaceRE "\n(#+) " $new_header }}
+
+{{/* render the Markdown to HTML
+     declare it to be safe HTML and return */}}
+{{ $transcript := $s | markdownify | safeHTML }}
 
 <div class="youtube">
-  <h2 class="video-title">
+  <h{{ $levelOffset}} class="video-title">
     {{ $title }}
-  </h2>
+  </h{{ $levelOffset }}>
   <iframe src="https://www.youtube.com/embed/{{ .Get "id" }}?enablejsapi=1{{ with .Get "color" }}{{ if eq . "white" }}&color=white{{ end }}{{ end }}{{ with .Get "autoplay" }}{{ if eq . "true" }}&autoplay=1{{ end }}{{ end }}{{ if isset .Params "yt_start" }}&start={{ .Get "yt_start" }}{{ end }}{{ if isset .Params "yt_end" }}&end={{ .Get "yt_end" }}{{ end }}&modestbranding=0" allowfullscreen class="youtube"></iframe>
   {{ if $transcript }}
   <button type="button" class="video-transcript-button">

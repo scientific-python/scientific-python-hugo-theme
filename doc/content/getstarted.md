@@ -18,27 +18,27 @@ and place it on your path.
 1. Download [the theme ZIP file](https://github.com/scientific-python/scientific-python-hugo-theme/archive/refs/heads/main.zip) and extract it.
 2. Copy the `doc` folder as a template of your new website:
 
-   ```
+   ```sh
    cp -r scientific-python-hugo-theme-main/doc ./my-website
    cd my-website
    ```
 
 3. Initialize git and add `scientific-python-hugo-theme` as a submodule:
 
-   ```
+   ```sh
    git init
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
    ```
 
 4. Download all submodules:
 
-   ```
+   ```sh
    git submodule update --init --recursive
    ```
 
 5. Build your site:
 
-   ```
+   ```sh
    hugo serve
    ```
 
@@ -89,6 +89,39 @@ folder.
 
 By default, news items link to the `/news` category page (which lists all news items).
 You can override that by setting `newsLink` in the preamble of any news post.
+
+## Code styling
+
+To enable code styling, add the following to your config file:
+
+```yaml
+markup:
+  highlight:
+    noClasses: false
+```
+
+The default theme is [Witch
+Hazel](https://github.com/theacodes/witchhazel), but with a blue
+background.  To use a different theme, [generate a new
+stylesheet](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode)
+using:
+
+```bash
+hugo gen chromastyles --style=monokai > /assets/css/code-highlight.css
+```
+
+You can replace `monokai` with any of the themes supported by
+[Chroma](https://github.com/alecthomas/chroma), as listed [in their
+gallery](https://xyproto.github.io/splash/docs/).
+
+Then, use fenced code blocks and remember to specify the language:
+
+````md
+```python
+def foo(x):
+    return x**2
+```
+````
 
 ## Example sites
 
