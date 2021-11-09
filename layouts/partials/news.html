@@ -1,6 +1,7 @@
 {{ range first 1 (where .Site.RegularPages "Section" "news") }}
+{{ $newsLink := default "/news" .Params.newsLink }}
 <div class="news-container">
-    <div class="news-title"><a href="{{ relURL "/news" }}"> {{ .Title }}</a></div>
-    <div class="news-date"><a href="{{ relURL "/news" }}">{{ .Date.Format "2006-01-02" }}</a></div>
+    <div class="news-title"><a href="{{ relURL $newsLink }}"> {{ .Title }}</a></div>
+    <div class="news-date"><a href="{{ relURL $newsLink }}">{{ .Date.Format "2006-01-02" }}</a></div>
 </div>
 {{ end }}

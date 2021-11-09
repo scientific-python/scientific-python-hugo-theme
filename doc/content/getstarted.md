@@ -87,6 +87,9 @@ The first post from `/content/en/news` will be highlighted on the
 front page.  If you don't want that, remove the `/content/en/news`
 folder.
 
+By default, news items link to the `/news` category page (which lists all news items).
+You can override that by setting `newsLink` in the preamble of any news post.
+
 ## Code styling
 
 To enable code styling, add the following to your config file:
