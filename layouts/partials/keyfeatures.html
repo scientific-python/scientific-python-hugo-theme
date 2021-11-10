@@ -4,14 +4,18 @@
 <section class="keyfeatures">
     <div class="container">
         <div class="keyfeatures-box-container">
-            {{- range $features }}
-            <div class="keyfeatures-box-content keyfeatures-underline">
-                <p>
-                    <div class="keyfeatures-box-title">{{ .title }}</div>
-                    <div class="keyfeatures-box-text">{{ .text | markdownify }}</div>
-                </p>
-            </div>
-            {{- end }}
+          {{- range $features }}
+          <div class="keyfeatures-box-content keyfeatures-underline">
+            <p>
+              <div class="keyfeatures-box-title">{{ .title }}</div>
+              <div class="keyfeatures-box-text">{{ .text | markdownify }}</div>
+            </p>
+            {{- if isset . "link" -}}
+            <!-- We use JavaScript in keyfeatures.js to attach this link to the card -->
+            <a href="{{ relURL .link }}" class="keyfeature-link" style="display: none;"></a>
+            {{- end -}}
+          </div>
+          {{- end }}
         </div>
     </div>
 </section>
