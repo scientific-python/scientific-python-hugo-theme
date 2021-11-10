@@ -61,8 +61,16 @@ The first post from `/content/en/news` will be highlighted on the
 front page.  If you don't want that, remove the `/content/en/news`
 folder.
 
-By default, news items link to the `/news` category page (which lists all news items).
-You can override that by setting `newsLink` in the preamble of any news post.
+By default, news items link to the `/news` category page (which lists
+all news items).  You can override that by setting `newsLink` in the
+preamble of any news post.
+
+### Single page news
+
+If you prefer to list all your news items on one page, you may do so
+in `/news.md`, instead of adding posts to `/news`.  Set the
+`newsHeader` parameter in the preamble of that document to populate
+the banner on the front page.
 
 ## Team gallery
 
