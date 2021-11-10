@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Preloader. Set to true for front-page fade-in animation -->
-    {{ if .IsHome }}
+    {{ if (and .IsHome .Site.Params.fadeFrontPage) }}
     <div id="preloader"></div>
     {{ end }}
 
