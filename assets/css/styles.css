@@ -6,6 +6,12 @@ em {
     color: var(--colorPrimaryDark) !important;
 }
 
+/* This color came from uikit; we re-specify it here
+   to show how to override it for the content section */
+.content-padding a {
+  color: var(--colorContentLink);
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
