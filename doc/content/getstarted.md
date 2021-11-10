@@ -30,23 +30,17 @@ and place it on your path.
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
    ```
 
-4. Download all submodules:
+4. Build and serve your site:
 
    ```sh
-   git submodule update --init --recursive
-   ```
-
-5. Build your site:
-
-   ```sh
-   hugo serve
+   make serve
    ```
 
 Browse to `http://localhost:1313`, and hopefully you will see your new site!
 
 ## Building for production
 
-Run `hugo` and find the output in `public`.
+Run `make html`.  Output appears in `./public`.
 
 ## Customizing the site
 
