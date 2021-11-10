@@ -2,6 +2,7 @@ theme:
   - scientific-python-hugo-theme/themes/hugo-fresh
 
 params:
+  fadeFrontPage: false
   images:
   - /images/logo.svg
   navColor: blue
