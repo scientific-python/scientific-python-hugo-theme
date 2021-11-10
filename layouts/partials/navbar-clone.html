@@ -83,23 +83,7 @@
         {{- end }}
 
         {{- if .IsTranslated }}
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">{{ .Language.LanguageName }}</a>
-              <div class="navbar-dropdown">
-              {{- range .Translations }}
-
-              <a href="{{ .RelPermalink }}" id="navbar-item" class="navbar-item">
-                {{ .Language.LanguageName }}
-              </a>
-
-              {{- end }}
-
-              <a href="https://crowdin.com/project/numpyorg"
-              id="navbar-item" class="navbar-item" target="_blank">
-                Help us to translate
-              </a>
-              </div>
-            </div>
+        {{ partial "translation.html" . }}
         {{- end }}
       </div>
     </div>
