@@ -16,6 +16,7 @@ and place it on your path.
 ## Download and install
 
 1. Download [the theme ZIP file](https://github.com/scientific-python/scientific-python-hugo-theme/archive/refs/heads/main.zip) and extract it.
+
 2. Copy the `doc` folder as a template of your new website:
 
    ```sh
@@ -30,7 +31,13 @@ and place it on your path.
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
    ```
 
-4. Build and serve your site:
+4.  Download all submodules:
+
+   ```sh
+   git submodule update --init --recursive
+   ```
+
+5. Build your site:
 
    ```sh
    make serve
@@ -38,7 +45,7 @@ and place it on your path.
 
 Browse to `http://localhost:1313`, and hopefully you will see your new site!
 
-## Building for production
+## Build HTML
 
 Run `make html`.  Output appears in `./public`.
 

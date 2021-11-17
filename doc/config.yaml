@@ -49,7 +49,7 @@ params:
         title: ""
         links:
           - text: About
-            link: /about/teams/
+            link: /about/
           - text: Theme GitHub
             link: https://github.com/scientific-python/scientific-python-hugo-theme
       column2:

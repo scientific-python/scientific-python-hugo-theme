@@ -21,32 +21,13 @@ themes/scientific-python-hugo-theme/themes/hugo-fresh/README.md:
 
 themes: | themes/scientific-python-hugo-theme themes/scientific-python-hugo-theme/themes/hugo-fresh/README.md
 
-GH_ORG = scientific-python
-TEAMS_DIR = static/teams
-TEAMS = theme-team
-TEAMS_QUERY = python themes/scientific-python-hugo-theme/tools/team_query.py
-
-$(TEAMS_DIR):
-	mkdir -p $(TEAMS_DIR)
-
-$(TEAMS_DIR)/%.md: $(TEAMS_DIR)
-	$(eval TEAM_NAME=$(shell python -c "import re; print(' '.join(x.capitalize() for x in re.split('-|_', '$*')))"))
-	$(TEAMS_QUERY) --org $(GH_ORG) --team "$*"  >  $(TEAMS_DIR)/$*.html
-
-teams-clean:
-	for team in $(TEAMS); do \
-	  rm -f $(TEAMS_DIR)/$${team}.html ;\
-	done
-
-teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
-
 html: ## Build site in `./public`
 html: themes
-	hugo
+	hugo --buildDrafts
 
 serve: ## Serve site, typically on http://localhost:1313
 serve: themes
-	@hugo --i18n-warnings server
+	@hugo --i18n-warnings --buildDrafts server
 
 clean: ## Remove built files
 clean:
