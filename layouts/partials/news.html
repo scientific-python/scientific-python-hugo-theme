@@ -3,7 +3,9 @@
 {{ $newsHeader := default .Title .Params.newsHeader }}
 {{ $date := .Date.Format "2006-01-02" }}
 <div class="news-container">
-    <div class="news-title"><a href="{{ relURL $newsLink }}"> {{ $newsHeader }}</a></div>
-    <div class="news-date"><a href="{{ relURL $newsLink }}">{{ $date  }}</a></div>
+  <div class="news-title"><a href="{{ relURL $newsLink }}"> {{ $newsHeader }}</a></div>
+  {{ if .Date }}
+  <div class="news-date"><a href="{{ relURL $newsLink }}">{{ $date }}</a></div>
+  {{ end }}
 </div>
 {{ end }}
