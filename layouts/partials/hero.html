@@ -20,9 +20,11 @@
                       {{ . }}
                   </div>
                   {{ end }}
+                  {{ if $buttonText }}
                   <div class="hero-cta">
                       <a href="{{ $buttonLink }}"><button class="cta-button">{{ $buttonText }}</button></a>
                   </div>
+                  {{ end }}
               </div>
           </div>
       </div>
