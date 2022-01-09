@@ -88,3 +88,19 @@ python team_query.py --org scientific-python --team spec-steering-committee --ti
 
 we generate a raw HTML gallery, and provide a
 shortcode (include-html) for pulling it in anywhere on the site.
+
+## Analytics
+
+The theme supports analytics through Plausible, which can be self-hosted or paid-for at https://plausible.io/.
+To enable Plausible analytics, add to your `config.yaml`:
+
+```
+params:
+  plausible:
+    dataDomain: your-domain.org
+    javaScript: https://your.plausible.io/javascript/path.js
+```
+
+By default, `javaScript` points to the server at
+`https://analytics.scientific-python.org`.  Contact the Scientific
+Python team to have your analytics hosted there.

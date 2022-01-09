@@ -9,3 +9,6 @@ params:
   font:
     name: "Lato"
     sizes: [400,900]
+  plausible:
+    dataDomain: null
+    javaScript: "https://analytics.scientific-python.org/js/plausible.js"
