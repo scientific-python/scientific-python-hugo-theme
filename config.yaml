@@ -1,6 +1,3 @@
-theme:
-  - scientific-python-hugo-theme/themes/hugo-fresh
-
 params:
   fadeFrontPage: false
   images:
