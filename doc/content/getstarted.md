@@ -6,7 +6,7 @@ sidebar: true
 ## The Scientific Python theme for Hugo
 
 The **Scientific Python Hugo Theme** is a theme for the
-[Hugo](https://gohugo.io) static site generator built on the
+[Hugo](https://gohugo.io) static site generator based on the
 [Fresh](https://github.com/StefMa/hugo-fresh) theme.
 
 To use the theme, you will need to
