@@ -32,7 +32,6 @@ def shortcode_doc(fn):
 print('''\
 ---
 title: Shortcodes
-sidebar: true
 shortcutDepth: 1
 ---
 

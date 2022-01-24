@@ -1,6 +1,5 @@
 ---
 title: Get Started
-sidebar: true
 ---
 
 ## The Scientific Python theme for Hugo
