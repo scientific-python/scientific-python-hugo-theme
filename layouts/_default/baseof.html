@@ -7,8 +7,8 @@
     <!-- Render theme css -->
     {{ partial "css.html" . }}
 
-    <!-- Render site css -->
-    {{ partial "scientific-python-theme-css.html" . }}
+    <!-- Render custom header -->
+    {{ partial "head.html" . }}
 
     <!-- Refer: https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/ -->
     {{ if .IsTranslated }}
