@@ -1,13 +1,23 @@
+<!-- Include all theme CSS filenames here -->
+{{ $cssFiles := (slice
+                   "bulma"
+                   "vars" "styles" "content" "news" "keyfeatures"
+                   "tables" "videos" "posts" "teams" "code-highlight"
+                ) }}
+{{ $page := . }}
+
 {{- $inServerMode := .Site.IsServer }}
-{{- $sass         := (slice "css/bulma/bulma.sass" "css/fresh/core.scss") }}
+{{- $sass         := (slice "css/fresh/core.scss") }}
 {{- $cssOpts      := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") }}
 
+<!-- Fonts -->
 {{- $fontName     := .Site.Params.font.name | default "Open Sans" }}
 {{- $fontFace     := replace $fontName " " "+" }}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes }}
 <link href="{{ $fontUrl }}" rel="stylesheet">
 
+<!-- SASS --- currently only for fresh -->
 {{- range $sass }}
 {{- if $inServerMode }}
 {{- $css := resources.Get . | toCSS $cssOpts }}
@@ -18,15 +28,10 @@
 {{- end }}
 {{- end }}
 
-{{ $page := . }}
 <!-- Favicon -->
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
 
 <!-- Theme CSS -->
-{{ $cssFiles := (slice
-                   "vars" "styles" "content" "news" "keyfeatures"
-                   "tables" "videos" "posts" "teams" "code-highlight"
-                ) }}
 {{- range $cssFiles -}}
 {{- $cssFile := printf "css/%s.css" . -}}
 {{- $targetFile := printf "css/scientific-python-hugo-theme/%s.css" . -}}
