@@ -6,7 +6,7 @@
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
 
 <footer id="footer" class="footer">
-  <div class="container">
+  <div class="container is-max-widescreen">
     <div id="footer-columns" class="columns">
       <div class="footer-logo-column">
         <img id="footer-logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">

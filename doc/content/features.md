@@ -1,6 +1,5 @@
 ---
 title: Features
-sidebar: true
 ---
 
 ## Partials
