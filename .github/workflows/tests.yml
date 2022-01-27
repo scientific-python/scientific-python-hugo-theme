@@ -26,7 +26,9 @@ jobs:
           # extended: true
 
       - name: Build
-        run: cd doc && hugo --minify
+        run:
+          python tools/render_shortcode_docs.py > doc/content/shortcodes.md
+          cd doc && hugo --themesDir="../.." --minify
 
       # Serve the docs and wait to be ready
       - name: Serve the built site
