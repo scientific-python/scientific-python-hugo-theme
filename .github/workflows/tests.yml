@@ -1,0 +1,66 @@
+name: continuous-integration
+
+on: [push, pull_request]
+
+jobs:
+  # Run local Lighthouse audit against built site
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      PORT: 8000
+      # the host interface to listen on, might need to be 0.0.0.0
+      HOST: 127.0.0.1
+      # the base url
+      URL: http://127.0.0.1:8000
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: cd doc && hugo --minify
+
+      # Serve the docs and wait to be ready
+      - name: Serve the built site
+        run: |
+          nohup hugo serve --themesDir="../.." --port=${PORT} &
+          curl --retry 10 --retry-connrefused --retry-max-time 60 ${URL}/index.html
+
+      # Run the audit
+      # TODO: use the hosted API with a secret? would allow for comparison over time...
+      - name: Make folder for Lighthouse reports
+        run: mkdir -p /tmp/lighthouse/lighthouse-${{ github.run_number }}
+
+      - name: Run Lighthouse on Site
+        id: lighthouse
+        uses: foo-software/lighthouse-check-action@v2.0.0
+        with:
+          # TODO: generate this list to audit all html pages
+          urls: >-
+            ${{ env.URL }}/,
+            ${{ env.URL }}/features/,
+            ${{ env.URL }}/gethelp,
+            ${{ env.URL }}/getstarted/,
+            ${{ env.URL }}/shortcodes/,
+            ${{ env.URL }}/about/
+          outputDirectory: /tmp/lighthouse/lighthouse-${{ github.run_number }}
+          verbose: true
+
+      # Check the audit for threshold values
+      - name: Assess Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@v1.0.1
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouse.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "93"
+          minBestPracticesScore: "87"
+          minPerformanceScore: "93"
+          minSeoScore: "100"
+        if: always()
