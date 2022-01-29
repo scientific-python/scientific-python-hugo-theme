@@ -33,7 +33,7 @@ and place it on your path.
 4.  Download all submodules:
 
    ```sh
-   git submodule update --init --recursive
+   git submodule update --init
    ```
 
 5. Build your site:
