@@ -16,18 +16,15 @@ themes/scientific-python-hugo-theme:
 	  exit 1; \
 	fi
 
-themes/scientific-python-hugo-theme/themes/hugo-fresh/README.md:
-	git submodule update --init --recursive
-
-themes: | themes/scientific-python-hugo-theme themes/scientific-python-hugo-theme/themes/hugo-fresh/README.md
+themes: themes/scientific-python-hugo-theme
 
 html: ## Build site in `./public`
 html: themes
-	hugo --buildDrafts
+	hugo
 
 serve: ## Serve site, typically on http://localhost:1313
 serve: themes
-	@hugo --i18n-warnings --buildDrafts server
+	@hugo --i18n-warnings server
 
 clean: ## Remove built files
 clean:
