@@ -30,13 +30,7 @@ and place it on your path.
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
    ```
 
-4.  Download all submodules:
-
-   ```sh
-   git submodule update --init
-   ```
-
-5. Build your site:
+4. Build your site:
 
    ```sh
    make serve
