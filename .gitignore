@@ -1,6 +1,4 @@
 *~
 \#*
 .hugo_build.lock
-
-# Auto-generated
-doc/content/shortcodes.md
+resources/
