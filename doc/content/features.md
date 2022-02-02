@@ -101,5 +101,5 @@ params:
 ```
 
 By default, `javaScript` points to the server at
-`https://analytics.scientific-python.org`.  Contact the Scientific
+`https://views.scientific-python.org`.  Contact the Scientific
 Python team to have your analytics hosted there.
