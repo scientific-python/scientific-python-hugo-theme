@@ -18,12 +18,11 @@ params:
     text: Scientific Python Hugo Theme
     link: /
   hero:
-    title: Hugo Theme
-    subtitle: Used by core projects in the scientific Python ecosystem.
-    buttontext: Get started
-    buttonlink: /getstarted/
+    title: Scientific Python Theme
     image: logo.svg
   navbar:
+   - title: Get started
+     url: /getstarted/
    - title: Features
      url: /features/
    - title: Shortcodes
