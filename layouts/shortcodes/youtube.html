@@ -53,7 +53,7 @@ and since there are already two, we need to add a further
 {{ $transcript := $s | markdownify | safeHTML }}
 
 <div class="youtube">
-  <h{{ $levelOffset}} class="video-title">
+  <h{{ $levelOffset}} id="transcript-{{ $title | anchorize }}" class="video-title">
     {{ $title }}
   </h{{ $levelOffset }}>
   <iframe src="https://www.youtube.com/embed/{{ .Get "id" }}?enablejsapi=1{{ with .Get "color" }}{{ if eq . "white" }}&color=white{{ end }}{{ end }}{{ with .Get "autoplay" }}{{ if eq . "true" }}&autoplay=1{{ end }}{{ end }}{{ if isset .Params "yt_start" }}&start={{ .Get "yt_start" }}{{ end }}{{ if isset .Params "yt_end" }}&end={{ .Get "yt_end" }}{{ end }}&modestbranding=0" allowfullscreen class="youtube"></iframe>
