@@ -17,18 +17,6 @@ $(document).ready(function(){
         });
     }
 
-    //Navbar Clone
-    if ($('#navbar-clone').length) {
-        $(window).on("scroll", function() {    // this will work when your window scrolled.
-            var height = $(window).scrollTop();  //getting the scrolling height of window
-            if(height  > 50) {
-                $("#navbar-clone").addClass('is-active');
-            } else{
-                $("#navbar-clone").removeClass('is-active');
-            }
-        });
-    }
-
     //reveal elements on scroll so animations trigger the right way
     var $window           = $(window),
         win_height_padded = $window.height() * 1.1,
