@@ -253,7 +253,7 @@ figcaption {
 }
 
 blockquote {
-    border-left: 6px solid rgb(238, 238, 238);
+    border-left: 6px solid var(--colorSecondary);
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
