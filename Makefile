@@ -21,11 +21,11 @@ teams-clean:
 
 teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
 
-shortcode-docs:
+doc/content/shortcodes.md:
 	python tools/render_shortcode_docs.py > doc/content/shortcodes.md
 
-doc-serve: shortcode-docs
+doc-serve: doc/content/shortcodes.md
 	(cd doc && hugo serve --themesDir="../..")
 
-docs: shortcode-docs
+docs: doc/content/shortcodes.md
 	(cd doc ; hugo --themesDir="../..")
