@@ -249,7 +249,7 @@ p {
 }
 
 .icon {
-    color: #1e87f0;
+    color: var(--colorIcon);
 }
 
 .copyright {
