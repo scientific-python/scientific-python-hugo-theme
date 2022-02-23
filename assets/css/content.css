@@ -47,3 +47,8 @@
     font-weight: bold;
     margin-top: 25px;
 }
+
+/* Override bulma .label font-weight, which otherwise impacts on g.label used by mermaid */
+g.label {
+  font-weight: normal;
+}

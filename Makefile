@@ -21,7 +21,7 @@ teams-clean:
 
 teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
 
-doc/content/shortcodes.md:
+doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 	python tools/render_shortcode_docs.py > doc/content/shortcodes.md
 
 doc-serve: doc/content/shortcodes.md
