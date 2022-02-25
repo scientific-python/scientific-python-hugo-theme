@@ -42,7 +42,8 @@ params:
     socialmediatitle: ""
     socialmedia:
       - link: https://github.com/scientific-python/
-        icon: github
+        # Find icon names here: https://fontawesome.com/search
+        icon: fa-brands fa-github
     quicklinks:
       column1:
         title: ""
