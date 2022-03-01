@@ -34,7 +34,7 @@
             <div class="social-media-icons">
               {{- range $socialMedia }}
               <a class="level-item" href="{{ .link }}" aria-label="{{ .link }}">
-                <span class="icon"><i class="fab fa-{{ .icon }}"></i></span>
+                <span class="icon"><i class="{{ .icon }}"></i></span>
               </a>
               {{- end }}
             </div>
