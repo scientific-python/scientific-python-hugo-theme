@@ -103,3 +103,14 @@ params:
 By default, `javaScript` points to the server at
 `https://views.scientific-python.org`.  Contact the Scientific
 Python team to have your analytics hosted there.
+
+## Icons
+
+You can add custom icons (for use in, e.g., the footer) by downloading Material-UI SVGs from [Google Fonts](https://fonts.google.com/icons) to the `/assets/icons` directory.
+
+In the footer, the icons can then be used like the ones built-into the theme.
+To use them elsewhere, e.g. in Hugo templates, we provide an `svg-icon` partial.  For example, `/assets/icons/my-icon.svg` is displayed using:
+
+```
+{{ partial "svg-icon" "my-icon" }}
+```

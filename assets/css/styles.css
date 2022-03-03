@@ -291,3 +291,26 @@ blockquote p {
         width: 100%;
     }
 }
+
+/* Icon size for the whole document */
+svg.icon {
+  height: 0.75em;
+  width: 0.75em;
+  vertical-align: middle;
+}
+
+/* Icon size slightly enlargened for footer */
+#footer .social-media-icons {
+  font-size: 1.5em;
+}
+
+#footer svg.icon {
+  fill: #1e87f0;
+  margin-right: 0.5rem;
+}
+
+/* For information ⓘ, when icon is missing */
+#footer .icon {
+  font-weight: 900;
+  color: #1e87f0;
+}
