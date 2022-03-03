@@ -41,9 +41,12 @@ params:
     logo: logo.svg
     socialmediatitle: ""
     socialmedia:
+      - link: https://scientific-python.org/
+        icon: scientific-python
+      - link: https://discuss.scientific-python.org/
+        icon: discourse
       - link: https://github.com/scientific-python/
-        # Find icon names here: https://fontawesome.com/search
-        icon: fa-brands fa-github
+        icon: github
     quicklinks:
       column1:
         title: ""

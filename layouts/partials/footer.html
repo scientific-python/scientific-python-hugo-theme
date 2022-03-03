@@ -34,7 +34,11 @@
             <div class="social-media-icons">
               {{- range $socialMedia }}
               <a class="level-item" href="{{ .link }}" aria-label="{{ .link }}">
-                <span class="icon"><i class="{{ .icon }}"></i></span>
+                {{if .icon -}}
+                {{- partial "svg-icon" .icon -}}
+                {{- else -}}
+                <span class="icon">ⓘ</span>
+                {{- end }}
               </a>
               {{- end }}
             </div>
