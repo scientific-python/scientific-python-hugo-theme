@@ -41,11 +41,12 @@ params:
     logo: logo.svg
     socialmediatitle: ""
     socialmedia:
-      - link: https://github.com/scientific-python/
+      - link: https://scientific-python.org/
         icon: scientific-python
-      - link: https://blog.scientific-python.org
-        icon: rss-feed
-
+      - link: https://discuss.scientific-python.org/
+        icon: discourse
+      - link: https://github.com/scientific-python/
+        icon: github
     quicklinks:
       column1:
         title: ""
