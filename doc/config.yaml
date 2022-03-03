@@ -43,8 +43,6 @@ params:
     socialmedia:
       - link: https://scientific-python.org/
         icon: scientific-python
-      - link: https://discuss.scientific-python.org/
-        icon: discourse
       - link: https://github.com/scientific-python/
         icon: github
     quicklinks:
