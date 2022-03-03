@@ -45,10 +45,6 @@ params:
         icon: scientific-python
       - link: https://discuss.scientific-python.org/
         icon: discourse
-      - link: https://blog.scientific-python.org/
-        icon: rss-feed
-      - link: https://www.youtube.com/channel/UC2wKi87Wmy9C1OQMyD9fGxA
-        icon: youtube
       - link: https://github.com/scientific-python/
         icon: github
     quicklinks:
