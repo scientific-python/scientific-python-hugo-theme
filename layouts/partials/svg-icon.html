@@ -4,4 +4,4 @@
 {{ $match := "<svg (.*)?>(.*)</svg>" }}
 
 {{ $replaceWith := printf `<svg class="icon %s" viewBox="0 0 24 24" ${1}>${2}</svg>` $class }}
-{{ return (replaceRE $match $replaceWith (printf "/assets/icons/%s.svg" $svg | readFile) | safeHTML) }}
+{{ (replaceRE $match $replaceWith (resources.Get (printf "/icons/%s.svg" $svg)).Content) | safeHTML }}
