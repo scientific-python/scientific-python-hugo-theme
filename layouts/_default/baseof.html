@@ -5,27 +5,27 @@
     <title>{{ block "title" . }}{{ .Site.Title }}{{ if not (eq .Site.Title .Title) }} - {{ .Title }}{{end}}{{ end }}</title>
 
     <!-- Render theme css -->
-    {{ partial "css.html" . }}
+    {{ partial "css.html" . -}}
 
     <!-- Render custom header -->
-    {{ partial "head.html" . }}
+    {{ partial "head.html" . -}}
 
     <!-- Refer: https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/ -->
     {{ if .IsTranslated }}
       {{ range .Translations }}
       <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}" />
       {{ end }}
-    {{ end }}
+    {{ end -}}
   </head>
   <body>
     <!-- Preloader. Set to true for front-page fade-in animation -->
     {{ if (and .IsHome .Site.Params.fadeFrontPage) }}
     <div id="preloader"></div>
-    {{ end }}
+    {{ end -}}
 
     {{ block "navbar" . }}
-    {{ partial "navbar.html" . }}
-    {{ partial "navbar-clone.html" . }}
+    {{ partial "navbar.html" . -}}
+    {{ partial "navbar-clone.html" . -}}
     {{ end }}
 
     {{ block "main" . }}
@@ -35,11 +35,11 @@
     <div id="backtotop"><a href="#" id="backtotop-color"></a></div>
 
     {{ if .Site.Params.footer }}
-    {{ partial "footer.html" . }}
+    {{ partial "footer.html" . -}}
     {{ end }}
 
-    {{ partial "javascript.html" . }}
+    {{ partial "javascript.html" . -}}
 
-    {{ partial "analytics.html" . }}
+    {{ partial "analytics.html" . -}}
   </body>
 </html>
