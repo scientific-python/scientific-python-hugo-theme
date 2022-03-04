@@ -31,7 +31,7 @@
 
 {{- range $cssFiles -}}
 
-{{- $targetFile := printf "css/scientific-python-hugo-theme/%s.css" . -}}
+{{- $targetFile := printf "css/%s.css" . -}}
 
 {{ if $inServerMode -}}
 {{ $custom_style := . | resources.ExecuteAsTemplate $targetFile $page -}}
