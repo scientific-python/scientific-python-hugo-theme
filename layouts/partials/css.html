@@ -20,10 +20,10 @@
 {{- range $sass -}}
 
 {{- if $inServerMode -}}
-{{- $css := resources.Get . | toCSS $cssOpts -}}
+{{ $css := resources.Get . | toCSS $cssOpts -}}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 {{ else }}
-{{- $css := resources.Get . | toCSS $cssOpts | minify | fingerprint -}}
+{{ $css := resources.Get . | toCSS $cssOpts | minify | fingerprint -}}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end -}}
 
@@ -37,7 +37,7 @@
 {{ $custom_style := . | resources.ExecuteAsTemplate $targetFile $page -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
 {{ else }}
-{{- $custom_style := . | resources.ExecuteAsTemplate $targetFile $page | minify | fingerprint -}}
+{{ $custom_style := . | resources.ExecuteAsTemplate $targetFile $page | minify | fingerprint -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}" integrity="{{ $custom_style.Data.Integrity }}">
 {{- end -}}
 
