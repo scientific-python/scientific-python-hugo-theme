@@ -1,5 +1,5 @@
 table td:not(:last-child), table th {
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.8rem;
 }
 
 table td:not:first-child, table th:not:first-child {
