@@ -27,7 +27,7 @@ html: themes content/shortcodes.md
 
 serve: ## Serve site, typically on http://localhost:1313
 serve: themes content/shortcodes.md
-	@hugo --i18n-warnings server
+	@hugo --printI18nWarnings server
 
 clean: ## Remove built files
 clean:
