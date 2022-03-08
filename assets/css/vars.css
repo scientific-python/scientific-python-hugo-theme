@@ -14,4 +14,16 @@
   --colorContentLink: rgb(30, 135, 240);
 
   --colorIcon: rgb(30, 135, 240);
+
+  --colorNoteHeading: #6AB0DE;
+  --colorNoteContent: #E7F2FA;
+
+  --colorInfoHeading: #F0B37E;
+  --colorInfoContent: #FFF2DB;
+
+  --colorWarningHeading: rgba(217, 83, 79, 0.8);
+  --colorWarningContent: #FAE2E2;
+
+  --colorTipHeading: rgba(92, 184, 92, 0.8);
+  --colorTipContent: #E6F9E6;
 }
