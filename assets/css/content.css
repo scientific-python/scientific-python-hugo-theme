@@ -41,11 +41,35 @@
 }
 
 .content-container h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: bold;
     margin-top: 25px;
+}
+
+.content-container h4 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.content-container h5 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+    margin-top: 22px;
+}
+
+.content-container h6 {
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 21px;
 }
 
 /* Override bulma .label font-weight, which otherwise impacts on g.label used by mermaid */

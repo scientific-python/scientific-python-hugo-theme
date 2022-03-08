@@ -213,6 +213,11 @@ p {
     height: 75px;
 }
 
+.footer-column {
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
 .link-column {
     display: block;
     flex-basis: 0;
@@ -241,6 +246,10 @@ p {
 
 .social-media-icons {
     display: flex;
+}
+
+.icon {
+    color: var(--colorIcon);
 }
 
 .copyright {
@@ -313,4 +322,11 @@ svg.icon {
 #footer .icon {
   font-weight: 900;
   color: #1e87f0;
+
+.highlight {
+    padding: 10px;
+}
+
+.chroma {
+    padding: 10px;
 }
