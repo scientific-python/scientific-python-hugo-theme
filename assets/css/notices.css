@@ -18,29 +18,29 @@
 }
 
 .note-notice .notice-type {
-  background: #6AB0DE;
+  background: var(--colorNoteHeading);
 }
 .note-notice .notice-content {
-  background: #E7F2FA;
+  background: var(--colorNoteContent);
 }
 
 .info-notice .notice-type {
-  background: #F0B37E;
+  background: var(--colorInfoHeading);
 }
 .info-notice .notice-content {
-  background: #FFF2DB;
+  background: var(--colorInfoContent);
 }
 
 .warning-notice .notice-type {
-  background: rgba(217, 83, 79, 0.8);
+  background: var(--colorWarningHeading);
 }
 .warning-notice .notice-content {
-  background: #FAE2E2;
-}
-.tip-notice .notice-type {
-  background: rgba(92, 184, 92, 0.8);
+  background: var(--colorWarningContent);
 }
 
+.tip-notice .notice-type {
+  background: var(--colorTipHeading);
+}
 .tip-notice .notice-content {
-  background: #E6F9E6;
+  background: var(--colorTipContent);
 }
