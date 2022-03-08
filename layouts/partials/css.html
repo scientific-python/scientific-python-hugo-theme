@@ -11,10 +11,10 @@
 {{- $fontFace     := replace $fontName " " "+" -}}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," -}}
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes -}}
-<link href="{{ $fontUrl }}" rel="stylesheet">
 
-<!-- Favicon -->
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
+<link rel="stylesheet" href="{{ $fontUrl }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
 <!-- SASS --- currently only for fresh -->
 {{- range $sass -}}
