@@ -1,9 +1,8 @@
 <!-- Include all theme CSS filenames here -->
 {{- $page := . -}}
-{{- $cssFiles := resources.Match "css/*.css" -}}
 
 {{- $inServerMode := .Site.IsServer -}}
-{{- $sass         := (slice "css/fresh/core.scss") -}}
+{{- $sass         := (slice "theme-css/fresh/core.scss") -}}
 {{- $cssOpts      := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 
 <!-- Fonts -->
@@ -28,6 +27,10 @@
 {{- end -}}
 
 {{- end -}}
+
+{{- $themeCssFiles := resources.Match "theme-css/*.css" -}}
+{{- $userCssFiles := resources.Match "css/*.css" -}}
+{{- $cssFiles := $themeCssFiles | append $userCssFiles }}
 
 {{- range $cssFiles -}}
 
