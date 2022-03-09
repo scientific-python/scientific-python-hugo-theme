@@ -7,7 +7,9 @@
     {{ partial "single/content.html" . }}
     {{ end }}
 
+    {{ if .Site.GetPage "/news" }}
     {{ partial "news.html" . }}
+    {{ end }}
 
     {{ if .Site.Params.keyfeatures }}
     {{ partial "keyfeatures.html" . }}
