@@ -1,50 +1,27 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="{{ "js/fresh.js" | relURL }}"></script>
-<script src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<!-- Font Awesome -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></script>
-<!-- UIkit -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
-<!-- Thebe Configuration -->
-<script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "joelachance/thebelab-requirements"
-        },
-    }
-</script>
-<script src="https://unpkg.com/thebe@0.8.2/lib/index.js"></script>
-<!-- app.js -->
-<script src="{{ "js/app.js" | relURL }}"></script>
+{{- $inServerMode := .Site.IsServer -}}
 
-<script src="{{ "js/shortcuts.js" | relURL }}"></script>
-<script type="text/javascript">setupShortcuts(maxLevel={{ default 2 .Page.Params.shortcutDepth }});</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script src="{{ "js/keyfeatures.js" | relURL }}"></script>
 
 <!-- Custom JS -->
 <!-- All JS files under static/js are included -->
-{{ $jsDir := "static/js" }}
-{{ if (fileExists $jsDir) }}
+{{- $jsFiles := resources.Match "js/*.js" -}}
+{{- if $inServerMode -}}
+{{- $js := $jsFiles | resources.Concat "js/bundle.js" }}
+<script type="text/javascript" src={{ $js.RelPermalink }}></script>
+{{ else }}
+{{- $js := $jsFiles | resources.Concat "js/bundle.js" | resources.Minify }}
+<script type="text/javascript" src={{ $js.RelPermalink }}></script>
+{{- end -}}
 
-{{ range (readDir $jsDir) }}
+<!-- UIkit -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/js/uikit.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.6/dist/css/uikit.min.css" />
 
-{{ if (strings.HasSuffix .Name ".js") }}
-{{ $fileName := printf "js/%s" .Name }}
-<script type="text/javascript" src="{{ $fileName | relURL }}"></script>
-{{ end }}
+<script type="text/javascript">setupShortcuts(maxLevel={{ default 2 .Page.Params.shortcutDepth }});</script>
 
-{{ end }}
-
-{{ end }}
-
-
-{{ if .HasShortcode "youtube" }}
+{{- if .HasShortcode "youtube" }}
 <script type="text/javascript">
   var buttons = document.getElementsByClassName("video-transcript-button");
   var i;
@@ -61,4 +38,8 @@
     });
   }
 </script>
-{{ end }}
+{{ end -}}
+
+{{- if .HasShortcode "mermaid" }}
+<script async src="https://unpkg.com/mermaid@8.14.0/dist/mermaid.min.js"></script>
+{{ end -}}

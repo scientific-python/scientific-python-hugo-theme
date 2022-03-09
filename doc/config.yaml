@@ -18,12 +18,11 @@ params:
     text: Scientific Python Hugo Theme
     link: /
   hero:
-    title: Hugo Theme
-    subtitle: Used by core projects in the scientific Python ecosystem.
-    buttontext: Get started
-    buttonlink: /getstarted/
+    title: Scientific Python Theme
     image: logo.svg
   navbar:
+   - title: Get started
+     url: /getstarted/
    - title: Features
      url: /features/
    - title: Shortcodes
@@ -38,22 +37,28 @@ params:
 [numpy.org](https://github.com/numpy/numpy.org), and
 [scipy.org](https://github.com/scipy/scipy.org)."
       - title: Community Maintained
-        text: The theme is maintained by the [Theme Team](https://github.com/orgs/scientific-python/teams/theme-team)
+        text: The theme is maintained by the [Theme Team](/about/).
   footer:
     logo: logo.svg
     socialmediatitle: ""
     socialmedia:
+      - link: https://scientific-python.org/
+        icon: scientific-python
+      - link: https://discuss.scientific-python.org/
+        icon: discourse
       - link: https://github.com/scientific-python/
         icon: github
     quicklinks:
       column1:
         title: ""
         links:
-          - text: Scientific Python Forum
-            link: https://discuss.scientific-python.org
-      column2:
-        links:
+          - text: About
+            link: /about/
           - text: Theme GitHub
             link: https://github.com/scientific-python/scientific-python-hugo-theme
+      column2:
+        links:
+          - text: Scientific Python Forum
+            link: https://discuss.scientific-python.org
       column3:
         links:

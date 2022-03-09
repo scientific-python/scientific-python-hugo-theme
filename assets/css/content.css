@@ -4,12 +4,6 @@
     padding: 75px 15px 125px 15px;
 }
 
-.shortcuts-container {
-    width: 100%;
-    max-width: 150px;
-    margin: 75px 15px;
-}
-
 .content-container {
     max-width: 850px;
     margin: 0 30px;
@@ -47,43 +41,38 @@
 }
 
 .content-container h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: bold;
     margin-top: 25px;
 }
 
-.shortcuts-title {
-    font-size: 17px;
+.content-container h4 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     font-weight: bold;
+    margin-top: 23px;
 }
 
-#shortcuts {
-    margin-top: 10px;
-    border-left: 1px solid var(--colorPrimaryDark);
+.content-container h5 {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+    margin-top: 22px;
 }
 
-.shortcuts-H2 {
-    margin: 5px 5px 0 15px;
-    font-size: 15px;
-    cursor: pointer;
+.content-container h6 {
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 21px;
 }
 
-.shortcuts-H3 {
-    margin: 5px 5px 0 25px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.sidebar-links {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0 0 0;
-}
-
-@media only screen and (max-width: 1090px) {
-    .shortcuts-container {
-        display: none;
-    }
+/* Override bulma .label font-weight, which otherwise impacts on g.label used by mermaid */
+g.label {
+  font-weight: normal;
 }

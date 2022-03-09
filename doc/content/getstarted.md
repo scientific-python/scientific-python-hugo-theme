@@ -1,12 +1,11 @@
 ---
 title: Get Started
-sidebar: true
 ---
 
 ## The Scientific Python theme for Hugo
 
 The **Scientific Python Hugo Theme** is a theme for the
-[Hugo](https://gohugo.io) static site generator built on the
+[Hugo](https://gohugo.io) static site generator based on the
 [Fresh](https://github.com/StefMa/hugo-fresh) theme.
 
 To use the theme, you will need to
@@ -16,6 +15,7 @@ and place it on your path.
 ## Download and install
 
 1. Download [the theme ZIP file](https://github.com/scientific-python/scientific-python-hugo-theme/archive/refs/heads/main.zip) and extract it.
+
 2. Copy the `doc` folder as a template of your new website:
 
    ```sh
@@ -30,23 +30,17 @@ and place it on your path.
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
    ```
 
-4. Download all submodules:
+4. Build your site:
 
    ```sh
-   git submodule update --init --recursive
-   ```
-
-5. Build your site:
-
-   ```sh
-   hugo serve
+   make serve
    ```
 
 Browse to `http://localhost:1313`, and hopefully you will see your new site!
 
-## Building for production
+## Build HTML
 
-Run `hugo` and find the output in `public`.
+Run `make html`.  Output appears in `./public`.
 
 ## Customizing the site
 

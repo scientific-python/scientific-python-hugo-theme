@@ -1,6 +1,5 @@
 ---
 title: Features
-sidebar: true
 ---
 
 ## Partials
@@ -21,6 +20,16 @@ preamble.  It defaults to 2.
 
 Each page should contain a `summary` in the preamble, otherwise the
 site description is provided as metadata.
+
+## Custom stylesheets
+
+Custom styles should be added to `/assets/css/my_css.css` (where
+`my_css` can be any name, other than those already in the theme).
+
+## Custom JavaScript
+
+Custom JavaScript can be added as `/assets/js/my_js.js` (where `my_js`
+can be any name).
 
 ## Code styling
 
@@ -61,8 +70,16 @@ The first post from `/content/en/news` will be highlighted on the
 front page.  If you don't want that, remove the `/content/en/news`
 folder.
 
-By default, news items link to the `/news` category page (which lists all news items).
-You can override that by setting `newsLink` in the preamble of any news post.
+By default, news items link to the `/news` category page (which lists
+all news items).  You can override that by setting `newsLink` in the
+preamble of any news post.
+
+### Single page news
+
+If you prefer to list all your news items on one page, you may do so
+in `/news.md`, instead of adding posts to `/news`.  Set the
+`newsHeader` parameter in the preamble of that document to populate
+the banner on the front page.
 
 ## Team gallery
 
@@ -80,3 +97,30 @@ python team_query.py --org scientific-python --team spec-steering-committee --ti
 
 we generate a raw HTML gallery, and provide a
 shortcode (include-html) for pulling it in anywhere on the site.
+
+## Analytics
+
+The theme supports analytics through Plausible, which can be self-hosted or paid-for at https://plausible.io/.
+To enable Plausible analytics, add to your `config.yaml`:
+
+```
+params:
+  plausible:
+    dataDomain: your-domain.org
+    javaScript: https://your.plausible.io/javascript/path.js
+```
+
+By default, `javaScript` points to the server at
+`https://views.scientific-python.org`.  Contact the Scientific
+Python team to have your analytics hosted there.
+
+## Icons
+
+You can add custom icons (for use in, e.g., the footer) by downloading Material-UI SVGs from [Google Fonts](https://fonts.google.com/icons) to the `/assets/icons` directory.
+
+In the footer, the icons can then be used like the ones built-into the theme.
+To use them elsewhere, e.g. in Hugo templates, we provide an `svg-icon` partial.  For example, `/assets/icons/my-icon.svg` is displayed using:
+
+```
+{{ partial "svg-icon" "my-icon" }}
+```
