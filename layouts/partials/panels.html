@@ -1,0 +1,33 @@
+{{- $panels := .Site.Params.panels }}
+{{- $title    := index $panels "title" }}
+{{- $subtitle := index $panels "subtitle" }}
+{{- $tiles    := index $panels "tiles" }}
+<section class="panels">
+  <div class="container is-max-widescreen">
+    <div class="title-wrapper has-text-centered">
+      <h2 class="title is-2">{{ $title }}</h2>
+      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
+      <div class="divider is-centered"></div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="columns">
+        {{- range $tiles }}
+        <div class="column is-one-third">
+          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
+            <div class="card-title">
+              <h4>{{ .title }}</h4>
+            </div>
+            <div class="card-text">
+                <p>{{ .text }}</p>
+            </div>
+            <div class="card-action">
+              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
+            </div>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>
