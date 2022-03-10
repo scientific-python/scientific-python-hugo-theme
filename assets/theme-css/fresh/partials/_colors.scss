@@ -8,7 +8,7 @@ $grey-white: #f2f2f2;
 
 $primary: #4FC1EA;
 $secondary: #F39200;
-$accent: #00efb7;
+$accent: var(--colorPrimary);
 
 $fade-grey: #ededed;
 $light-grey: #EFF4F7;
