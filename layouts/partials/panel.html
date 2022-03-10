@@ -2,24 +2,18 @@
 {{- $tiles    := index $panel "tiles" }}
 <section class="panel">
   <div class="container is-max-widescreen">
-    <div class="content-wrapper">
-      <div class="columns">
-        {{- range $tiles }}
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered">
-            <div class="card-title">
-              <h4>{{ .title }}</h4>
+        <div class="panel-box-container">
+            {{- range $tiles }}
+            <div class="panel-box-content panel-underline">
+                <p>
+                    <div class="panel-box-title">{{ .title }}</div>
+                    <div class="panel-box-text">{{ .text | markdownify }}</div>
+                    <div class="panel-box-action"> 
+                       <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
+                    </div>
+                </p>
             </div>
-            <div class="card-text">
-                <p>{{ .text }}</p>
-            </div>
-            <div class="card-action">
-              <a href="{{ .url }}" class="button btn-align-md accent-btn raised">{{ .buttonText }}</a>
-            </div>
-          </div>
+            {{- end }}
         </div>
-        {{- end }}
-      </div>
     </div>
-  </div>
 </section>
