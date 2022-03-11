@@ -20,17 +20,18 @@
 
 #shortcuts {
   margin-top: 10px;
-  border-left: 1px solid var(--colorPrimaryDark);
 }
 
 #shortcuts > div:not(.active) {
+  margin-left: 2px;
+  border-left: 1px solid var(--colorPrimaryDark);
   opacity: 0.75;
 }
 
 #shortcuts > div.active {
   font-weight: bold;
   color: var(--colorPrimaryDark);
-  border-left: 1.5px solid var(--colorPrimaryDark);
+  border-left: 5px solid var(--colorPrimaryDark);
 }
 
 .shortcuts-H2 {

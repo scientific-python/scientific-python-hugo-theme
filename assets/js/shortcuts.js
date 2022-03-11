@@ -31,7 +31,7 @@ function scrollHeadersAndNavbar() {
   var allShortcuts = $('#shortcuts > div');
 
   //Navbar Clone
-  if (scrollPosition  > 50) {
+  if (scrollPosition > 50) {
     $("#navbar-clone").addClass('is-active');
   } else{
     $("#navbar-clone").removeClass('is-active');
