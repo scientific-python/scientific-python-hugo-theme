@@ -10,6 +10,9 @@ shortcodes = [
 
 
 def shortcode_doc(fn):
+    """
+    Return description, example, code
+    """
     with open(fn, 'r') as f:
         data = f.read()
 

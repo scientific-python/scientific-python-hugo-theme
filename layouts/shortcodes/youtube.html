@@ -1,8 +1,8 @@
 {{/*
 
-doc: Embed YouTube videos, with foldable captions. The levelOffset parameter can be used to control the depth of the video heading and content.
+doc: Embed YouTube videos, with foldable captions. The `levelOffset` parameter can be used to control the depth of the video heading and content. The shortcode can be invoked either with an `id` attribute, or by specifying `page`. In the latter case, that page's preamble should provide `youtube_id`, `title`, `venue`, and `date`, and its contents act as the video transcript. Remember the closing tag!
 
-{{< youtube id="EmGSSbwdCZQ" class="talk" title="Open Data Science" venue="CU Denver Data Science Symposium 2020" author="Stefan van der Walt" levelOffset=3 >}}
+{{< youtube id="EmGSSbwdCZQ" class="talk" title="YouTube: Open Data Science" venue="CU Denver Data Science Symposium 2020" author="Stefan van der Walt" levelOffset=3 >}}
 
 Here, I will give a transcript of the whole video, and say some things about it that you cannot know otherwise without watching the **video**.
 
@@ -12,13 +12,41 @@ This is it!
 
 {{< /youtube >}}
 
+{{< youtube page="video-page" levelOffset=3 >}}{{< /youtube >}}
+
 */}}
 
-{{ $title := .Get "title" }}
-{{ $venue := .Get "venue" }}
-{{ $author := .Get "author" }}
-{{ $date := .Get "date" }}
-{{ $transcript := .Inner }}
+{{- $id := .Get "id" -}}
+{{- $title := "" -}}
+{{- $venue := "" -}}
+{{- $author := "" -}}
+{{- $date := "" -}}
+{{- $transcript := "" -}}
+
+{{- if $id }}
+
+{{- $title = .Get "title" -}}
+{{- $venue = .Get "venue" -}}
+{{- $author = .Get "author" -}}
+{{- $date = .Get "date" -}}
+{{- $transcript = .Inner -}}
+
+{{- else -}}
+
+{{- $pageName := printf "%s.md" (.Get "page") -}}
+{{- $pageInBundle := .Page.Resources.GetMatch $pageName -}}
+{{- $pageInSite := .Site.GetPage $pageName -}}
+{{- $page := or $pageInBundle $pageInSite -}}
+
+{{- $id = $page.Params.youtube_id -}}
+{{- $title = $page.Params.title -}}
+{{- $venue = $page.Params.venue -}}
+{{- $author = $page.Params.author -}}
+{{- $date = time.Format "Jan 2, 2006" $page.Params.date -}}
+{{- $transcript = $page.RawContent -}}
+
+{{- end -}}
+
 
 {{/* Adjust the indentation of the transcript according to levelOffset */}}
 {{/* See https://discourse.gohugo.io/t/option-to-shift-headings/6136/2 */}}
@@ -53,12 +81,12 @@ and since there are already two, we need to add a further
 {{ $transcript := $s | markdownify | safeHTML }}
 
 <div class="youtube">
-  <h{{ $levelOffset}} id="transcript-{{ $title | anchorize }}" class="video-title">
+  <h{{ $levelOffset }} id="transcript-{{ $title | anchorize }}" class="video-title">
     {{ $title }}
   </h{{ $levelOffset }}>
-  <iframe src="https://www.youtube.com/embed/{{ .Get "id" }}?enablejsapi=1{{ with .Get "color" }}{{ if eq . "white" }}&color=white{{ end }}{{ end }}{{ with .Get "autoplay" }}{{ if eq . "true" }}&autoplay=1{{ end }}{{ end }}{{ if isset .Params "yt_start" }}&start={{ .Get "yt_start" }}{{ end }}{{ if isset .Params "yt_end" }}&end={{ .Get "yt_end" }}{{ end }}&modestbranding=0" allowfullscreen class="youtube"></iframe>
+  <iframe src="https://www.youtube.com/embed/{{ $id }}?enablejsapi=1&modestbranding=0" allowfullscreen class="youtube"></iframe>
   {{ if $transcript }}
-  <button type="button" class="video-transcript-button">
+  <button type="button" class="yp-video-transcript-button video-transcript-button">
     <span class="video-transcript-button-pointer"></span>
     Transcript
   </button>
@@ -67,7 +95,7 @@ and since there are already two, we need to add a further
   </div>
   {{ end }}
   <div class="video-meta">
-    {{if $author }}
+    {{ if $author }}
     <div class="video-author">
       {{ $author }}
     </div>
