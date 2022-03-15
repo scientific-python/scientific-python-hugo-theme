@@ -99,12 +99,12 @@ em {
     text-decoration: none;
 }
 
-#navbar-logo {
+.navbar-logo {
   height: 28px;
   padding-right: 1rem;
 }
 
-#navbar-logo-text {
+.navbar-logo-text {
   font-size: 1.25rem;
   font-weight: bold;
 }

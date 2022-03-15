@@ -7,8 +7,8 @@
       {{ if not .IsHome }}
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
-        <img id="navbar-logo" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
-        <div id="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
+        <img class="navbar-logo" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
+        <div class="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
       </a>
       {{- end}}
       {{ end }}
@@ -20,7 +20,7 @@
       </a>
     </div>
 
-    <div id="navbar-menu" class="navbar-menu is-static">
+    <div class="navbar-menu is-static">
 
       <div class="navbar-end">
         {{- range $navbar }}
