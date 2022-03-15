@@ -42,7 +42,9 @@ This is it!
 {{- $title = $page.Params.title -}}
 {{- $venue = $page.Params.venue -}}
 {{- $author = $page.Params.author -}}
-{{- $date = time.Format "Jan 2, 2006" $page.Params.date -}}
+{{ if $page.Params.date }}
+  {{- $date = time.Format "Jan 2, 2006" $page.Params.date -}}
+{{ end }}
 {{- $transcript = $page.RawContent -}}
 
 {{- end -}}
