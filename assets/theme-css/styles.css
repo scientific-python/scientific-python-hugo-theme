@@ -89,13 +89,14 @@ em {
     cursor: pointer;
 }
 
-#navbar-item {
+.navbar-item {
     color: var(--colorPrimaryDark);
     text-decoration: none;
 }
 
-#navbar-item:hover {
+.navbar-item:hover {
     color: var(--colorPrimaryLight) !important;
+    text-decoration: none;
 }
 
 #navbar-logo {
