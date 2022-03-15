@@ -5,14 +5,13 @@
  <div class="navbar-dropdown">
    {{- range .Translations }}
 
-   <a href="{{ .RelPermalink }}" id="navbar-item" class="navbar-item">
+   <a href="{{ .RelPermalink }}" class="navbar-item">
      {{ default .Language .Language.LanguageName }}
    </a>
 
    {{- end }}
    {{ if $crowdin }}
-   <a href="{{ $crowdin }}"
-      id="navbar-item" class="navbar-item" target="_blank">
+   <a href="{{ $crowdin }}" class="navbar-item" target="_blank">
      Help us translate
    </a>
    {{ end }}
