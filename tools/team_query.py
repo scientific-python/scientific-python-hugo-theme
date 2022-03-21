@@ -6,7 +6,8 @@ import string
 import requests
 
 
-team_query = string.Template("""
+team_query = string.Template(
+    """
   query {
     organization(login: "$org") {
       team(slug: "$team") {
@@ -22,14 +23,15 @@ team_query = string.Template("""
       }
     }
   }
-""")
+"""
+)
 
 
 def api(query):
     request = requests.post(
-        'https://api.github.com/graphql',
-        json={'query': query},
-        headers={'Authorization': f'bearer {token}'}
+        "https://api.github.com/graphql",
+        json={"query": query},
+        headers={"Authorization": f"bearer {token}"},
     )
     if request.status_code == 200:
         return request.json()
@@ -37,35 +39,41 @@ def api(query):
         raise RuntimeError("Request received HTTP {request.status_code}: {query}")
 
 
-parser = argparse.ArgumentParser(description='Generate team gallery from GitHub')
-parser.add_argument('--org', required=True, help='GitHub organization name')
-parser.add_argument('--team', required=True, help='Team name in the organization')
+parser = argparse.ArgumentParser(description="Generate team gallery from GitHub")
+parser.add_argument("--org", required=True, help="GitHub organization name")
+parser.add_argument("--team", required=True, help="Team name in the organization")
 args = parser.parse_args()
 
 org = args.org
 team = args.team
 
-token = os.environ.get('GH_TOKEN', None)
+token = os.environ.get("GH_TOKEN", None)
 if token is None:
-    print("No token found.  Please export a GH_TOKEN with permissions "
-          "to read team members.", file=sys.stderr)
+    print(
+        "No token found.  Please export a GH_TOKEN with permissions "
+        "to read team members.",
+        file=sys.stderr,
+    )
     sys.exit(-1)
 
 
 resp = api(team_query.substitute(org=org, team=team))
-members = resp['data']['organization']['team']['members']['nodes']
-team_name = resp['data']['organization']['team']['name']
+members = resp["data"]["organization"]["team"]["members"]["nodes"]
+team_name = resp["data"]["organization"]["team"]["name"]
 
-team_template = string.Template('''
+team_template = string.Template(
+    """
 <div class="team">
   <h6 class="name title">${team_name}</h6>
   <div class="members">
     ${members}
   </div>
 </div>
-''')
+"""
+)
 
-member_template = string.Template('''
+member_template = string.Template(
+    """
     <div class="member">
       <a href="${url}" class="name">
         <div class="photo">
@@ -78,14 +86,15 @@ member_template = string.Template('''
         ${name}
       </a>
     </div>
-''')
+"""
+)
 
 members_list = []
 for m in members:
     m["name"] = m["name"] or m["login"]
     members_list.append(member_template.substitute(**m))
 
-members_str = ''.join(members_list)
+members_str = "".join(members_list)
 team_str = team_template.substitute(members=members_str, team_name=team_name)
 
 print(team_str)

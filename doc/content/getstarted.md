@@ -40,7 +40,7 @@ Browse to `http://localhost:1313`, and hopefully you will see your new site!
 
 ## Build HTML
 
-Run `make html`.  Output appears in `./public`.
+Run `make html`. Output appears in `./public`.
 
 ## Customizing the site
 
