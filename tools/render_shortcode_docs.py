@@ -13,11 +13,11 @@ def shortcode_doc(fn):
     """
     Return description, example, code
     """
-    with open(fn, "r") as f:
+    with open(fn) as f:
         data = f.read()
 
     match = re.match(
-        "^{{/\*.*doc: ([^\n]*)(.*?)^\*/}}$", data, re.MULTILINE | re.DOTALL
+        "^{{/\\*.*doc: ([^\n]*)(.*?)^\\*/}}$", data, re.MULTILINE | re.DOTALL
     )
 
     if not match:
