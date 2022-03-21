@@ -13,26 +13,30 @@ def shortcode_doc(fn):
     """
     Return description, example, code
     """
-    with open(fn, 'r') as f:
+    with open(fn, "r") as f:
         data = f.read()
 
-    match = re.match('^{{/\*.*doc: ([^\n]*)(.*?)^\*/}}$', data, re.MULTILINE | re.DOTALL)
+    match = re.match(
+        "^{{/\*.*doc: ([^\n]*)(.*?)^\*/}}$", data, re.MULTILINE | re.DOTALL
+    )
 
     if not match:
         return None, None, None
 
     description, code = match.group(1), match.group(2).strip()
 
-    example = (code
-               .replace('{{< ', '{{</* ')
-               .replace(' >}}', ' */>}}')
-               .replace('{{% ', '{{%/* ')
-               .replace(' %}}', ' */%}}'))
+    example = (
+        code.replace("{{< ", "{{</* ")
+        .replace(" >}}", " */>}}")
+        .replace("{{% ", "{{%/* ")
+        .replace(" %}}", " */%}}")
+    )
 
     return description, example, code
 
 
-print('''\
+print(
+    """\
 ---
 title: Shortcodes
 shortcutDepth: 1
@@ -50,10 +54,11 @@ _shortcodes_.  Shortcodes are small snippets that look like this
 that Hugo renders using a predefined template.
 
 Here are some shortcodes used by this theme.
-''')
+"""
+)
 
 for shortcode_fn in shortcodes:
-    title = os.path.basename(shortcode_fn).replace('.html', '')
+    title = os.path.basename(shortcode_fn).replace(".html", "")
     description, example, code = shortcode_doc(shortcode_fn)
     if description is None:
         continue
@@ -62,6 +67,6 @@ for shortcode_fn in shortcodes:
     print(description)
     print(f"```\n{example}\n```")
     print("This example renders as:")
-    print('___')
+    print("___")
     print(code)
-    print('___')
+    print("___")

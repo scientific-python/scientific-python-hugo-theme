@@ -1,1 +1,1 @@
-This is some *example markdown* with **bold**!
+This is some _example markdown_ with **bold**!
