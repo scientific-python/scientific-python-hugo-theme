@@ -12,7 +12,7 @@ markup:
 params:
   description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
-  - /images/logo.svg
+    - /images/logo.svg
   navbarlogo:
     image: logo.svg
     text: Scientific Python Hugo Theme
@@ -21,20 +21,21 @@ params:
     title: Scientific Python Theme
     image: logo.svg
   navbar:
-   - title: Get started
-     url: /getstarted/
-   - title: Features
-     url: /features/
-   - title: Shortcodes
-     url: /shortcodes/
+    - title: Get started
+      url: /getstarted/
+    - title: Features
+      url: /features/
+    - title: Shortcodes
+      url: /shortcodes/
   keyfeatures:
     features:
       - title: Documented
         text: The theme is documented at https://theme.scientific-python.org.
       - title: Reusable
-        text: "The theme is being used by [scientific-python.org](https://github.com/scientific-python/scientific-python.org),
-[numpy.org](https://github.com/numpy/numpy.org), and
-[scipy.org](https://github.com/scipy/scipy.org)."
+        text: "The theme is being used by
+          [scientific-python.org](https://github.com/scientific-python/scientific-python.org),
+          [numpy.org](https://github.com/numpy/numpy.org), and
+          [scipy.org](https://github.com/scipy/scipy.org)."
       - title: Community Maintained
         text: The theme is maintained by the [Theme Team](/about/).
   footer:

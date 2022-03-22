@@ -13,3 +13,9 @@ repos:
       - id: prettier
         files: \.(md|yml|yaml)
         args: [--prose-wrap=preserve]
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.31.1
+    hooks:
+      - id: pyupgrade
+        args: [--py38-plus]
