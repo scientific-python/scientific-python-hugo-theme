@@ -28,12 +28,14 @@
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             {{ .title }}
+            {{ if .is_external }}{{ partial "svg-icon" "mail" }}{{ end }}
           </a>
 
           <div class="navbar-dropdown">
             {{- range .sublinks }}
             <a href="{{ .url }}" class="navbar-item">
               {{ .title }}
+              {{ if .is_external }}{{ partial "svg-icon" "mail" }}{{ end }}
             </a>
             {{- end }}
           </div>
@@ -42,11 +44,13 @@
         <a href="{{ .url }}" class="navbar-item">
           <span class="button signup-button rounded secondary-btn raised">
             {{ .title }}
+            {{ if .is_external }}{{ partial "svg-icon" "mail" }}{{ end }}
           </span>
         </a>
         {{- else }}
         <a href="{{ .url }}" class="navbar-item is-secondary">
           {{ .title }}
+          {{ if .is_external }}{{ partial "svg-icon" "mail" }}{{ end }}
         </a>
         {{- end }}
         {{- end }}
