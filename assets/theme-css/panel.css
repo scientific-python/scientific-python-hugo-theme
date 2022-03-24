@@ -30,7 +30,7 @@
     height: 140px;
     min-width: 275px;
     width: 335px;
-    margin: 25px auto;
+    margin: 25px 15px 25px 15px;
     border-radius: 3px;
 }
 
@@ -146,4 +146,5 @@
     padding-left: 1em;
     padding-right: 1em;
     padding-top: calc(.5em - 1px);
+    text-decoration: none;
 }
