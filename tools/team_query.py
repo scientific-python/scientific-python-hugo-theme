@@ -64,7 +64,7 @@ team_name = resp["data"]["organization"]["team"]["name"]
 team_template = string.Template(
     """
 <div class="team">
-  <h6 class="name title">${team_name}</h6>
+  <h3 class="name title">${team_name}</h3>
   <div class="members">
     ${members}
   </div>
