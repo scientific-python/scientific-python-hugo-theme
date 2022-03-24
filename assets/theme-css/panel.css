@@ -32,7 +32,6 @@
     width: 335px;
     margin: 25px 15px 25px 15px;
     border-radius: 3px;
-    box-shadow: 0px 8px 15px var(--colorShadow);
 }
 
 .panel-box-text > a {
