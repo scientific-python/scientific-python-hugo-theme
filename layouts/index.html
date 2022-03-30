@@ -3,6 +3,10 @@
     {{ partial "hero.html" . }}
     {{ end }}
 
+    {{ if .Site.Params.panel }}
+    {{ partial "panel.html" . }}
+    {{ end }}
+
     {{ if .Content }}
     {{ partial "single/content.html" . }}
     {{ end }}
