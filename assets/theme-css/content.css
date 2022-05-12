@@ -29,7 +29,13 @@
 }
 
 .content-container .divider {
+    height: 3px;
+    border-radius: 50px;
     background: var(--colorPrimaryDark);
+    width: 60px;
+    &.is-centered {
+        margin: 0 auto;
+    }
 }
 
 .content-container h2 {

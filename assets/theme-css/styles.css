@@ -27,10 +27,6 @@ em {
     width: 100vw;
 }
 
-.hero-container {
-    width: 100vw;
-}
-
 .hero-content {
     display: flex;
     flex-direction: column;
