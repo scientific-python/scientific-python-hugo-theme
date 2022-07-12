@@ -18,6 +18,7 @@ This is it!
 
 {{- $id := .Get "id" -}}
 {{- $title := "" -}}
+{{- $about := "" -}}
 {{- $venue := "" -}}
 {{- $author := "" -}}
 {{- $date := "" -}}
@@ -40,6 +41,7 @@ This is it!
 
 {{- $id = $page.Params.youtube_id -}}
 {{- $title = $page.Params.title -}}
+{{- $about = $page.Params.about -}}
 {{- $venue = $page.Params.venue -}}
 {{- $author = $page.Params.author -}}
 {{ if $page.Params.date }}
@@ -86,6 +88,9 @@ and since there are already two, we need to add a further
   <h{{ $levelOffset }} id="transcript-{{ $title | anchorize }}" class="video-title">
     {{ $title }}
   </h{{ $levelOffset }}>
+  <div class="video-about">
+    {{ $about }}
+  </div>
   <iframe src="https://www.youtube.com/embed/{{ $id }}?enablejsapi=1&modestbranding=0" allowfullscreen class="youtube"></iframe>
   {{ if $transcript }}
   <button type="button" class="yp-video-transcript-button video-transcript-button">
