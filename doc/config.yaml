@@ -23,6 +23,9 @@ params:
   navbar:
     - title: Get started
       url: /getstarted/
+      sublinks:
+        - title: Link to the blog
+          url: https://blog.scientific-python.org
     - title: Features
       url: /features/
       is_external: true
