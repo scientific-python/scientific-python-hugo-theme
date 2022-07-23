@@ -315,18 +315,23 @@ svg.icon {
 
 /* Icon size slightly enlargened for footer */
 #footer .social-media-icons {
-  font-size: 1.5em;
-}
-
-#footer svg.icon {
-  fill: #1e87f0;
-  margin-right: 0.5rem;
-}
+    font-size: 2.3em;
+  }
+  
+  #footer svg.icon {
+    fill: var(--colorSecondary);
+    margin-right: 0.5rem;
+  }
+  
+  #footer svg.icon:hover {
+      fill: #ffffff;
+  }
 
 /* For information ⓘ, when icon is missing */
 #footer .icon {
   font-weight: 900;
-  color: #1e87f0;
+  color: var(--colorSecondary);
+}
 
 .highlight {
     padding: 10px;
