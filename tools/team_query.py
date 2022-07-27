@@ -60,12 +60,11 @@ if token is None:
 resp = api(team_query.substitute(org=org, team=team))
 members = resp["data"]["organization"]["team"]["members"]["nodes"]
 team_name = resp["data"]["organization"]["team"]["name"]
-team_anchor = team_name.lower().replace(" ", "-")
 
 team_template = string.Template(
     """
 <div class="team">
-  <h3 id="${team_anchor}" class="name title">${team_name}</h3>
+  <h3 id="${team}" class="name title">${team_name}</h3>
   <div class="members">
     ${members}
   </div>
@@ -96,8 +95,6 @@ for m in members:
     members_list.append(member_template.substitute(**m))
 
 members_str = "".join(members_list)
-team_str = team_template.substitute(
-    members=members_str, team_anchor=team_anchor, team_name=team_name
-)
+team_str = team_template.substitute(members=members_str, team=team, team_name=team_name)
 
 print(team_str)
