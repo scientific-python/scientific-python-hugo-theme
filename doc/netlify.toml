@@ -1,10 +1,6 @@
-[build]
-  # https://answers.netlify.com/t/build-canceled-due-to-no-content-change-when-using-submodule/25445/2
-  ignore = "false"
-
 [build.environment]
   PYTHON_VERSION = "3.8"
-  HUGO_VERSION = "0.101.0"
+  HUGO_VERSION = "0.102.1"
 
 [[plugins]]
   package = "netlify-plugin-checklinks"
