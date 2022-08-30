@@ -9,7 +9,7 @@ button {
     }
 }
 
-// Preloader 
+// Preloader
 #preloader {
     position: fixed;
     top: 0;
@@ -25,16 +25,16 @@ button {
     height: 200px;
     position: absolute;
     left: 50%;
-    // centers the loading animation horizontally on the screen 
+    // centers the loading animation horizontally on the screen
     top: 50%;
-    // centers the loading animation vertically on the screen 
+    // centers the loading animation vertically on the screen
     background-image: url(../../images/loaders/rings.svg);
     background-size: 80px 80px;
-    // path to loading animation 
+    // path to loading animation
     background-repeat: no-repeat;
     background-position: center;
     margin: -100px 0 0 -100px;
-    // width and height divided by two 
+    // width and height divided by two
 }
 
 // Back to top button
