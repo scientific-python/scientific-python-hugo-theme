@@ -317,12 +317,12 @@ svg.icon {
 #footer .social-media-icons {
     font-size: 2.3em;
   }
-  
+
   #footer svg.icon {
     fill: var(--colorSecondary);
     margin-right: 0.5rem;
   }
-  
+
   #footer svg.icon:hover {
       fill: #ffffff;
   }
