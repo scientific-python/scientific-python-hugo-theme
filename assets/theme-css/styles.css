@@ -247,6 +247,8 @@ p {
 
 .social-media-icons {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em;
 }
 
 .icon {
