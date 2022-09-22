@@ -340,3 +340,10 @@ svg.icon {
 .chroma {
     padding: 10px;
 }
+
+pre {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    background: #fff;
+}
