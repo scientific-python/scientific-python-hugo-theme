@@ -347,3 +347,9 @@ pre {
     border-radius: 3px;
     background: #fff;
 }
+
+code {
+    color: #f0506e;
+    padding: 2px 6px;
+    background: #f8f8f8;
+}
