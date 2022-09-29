@@ -246,7 +246,9 @@ p {
 }
 
 .social-media-icons {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.4em;
 }
 
 .icon {
