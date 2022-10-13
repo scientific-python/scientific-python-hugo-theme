@@ -4,7 +4,7 @@ import re
 shortcodes = [
     os.path.join(dirpath, filename)
     for (dirpath, dirs, files) in os.walk(".")
-    for filename in files
+    for filename in sorted(files)
     if (dirpath.endswith("/shortcodes") and filename.endswith(".html"))
 ]
 
