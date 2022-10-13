@@ -200,19 +200,17 @@ p {
 }
 
 .footer-logo-column {
-    display: flex;
-    justify-content: center;
     padding: 20px 7vw;
     font-size: 1rem;
 }
 
 #footer-logo {
-    height: 75px;
+  height: 75px;
 }
 
 .footer-column {
     padding-left: 0px;
-    margin-top:20px
+    margin-top: 20px
 }
 
 #footer-columns > div > div > ul {
@@ -243,10 +241,6 @@ p {
 .footer-actions p {
     margin: 0;
     color: var(--colorSecondary);
-}
-
-.social-media-icons {
-    display: flex;
 }
 
 .icon {
@@ -313,19 +307,23 @@ svg.icon {
   width: 1.5rem;
 }
 
-/* Icon size slightly enlargened for footer */
 #footer .social-media-icons {
-    font-size: 2.3em;
-  }
+  /* Icon size slightly enlargened for footer */
+  font-size: 2.3em;
+}
 
-  #footer svg.icon {
-    fill: var(--colorSecondary);
-    margin-right: 0.5rem;
-  }
+#footer .social-media-icons a {
+  display: inline-block;
+}
 
-  #footer svg.icon:hover {
-      fill: #ffffff;
-  }
+#footer svg.icon {
+  fill: var(--colorSecondary);
+  margin-right: 0.5rem;
+}
+
+#footer svg.icon:hover {
+  fill: #ffffff;
+}
 
 /* For information ⓘ, when icon is missing */
 #footer .icon {
