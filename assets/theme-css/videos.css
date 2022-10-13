@@ -46,11 +46,11 @@
 .video-transcript-button-pointer {
 }
 
-.video-transcript-button .video-transcript-button-pointer::before{
+.video-transcript-button .video-transcript-button-pointer::before {
   content: "▶";
 }
 
-.video-transcript-button.active .video-transcript-button-pointer::before{
+.video-transcript-button.active .video-transcript-button-pointer::before {
   content: "▼";
 }
 
