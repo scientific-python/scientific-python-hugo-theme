@@ -340,19 +340,3 @@ svg.icon {
 .chroma {
     padding: 10px;
 }
-
-pre {
-    padding: 10px;
-/*    border: 5px solid; #e5e5e5; */
-    border-radius: 3px;
-    background: var(--colorPrimaryDark);
-    color: #f8f8f2;
-/*    background-color: var(--colorPrimaryDark); */
-    margin-top: 0.25rem;
-}
-
-code {
-    color: #f0506e;
-    padding: 2px 6px;
-    background: #f8f8f8;
-}
