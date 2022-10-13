@@ -17,7 +17,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/psf/black
-    rev: 22.6.0
+    rev: 22.10.0
     hooks:
       - id: black
 
@@ -25,11 +25,11 @@ repos:
     rev: v2.7.1
     hooks:
       - id: prettier
-        files: \.(md|yml|yaml)
+        files: \.(css|md|yml|yaml)
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.37.3
+    rev: v3.1.0
     hooks:
       - id: pyupgrade
         args: [--py38-plus]

@@ -1,7 +1,11 @@
 :root {
-  --fontFamily: {{ .Site.Params.font.name }};
+  --fontFamily: {
+     {
+      .Site.Params.font.name;
+    }
+  }
 
-  --colorPrimaryDark:  rgb(1, 50, 67);
+  --colorPrimaryDark: rgb(1, 50, 67);
   --colorPrimary: rgb(77, 119, 207);
   --colorPrimaryLight: rgb(77, 171, 207);
 
@@ -15,15 +19,15 @@
 
   --colorIcon: rgb(30, 135, 240);
 
-  --colorNoteHeading: #6AB0DE;
-  --colorNoteContent: #E7F2FA;
+  --colorNoteHeading: #6ab0de;
+  --colorNoteContent: #e7f2fa;
 
-  --colorInfoHeading: #F0B37E;
-  --colorInfoContent: #FFF2DB;
+  --colorInfoHeading: #f0b37e;
+  --colorInfoContent: #fff2db;
 
   --colorWarningHeading: rgba(217, 83, 79, 0.8);
-  --colorWarningContent: #FAE2E2;
+  --colorWarningContent: #fae2e2;
 
   --colorTipHeading: rgba(92, 184, 92, 0.8);
-  --colorTipContent: #E6F9E6;
+  --colorTipContent: #e6f9e6;
 }
