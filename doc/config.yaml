@@ -32,11 +32,17 @@ params:
     features:
       - title: Documented
         text: The theme is documented at https://theme.scientific-python.org.
-      - title: Reusable
-        text: "The theme is being used by
-          [scientific-python.org](https://github.com/scientific-python/scientific-python.org),
-          [numpy.org](https://github.com/numpy/numpy.org), and
-          [scipy.org](https://github.com/scipy/scipy.org)."
+      - title: Used by
+        text: "The theme is being used by"
+          - org_title: scientific-python.org
+            url: https://github.com/scientific-python/scientific-python.org
+            img: /assets/icons/scientific-python-logo.svg
+          - org_title: numpy.org
+            url: https://github.com/numpy/numpy.org
+            img: /assets/icons/numpy-logo.svg
+          - org_title: scipy.org
+            url: https://github.com/scipy/scipy.org
+            img: /assets/icons/scipy-logo.svg
       - title: Community Maintained
         text: The theme is maintained by the [Theme Team](/about/).
   footer:
