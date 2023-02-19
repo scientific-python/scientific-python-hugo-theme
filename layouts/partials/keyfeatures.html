@@ -1,5 +1,8 @@
 {{- $keyfeatures := .Site.Params.keyfeatures }}
 {{- $features := index $keyfeatures "features" }}
+{{- $org_title := index $features "org_title" }}
+{{- $url := index $features "url" }}
+{{- $img := index $features "img" }}
 
 <section class="keyfeatures">
     <div class="container is-max-widescreen">
@@ -9,6 +12,9 @@
                 <p>
                     <div class="keyfeatures-box-title">{{ .title }}</div>
                     <div class="keyfeatures-box-text">{{ .text | markdownify }}</div>
+                    <div class="keyfeatures-box-org_title">{{ .org_title }}</div>
+                    <div class="keyfeatures-box-url">{{ .url }}</div>
+                    <div class="keyfeatures-box-img">{{ .img }}</div>
                 </p>
             </div>
             {{- end }}
