@@ -292,7 +292,7 @@ blockquote p {
     max-width: 50vw;
   }
 
-  .social-media-icons {
+  .community-icons {
     width: 100%;
   }
 }
@@ -308,12 +308,12 @@ svg.icon {
   width: 1.5rem;
 }
 
-#footer .social-media-icons {
+#footer .community-icons {
   /* Icon size slightly enlargened for footer */
   font-size: 2.3em;
 }
 
-#footer .social-media-icons a {
+#footer .community-icons a {
   display: inline-block;
 }
 
