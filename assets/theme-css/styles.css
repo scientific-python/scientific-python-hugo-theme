@@ -52,11 +52,12 @@ em {
   font-weight: 900;
   font-size: 6em;
   color: var(--colorPrimaryDark);
+  margin: 0.5em;
 }
 
 .hero-logo {
   max-height: 75px;
-  padding: 0px 0 0 15px;
+  margin: 1em;
 }
 
 .hero-subtitle {
