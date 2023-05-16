@@ -24,7 +24,7 @@
 .content-container .divider {
   height: 3px;
   border-radius: 50px;
-  background: var(--colorPrimaryDark);
+  background: var(--colorTextAlt);
   width: 60px;
   &.is-centered {
     margin: 0 auto;
@@ -80,7 +80,17 @@ h6 {
   margin-top: 21px;
 }
 
+.content-container .name.title {
+  /* Override bulma's .title selector. */
+  color: var(--colorHeading);
+}
+
 /* Override bulma .label font-weight, which otherwise impacts on g.label used by mermaid */
 g.label {
   font-weight: normal;
+}
+
+strong {
+  /* Override bulma's STRONG selector. */
+  color: var(--colorText);
 }

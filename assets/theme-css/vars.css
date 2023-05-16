@@ -2,6 +2,7 @@
 :root {
   --fontFamily: "{{ .Site.Params.font.name }}", "Noto Sans Symbols 2";
 
+  /* First we name the colors of our theme's palette. */
   --colorPrimaryDark: rgb(1, 50, 67);
   --colorPrimary: rgb(77, 119, 207);
   --colorPrimaryLight: rgb(77, 171, 207);
@@ -10,13 +11,25 @@
   --colorSecondary: rgb(238, 238, 238);
   --colorSecondaryLight: rgb(255, 255, 255);
 
-  --colorHeading: rgb(54, 54, 54);
-  --colorHighlight: rgb(255, 197, 83);
-  --colorShadow: rgba(0, 0, 0, 0.1);
-  --colorContentLink: rgb(30, 135, 240);
+  --colorBrightBlue: rgb(30, 135, 240);
+  --colorYellow: rgb(255, 197, 83);
 
-  --colorIcon: rgb(30, 135, 240);
+  /* Now we assign those named colors to various purposes. */
+  --colorBackground: var(--colorSecondaryLight);
+  --colorBackgroundAlt: var(--colorPrimaryDark);
+  --colorBackgroundAlt2: var(--colorSecondaryDark);
 
+  --colorText: var(--colorPrimaryDark);
+  --colorTextAlt: var(--colorSecondaryLight);
+
+  --colorContentLink: var(--colorBrightBlue);
+  --colorHeading: var(--colorPrimaryDark);
+  --colorHighlight: var(--colorYellow);
+  --colorHover: var(--colorPrimaryLight);
+  --colorIcon: var(--colorBrightBlue);
+  --colorShadow: var(--colorPrimaryDark);
+
+    /* FIXME: These colors should probably use named colors. */
   --colorNoteHeading: #6ab0de;
   --colorNoteContent: #e7f2fa;
 
@@ -28,4 +41,25 @@
 
   --colorTipHeading: rgba(92, 184, 92, 0.8);
   --colorTipContent: #e6f9e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Basically, we reassign the colors named in the non-dark theme. The
+       exception is the background: it seems to look better as #111
+       than as --colorPrimaryDark. */
+    --colorBackground: #111;
+    --colorBackgroundAlt: var(--colorPrimaryDark);
+    --colorBackgroundAlt2: var(--colorSecondaryDark);
+
+    --colorText: var(--colorSecondaryLight);
+    --colorTextAlt: var(--colorSecondaryLight);
+
+    --colorShadow: var(--colorSecondary);
+    --colorHeading: var(--colorSecondary);
+  }
+  html {
+    background: var(--colorBackground);
+    color: var(--colorText);
+  }
 }
