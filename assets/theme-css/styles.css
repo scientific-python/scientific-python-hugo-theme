@@ -182,21 +182,11 @@ p {
   .hero-title {
     font-size: 4em;
   }
-
-  .hero-logo {
-    max-height: 60px;
-  }
 }
 
 @media only screen and (max-width: 400px) {
-  .hero-logo {
-    max-height: 50px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .hero-logo {
-    max-height: 40px;
+  .hero-title {
+    flex-direction: column;
   }
 }
 
