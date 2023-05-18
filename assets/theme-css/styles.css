@@ -33,12 +33,11 @@ em {
 }
 
 .hero-title-content {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 1200px;
-  margin: 6vh auto;
   justify-content: space-around;
+  width: 100%;
 }
 
 .hero-headline {
@@ -47,16 +46,20 @@ em {
 }
 
 .hero-title {
+  align-content: center;
+  align-items: center;
   display: flex;
+  flex-direction: row;
   font-family: var(--fontFamily), sans-serif;
   font-weight: 900;
   font-size: 6em;
   color: var(--colorPrimaryDark);
+  padding: 0 0.5em 0.5em;
 }
 
 .hero-logo {
-  max-height: 75px;
-  padding: 0px 0 0 15px;
+  max-height: 2em;
+  padding: 0.25em;
 }
 
 .hero-subtitle {
@@ -66,6 +69,9 @@ em {
 
 .hero-cta {
   padding: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
 }
 
 .cta-button {
@@ -176,21 +182,11 @@ p {
   .hero-title {
     font-size: 4em;
   }
-
-  .hero-logo {
-    max-height: 60px;
-  }
 }
 
 @media only screen and (max-width: 400px) {
-  .hero-logo {
-    max-height: 50px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .hero-logo {
-    max-height: 40px;
+  .hero-title {
+    flex-direction: column;
   }
 }
 
@@ -339,3 +335,7 @@ svg.icon {
 .chroma {
   padding: 10px;
 }
+
+/* Local Variables: */
+/* css-indent-offset: 2 */
+/* End: */
