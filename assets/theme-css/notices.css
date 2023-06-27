@@ -44,3 +44,17 @@
 .tip-notice .notice-content {
   background: var(--colorTipContent);
 }
+
+.mission-notice .notice-type {
+  background: var(--colorNoteHeading);
+}
+.mission-notice .notice-content {
+  background: var(--colorNoteContent);
+}
+
+.values-notice .notice-type {
+  background: var(--colorNoteHeading);
+}
+.values-notice .notice-content {
+  background: var(--colorNoteContent);
+}
