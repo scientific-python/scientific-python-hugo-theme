@@ -1,3 +1,4 @@
+
 {{- $title          := .Site.Params.title }}
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
@@ -16,7 +17,7 @@
           <div class="footer-column">
             <div class="footer-header">
             </div>
-            <ul class="link-list" style="padding-left: 30px; margin-top: 20px;">
+            <ul class="link-list" style="margin-top: 20px;">
               {{- range .links }}
               <li class="link-list">
                 <a class="footer-link" href="{{ .link }}">
