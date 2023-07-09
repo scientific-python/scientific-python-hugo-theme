@@ -46,6 +46,7 @@
 .panel-box-action {
   text-align: center;
   font-weight: bold;
+  padding-top: 1em;
 }
 
 .panel-box-content:hover > .panel-box-text,
