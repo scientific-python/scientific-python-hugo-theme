@@ -27,7 +27,7 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	font-weight: 500;
-	color: "--colorShadow";
+	color: var(--colorShadow);
 }
 .keyfeatures-box-title:hover {
 	color: var(--colorPrimaryDark);
