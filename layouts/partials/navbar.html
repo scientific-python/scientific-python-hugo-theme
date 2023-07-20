@@ -1,10 +1,11 @@
 {{- $title          := .Site.Params.title }}
 {{- $navbar         := .Site.Params.navbar }}
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
+{{- $navbarLogoShow := .Site.Params.navbarlogoshow }}
 <nav id="nav" class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container is-max-widescreen">
     <div class="navbar-brand">
-      {{ if not .IsHome }}
+      {{ if or (not .IsHome) ($navbarLogoShow) }}
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
         <img class="navbar-logo" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
