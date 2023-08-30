@@ -25,12 +25,12 @@
   margin: 15px;
   font-size: 16px;
   text-transform: uppercase;
-	cursor: pointer;
-	font-weight: 500;
-	color: "--colorShadow";
+  cursor: pointer;
+  font-weight: 500;
+  color: "--colorShadow";
 }
 .keyfeatures-box-title:hover {
-	color: var(--colorPrimaryDark);
+  color: var(--colorPrimaryDark);
 }
 
 .keyfeatures-box-text > a {
@@ -42,8 +42,8 @@
   font-size: 14px;
   height: 6em;
   overflow: hidden;
-	cursor: pointer;
-	color: var(--colorSecondaryDark);
+  cursor: pointer;
+  color: var(--colorSecondaryDark);
 }
 
 .keyfeatures-box-text:after {

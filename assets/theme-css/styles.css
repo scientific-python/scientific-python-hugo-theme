@@ -37,8 +37,8 @@ em {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-	max-width: 1200px;
-	margin: 6vh auto;
+  max-width: 1200px;
+  margin: 6vh auto;
 }
 
 .hero-headline {
@@ -55,8 +55,8 @@ em {
 }
 
 .hero-logo {
-	max-height: 75px;
-	padding: 0px 0 0 15px;
+  max-height: 75px;
+  padding: 0px 0 0 15px;
 }
 
 .hero-subtitle {
@@ -86,7 +86,7 @@ em {
 }
 
 .cta-button:hover {
-	box-shadow: 5px 5px 10px var(--colorShadow);
+  box-shadow: 5px 5px 10px var(--colorShadow);
 }
 
 .navbar-item {
@@ -181,21 +181,21 @@ p {
     font-size: 4em;
   }
 
-	.hero-logo {
-		max-height: 60px;
-	}
+  .hero-logo {
+    max-height: 60px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-	.hero-logo {
-		max-height: 50px;
-	}
+  .hero-logo {
+    max-height: 50px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-	.hero-logo {
-		max-height: 40px;
-	}
+  .hero-logo {
+    max-height: 40px;
+  }
 }
 
 /* Footer */
@@ -313,12 +313,12 @@ svg.icon {
 }
 
 #footer .social-media-icons {
-	/* Icon size slightly enlargened for footer */
-	font-size: 2.3em;
+  /* Icon size slightly enlargened for footer */
+  font-size: 2.3em;
 }
 
 #footer .social-media-icons a {
-	display: inline-block;
+  display: inline-block;
 }
 
 #footer svg.icon {
