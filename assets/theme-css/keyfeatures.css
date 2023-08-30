@@ -61,11 +61,6 @@
   );
 }
 
-/* .keyfeatures-box-content:hover > .keyfeatures-box-text,
-.keyfeatures-box-content:focus > .keyfeatures-box-text,
-.keyfeatures-box-content:active > .keyfeatures-box-text {
-} */
-
 @media only screen and (max-width: 1280px) {
   .keyfeatures .container {
     align-items: center;
