@@ -31,16 +31,16 @@
 
     /* FIXME: These colors should probably use named colors. */
   --colorNoteHeading: #6ab0de;
-  --colorNoteContent: #e7f2fa;
+  --colorNoteBackground: #e7f2fa;
 
   --colorInfoHeading: #f0b37e;
-  --colorInfoContent: #fff2db;
+  --colorInfoBackground: #fff2db;
 
   --colorWarningHeading: rgba(217, 83, 79, 0.8);
-  --colorWarningContent: #fae2e2;
+  --colorWarningBackground: #fae2e2;
 
   --colorTipHeading: rgba(92, 184, 92, 0.8);
-  --colorTipContent: #e6f9e6;
+  --colorTipBackground: #e6f9e6;
 
   /* Color from bulma.css, but this variable is currently only used for
    dark mode. */
@@ -64,6 +64,11 @@
 
     --colorBlockBackground: var(--colorPrimaryDark);
     --colorCode: #ffb8d1;
+
+    --colorNoteBackground: #3f5565;
+    --colorInfoBackground: #45413a;
+    --colorWarningBackground: #433c3c;
+    --colorTipBackground: #3e433e;
   }
   html {
     background: var(--colorBackground);
