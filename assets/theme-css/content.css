@@ -24,7 +24,7 @@
 .content-container .divider {
   height: 3px;
   border-radius: 50px;
-  background: var(--colorTextAlt);
+  background: var(--colorText);
   width: 60px;
   &.is-centered {
     margin: 0 auto;
