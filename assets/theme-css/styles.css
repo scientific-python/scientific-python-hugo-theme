@@ -4,7 +4,7 @@ body {
 }
 
 em {
-  color: var(--colorPrimaryDark) !important;
+  color: var(--colorText);
 }
 
 /* This color came from uikit; we re-specify it here
