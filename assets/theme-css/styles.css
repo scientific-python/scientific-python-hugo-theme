@@ -7,6 +7,10 @@ em {
   color: var(--colorText);
 }
 
+hr {
+  background-color: var(--colorSecondaryDark);
+}
+
 /* This color came from uikit; we re-specify it here
    to show how to override it for the content section */
 .content-padding a {
