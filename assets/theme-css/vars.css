@@ -41,6 +41,10 @@
 
   --colorTipHeading: rgba(92, 184, 92, 0.8);
   --colorTipContent: #e6f9e6;
+
+  /* Color from bulma.css, but this variable is currently only used for
+   dark mode. */
+  --colorCode: #da1039;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,9 +61,20 @@
 
     --colorShadow: var(--colorSecondary);
     --colorHeading: var(--colorSecondary);
+
+    --colorBlockBackground: var(--colorPrimaryDark);
+    --colorCode: #ffb8d1;
   }
   html {
     background: var(--colorBackground);
+    color: var(--colorText);
+  }
+  code {
+    background: var(--colorBlockBackground);
+    color: var(--colorCode);
+  }
+  pre {
+    background: var(--colorBlockBackground);
     color: var(--colorText);
   }
 }
