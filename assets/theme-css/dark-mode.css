@@ -10,6 +10,8 @@
     --colorText: white;
     --colorTextAlt: var(--colorSecondaryLight);
 
+    --colorContentLink: var(--colorPrimaryLight);
+
     --colorShadow: var(--colorSecondary);
     --colorHeading: var(--colorSecondary);
 
