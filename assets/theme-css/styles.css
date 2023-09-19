@@ -101,7 +101,7 @@ table th {
   letter-spacing: 1.5px;
   font-weight: 500;
   color: var(--colorBackground);
-  background-color: var(--colorText);
+  background-color: var(--colorBackgroundInverse);
   border: none;
   border-radius: 25px;
   outline: none;
@@ -110,7 +110,7 @@ table th {
 }
 
 .navbar-item {
-  color: var(--colorPrimaryDark);
+  color: var(--colorTextInverse);
   text-decoration: none;
 }
 
