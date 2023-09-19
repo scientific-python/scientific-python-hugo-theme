@@ -18,12 +18,17 @@
   min-width: 275px;
   width: 335px;
   margin: 25px auto;
-  border-radius: 3px;
+  border-radius: 25px;
+  border-top: 4px solid;
+  border-left: 4px solid;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-color: var(--colorBackgroundInverse);
 }
 
 .keyfeatures-box-title {
   margin: 15px;
-  font-size: 16px;
+  font-size: 1.1em;
   text-transform: uppercase;
 }
 
@@ -33,7 +38,6 @@
 
 .keyfeatures-box-text {
   margin: 15px;
-  font-size: 14px;
   height: 6em;
   overflow: hidden;
 }
@@ -82,10 +86,7 @@
 .keyfeatures-underline {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
   /* Black, with 10% opacity */
-  box-shadow: 0px 8px 15px var(--colorShadow);
   position: relative;
   overflow: hidden;
 }
