@@ -6,7 +6,7 @@
     --colorBackgroundAlt2: var(--colorSecondaryDark);
 
     --colorText: var(--colorPrimaryDark);
-    --colorTextAlt: var(--colorSecondaryLight);
+    --colorTextAlt: var(--colorSecondaryDark);
 
     --colorContentLink: var(--colorBrightBlue);
     --colorHeading: var(--colorPrimaryDark);

@@ -11,6 +11,11 @@ hr {
   background-color: var(--colorSecondaryDark);
 }
 
+table th {
+  /* Overriding bulma. */
+  color: var(--colorTextAlt);
+}
+
 /* This color came from uikit; we re-specify it here
    to show how to override it for the content section */
 .content-padding a {
