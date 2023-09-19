@@ -125,6 +125,7 @@ a.navbar-item:hover {
 }
 
 .navbar-logo-text {
+  color: var(--colorTextInverse);
   font-size: 1.25rem;
   font-weight: bold;
 }
