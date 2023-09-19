@@ -16,6 +16,7 @@
     --colorBlockBackground: var(--colorPrimaryDark);
     --colorCode: #ffb8d1;
 
+    /* FIXME: These colors should probably use named colors. */
     --colorNoteBackground: #3f5565;
     --colorInfoBackground: #45413a;
     --colorWarningBackground: #433c3c;

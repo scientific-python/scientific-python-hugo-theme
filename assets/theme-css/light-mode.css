@@ -1,0 +1,18 @@
+@media not (prefers-color-scheme: dark) {
+  :root {
+    /* Now we assign those named colors to various purposes. */
+    --colorBackground: var(--colorSecondaryLight);
+    --colorBackgroundAlt: var(--colorPrimaryDark);
+    --colorBackgroundAlt2: var(--colorSecondaryDark);
+
+    --colorText: var(--colorPrimaryDark);
+    --colorTextAlt: var(--colorSecondaryLight);
+
+    --colorContentLink: var(--colorBrightBlue);
+    --colorHeading: var(--colorPrimaryDark);
+    --colorHighlight: var(--colorYellow);
+    --colorHover: var(--colorPrimaryLight);
+    --colorIcon: var(--colorBrightBlue);
+    --colorShadow: var(--colorPrimaryDark);
+  }
+}

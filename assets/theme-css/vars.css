@@ -14,21 +14,6 @@
   --colorBrightBlue: rgb(30, 135, 240);
   --colorYellow: rgb(255, 197, 83);
 
-  /* Now we assign those named colors to various purposes. */
-  --colorBackground: var(--colorSecondaryLight);
-  --colorBackgroundAlt: var(--colorPrimaryDark);
-  --colorBackgroundAlt2: var(--colorSecondaryDark);
-
-  --colorText: var(--colorPrimaryDark);
-  --colorTextAlt: var(--colorSecondaryLight);
-
-  --colorContentLink: var(--colorBrightBlue);
-  --colorHeading: var(--colorPrimaryDark);
-  --colorHighlight: var(--colorYellow);
-  --colorHover: var(--colorPrimaryLight);
-  --colorIcon: var(--colorBrightBlue);
-  --colorShadow: var(--colorPrimaryDark);
-
     /* FIXME: These colors should probably use named colors. */
   --colorNoteHeading: #6ab0de;
   --colorNoteBackground: #e7f2fa;
