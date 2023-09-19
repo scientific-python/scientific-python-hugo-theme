@@ -109,7 +109,8 @@ table th {
   cursor: pointer;
 }
 
-a.navbar-item, a.navbar-item:visited {
+a.navbar-item,
+a.navbar-item:visited {
   color: var(--colorTextInverse);
   text-decoration: none;
 }
