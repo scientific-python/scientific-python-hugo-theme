@@ -26,8 +26,4 @@
 
   --colorTipHeading: rgba(92, 184, 92, 0.8);
   --colorTipBackground: #e6f9e6;
-
-  /* Color from bulma.css, but this variable is currently only used for
-   dark mode. */
-  --colorCode: #da1039;
 }

@@ -14,5 +14,9 @@
     --colorHover: var(--colorPrimaryLight);
     --colorIcon: var(--colorBrightBlue);
     --colorShadow: var(--colorPrimaryDark);
+
+    /* Color from bulma.css, but this variable is currently only used for
+       dark mode. */
+    --colorCode: #da1039;
   }
 }
