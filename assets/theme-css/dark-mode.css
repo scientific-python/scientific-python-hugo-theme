@@ -35,6 +35,10 @@
     color: var(--colorText);
   }
 
+  .cta-button {
+    box-shadow: none !important;
+  }
+
   /* The .shortcuts-title "list-bulleted.svg" file is black on
    transparent background, so we use a CSS filter to invert its color
    in dark mode. */
