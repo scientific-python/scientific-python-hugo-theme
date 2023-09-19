@@ -7,11 +7,16 @@
     --colorBackgroundAlt: var(--colorPrimaryDark);
     --colorBackgroundAlt2: var(--colorSecondaryDark);
 
-    --colorText: var(--colorSecondaryLight);
+    --colorText: white;
     --colorTextAlt: var(--colorSecondaryLight);
 
     --colorShadow: var(--colorSecondary);
     --colorHeading: var(--colorSecondary);
+
+    /* For, e.g. .news-container */
+    --colorTextInverse: var(--colorSecondaryLight);
+    --colorBackgroundInverse: var(--colorPrimaryDark);
+    --colorLinkInverse: var(--colorPrimaryLight);
 
     --colorBlockBackground: var(--colorPrimaryDark);
     --colorCode: #ffb8d1;

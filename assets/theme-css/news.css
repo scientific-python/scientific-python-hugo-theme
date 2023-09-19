@@ -5,17 +5,17 @@
   width: 100vw;
   min-height: 45px;
   background-color: var(--colorBackgroundAlt);
-  color: var(--colorBackground);
+  color: var(--colorTextAlt);
   white-space: nowrap;
 }
 
 .news-container a {
-  color: var(--colorBackground);
+  color: var(--colorLinkAlt);
 
 }
 
 .news-container a:hover {
-  color: var(--colorContentLink);
+  color: var(--colorLintAltHover);
 }
 
 .news-title {
