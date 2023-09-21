@@ -37,6 +37,10 @@
 {{- if .HasShortcode "mermaid" }}
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.4.0/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
+
+  const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'default';
+
+  mermaid.initialize({ startOnLoad: false, theme: theme });
+  await mermaid.run({ querySelector: '.mermaid' });
 </script>
 {{ end -}}
