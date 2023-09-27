@@ -5,6 +5,7 @@ params:
   navColor: blue
   font:
     name: "Lato"
+    fallbackName: "Noto Sans Symbols 2"
     sizes: [400, 900]
   plausible:
     dataDomain: null
