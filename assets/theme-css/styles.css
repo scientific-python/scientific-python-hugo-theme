@@ -308,10 +308,6 @@ svg.icon {
   vertical-align: middle;
 }
 
-.navbar svg.icon {
-  width: 1.5rem;
-}
-
 #footer .community-icons {
   /* Icon size slightly enlargened for footer */
   font-size: 2.3em;

@@ -25,7 +25,6 @@ params:
       url: /getstarted/
     - title: Features
       url: /features/
-      is_external: true
     - title: Shortcodes
       url: /shortcodes/
   keyfeatures:
