@@ -15,11 +15,7 @@
 <link rel="stylesheet" href="{{ $fontUrl }}">
 
 <!-- Fallback font for symbols (such as "🛈"). -->
-{{- $fallbackFontName     := .Site.Params.font.fallbackName | default "Noto Sans Symbols 2" -}}
-{{- $fallbackFontFace     := replace $fallbackFontName " " "+" -}}
-{{- $fallbackFontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," -}}
-{{- $fallbackFontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fallbackFontFace $fallbackFontSizes -}}
-<link rel="stylesheet" href="{{ $fallbackFontUrl }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Symbols+2">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
