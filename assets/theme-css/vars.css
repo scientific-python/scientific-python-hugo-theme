@@ -1,6 +1,6 @@
 /* prettier-ignore */
 :root {
-  --fontFamily: {{ .Site.Params.font.name }}, "Noto Sans Symbols 2";
+  --fontFamily: "{{ .Site.Params.font.name }}", "Noto Sans Symbols 2";
 
   --colorPrimaryDark: rgb(1, 50, 67);
   --colorPrimary: rgb(77, 119, 207);
