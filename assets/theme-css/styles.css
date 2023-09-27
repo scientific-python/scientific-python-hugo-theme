@@ -56,12 +56,15 @@ em {
   font-size: 6em;
   color: var(--colorPrimaryDark);
   justify-content: center;
+  margin-bottom: 0.2em;
   margin-right: 0.5em;
 }
 
 .hero-logo {
-  max-height: 2em;
-  padding: 0.25em;
+  align-self: start;
+  margin: 0.1em;
+  margin-left: 0.25em;
+  max-height: 0.8em;
 }
 
 .hero-subtitle {
