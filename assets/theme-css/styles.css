@@ -324,10 +324,6 @@ svg.icon {
   color: var(--colorSecondary);
 }
 
-.highlight {
-  padding: 10px;
-}
-
 .chroma {
   padding: 10px;
 }
