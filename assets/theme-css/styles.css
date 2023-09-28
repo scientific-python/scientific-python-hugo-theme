@@ -381,6 +381,10 @@ a.navbar-item:hover {
   border-color: var(--colorPrimaryDark);
 }
 
+.footer nav {
+  background: var(--colorPrimaryDark);
+}
+
 /* Local Variables: */
 /* css-indent-offset: 2 */
 /* End: */
