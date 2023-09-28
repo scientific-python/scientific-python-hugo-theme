@@ -91,6 +91,7 @@ table th {
 }
 
 .cta-button {
+  margin-right: 1em;
   min-width: 15rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
