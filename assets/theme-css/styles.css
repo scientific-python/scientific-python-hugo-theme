@@ -108,39 +108,6 @@ table th {
   cursor: pointer;
 }
 
-a.navbar-item,
-a.navbar-item:visited {
-  color: var(--colorTextInverse);
-  text-decoration: none;
-}
-
-a.navbar-item:hover {
-  color: var(--colorPrimaryLight);
-}
-
-.navbar-logo {
-  height: 28px;
-  padding-right: 1rem;
-}
-
-.navbar-logo-text {
-  color: var(--colorTextInverse);
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown {
-  border-top-color: var(--colorPrimaryDark);
-}
-
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
-  color: var(--colorPrimaryDark);
-}
-
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link:after {
-  border-color: var(--colorPrimaryDark);
-}
-
 #feature-card {
   height: 475px;
 }
@@ -350,6 +317,8 @@ svg.icon {
   padding: 10px;
 }
 
+/* navbar */
+
 nav,
 .navbar {
   background: var(--colorBackgroundAlt);
@@ -366,6 +335,39 @@ nav,
 }
 .navbar-menu.is-active {
   background: var(--colorBackgroundAlt2);
+}
+
+a.navbar-item,
+a.navbar-item:visited {
+  color: var(--colorTextInverse);
+  text-decoration: none;
+}
+
+a.navbar-item:hover {
+  color: var(--colorPrimaryLight);
+}
+
+.navbar-logo {
+  height: 28px;
+  padding-right: 1rem;
+}
+
+.navbar-logo-text {
+  color: var(--colorTextInverse);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown {
+  border-top-color: var(--colorPrimaryDark);
+}
+
+.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
+  color: var(--colorPrimaryDark);
+}
+
+.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link:after {
+  border-color: var(--colorPrimaryDark);
 }
 
 /* Local Variables: */
