@@ -321,8 +321,8 @@ svg.icon {
 
 nav,
 .navbar {
-  background: var(--colorBackgroundAlt);
-  color: var(--colorTextAlt);
+  background: var(--colorBackground);
+  color: var(--colorText);
 }
 .navbar-burger {
   color: var(--colorTextAlt);
@@ -339,7 +339,7 @@ nav,
 
 a.navbar-item,
 a.navbar-item:visited {
-  color: var(--colorTextInverse);
+  color: var(--colorText);
   text-decoration: none;
 }
 
