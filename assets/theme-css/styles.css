@@ -79,6 +79,7 @@ table th {
   font-size: 6em;
   color: var(--colorText);
   justify-content: center;
+  margin-left: 1em;
   margin-bottom: 0.2em;
   margin-right: 0.5em;
 }
