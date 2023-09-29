@@ -29,9 +29,9 @@ We're happy to announce the release of scientific-python-hugo-theme 0.1!
 - Generalize theme to render lists, index pages, and single pages with theme ([#18](https://github.com/scientific-python/scientific-python-hugo-theme/pull/18)).
 - Only render the content + scaffolding if there's content to show ([#21](https://github.com/scientific-python/scientific-python-hugo-theme/pull/21)).
 - Display footer on all pages ([#20](https://github.com/scientific-python/scientific-python-hugo-theme/pull/20)).
-- List / section view will render _index content or, if not available, list of subpages ([#22](https://github.com/scientific-python/scientific-python-hugo-theme/pull/22)).
+- List / section view will render \_index content or, if not available, list of subpages ([#22](https://github.com/scientific-python/scientific-python-hugo-theme/pull/22)).
 - Add CSS updates from numpy.org; factor out theme's table styling ([#23](https://github.com/scientific-python/scientific-python-hugo-theme/pull/23)).
-- Compile and include all assets/css/*.css ([#24](https://github.com/scientific-python/scientific-python-hugo-theme/pull/24)).
+- Compile and include all assets/css/\*.css ([#24](https://github.com/scientific-python/scientific-python-hugo-theme/pull/24)).
 - Remove MailChimp form, with a partial for adding it back ([#25](https://github.com/scientific-python/scientific-python-hugo-theme/pull/25)).
 - Render the navbar everywhere ([#26](https://github.com/scientific-python/scientific-python-hugo-theme/pull/26)).
 - Add youtube shortcode ([#27](https://github.com/scientific-python/scientific-python-hugo-theme/pull/27)).
@@ -95,7 +95,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.1!
 - Use /js/script.js instead of /js/plausible.js for analytics ([#111](https://github.com/scientific-python/scientific-python-hugo-theme/pull/111)).
 - Rename analytics.scientific-python.org to views.scientific-python.org ([#113](https://github.com/scientific-python/scientific-python-hugo-theme/pull/113)).
 - Remove hero-footer ([#110](https://github.com/scientific-python/scientific-python-hugo-theme/pull/110)).
-- Remove _internal references ([#108](https://github.com/scientific-python/scientific-python-hugo-theme/pull/108)).
+- Remove \_internal references ([#108](https://github.com/scientific-python/scientific-python-hugo-theme/pull/108)).
 - Remove unused shortcodes ([#112](https://github.com/scientific-python/scientific-python-hugo-theme/pull/112)).
 - Update title banner ([#115](https://github.com/scientific-python/scientific-python-hugo-theme/pull/115)).
 - Highlight current heading in shortcuts ([#116](https://github.com/scientific-python/scientific-python-hugo-theme/pull/116)).
@@ -186,7 +186,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.1!
 - Fix: (layouts/partials/footer.html) Alignment ([#230](https://github.com/scientific-python/scientific-python-hugo-theme/pull/230)).
 - Update hugo ([#234](https://github.com/scientific-python/scientific-python-hugo-theme/pull/234)).
 - Meta: Add .dir-locals.el ([#235](https://github.com/scientific-python/scientific-python-hugo-theme/pull/235)).
-- Update include-* shortcodes ([#236](https://github.com/scientific-python/scientific-python-hugo-theme/pull/236)).
+- Update include-\* shortcodes ([#236](https://github.com/scientific-python/scientific-python-hugo-theme/pull/236)).
 - Update Hugo ([#237](https://github.com/scientific-python/scientific-python-hugo-theme/pull/237)).
 - Change the width of the cta-button ([#238](https://github.com/scientific-python/scientific-python-hugo-theme/pull/238)).
 - Update hugo ([#239](https://github.com/scientific-python/scientific-python-hugo-theme/pull/239)).
@@ -235,4 +235,3 @@ We're happy to announce the release of scientific-python-hugo-theme 0.1!
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
 _These lists are automatically generated, and may not be complete or may contain duplicates._
-
