@@ -4,17 +4,19 @@
   align-items: center;
   width: 100vw;
   min-height: 45px;
-  background-color: var(--colorPrimaryDark);
-  color: var(--colorSecondaryLight);
+  background-color: var(--colorBackgroundInverse);
+  color: var(--colorTextInverse);
   white-space: nowrap;
 }
 
 .news-container a {
-  color: var(--colorSecondaryLight);
+  /* FIXME: We need a named color for this, like --colorLinkInverse. */
+  color: var(--colorSecondary);
 }
 
 .news-container a:hover {
-  color: var(--colorSecondaryLight);
+  /* FIXME: We need a named color for this, too. */
+  color: var(--colorPrimaryLight);
 }
 
 .news-title {

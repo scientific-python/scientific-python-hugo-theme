@@ -2,6 +2,7 @@
 :root {
   --fontFamily: "{{ .Site.Params.font.name }}", "Noto Sans Symbols 2";
 
+  /* First we name the colors of our theme's palette. */
   --colorPrimaryDark: rgb(1, 50, 67);
   --colorPrimary: rgb(77, 119, 207);
   --colorPrimaryLight: rgb(77, 171, 207);
@@ -10,22 +11,14 @@
   --colorSecondary: rgb(238, 238, 238);
   --colorSecondaryLight: rgb(255, 255, 255);
 
-  --colorHeading: rgb(54, 54, 54);
-  --colorHighlight: rgb(255, 197, 83);
-  --colorShadow: rgba(0, 0, 0, 0.1);
-  --colorContentLink: rgb(30, 135, 240);
+  --colorBrightBlue: rgb(30, 135, 240);
+  --colorYellow: rgb(255, 197, 83);
 
-  --colorIcon: rgb(30, 135, 240);
-
+  /* .notice boxes (only the heading colors; the content background
+   colors are in the light/dark mode files) */
+  /* FIXME: These colors should probably use named colors. */
   --colorNoteHeading: #6ab0de;
-  --colorNoteContent: #e7f2fa;
-
   --colorInfoHeading: #f0b37e;
-  --colorInfoContent: #fff2db;
-
   --colorWarningHeading: rgba(217, 83, 79, 0.8);
-  --colorWarningContent: #fae2e2;
-
   --colorTipHeading: rgba(92, 184, 92, 0.8);
-  --colorTipContent: #e6f9e6;
 }

@@ -110,7 +110,7 @@ We replaced the background color, `#433e56`, with `var(--colorPrimaryDark)`.
 }
 /* NameTag */
 .chroma .nt {
-  color: #ffb8d1;
+  color: var(--colorCode);
 }
 /* Literal */
 .chroma .l {
