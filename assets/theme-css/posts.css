@@ -1,14 +1,19 @@
+div.post-list {
+    clear: left;
+}
+
+.post-title a {
+  /* ".content-padding a" rule conflicts. */
+  color: var(--colorText) !important;
+}
+
 .post-list article {
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .post-list .post-title {
   font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
   font-weight: bold;
-  padding-bottom: 0.5rem;
 }
 
 .post-author {
