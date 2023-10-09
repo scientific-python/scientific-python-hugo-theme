@@ -1,5 +1,7 @@
 .panel {
   margin: 1em;
+  /* Override bulma. */
+  box-shadow: none;
 }
 
 .panel .container {
