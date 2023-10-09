@@ -49,12 +49,6 @@
   padding-top: 1em;
 }
 
-.panel-box-content:hover > .panel-box-text,
-.panel-box-content:focus > .panel-box-text,
-.panel-box-content:active > .panel-box-text {
-  color: var(--colorSecondaryDark);
-}
-
 @media only screen and (max-width: 1280px) {
   .panel .container {
     align-items: center;
