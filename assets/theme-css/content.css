@@ -1,7 +1,7 @@
 .content-padding {
   display: flex;
   justify-content: center;
-  padding: 75px 15px 125px 15px;
+  margin: 1em;
 }
 
 .content-container {

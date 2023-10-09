@@ -1,5 +1,7 @@
 .panel {
-  margin: 15px 0;
+  margin: 1em;
+  /* Override bulma. */
+  box-shadow: none;
 }
 
 .panel .container {
@@ -17,7 +19,7 @@
   height: 140px;
   min-width: 275px;
   width: 335px;
-  margin: 25px 15px 25px 15px;
+  margin: 0.5em 1em;
   border-radius: 3px;
 }
 
@@ -49,12 +51,6 @@
   padding-top: 1em;
 }
 
-.panel-box-content:hover > .panel-box-text,
-.panel-box-content:focus > .panel-box-text,
-.panel-box-content:active > .panel-box-text {
-  color: var(--colorSecondaryDark);
-}
-
 @media only screen and (max-width: 1280px) {
   .panel .container {
     align-items: center;
@@ -83,10 +79,6 @@
 .panel-underline {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  /* Black, with 10% opacity */
-  box-shadow: 0px 8px 15px var(--colorShadow);
   position: relative;
   overflow: hidden;
 }
@@ -117,7 +109,7 @@
 .panel-button {
   border: 2px solid var(--colorPrimary);
   background-color: var(--colorLight);
-  color: var(--colorPrimary);
+  color: var(--colorText);
   font-size: 16px;
   cursor: pointer;
   padding-bottom: calc(0.5em - 1px);
