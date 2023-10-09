@@ -30,3 +30,19 @@ doc-serve: doc/content/shortcodes.md
 
 docs: doc/content/shortcodes.md
 	(cd doc ; hugo --themesDir="../..")
+
+PST_SASS_DIR = assets/theme-css/pst
+ALL_SASS_FILENAME = $(PST_SASS_DIR)/all.scss
+
+pydata-sphinx-theme-scss:
+# Copy the latest SCSS files from the pydata-sphinx-theme repo into
+# our project.  This must be passed to a single shell invocation due
+# to the variable, which we only want to define when executing this
+# rule.  NOTE: This assumes none of these filenames include spaces.
+	rm -rf $(PST_SASS_DIR)
+	TEMP_DIR=$$(mktemp -d) \
+	&& git clone --depth 1 "https://github.com/pydata/pydata-sphinx-theme.git" "$$TEMP_DIR" \
+	&& cp -a "$$TEMP_DIR"/src/pydata_sphinx_theme/assets/styles $(PST_SASS_DIR) \
+	&& SCSS_FILES=$$(find $(PST_SASS_DIR) -iname '*.scss') \
+	&& echo "/* Imported pydata-sphinx-theme Sass files as of: $$(cd $$TEMP_DIR && git rev-parse --short HEAD) */" >$(ALL_SASS_FILENAME) \
+	&& for file in $$SCSS_FILES; do echo "@import '$$(basename -s .scss $$file)';" >>$(ALL_SASS_FILENAME); done
