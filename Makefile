@@ -32,7 +32,8 @@ docs: doc/content/shortcodes.md
 	(cd doc ; hugo --themesDir="../..")
 
 PST_SASS_DIR = assets/theme-css/pst
-ALL_SASS_FILENAME = $(PST_SASS_DIR)/all.scss
+PST_SASS_VARIABLES_DIR = $(PST_SASS_DIR)/variables
+PST_VARS_SASS_FILENAME = assets/theme-css/pst-vars.scss
 
 pydata-sphinx-theme-scss:
 # Copy the latest SCSS files from the pydata-sphinx-theme repo into
@@ -41,8 +42,10 @@ pydata-sphinx-theme-scss:
 # rule.  NOTE: This assumes none of these filenames include spaces.
 	rm -rf $(PST_SASS_DIR)
 	TEMP_DIR=$$(mktemp -d) \
-	&& git clone --depth 1 "https://github.com/pydata/pydata-sphinx-theme.git" "$$TEMP_DIR" \
-	&& cp -a "$$TEMP_DIR"/src/pydata_sphinx_theme/assets/styles $(PST_SASS_DIR) \
-	&& SCSS_FILES=$$(find $(PST_SASS_DIR) -iname '*.scss') \
-	&& echo "/* Imported pydata-sphinx-theme Sass files as of: $$(cd $$TEMP_DIR && git rev-parse --short HEAD) */" >$(ALL_SASS_FILENAME) \
-	&& for file in $$SCSS_FILES; do echo "@import '$$(basename -s .scss $$file)';" >>$(ALL_SASS_FILENAME); done
+	&& ( \
+		git clone --depth 1 "https://github.com/pydata/pydata-sphinx-theme.git" "$$TEMP_DIR" \
+		&& cp -a "$$TEMP_DIR"/src/pydata_sphinx_theme/assets/styles $(PST_SASS_DIR) \
+		&& SCSS_FILES=$$(find $(PST_SASS_VARIABLES_DIR) -iname '*.scss') \
+		&& echo "/* Imported pydata-sphinx-theme Sass variables files as of: $$(cd $$TEMP_DIR && git rev-parse --short HEAD) */" >$(PST_VARS_SASS_FILENAME) \
+		&& for file in $$SCSS_FILES; do echo "@import 'pst/variables/$$(basename -s .scss $$file)';" >>$(PST_VARS_SASS_FILENAME); done \
+	); rm -rf $$TEMP_DIR
