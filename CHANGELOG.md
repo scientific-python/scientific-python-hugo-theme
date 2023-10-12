@@ -1,3 +1,39 @@
+# scientific-python-hugo-theme 0.2
+
+We're happy to announce the release of scientific-python-hugo-theme 0.2!
+
+## Enhancements
+
+- Implement dark mode ([#233](https://github.com/scientific-python/scientific-python-hugo-theme/pull/233)).
+- Change: (posts.css) Condense and simplify ([#283](https://github.com/scientific-python/scientific-python-hugo-theme/pull/283)).
+- Blog dark theme issues ([#284](https://github.com/scientific-python/scientific-python-hugo-theme/pull/284)).
+- Fix: (pre) background-color, color ([#288](https://github.com/scientific-python/scientific-python-hugo-theme/pull/288)).
+
+## Bug Fixes
+
+- Fix: (.navbar-logo-text) Color ([#282](https://github.com/scientific-python/scientific-python-hugo-theme/pull/282)).
+- Fix hero title and icon alignment on narrower screens ([#276](https://github.com/scientific-python/scientific-python-hugo-theme/pull/276)).
+- Fix: (light-mode.css) Specify --colorBlockBackground ([#287](https://github.com/scientific-python/scientific-python-hugo-theme/pull/287)).
+
+## Maintenance
+
+- Update prettier config ([#277](https://github.com/scientific-python/scientific-python-hugo-theme/pull/277)).
+- Use pre-commit bot ([#281](https://github.com/scientific-python/scientific-python-hugo-theme/pull/281)).
+
+## Contributors
+
+2 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+1 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.1
 
 We're happy to announce the release of scientific-python-hugo-theme 0.1!
