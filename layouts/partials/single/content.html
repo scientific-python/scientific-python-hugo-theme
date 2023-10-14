@@ -11,7 +11,7 @@
                 <div class="divider"></div>
             </div>
         </div>
-        {{ with partial "post_meta.html" . -}}
+        {{ with partial "post_meta.html" (dict "context" . "noSummary" true) -}}
         <div class="post-meta">{{ . }}</div>
         {{- end }}
 
