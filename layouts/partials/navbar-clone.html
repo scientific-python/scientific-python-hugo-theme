@@ -25,7 +25,7 @@
         {{- range $navbar }}
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
+          <a class="navbar-link nav-internal">
             {{ .title }}
           </a>
 
@@ -44,7 +44,7 @@
           </span>
         </a>
         {{- else }}
-        <a href="{{ .url }}" class="navbar-item is-secondary">
+        <a href="{{ .url }}" class="navbar-link nav-internal">
           {{ .title }}
         </a>
         {{- end }}

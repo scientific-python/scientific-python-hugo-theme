@@ -2,7 +2,7 @@
 {{- $navbar         := .Site.Params.navbar }}
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
 {{- $navbarLogoShow := .Site.Params.navbarlogoshow }}
-<nav id="nav" class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+<nav id="nav" class="bd-header bd-navbar navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container is-max-widescreen">
     <div class="navbar-brand">
       {{ if or (not .IsHome) ($navbarLogoShow) }}
