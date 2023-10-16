@@ -3,7 +3,7 @@
 
 {{- $inServerMode := .Site.IsServer -}}
 <!-- NOTE: Including the pst-vars.scss file while developing. -->
-{{- $sass         := (slice "theme-css/fresh/core.scss" "theme-css/pst-vars.scss") -}}
+{{- $sass         := (slice "theme-css/fresh/core.scss") -}}
 {{- $cssOpts      := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 
 <!-- Fonts -->
@@ -34,7 +34,8 @@
 
 {{- $themeCssFiles := resources.Match "theme-css/*.css" -}}
 {{- $userCssFiles := resources.Match "css/*.css" -}}
-{{- $cssFiles := $themeCssFiles | append $userCssFiles }}
+{{- $pstCssFiles := resources.Match "theme-css/pst-styles/*.css" -}}
+{{- $cssFiles := $pstCssFiles | append $userCssFiles | append $themeCssFiles }}
 
 {{- range $cssFiles -}}
 
