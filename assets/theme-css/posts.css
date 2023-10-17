@@ -21,7 +21,7 @@ div.post-list {
   display: inline;
 }
 
-.post-author:not(:first-child):before {
+.post-author:not(:last-child):after {
   content: ", ";
 }
 
