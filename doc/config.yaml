@@ -13,6 +13,10 @@ params:
   description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
     - /images/logo.svg
+  iconlinks:
+    sourcecode:
+      url: https://github.com/scientific-python/scientific-python-hugo-theme
+  navbarlogoshow: true
   navbarlogo:
     image: logo.svg
     text: Scientific Python Hugo Theme
