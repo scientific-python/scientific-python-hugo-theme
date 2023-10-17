@@ -21,40 +21,46 @@
       </a>
     </div>
 
-    <div id="navbar-menu" class="navbar-menu is-static">
+    <div id="navbar-menu" class="navbar-header-items">
 
-      <div class="navbar-end">
-        {{- range $navbar }}
-        {{- if .sublinks }}
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            {{ .title }}
-          </a>
+      <div class="navbar-item">
+        <nav class="navbar-nav">
+          <ul class="bd-navbar-elements navbar-nav">
+            {{- range $navbar }}
+            <li class="nav-item">
+              {{- if .sublinks }}
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  {{ .title }}
+                </a>
 
-          <div class="navbar-dropdown">
-            {{- range .sublinks }}
-            <a href="{{ .url }}" class="navbar-item">
-              {{ .title }}
-            </a>
+                <div class="navbar-dropdown">
+                  {{- range .sublinks }}
+                  <a href="{{ .url }}" class="navbar-item">
+                    {{ .title }}
+                  </a>
+                  {{- end }}
+                </div>
+              </div>
+              {{- else if .button }}
+              <a href="{{ .url }}" class="navbar-item">
+                <span class="button signup-button rounded secondary-btn raised">
+                  {{ .title }}
+                </span>
+              </a>
+              {{- else }}
+              <a href="{{ .url }}" class="navbar-item is-secondary">
+                {{ .title }}
+              </a>
+              {{- end }}
+              {{- end }}
+
+              {{- if .IsTranslated }}
+              {{ partial "translation.html" . }}
+            </li>
             {{- end }}
-          </div>
-        </div>
-        {{- else if .button }}
-        <a href="{{ .url }}" class="navbar-item">
-          <span class="button signup-button rounded secondary-btn raised">
-            {{ .title }}
-          </span>
-        </a>
-        {{- else }}
-        <a href="{{ .url }}" class="navbar-item is-secondary">
-          {{ .title }}
-        </a>
-        {{- end }}
-        {{- end }}
-
-        {{- if .IsTranslated }}
-        {{ partial "translation.html" . }}
-        {{- end }}
+          </ul>
+        </nav>
       </div>
     </div>
   </div>
