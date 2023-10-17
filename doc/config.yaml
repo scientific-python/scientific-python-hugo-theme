@@ -12,25 +12,30 @@ markup:
 params:
   description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
-    - /images/logo.svg
+    logo:
+      file: /images/logo.svg
+      text: Scientific Python Hugo Theme
+      link: /
+      show: true
   iconlinks:
     sourcecode:
       url: https://github.com/scientific-python/scientific-python-hugo-theme
-  navbarlogoshow: true
-  navbarlogo:
-    image: logo.svg
-    text: Scientific Python Hugo Theme
-    link: /
   hero:
     title: Scientific Python Theme
     image: logo.svg
   navbar:
-    - title: Get started
-      url: /getstarted/
-    - title: Features
-      url: /features/
-    - title: Shortcodes
-      url: /shortcodes/
+    logo:
+      show: true
+      link: /
+      image: logo.svg
+      text: Scientific Python Theme 
+    links:
+      - title: Get started
+        url: /getstarted/
+      - title: Features
+        url: /features/
+      - title: Shortcodes
+        url: /shortcodes/
   keyfeatures:
     features:
       - title: Documented

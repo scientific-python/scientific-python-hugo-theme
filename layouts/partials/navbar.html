@@ -7,12 +7,12 @@
   <div class="bd-header__inner bd-page-width">
     <!-- Title and logo. -->
     <div class="navbar-header-items__start">
-      {{ if or (not .IsHome) ($navbarLogoShow) }}
-      {{- if $navbarLogo}}
+      {{ if or (not .IsHome) ($navbar.logo.show) }}
+      {{- if $navbar.logo.image }}
       <div class="navbar-item">
-        <a class="navbar-brand logo" href="{{ $navbarLogo.link }}">
-          <img class="logo__image" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
-          <p class="title logo__title">{{ default "" $navbarLogo.text }}</p>
+        <a class="navbar-brand logo" href="{{ $navbar.logo.link }}">
+          <img class="logo__image" src="{{ printf "/images/%s" $navbar.logo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbar.logo.text }}">
+          <p class="title logo__title">{{ default "" $navbar.logo.text }}</p>
         </a>
       </div>
       {{- end}}
@@ -25,7 +25,7 @@
         <div class="navbar-item">
           <nav class="navbar-nav">
             <ul class="bd-navbar-elements navbar-nav">
-              {{- range $navbar }}
+              {{- range $navbar.links }}
               <li class="nav-item">
                 <a href="{{ .url }}" class="navbar-item is-secondary">
                   {{ .title }}
