@@ -10,6 +10,11 @@
   font-weight: bold;
 }
 
+/* .keyfeatures SECTION. */
+section.keyfeatures  {
+  padding: 5%;
+}
+
 
 /* FOOTER element. */
 footer {
