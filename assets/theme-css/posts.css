@@ -21,7 +21,7 @@ div.post-list {
   display: inline;
 }
 
-.post-author:not(:last-child):after {
+.post-author:not(:first-child):before {
   content: ", ";
 }
 
@@ -31,9 +31,4 @@ div.post-list {
 
 .post-list .post-summary {
   padding-top: 0.5rem;
-}
-
-svg.calendar-icon, svg.person-icon {
-  /* FIXME: Use a color variable. */
-  fill: gray;
 }
