@@ -16,13 +16,18 @@ body {
 
 
 /* Hero DIV. */
+section.hero {
+  align-items: center;
+}
 .hero * img.logo {
-  max-height: 1em;
+  max-height: 0.6em;
+  vertical-align: top;
 }
 
 .hero .title {
-  font-size: 5em;
+  font-size: 4.5em;
   font-weight: bold;
+  margin: 0.5em;
 }
 
 /* .keyfeatures SECTION. */
