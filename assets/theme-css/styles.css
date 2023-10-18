@@ -30,9 +30,42 @@ section.hero {
   margin: 0.5em;
 }
 
-/* .keyfeatures SECTION. */
+/* Sections. */
 section.keyfeatures  {
   padding: 5%;
+}
+
+aside.news {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+aside.news header {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  vertical-align: middle;
+}
+
+aside.news > header {
+  border-right: 1px solid black;
+}
+
+aside.news article {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+aside.news article header * {
+  color: var(--colorText);
+  text-decoration: none;
+}
+aside.news article header time {
+  font-weight: normal;
 }
 
 
