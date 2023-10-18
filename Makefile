@@ -30,3 +30,7 @@ doc-serve: doc/content/shortcodes.md
 
 docs: doc/content/shortcodes.md
 	(cd doc ; hugo --themesDir="../..")
+
+theme: doc/content/shortcodes.md
+	(cd .. ; ln -s repo scientific-python-hugo-theme)
+	(cd doc ; hugo --themesDir="../..")
