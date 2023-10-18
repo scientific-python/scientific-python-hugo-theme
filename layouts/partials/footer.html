@@ -1,50 +1,51 @@
-{{- $title          := .Site.Params.title }}
+{{- $title       := .Site.Params.title }}
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
-{{- $quickLinks  := index $footer "quicklinks" }}
 {{- $socialMedia := index $footer "socialmedia" }}
-{{- $navbarLogo     := .Site.Params.navbarlogo }}
+{{- $navbarLogo  := .Site.Params.navbarlogo }}
 
-<footer id="footer" class="footer">
-  <div class="container is-max-widescreen">
-    <div id="footer-columns" class="columns">
-      <div class="footer-logo-column">
-        <img id="footer-logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
-      </div>
-      {{- range $quickLinks }}
-        <div class="link-column">
-          <div class="footer-column">
-            <div class="footer-header">
-            </div>
-            <ul class="link-list" style="margin-top: 20px;">
-              {{- range .links }}
-              <li class="link-list">
-                <a class="footer-link" href="{{ .link }}">
-                  {{ .text }}
-                </a>
-              </li>
-              {{- end }}
-            </ul>
-          </div>
-        </div>
-      {{- end }}
-        <div class="footer-actions">
-          {{ partial "footer_actions.html" . }}
-          <nav class="level is-mobile">
-            <div class="community-icons">
-              {{- range $socialMedia }}
-              <a class="level-item" href="{{ .link }}" aria-label="{{ .link }}">
-                {{if .icon -}}
-                {{- partial "svg-icon" .icon -}}
-                {{- else -}}
-                <span class="icon">ⓘ</span>
-                {{- end }}
-              </a>
-              {{- end }}
-            </div>
-          </nav>
-          <div class="copyright">&copy; {{ now.Year}} {{ $title }}. All rights reserved.</div>
-        </div>
+<footer class="footer">
+    <div>
+      <img class="logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
     </div>
-  </div>
+    
+    {{ with $footer.links }}
+    <div>
+      <ul>
+        {{ range . }}
+        <li>
+          <a href="{{ .link }}">
+            {{ .text }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    <div style="display: flex; flex-direction: column;">
+      {{ with $footer.icons }}
+      <div>
+        <ul class="icons">
+          {{ range . }}
+          <li>
+            <a href="{{ .link }}" aria-label="{{ .link }}">
+              {{ if .icon }}
+              {{- partial "svg-icon" .icon -}}
+              {{- else -}}
+              <span class="icon">ⓘ</span>
+              {{ end }}
+            </a>
+            {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ partial "footer_actions.html" . }}
+
+      {{ with .Site.Params.copyright }}
+      <div class="copyright">&copy; {{ now.Year }} {{ . }}. All rights reserved.</div>
+      {{ end }}
+    </div>
 </footer>
+

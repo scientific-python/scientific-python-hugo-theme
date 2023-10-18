@@ -1,6 +1,6 @@
-/* Rules that don't from pydata-sphinx-theme (PST). */
+/* Rules that don't come from pydata-sphinx-theme (PST). */
 
-/* Hero section. */
+/* Hero DIV. */
 .hero * img.logo {
   max-height: 1em;
 }
@@ -9,3 +9,27 @@
   font-size: 5em;
   font-weight: bold;
 }
+
+
+/* FOOTER element. */
+footer {
+  display: flex;
+  flex-direction: row;
+}
+footer > div {
+  flex-grow: 1;
+}
+footer img.logo {
+  max-height: 5em;
+}
+
+footer * ul.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding-inline-start: 0;
+}
+footer * ul.icons li {
+  margin: 0.25em;
+}
+
