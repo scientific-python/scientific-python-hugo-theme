@@ -24,8 +24,9 @@ teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
 doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 	python tools/render_shortcode_docs.py > doc/content/shortcodes.md
 
+# Serve for development purposes.
 doc-serve: doc/content/shortcodes.md
-	(cd doc && hugo serve --themesDir="../..")
+	(cd doc && hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
 docs: doc/content/shortcodes.md
 	(cd doc ; hugo --themesDir="../..")
