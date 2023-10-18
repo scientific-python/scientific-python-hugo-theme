@@ -1,5 +1,20 @@
 /* Rules that don't come from pydata-sphinx-theme (PST). */
 
+body {
+  font-family: Lato, sans-serif;
+}
+
+/* .navbar */
+.navbar * .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.navbar-header-items {
+  align-items: end;
+  flex-grow: 0 !important;
+}
+
+
 /* Hero DIV. */
 .hero * img.logo {
   max-height: 1em;

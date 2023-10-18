@@ -22,14 +22,14 @@ params:
     sourcecode:
       url: https://github.com/scientific-python/scientific-python-hugo-theme
   hero:
-    title: Scientific Python Theme
+    title: Scientific Python Hugo Theme
     image: logo.svg
   navbar:
     logo:
       show: true
       link: /
       image: logo.svg
-      text: Scientific Python Theme 
+      text: Scientific Python Hugo Theme 
     links:
       - title: Get started
         url: /getstarted/
