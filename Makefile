@@ -1,6 +1,5 @@
-.PHONY: doc-serve shortcode-docs docs
+.PHONY: doc-serve shortcode-docs docs scipy blog learn
 .DEFAULT_GOAL := doc-serve
-
 
 GH_ORG = scientific-python
 TEAMS_DIR = doc/static/teams
@@ -24,13 +23,35 @@ teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
 doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 	python tools/render_shortcode_docs.py > doc/content/shortcodes.md
 
+docs: doc/content/shortcodes.md
+	(cd doc ; hugo --themesDir="../..")
+
 # Serve for development purposes.
 doc-serve: doc/content/shortcodes.md
 	(cd doc && hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
-docs: doc/content/shortcodes.md
-	(cd doc ; hugo --themesDir="../..")
+# -----------------------------------
+# The following is for use on netlify
+# -----------------------------------
 
-theme: doc/content/shortcodes.md
-	(cd .. ; ln -s repo scientific-python-hugo-theme)
+theme: doc/content/shortcodes.md scipy blog learn
 	(cd doc ; hugo --themesDir="../..")
+	(mv scipy/public doc/public/scipy)
+	(mv blog/public doc/public/blog)
+	(mv learn/public doc/public/learn)
+
+scipy:
+	rm -rf $@
+	git clone https://github.com/scipy/scipy.org $@
+	(cd $@ ; hugo --themesDir="../..")
+
+blog:
+	rm -rf $@
+	git clone https://github.com/scientific-python/blog.scientific-python.org $@
+	(cd $@ ; make prepare ; cp -a themes/hugo-atom-feed ../..)
+	(cd $@ ; hugo --themesDir="../..")
+
+learn:
+	rm -rf $@
+	git clone https://github.com/scientific-python/learn.scientific-python.org $@
+	(cd $@ ; hugo --themesDir="../..")
