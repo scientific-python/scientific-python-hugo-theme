@@ -49,7 +49,9 @@ params:
       - title: Community Maintained
         text: The theme is maintained by the [Theme Team](/about/).
   footer:
-    logo: logo.svg
+    logo:
+      file: logo.svg
+      text: Scientific Python
     links:
       - text: About
         link: /about/

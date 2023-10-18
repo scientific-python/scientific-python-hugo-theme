@@ -1,51 +1,51 @@
 {{- $title       := .Site.Params.title }}
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
-{{- $socialMedia := index $footer "socialmedia" }}
-{{- $navbarLogo  := .Site.Params.navbarlogo }}
 
 <footer class="footer">
+  {{ with $footer.logo }}
+  <div>
+    <img class="logo" src="{{- printf "/images/%s" .file | relURL -}}" alt="{{- .text -}}">
+  </div>
+  {{ end }}
+  
+  {{ with $footer.links }}
+  <div>
+    <ul>
+      {{ range . }}
+      <li>
+        <a href="{{ .link }}">
+          {{ .text }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <div style="display: flex; flex-direction: column;">
+    {{ with $footer.icons }}
     <div>
-      <img class="logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
-    </div>
-    
-    {{ with $footer.links }}
-    <div>
-      <ul>
+      <ul class="icons">
         {{ range . }}
         <li>
-          <a href="{{ .link }}">
-            {{ .text }}
+          <a href="{{ .link }}" aria-label="{{ .link }}">
+            {{ if .icon }}
+            {{- partial "svg-icon" .icon -}}
+            {{- else -}}
+            <span class="icon">ⓘ</span>
+            {{ end }}
           </a>
-        </li>
-        {{ end }}
+          {{ end }}
       </ul>
     </div>
     {{ end }}
 
-    <div style="display: flex; flex-direction: column;">
-      {{ with $footer.icons }}
-      <div>
-        <ul class="icons">
-          {{ range . }}
-          <li>
-            <a href="{{ .link }}" aria-label="{{ .link }}">
-              {{ if .icon }}
-              {{- partial "svg-icon" .icon -}}
-              {{- else -}}
-              <span class="icon">ⓘ</span>
-              {{ end }}
-            </a>
-            {{ end }}
-        </ul>
-      </div>
-      {{ end }}
+    {{ partial "footer_actions.html" . }}
 
-      {{ partial "footer_actions.html" . }}
-
-      {{ with .Site.Params.copyright }}
-      <div class="copyright">&copy; {{ now.Year }} {{ . }}. All rights reserved.</div>
-      {{ end }}
-    </div>
+    {{ with .Site.Params.copyright }}
+    <div class="copyright">&copy; {{ now.Year }} {{ . }}. All rights reserved.</div>
+    {{ end }}
+  </div>
 </footer>
 
