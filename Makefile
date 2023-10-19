@@ -1,4 +1,4 @@
-.PHONY: doc-serve shortcode-docs docs scipy blog learn
+.PHONY: doc-serve shortcode-docs docs scipy main blog learn
 .DEFAULT_GOAL := doc-serve
 
 GH_ORG = scientific-python
@@ -34,15 +34,23 @@ doc-serve: doc/content/shortcodes.md
 # The following is for use on netlify
 # -----------------------------------
 
-theme: doc/content/shortcodes.md scipy blog learn
+theme: doc/content/shortcodes.md scipy main blog learn
 	(cd doc ; hugo --themesDir="../..")
-	(mv scipy/public doc/public/scipy)
-	(mv blog/public doc/public/blog)
-	(mv learn/public doc/public/learn)
+	mv scipy/public doc/public/scipy
+	mv main/public doc/public/main
+	mv blog/public doc/public/blog
+	mv learn/public doc/public/learn
 
 scipy:
 	rm -rf $@
 	git clone https://github.com/scipy/scipy.org $@
+	(cd $@ ; hugo --themesDir="../..")
+
+main:
+	rm -rf $@
+	git clone https://github.com/scientific-python/scientific-python.org $@
+	(cd $@ ; git submodule update --init content/specs)
+	(cd $@ ; pip install -q -r requirements.txt)
 	(cd $@ ; hugo --themesDir="../..")
 
 blog:
