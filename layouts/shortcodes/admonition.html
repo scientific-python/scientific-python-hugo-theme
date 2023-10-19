@@ -1,0 +1,28 @@
+{{/*
+
+doc: Create note, warning, information, and tip notices.
+
+{{< admonition note >}}
+This is a note.
+{{< /admonition >}}
+
+{{< admonition info >}}
+This is information.
+{{< /admonition >}}
+
+{{< admonition warning>}}
+This is a warning.
+{{< /admonition >}}
+
+{{< admonition tip >}}
+This is a tip.
+{{< /admonition >}}
+
+*/}}
+
+<div class="admonition {{ .Get 0 }}">
+  <div class="admonition-title">🛈  &nbsp;{{ .Get 0 | humanize }}</div>
+  <p>
+    {{ .Inner | markdownify }}
+  </p>
+</div>
