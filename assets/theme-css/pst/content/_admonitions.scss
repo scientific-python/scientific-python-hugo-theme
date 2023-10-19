@@ -13,6 +13,7 @@ div.admonition,
   border-color: var(--pst-color-info);
   border-radius: $admonition-border-radius;
   background-color: var(--pst-color-on-background);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
   //@include box-shadow();
 
   // Last item should have no spacing since we'll control that w/ padding
@@ -38,6 +39,7 @@ div.admonition,
     padding: 0.4rem 0.6rem 0.4rem 2rem;
     font-weight: var(--pst-admonition-font-weight-heading);
     position: relative;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
     //@include background-from-color-variable(--pst-color-info-bg);
     // now that we use solid colors we want the title on top
     z-index: 1;
@@ -283,6 +285,7 @@ aside.topic {
   border-color: var(--pst-color-border);
   border-radius: $admonition-border-radius;
   padding: 1rem 1.25rem;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
   //@include box-shadow();
 
   .topic-title {
