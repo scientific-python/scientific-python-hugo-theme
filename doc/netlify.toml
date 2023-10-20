@@ -2,14 +2,16 @@
   PYTHON_VERSION = "3.8" # netlify currently only support 2.7 and 3.8
   HUGO_VERSION = "0.119.0"
   DART_SASS_VERSION = "1.69.4"
+  DART_SASS_URL = "https://github.com/sass/dart-sass/releases/download/"
 
 [build]
   base = "doc"
   publish = "public"
   command = """\
-    curl -LJO https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
-    tar -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
-    rm dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz && \
+    export DART_SASS_TARBALL="dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz" && \
+    curl -LJO ${DART_SASS_URL}/${DART_SASS_VERSION}/${DART_SASS_TARBALL} && \
+    tar -xf ${DART_SASS_TARBALL} && \
+    rm ${DART_SASS_TARBALL} && \
     export PATH=/opt/build/repo/doc/dart-sass:$PATH && \
     (cd ../.. ; ln -s repo scientific-python-hugo-theme) && \
     (cd .. ; make docs) \
