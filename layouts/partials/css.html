@@ -5,7 +5,7 @@
 {{- $serverOpts   := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 {{- $sassCompiler := dict "transpiler" "dartsass" -}}
 {{- $cssOpts      := collections.Merge $sassCompiler $serverOpts -}}
-{{- $sass         := (slice "theme-css/fresh/core.scss") -}}
+{{- $sass         := (slice "theme-css/fresh/core.scss" "theme-css/pst/pydata-sphinx-theme.scss") -}}
 
 <!-- Fonts -->
 {{- $fontName     := .Site.Params.font.name | default "Open Sans" -}}
@@ -21,7 +21,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
-<!-- SASS --- currently only for fresh -->
+<!-- SASS -->
 {{- range $sass -}}
 
 {{- if $inServerMode -}}
