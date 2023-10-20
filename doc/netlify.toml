@@ -14,7 +14,7 @@
     rm ${DART_SASS_TARBALL} && \
     export PATH=/opt/build/repo/doc/dart-sass:$PATH && \
     (cd ../.. ; ln -s repo scientific-python-hugo-theme) && \
-    (cd .. ; make docs) \
+    (cd .. ; make theme) \
     """
 
 [context.deploy-preview]
