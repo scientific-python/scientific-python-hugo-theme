@@ -11,15 +11,8 @@ var prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
  */
 function autoTheme(e) {
   targetTheme = prefersDark.matches ? "dark" : "light";
-  document.documentElement.dataset.theme = targetTheme;
   document.documentElement.setAttribute("data-theme", targetTheme);
-  localStorage.setItem("theme", targetTheme);
-  localStorage.setItem("mode", targetTheme);
 }
 
-targetTheme = prefersDark.matches ? "dark" : "light";
-document.documentElement.dataset.theme = targetTheme;
-document.documentElement.setAttribute("data-theme", targetTheme);
-localStorage.setItem("theme", targetTheme);
-localStorage.setItem("mode", targetTheme);
+autoTheme();
 prefersDark.onchange = autoTheme;
