@@ -4,6 +4,15 @@
   DART_SASS_VERSION = "1.69.4"
   DART_SASS_URL = "https://github.com/sass/dart-sass/releases/download/"
 
+[context.production.environment]
+  BUILD_TARGET = "theme"
+
+[context.deploy-preview.environment]
+  BUILD_TARGET = "netlify-preview"
+
+[context.deploy-preview]
+  ignore = "false"
+
 [build]
   base = "doc"
   publish = "public"
@@ -14,11 +23,8 @@
     rm ${DART_SASS_TARBALL} && \
     export PATH=/opt/build/repo/doc/dart-sass:$PATH && \
     (cd ../.. ; ln -s repo scientific-python-hugo-theme) && \
-    (cd .. ; make theme) \
+    (cd .. ; make ${BUILD_TARGET}) \
     """
-
-[context.deploy-preview]
-  ignore = "false"
 
 [[plugins]]
   package = "netlify-plugin-checklinks"
