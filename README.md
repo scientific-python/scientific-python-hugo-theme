@@ -13,7 +13,7 @@ documentation](https://theme.scientific-python.org), especially the
 When making PRs against this repository, a site preview of the theme
 documentation will be rendered. From there, you can browse preview
 builds of a few other community websites: `scipy`, `main`
-(scientific-python.org), `blog`, and `learn`.  E.g., if the preview link is
+(scientific-python.org), `blog`, and `learn`. E.g., if the preview link is
 
 https://deploy-preview-301--scientific-python-hugo-theme.netlify.app/
 
