@@ -3,6 +3,10 @@ body {
   font-family: var(--fontFamily), sans-serif;
 }
 
+.title {
+  color: var(--pst-heading-color);
+}
+
 code {
   font-size: 0.85em;
   padding: 0.15em;
