@@ -23,7 +23,6 @@ It\'s got a certain charm to it.
 
 ## `attention`
 
-
 {{< admonition attention >}}
 Climate change is real.
 {{< /admonition >}}
