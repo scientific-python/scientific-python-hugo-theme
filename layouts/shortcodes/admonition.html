@@ -2,26 +2,50 @@
 
 doc: Create note, warning, information, and tip notices.
 
+{{< admonition attention >}}
+This is an attention admonition.
+{{< /admonition >}}
+
+{{< admonition caution >}}
+This is a caution admonition.
+{{< /admonition >}}
+
+{{< admonition danger >}}
+This is a danger admonition.
+{{< /admonition >}}
+
+{{< admonition error >}}
+This is an error admonition.
+{{< /admonition >}}
+
+{{< admonition hint >}}
+This is an hint admonition.
+{{< /admonition >}}
+
+{{< admonition important >}}
+This is an important admonition.
+{{< /admonition >}}
+
 {{< admonition note >}}
-This is a note.
+This is a note admonition.
 {{< /admonition >}}
 
-{{< admonition info >}}
-This is information.
-{{< /admonition >}}
-
-{{< admonition warning>}}
-This is a warning.
+{{< admonition seealso >}}
+This is a seealso admonition.
 {{< /admonition >}}
 
 {{< admonition tip >}}
-This is a tip.
+This is a tip admonition.
+{{< /admonition >}}
+
+{{< admonition warning>}}
+This is a warning admonition.
 {{< /admonition >}}
 
 */}}
 
 <div class="admonition {{ .Get 0 }}">
-  <div class="admonition-title">🛈  &nbsp;{{ .Get 0 | humanize }}</div>
+  <div class="admonition-title"> {{ .Get 0 | humanize }}</div>
   <p>
     {{ .Inner | markdownify }}
   </p>
