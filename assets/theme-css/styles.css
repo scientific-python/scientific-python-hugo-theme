@@ -1,30 +1,9 @@
-body {
-  color: var(--colorText);
-  font-family: var(--fontFamily), sans-serif;
-}
-
-code {
-  font-size: 0.85em;
-  padding: 0.15em;
-}
-
-em {
-  color: var(--colorText);
+.title {
+  color: var(--pst-heading-color);
 }
 
 hr {
   background-color: var(--colorSecondaryDark);
-}
-
-pre {
-  background-color: var(--colorPrimaryDark);
-  color: var(--colorTextInverse);
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
 }
 
 table th {
@@ -32,10 +11,19 @@ table th {
   color: var(--colorTextAlt);
 }
 
-/* This color came from uikit; we re-specify it here
-   to show how to override it for the content section */
-.content-padding a {
-  color: var(--colorContentLink);
+/**
+ * See `code.literal` in
+ * src/pydata_sphinx_theme/assets/styles/content/_code.scss
+ */
+:not(pre) > code {
+  padding: 0.1rem 0.25rem;
+  background-color: var(--pst-color-surface);
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.25rem;
+}
+
+a > code {
+  color: var(--pst-color-inline-code-links);
 }
 
 .flex-row {
@@ -137,20 +125,8 @@ table th {
   margin-top: 30px;
 }
 
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-top: 15px;
-}
-
-h3 {
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-top: 10px;
-}
-
 p {
-  padding-top: 5px;
+  margin-bottom: 0;
 }
 
 .content-container ul {
@@ -223,10 +199,8 @@ p {
   flex-shrink: 1;
 }
 
-.footer-link,
-.footer-link:hover {
-  font-size: 1rem;
-  color: var(--colorSecondary);
+a.footer-link {
+  color: var(--colorTextInverse);
 }
 
 .footer-actions {

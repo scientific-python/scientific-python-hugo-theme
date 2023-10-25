@@ -22,23 +22,5 @@
 
     --colorBlockBackground: var(--colorPrimaryDark);
     --colorCode: #ffb8d1;
-
-    /* FIXME: These colors should probably use named colors. */
-    --colorNoteBackground: #3f5565;
-    --colorInfoBackground: #45413a;
-    --colorWarningBackground: #433c3c;
-    --colorTipBackground: #3e433e;
-  }
-  html {
-    background: var(--colorBackground);
-    color: var(--colorText);
-  }
-  code {
-    background: var(--colorBlockBackground);
-    color: var(--colorCode);
-  }
-  pre {
-    background: var(--colorBlockBackground);
-    color: var(--colorText);
   }
 }

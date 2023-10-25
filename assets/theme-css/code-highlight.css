@@ -4,13 +4,13 @@ Generated using:
 
    hugo gen chromastyles --style=witchhazel > /assets/css/code-highlight.css
 
-We replaced the background color, `#433e56`, with `var(--colorPrimaryDark)`.
+We replaced the color and background color with pst ones.
 
 */
 /* Background */
 .chroma {
-  color: #f8f8f2;
-  background-color: var(--colorPrimaryDark);
+  color: var(--pst-color-text-base);
+  background-color: var(--pst-color-surface);
 }
 /* Error */
 .chroma .err {

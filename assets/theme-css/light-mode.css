@@ -21,9 +21,5 @@
     --colorTextInverse: var(--colorBackground);
     --colorBackgroundInverse: var(--colorPrimaryDark);
     --colorLinkInverse: var(--colorPrimaryLight);
-
-    /* Color from bulma.css, but this variable is currently only used for
-       dark mode. */
-    --colorCode: #da1039;
   }
 }

@@ -15,9 +15,9 @@
 // re-usable SCSS functions / classes
 @import "abstracts/all";
 
-//// Basic styling applied throughout site
-//@import "./base/base";
-//
+// Basic styling applied throughout site
+@import "./base/base";
+
 //// Major theme layout, skeleton, and whitespace
 //@import "./sections/skip-link";
 //@import "./sections/container";
@@ -51,7 +51,7 @@
 // Content blocks in standard Sphinx
 @import "./content/admonitions";
 //@import "./content/api";
-//@import "./content/code";
+@import "./content/code";
 //@import "./content/figures";
 //@import "./content/footnotes";
 //@import "./content/hacks";
