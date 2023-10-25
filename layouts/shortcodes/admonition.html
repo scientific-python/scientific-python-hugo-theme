@@ -45,7 +45,7 @@ Reader discretion is strongly advised.
 */}}
 
 <div class="admonition {{ .Get 0 }}">
-  <div class="admonition-title"> &nbsp;{{ .Get 0 | humanize }}</div>
+  <div class="admonition-title"> {{ .Get 0 | humanize }}</div>
   <p>
     {{ .Inner | markdownify }}
   </p>
