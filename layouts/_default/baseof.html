@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
+    {{ print "<!-- Generated " (time.Now.UTC.Format "2006-01-02 15:04:05 UTC") " -->" | safeHTML }}
     {{ partial "meta.html" . }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ if not (eq .Site.Title .Title) }} - {{ .Title }}{{end}}{{ end }}</title>
 
