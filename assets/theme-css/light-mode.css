@@ -22,12 +22,6 @@
     --colorBackgroundInverse: var(--colorPrimaryDark);
     --colorLinkInverse: var(--colorPrimaryLight);
 
-    /* .notice boxes (the heading colors are the same in both themes) */
-    --colorNoteBackground: #e7f2fa;
-    --colorInfoBackground: #fff2db;
-    --colorWarningBackground: #fae2e2;
-    --colorTipBackground: #e6f9e6;
-
     /* Color from bulma.css, but this variable is currently only used for
        dark mode. */
     --colorCode: #da1039;
