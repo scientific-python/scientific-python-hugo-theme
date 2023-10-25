@@ -1,3 +1,5 @@
+disableKinds:
+  - taxonomy
 params:
   fadeFrontPage: false
   images:
