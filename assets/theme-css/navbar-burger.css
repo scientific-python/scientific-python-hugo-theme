@@ -1,0 +1,195 @@
+.navbar-burger {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: 0 0;
+  border: none;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+} /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+.navbar.is-white .navbar-burger {
+  color: #0a0a0a;
+}
+.navbar.is-black .navbar-burger {
+  color: #fff;
+}
+.navbar.is-light .navbar-burger {
+  color: rgba(0, 0, 0, 0.7);
+}
+.navbar.is-dark .navbar-burger {
+  color: #fff;
+}
+.navbar.is-link .navbar-burger {
+  color: #fff;
+}
+.navbar.is-info .navbar-burger {
+  color: #fff;
+}
+.navbar.is-success .navbar-burger {
+  color: #fff;
+}
+.navbar-burger {
+  color: #4a4a4a;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: 0 0;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+  margin-left: auto;
+}
+.navbar-burger span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-duration: 86ms;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+}
+.navbar-burger span:first-child {
+  top: calc(50% - 6px);
+}
+.navbar-burger span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+.navbar-burger span:nth-child(3) {
+  top: calc(50% + 4px);
+}
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.navbar-burger.is-active span:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+.navbar-burger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-burger.is-active span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+.navbar-menu {
+  display: none;
+}
+.navbar-item,
+.navbar-link {
+  color: #4a4a4a;
+  display: block;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+.navbar-item .icon:only-child,
+.navbar-link .icon:only-child {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+.navbar-link,
+a.navbar-item {
+  cursor: pointer;
+}
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  background-color: #fafafa;
+  color: #485fc7;
+}
+.navbar-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.navbar-item img {
+  max-height: 1.75rem;
+}
+.navbar-item.has-dropdown {
+  padding: 0;
+}
+.navbar-item.is-expanded {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.navbar-item.is-tab {
+  border-bottom: 1px solid transparent;
+  min-height: 3.25rem;
+  padding-bottom: calc(0.5rem - 1px);
+}
+.navbar-item.is-tab:focus,
+.navbar-item.is-tab:hover {
+  background-color: transparent;
+  border-bottom-color: #485fc7;
+}
+.navbar-item.is-tab.is-active {
+  background-color: transparent;
+  border-bottom-color: #485fc7;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  color: #485fc7;
+  padding-bottom: calc(0.5rem - 3px);
+}
+.navbar-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.navbar-link:not(.is-arrowless) {
+  padding-right: 2.5em;
+}
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #485fc7;
+  margin-top: -0.375em;
+  right: 1.125em;
+}
+.navbar-dropdown {
+  font-size: 0.875rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.navbar-dropdown .navbar-item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media screen and (max-width: 1023px) {
+  .navbar > .container {
+    display: block;
+  }
+  .navbar-brand .navbar-item,
+  .navbar-tabs .navbar-item {
+    align-items: center;
+    display: flex;
+  }
+  .navbar-link::after {
+    display: none;
+  }
+  .navbar-menu {
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    padding: 0.5rem 0;
+  }
+  .navbar-menu.is-active {
+    display: block;
+  }
+  .navbar.is-fixed-top .navbar-menu {
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 3.25rem);
+    overflow: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar-burger {
+    display: none;
+  }
+}
