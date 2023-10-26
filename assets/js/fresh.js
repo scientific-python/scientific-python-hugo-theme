@@ -18,38 +18,6 @@ function whenReady() {
     });
   }
 
-  //reveal elements on scroll so animations trigger the right way
-  const win_height = window.document.documentElement.clientHeight;
-  function revealOnScroll() {
-    const scrolled = document.documentElement.scrollTop;
-    const reveals = document.querySelector(".revealOnScroll:not(.animated)");
-    reveals &&
-      Array.prototype.map.call(
-        document.querySelector(".revealOnScroll:not(.animated)"),
-        (e) => {
-          console.log(e);
-          const box = e.getBoundingClientRect();
-          const offsetTop =
-            box.top + window.pageYOffset - document.documentElement.clientTop;
-          if (scrolled + win_height * 1.1 > offsetTop) {
-            if (e.dataset.timeout) {
-              window.setTimeout(
-                () => {
-                  e.classList.add("animated");
-                  e.classList.add(e.dataset.animation);
-                },
-                parseInt(e.dataset.timeout, 10),
-              );
-            } else {
-              e.classList.add("animated");
-              e.classList.add(e.dataset.animation);
-            }
-          }
-        },
-      );
-  }
-  window.onscroll = revealOnScroll;
-
   // Back to Top button behaviour
   var pxShow = 600;
   var scrollSpeed = 500;
