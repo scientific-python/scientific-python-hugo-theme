@@ -5,7 +5,7 @@
 {{- $serverOpts   := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 {{- $sassCompiler := dict "transpiler" "dartsass" -}}
 {{- $cssOpts      := collections.Merge $sassCompiler $serverOpts -}}
-{{- $sass         := (slice "theme-css/fresh/core.scss" "theme-css/pst/pydata-sphinx-theme.scss") -}}
+{{- $sass         := (slice "theme-css/pst/pydata-sphinx-theme.scss") -}}
 
 <!-- Fonts -->
 {{- $fontName     := .Site.Params.font.name | default "Open Sans" -}}
