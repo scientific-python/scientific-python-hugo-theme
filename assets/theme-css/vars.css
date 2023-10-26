@@ -13,12 +13,4 @@
 
   --colorBrightBlue: rgb(30, 135, 240);
   --colorYellow: rgb(255, 197, 83);
-
-  /* .notice boxes (only the heading colors; the content background
-   colors are in the light/dark mode files) */
-  /* FIXME: These colors should probably use named colors. */
-  --colorNoteHeading: #6ab0de;
-  --colorInfoHeading: #f0b37e;
-  --colorWarningHeading: rgba(217, 83, 79, 0.8);
-  --colorTipHeading: rgba(92, 184, 92, 0.8);
 }
