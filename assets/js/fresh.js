@@ -1,11 +1,20 @@
-$(document).ready(function () {
+function whenReady() {
   //Mobile menu toggle
-  if ($(".navbar-burger").length) {
-    $(".navbar-burger").on("click", function () {
-      var menu_id = $(this).attr("data-target");
-      $(this).toggleClass("is-active");
-      $("#" + menu_id).toggleClass("is-active");
-      $(".navbar.is-light").toggleClass("is-dark-mobile");
+  const burgers = document.getElementsByClassName("navbar-burger");
+  if (burgers) {
+    Array.prototype.map.call(burgers, (burger) => {
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("is-active");
+
+        const menu_id = burger.getAttribute("data-target");
+        const menu = document.getElementById(menu_id);
+        menu.classList.toggle("is-active");
+
+        const navbars = document.getElementsByClassName("navbar is-light");
+        Array.prototype.map.call(navbars, (e) => {
+          e.classList.toggle("is-dark-mobile");
+        });
+      });
     });
   }
 
@@ -99,4 +108,10 @@ $(document).ready(function () {
         }
       }
     });
-});
+}
+
+if (document.readyState !== "loading") {
+  whenReady();
+} else {
+  document.addEventListener("DOMContentLoaded", whenReady);
+}
