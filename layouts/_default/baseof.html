@@ -23,11 +23,6 @@
 
   </head>
   <body>
-    <!-- Preloader. Set to true for front-page fade-in animation -->
-    {{ if (and .IsHome .Site.Params.fadeFrontPage) }}
-    <div id="preloader"></div>
-    {{ end -}}
-
     {{ block "navbar" . }}
     {{ partial "navbar.html" . -}}
     {{ partial "navbar-clone.html" . -}}

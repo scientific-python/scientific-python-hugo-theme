@@ -1,7 +1,6 @@
 disableKinds:
   - taxonomy
 params:
-  fadeFrontPage: false
   images:
     - /images/logo.svg
   navColor: blue
