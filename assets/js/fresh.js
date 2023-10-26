@@ -19,23 +19,24 @@ function whenReady() {
   }
 
   // Back to Top button behaviour
-  var pxShow = 600;
-  var scrollSpeed = 500;
-  $(window).on("scroll", function () {
-    if ($(window).scrollTop() >= pxShow) {
-      $("#backtotop").addClass("visible");
-    } else {
-      $("#backtotop").removeClass("visible");
+  const pxShow = 600;
+  var timer = null;
+  const backToTop = document.getElementById("backtotop");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+
+    if (timer !== null) {
+      clearTimeout(timer);
     }
-  });
-  $("#backtotop a").on("click", function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      scrollSpeed,
+
+    timer = setTimeout(() =>
+      backToTop.classList.toggle("visible", scrollTop >= pxShow),
     );
-    return false;
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 500, behavior: "smooth" });
   });
 }
 
