@@ -22,20 +22,8 @@ function throttle(fn, interval) {
   };
 }
 
-// Highlight currently scrolled to header in shortcuts
-// Based on https://stackoverflow.com/a/32396543/214686
-// and
-// https://stackoverflow.com/a/57494988/214686
-// which fixes some issues with the first, particularly
-// around scrolling upward.
-function scrollHeadersAndNavbar() {
+function scrollNavbar() {
   const scrollPosition = document.documentElement.scrollTop;
-  const headers = Array.from(
-    document.querySelectorAll(":is(h1, h2, h3, h4, h5, h6)[id]"),
-  );
-  const allShortcuts = Array.from(
-    document.querySelectorAll("#shortcuts > div"),
-  );
 
   //Navbar Clone
   const navbarClone = document.getElementById("navbar-clone");
@@ -43,6 +31,24 @@ function scrollHeadersAndNavbar() {
   // Make navbar sticky, by activating a second, duplicate navbar
   // that is fixed to the top of the screen.
   navbarClone.classList.toggle("is-active", scrollPosition > 50);
+}
+
+// Highlight currently scrolled to header in shortcuts
+// Based on https://stackoverflow.com/a/32396543/214686
+// and
+// https://stackoverflow.com/a/57494988/214686
+// which fixes some issues with the first, particularly
+// around scrolling upward.
+function scrollHeadersAndNavbar() {
+  scrollNavbar();
+
+  const scrollPosition = document.documentElement.scrollTop;
+  const headers = Array.from(
+    document.querySelectorAll(":is(h1, h2, h3, h4, h5, h6)[id]"),
+  );
+  const allShortcuts = Array.from(
+    document.querySelectorAll("#shortcuts > div"),
+  );
 
   headers.map((currentSection) => {
     // get the position of the section
@@ -100,20 +106,24 @@ function setupShortcuts(shortcutDepth = 2) {
   }
 
   // Content Page Shortcuts
-  const shortcutsTarget = $("#shortcuts");
-  if (shortcutsTarget.length > 0) {
-    $(classes).map(function (idx, el) {
+  const shortcutsTarget = document.getElementById("shortcuts");
+  if (shortcutsTarget) {
+    const classElements = Array.from(document.querySelectorAll(classes));
+    classElements.map((el) => {
       const title = el.textContent;
       const elId = el.id;
       // Gets the element type (e.g. h2, h3)
-      const elType = $(el).get(0).tagName;
+      const elType = el.tagName;
       // Adds snake-case title as an id attribute to target element
-      shortcutsTarget.append(
+      shortcutsTarget.insertAdjacentHTML(
+        "beforeend",
         `<div id="${elId}-shortcut" class="shortcuts-${elType}" href="#${elId}">${title}</div>`,
       );
 
-      const shortcut = $(`#${elId}-shortcut`);
-      shortcut.click(function () {
+      const shortcut = document.getElementById(`${elId}-shortcut`);
+      shortcut.addEventListener("click", () => {
+        event.preventDefault();
+
         // We don't want the shortcuts to flash through highlights while
         // we scroll to the desired header
         unbindScroll();
@@ -121,32 +131,52 @@ function setupShortcuts(shortcutDepth = 2) {
         // Replace what's in the location bar, without changing browser history
         // and without triggering a page scroll
         history.replaceState(null, null, `#${elId}`);
-
-        let distance = $(`#${elId}`).offset().top - 60;
-        $([document.documentElement, document.body]).animate(
-          {
-            scrollTop: distance,
-          },
-          300,
-          null,
-          function () {
-            $("#shortcuts > div").removeClass("active");
-            shortcut.addClass("active");
-
-            // Done moving to clicked header; re-enable
-            // scroll highlighting of shortcuts
-            bindScroll();
-          },
+        const shortcutDivs = Array.from(
+          document.querySelectorAll("#shortcuts > div"),
         );
+        shortcutDivs.forEach((e) => e.classList.remove("active"));
+        shortcut.classList.add("active");
+
+        let headerOffset = el.offsetTop - 60;
+        scrollToThen(headerOffset, () => {
+          // Done moving to clicked header; re-enable
+          // scroll highlighting of shortcuts
+          bindScroll();
+
+          // After scroll, display the navbar, if necessary
+          scrollNavbar();
+        });
       });
     });
   }
 
   // Removes the shortcuts container if no shortcuts exist.
   // Also removes the 'Get Help' link.
-  if ($("#shortcuts div").length < 1) {
-    $(".shortcuts-container").css("display", "none");
+  const shortcuts = Array.from(document.querySelectorAll("#shortcuts div"));
+  if (shortcuts.length == 0) {
+    const shortcutsContainer = document.getElementById("shortcuts-container");
+    shortcutsContainer.style.display = "none";
   }
 
   bindScroll();
+}
+
+/**
+ * Modified from https://stackoverflow.com/a/55686711/214686
+ */
+function scrollToThen(offset, callback) {
+  const onScroll = throttle(() => {
+    const fixedOffset = offset.toFixed();
+    if (window.pageYOffset.toFixed() === fixedOffset) {
+      window.removeEventListener("scroll", onScroll);
+      callback();
+    }
+  }, 100);
+
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+  window.scrollTo({
+    top: offset,
+    /* behavior: 'smooth' */ /* too slow? */
+  });
 }
