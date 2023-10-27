@@ -369,6 +369,15 @@ pre {
   overflow: auto;
 }
 
+/* hide headerlinks until hovered over */
+a.headerlink {
+  visibility: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover > a.headerlink {
+  visibility: visible;
+}
+
 /* Local Variables: */
 /* css-indent-offset: 2 */
 /* End: */

@@ -110,7 +110,8 @@ function setupShortcuts(shortcutDepth = 2) {
   if (shortcutsTarget) {
     const classElements = Array.from(document.querySelectorAll(classes));
     classElements.map((el) => {
-      const title = el.textContent;
+      // Get title but remove anchor character #
+      const title = el.textContent.replace(/#$/, "");
       const elId = el.id;
       // Gets the element type (e.g. h2, h3)
       const elType = el.tagName;
