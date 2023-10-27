@@ -20,6 +20,7 @@ table th {
   background-color: var(--pst-color-surface);
   border: 1px solid var(--pst-color-border);
   border-radius: 0.25rem;
+  font-size: 0.875em;
 }
 
 a > code {
