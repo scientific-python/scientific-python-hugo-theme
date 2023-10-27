@@ -362,6 +362,13 @@ a.navbar-item:hover {
   background: var(--colorPrimaryDark);
 }
 
+/* reboot stuff needed for pydata-sphinx-theme */
+
+pre {
+  font-size: 0.875em;
+  overflow: auto;
+}
+
 /* Local Variables: */
 /* css-indent-offset: 2 */
 /* End: */
