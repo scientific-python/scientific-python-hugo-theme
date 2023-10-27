@@ -309,7 +309,7 @@ svg.icon {
 
 nav,
 .navbar {
-  background: var(--colorBackground);
+  background: var(--pst-color-background);
   color: var(--pst-color-text-base);
 }
 .navbar-burger {

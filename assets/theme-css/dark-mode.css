@@ -3,7 +3,6 @@
     /* Basically, we reassign the colors named in the non-dark theme. The
        exception is the background: it seems to look better as #111
        than as --colorPrimaryDark. */
-    --colorBackground: #111;
     --colorBackgroundAlt: var(--colorPrimaryDark);
     --colorBackgroundAlt2: var(--colorSecondaryDark);
 
