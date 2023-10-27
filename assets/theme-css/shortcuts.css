@@ -1,4 +1,4 @@
-.shortcuts-container {
+#shortcuts-container {
   position: sticky;
   align-self: flex-start;
   top: 6rem;
@@ -42,7 +42,7 @@
 }
 
 @media only screen and (max-width: 1090px) {
-  .shortcuts-container {
+  #shortcuts-container {
     display: none;
   }
 }
