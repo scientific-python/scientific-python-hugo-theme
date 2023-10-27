@@ -106,7 +106,7 @@ a > code {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;
-  color: var(--colorTextInverse);
+  color: var(--colorSecondary);
   background-color: var(--colorBackgroundInverse);
   border: none;
   border-radius: 25px;
@@ -200,7 +200,7 @@ p {
 }
 
 a.footer-link {
-  color: var(--colorTextInverse);
+  color: var(--colorSecondary);
 }
 
 .footer-actions {
