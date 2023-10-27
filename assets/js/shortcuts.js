@@ -29,28 +29,33 @@ function throttle(fn, interval) {
 // which fixes some issues with the first, particularly
 // around scrolling upward.
 function scrollHeadersAndNavbar() {
-  var scrollPosition = $(window).scrollTop();
-  var headers = $(":header[id]");
-  var allShortcuts = $("#shortcuts > div");
+  const scrollPosition = document.documentElement.scrollTop;
+  const headers = Array.from(
+    document.querySelectorAll(":is(h1, h2, h3, h4, h5, h6)[id]"),
+  );
+  const allShortcuts = Array.from(
+    document.querySelectorAll("#shortcuts > div"),
+  );
 
   //Navbar Clone
-  if (scrollPosition > 50) {
-    $("#navbar-clone").addClass("is-active");
-  } else {
-    $("#navbar-clone").removeClass("is-active");
-  }
+  const navbarClone = document.getElementById("navbar-clone");
 
-  headers.each(function () {
-    var currentSection = $(this);
+  // Make navbar sticky, by activating a second, duplicate navbar
+  // that is fixed to the top of the screen.
+  navbarClone.classList.toggle("is-active", scrollPosition > 50);
+
+  headers.map((currentSection) => {
     // get the position of the section
-    var sectionTop = currentSection.position().top;
-    var sectionHeight = currentSection.height();
+    // emulates JQuery's .position().top
+    const marginTop = parseInt(getComputedStyle(currentSection).marginTop, 10);
+    var sectionTop = currentSection.offsetTop - marginTop;
+    var sectionHeight = currentSection.getBoundingClientRect().height;
     var overall = scrollPosition + sectionHeight;
     var headerOffset = remToPx(4);
 
     if (scrollPosition < headerOffset) {
-      allShortcuts.removeClass("active");
-      return false;
+      allShortcuts.map((shortcut) => shortcut.classList.remove("active"));
+      return;
     }
 
     // user has scrolled over the top of the section
@@ -58,22 +63,24 @@ function scrollHeadersAndNavbar() {
       scrollPosition + headerOffset >= sectionTop &&
       scrollPosition < overall
     ) {
-      var id = currentSection.attr("id");
-      var shortcut = $(`#${id}-shortcut`);
-      if (shortcut.length && !shortcut.hasClass("active")) {
-        allShortcuts.removeClass("active");
-        shortcut.addClass("active");
+      const id = currentSection.id;
+      const shortcut = document.getElementById(`${id}-shortcut`);
+      if (shortcut) {
+        allShortcuts.map((shortcut) => shortcut.classList.remove("active"));
+        shortcut.classList.add("active");
       }
     }
   });
 }
 
+const throttledScrollHeadersAndNavbar = throttle(scrollHeadersAndNavbar, 100);
+
 function bindScroll() {
-  $(window).scroll(throttle(scrollHeadersAndNavbar, 100));
+  window.addEventListener("scroll", throttledScrollHeadersAndNavbar);
 }
 
 function unbindScroll() {
-  $(window).unbind("scroll");
+  window.removeEventListener("scroll", throttledScrollHeadersAndNavbar);
 }
 
 function remToPx(rem) {
