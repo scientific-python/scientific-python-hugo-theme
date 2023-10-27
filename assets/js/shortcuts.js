@@ -155,7 +155,9 @@ function setupShortcuts(shortcutDepth = 2) {
   const shortcuts = Array.from(document.querySelectorAll("#shortcuts div"));
   if (shortcuts.length == 0) {
     const shortcutsContainer = document.getElementById("shortcuts-container");
-    shortcutsContainer.style.display = "none";
+    if (shortcutsContainer) {
+      shortcutsContainer.style.display = "none";
+    }
   }
 
   bindScroll();
