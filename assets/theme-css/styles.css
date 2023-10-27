@@ -67,7 +67,7 @@ a > code {
   font-family: var(--fontFamily), sans-serif;
   font-weight: 900;
   font-size: 6em;
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   justify-content: center;
   margin-left: 1em;
   margin-bottom: 0.2em;
@@ -83,7 +83,7 @@ a > code {
 }
 
 .hero-subtitle {
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   font-size: 1em;
   max-width: 550px;
 }
@@ -310,7 +310,7 @@ svg.icon {
 nav,
 .navbar {
   background: var(--colorBackground);
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
 }
 .navbar-burger {
   color: var(--colorTextAlt);
@@ -327,7 +327,7 @@ nav,
 
 a.navbar-item,
 a.navbar-item:visited {
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   text-decoration: none;
 }
 
@@ -341,7 +341,7 @@ a.navbar-item:hover {
 }
 
 .navbar-logo-text {
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   font-size: 1.25rem;
   font-weight: bold;
 }

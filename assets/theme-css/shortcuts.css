@@ -13,14 +13,14 @@
 
 #shortcuts > div:not(.active) {
   margin-left: 2px;
-  border-left: 1px solid var(--colorText);
+  border-left: 1px solid var(--pst-color-text-base);
   opacity: 0.75;
 }
 
 #shortcuts > div.active {
   font-weight: bold;
-  color: var(--colorText);
-  border-left: 5px solid var(--colorText);
+  color: var(--pst-color-text-base);
+  border-left: 5px solid var(--pst-color-text-base);
 }
 
 .shortcuts-H2 {
