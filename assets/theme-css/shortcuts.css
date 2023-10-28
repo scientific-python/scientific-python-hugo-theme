@@ -9,6 +9,7 @@
 
 #shortcuts {
   margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 #shortcuts-header {
@@ -30,19 +31,19 @@
 
 .shortcuts-H2 {
   padding: 5px 5px 0 15px;
-  font-size: 15px;
+  font-size: 95%;
   cursor: pointer;
 }
 
 .shortcuts-H3 {
   padding: 5px 5px 0 25px;
-  font-size: 14px;
+  font-size: 90%;
   cursor: pointer;
 }
 
 .shortcuts-H4 {
   padding: 5px 5px 0 35px;
-  font-size: 12px;
+  font-size: 85%;
   cursor: pointer;
 }
 
