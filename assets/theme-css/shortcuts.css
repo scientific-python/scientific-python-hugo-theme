@@ -1,14 +1,19 @@
 #shortcuts-container {
   position: sticky;
   align-self: flex-start;
-  top: 6rem;
+  margin-top: 3rem;
+  top: 9rem; /* top + 3rem */
   width: 100%;
   max-width: 150px;
-  margin: 75px 15px;
 }
 
 #shortcuts {
   margin-top: 10px;
+}
+
+#shortcuts-header {
+  padding-left: calc(1rem + 2px);
+  padding-bottom: 0.25rem;
 }
 
 #shortcuts > div:not(.active) {

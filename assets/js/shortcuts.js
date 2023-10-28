@@ -153,7 +153,9 @@ function setupShortcuts(shortcutDepth = 2) {
 
   // Removes the shortcuts container if no shortcuts exist.
   // Also removes the 'Get Help' link.
-  const shortcuts = Array.from(document.querySelectorAll("#shortcuts div"));
+  const shortcuts = Array.from(
+    document.querySelectorAll("#shortcuts div:not(#shortcuts-header)"),
+  );
   if (shortcuts.length == 0) {
     const shortcutsContainer = document.getElementById("shortcuts-container");
     if (shortcutsContainer) {
