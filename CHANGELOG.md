@@ -1,3 +1,71 @@
+# scientific-python-hugo-theme 0.3
+
+We're happy to announce the release of scientific-python-hugo-theme 0.3!
+
+## Enhancements
+
+- Improvements to blog.scientific-python.org ([#289](https://github.com/scientific-python/scientific-python-hugo-theme/pull/289)).
+- Fixes related to scientific-python.org/grants (#291) ([#292](https://github.com/scientific-python/scientific-python-hugo-theme/pull/292)).
+- Build multiple sites ([#298](https://github.com/scientific-python/scientific-python-hugo-theme/pull/298)).
+- Use dart sass ([#303](https://github.com/scientific-python/scientific-python-hugo-theme/pull/303)).
+- Use pydata-sphinx-theme admonition styling ([#301](https://github.com/scientific-python/scientific-python-hugo-theme/pull/301)).
+- Enable font-awesome ([#310](https://github.com/scientific-python/scientific-python-hugo-theme/pull/310)).
+- Add javascript dark toggle mode ([#308](https://github.com/scientific-python/scientific-python-hugo-theme/pull/308)).
+- Add missing admonitions ([#312](https://github.com/scientific-python/scientific-python-hugo-theme/pull/312)).
+- Use pst page-toc ([#313](https://github.com/scientific-python/scientific-python-hugo-theme/pull/313)).
+- Add mission and values admonitions ([#322](https://github.com/scientific-python/scientific-python-hugo-theme/pull/322)).
+- Add date generated as comment ([#325](https://github.com/scientific-python/scientific-python-hugo-theme/pull/325)).
+- Use preconnects to speed up font loading ([#337](https://github.com/scientific-python/scientific-python-hugo-theme/pull/337)).
+- Prepare for better PST alignment ([#329](https://github.com/scientific-python/scientific-python-hugo-theme/pull/329)).
+- Render mermaid via code blocks, instead of shortcodes ([#338](https://github.com/scientific-python/scientific-python-hugo-theme/pull/338)).
+
+## Bug Fixes
+
+- Revert "Fixes related to scientific-python.org/grants (#291) (#292)" ([#294](https://github.com/scientific-python/scientific-python-hugo-theme/pull/294)).
+- Revert change that only provided partial context ([#311](https://github.com/scientific-python/scientific-python-hugo-theme/pull/311)).
+
+## Documentation
+
+- Update getstarted button ([#315](https://github.com/scientific-python/scientific-python-hugo-theme/pull/315)).
+
+## Maintenance
+
+- Meta: (Makefile) Serve with --poll, etc ([#293](https://github.com/scientific-python/scientific-python-hugo-theme/pull/293)).
+- Add netlify target ([#297](https://github.com/scientific-python/scientific-python-hugo-theme/pull/297)).
+- Test on main site ([#300](https://github.com/scientific-python/scientific-python-hugo-theme/pull/300)).
+- Only build site previews for PRs ([#306](https://github.com/scientific-python/scientific-python-hugo-theme/pull/306)).
+- Run linter ([#309](https://github.com/scientific-python/scientific-python-hugo-theme/pull/309)).
+- Purge unused bulma CSS ([#317](https://github.com/scientific-python/scientific-python-hugo-theme/pull/317)).
+- Add back missing pieces of bulma ([#318](https://github.com/scientific-python/scientific-python-hugo-theme/pull/318)).
+- Do not render duplicate shortcodes ([#324](https://github.com/scientific-python/scientific-python-hugo-theme/pull/324)).
+- Use purgeCSS to reduce fresh CSS ([#319](https://github.com/scientific-python/scientific-python-hugo-theme/pull/319)).
+- Disable taxonomy index page ([#323](https://github.com/scientific-python/scientific-python-hugo-theme/pull/323)).
+- Bump changelist from 0.3 to 0.4 ([#327](https://github.com/scientific-python/scientific-python-hugo-theme/pull/327)).
+- Bump pre-commit from 3.4.0 to 3.5.0 ([#328](https://github.com/scientific-python/scientific-python-hugo-theme/pull/328)).
+- Remove unused notices ([#326](https://github.com/scientific-python/scientific-python-hugo-theme/pull/326)).
+- Remove unused fadeFrontPage ([#330](https://github.com/scientific-python/scientific-python-hugo-theme/pull/330)).
+- Remove jquery usage in theme JS ([#331](https://github.com/scientific-python/scientific-python-hugo-theme/pull/331)).
+- Only handle shortcuts if they are present on the page ([#333](https://github.com/scientific-python/scientific-python-hugo-theme/pull/333)).
+- Update hugo ([#335](https://github.com/scientific-python/scientific-python-hugo-theme/pull/335)).
+
+## Contributors
+
+5 authors added to this release (alphabetically):
+
+- [@dependabot[bot]](https://github.com/apps/dependabot)
+- [@pre-commit-ci[bot]](https://github.com/apps/pre-commit-ci)
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.2
 
 We're happy to announce the release of scientific-python-hugo-theme 0.2!
