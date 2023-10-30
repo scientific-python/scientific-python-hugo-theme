@@ -124,3 +124,25 @@ To use them elsewhere, e.g. in Hugo templates, we provide an `svg-icon` partial.
 ```
 {{ partial "svg-icon" "my-icon" }}
 ```
+
+## Mermaid diagrams
+
+[Mermaid](https://mermaid.js.org/) diagrams are rendered from code blocks:
+
+````md
+```mermaid
+graph LR
+    A[Square Rect] -- Link text --> B((Circle))
+    A --> C(Round Rect)
+    B --> D{Rhombus}
+    C --> D
+```
+````
+
+```mermaid
+graph LR
+    A[Square Rect] -- Link text --> B((Circle))
+    A --> C(Round Rect)
+    B --> D{Rhombus}
+    C --> D
+```
