@@ -5,6 +5,7 @@ GH_ORG = scientific-python
 TEAMS_DIR = doc/static/teams
 TEAMS = theme-team
 TEAMS_QUERY = python tools/team_query.py
+HUGO_OPTS = --gc --minify --themesDir="../.."
 
 $(TEAMS_DIR):
 	mkdir -p $(TEAMS_DIR)
@@ -38,27 +39,27 @@ netlify-preview: theme scipy main blog learn
 	mv learn/public doc/public/learn
 
 theme: doc/content/shortcodes.md
-	(cd doc ; hugo --themesDir="../..")
+	(cd doc ; hugo $(HUGO_OPTS))
 
 scipy:
 	rm -rf $@
 	git clone https://github.com/scipy/scipy.org $@
-	(cd $@ ; hugo --themesDir="../..")
+	(cd $@ ; hugo $(HUGO_OPTS))
 
 main:
 	rm -rf $@
 	git clone https://github.com/scientific-python/scientific-python.org $@
 	(cd $@ ; git submodule update --init content/specs)
 	(cd $@ ; pip install -q -r requirements.txt)
-	(cd $@ ; hugo --themesDir="../..")
+	(cd $@ ; hugo $(HUGO_OPTS))
 
 blog:
 	rm -rf $@
 	git clone https://github.com/scientific-python/blog.scientific-python.org $@
 	(cd $@ ; make prepare ; cp -a themes/hugo-atom-feed ../..)
-	(cd $@ ; hugo --themesDir="../..")
+	(cd $@ ; hugo $(HUGO_OPTS))
 
 learn:
 	rm -rf $@
 	git clone https://github.com/scientific-python/learn.scientific-python.org $@
-	(cd $@ ; hugo --themesDir="../..")
+	(cd $@ ; hugo $(HUGO_OPTS))
