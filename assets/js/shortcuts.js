@@ -110,7 +110,7 @@ function setupShortcuts(shortcutDepth = 2) {
   if (shortcutsTarget) {
     const classElements = Array.from(document.querySelectorAll(classes));
     classElements.map((el) => {
-      const title = el.textContent;
+      const title = el.innerHTML;
       const elId = el.id;
       // Gets the element type (e.g. h2, h3)
       const elType = el.tagName;
@@ -152,7 +152,9 @@ function setupShortcuts(shortcutDepth = 2) {
 
   // Removes the shortcuts container if no shortcuts exist.
   // Also removes the 'Get Help' link.
-  const shortcuts = Array.from(document.querySelectorAll("#shortcuts div"));
+  const shortcuts = Array.from(
+    document.querySelectorAll("#shortcuts div:not(#shortcuts-header)"),
+  );
   if (shortcuts.length == 0) {
     const shortcutsContainer = document.getElementById("shortcuts-container");
     if (shortcutsContainer) {

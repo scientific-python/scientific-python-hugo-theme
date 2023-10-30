@@ -4,7 +4,7 @@ div.post-list {
 
 .post-title a {
   /* ".content-padding a" rule conflicts. */
-  color: var(--colorText) !important;
+  color: var(--pst-color-text-base) !important;
 }
 
 .post-list article {

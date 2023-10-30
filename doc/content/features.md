@@ -47,7 +47,7 @@ To use a different theme, [generate a new
 stylesheet](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode)
 using:
 
-```bash
+```
 hugo gen chromastyles --style=monokai > /assets/css/code-highlight.css
 ```
 
@@ -103,7 +103,7 @@ shortcode (include-html) for pulling it in anywhere on the site.
 The theme supports analytics through Plausible, which can be self-hosted or paid-for at https://plausible.io/.
 To enable Plausible analytics, add to your `config.yaml`:
 
-```
+```yaml
 params:
   plausible:
     dataDomain: your-domain.org

@@ -3,11 +3,9 @@
     /* Basically, we reassign the colors named in the non-dark theme. The
        exception is the background: it seems to look better as #111
        than as --colorPrimaryDark. */
-    --colorBackground: #111;
     --colorBackgroundAlt: var(--colorPrimaryDark);
     --colorBackgroundAlt2: var(--colorSecondaryDark);
 
-    --colorText: white;
     --colorTextAlt: var(--colorSecondaryLight);
 
     --colorContentLink: var(--colorPrimaryLight);
@@ -22,23 +20,5 @@
 
     --colorBlockBackground: var(--colorPrimaryDark);
     --colorCode: #ffb8d1;
-
-    /* FIXME: These colors should probably use named colors. */
-    --colorNoteBackground: #3f5565;
-    --colorInfoBackground: #45413a;
-    --colorWarningBackground: #433c3c;
-    --colorTipBackground: #3e433e;
-  }
-  html {
-    background: var(--colorBackground);
-    color: var(--colorText);
-  }
-  code {
-    background: var(--colorBlockBackground);
-    color: var(--colorCode);
-  }
-  pre {
-    background: var(--colorBlockBackground);
-    color: var(--colorText);
   }
 }

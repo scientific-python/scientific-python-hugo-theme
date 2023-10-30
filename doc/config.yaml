@@ -27,6 +27,8 @@ params:
       url: /features/
     - title: Shortcodes
       url: /shortcodes/
+    - title: Examples
+      url: /examples/
   keyfeatures:
     features:
       - title: Documented

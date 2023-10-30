@@ -28,10 +28,6 @@
   text-transform: uppercase;
 }
 
-.keyfeatures-box-text > a {
-  color: var(--colorPrimary);
-}
-
 .keyfeatures-box-text {
   margin: 15px;
   height: 6em;

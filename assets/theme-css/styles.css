@@ -1,30 +1,13 @@
 body {
-  color: var(--colorText);
-  font-family: var(--fontFamily), sans-serif;
+  margin: 0;
 }
 
-code {
-  font-size: 0.85em;
-  padding: 0.15em;
-}
-
-em {
-  color: var(--colorText);
+.title {
+  color: var(--pst-heading-color);
 }
 
 hr {
   background-color: var(--colorSecondaryDark);
-}
-
-pre {
-  background-color: var(--colorPrimaryDark);
-  color: var(--colorTextInverse);
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
 }
 
 table th {
@@ -32,10 +15,20 @@ table th {
   color: var(--colorTextAlt);
 }
 
-/* This color came from uikit; we re-specify it here
-   to show how to override it for the content section */
-.content-padding a {
-  color: var(--colorContentLink);
+/**
+ * See `code.literal` in
+ * src/pydata_sphinx_theme/assets/styles/content/_code.scss
+ */
+:not(pre) > code {
+  padding: 0.1rem 0.25rem;
+  background-color: var(--pst-color-surface);
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+a > code {
+  color: var(--pst-color-inline-code-links);
 }
 
 .flex-row {
@@ -79,7 +72,7 @@ table th {
   font-family: var(--fontFamily), sans-serif;
   font-weight: 900;
   font-size: 6em;
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   justify-content: center;
   margin-left: 1em;
   margin-bottom: 0.2em;
@@ -95,7 +88,7 @@ table th {
 }
 
 .hero-subtitle {
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   font-size: 1em;
   max-width: 550px;
 }
@@ -118,7 +111,7 @@ table th {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;
-  color: var(--colorTextInverse);
+  color: var(--colorSecondary);
   background-color: var(--colorBackgroundInverse);
   border: none;
   border-radius: 25px;
@@ -137,26 +130,23 @@ table th {
   margin-top: 30px;
 }
 
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding-top: 15px;
-}
-
-h3 {
-  font-size: 1.2em;
-  font-weight: bold;
-  padding-top: 10px;
-}
-
 p {
-  padding-top: 5px;
+  margin-bottom: 0;
 }
 
 .content-container ul {
   list-style-type: circle;
   padding: 10px;
   margin-left: 15px;
+}
+
+.content-container .toctree-wrapper ul:first-child {
+  margin-left: 0;
+  padding-left: 0.75rem;
+}
+
+.content-container .toctree-wrapper ul {
+  margin-left: 0.75rem;
 }
 
 .content-container ol {
@@ -223,9 +213,7 @@ p {
   flex-shrink: 1;
 }
 
-.footer-link,
-.footer-link:hover {
-  font-size: 1rem;
+a.footer-link {
   color: var(--colorSecondary);
 }
 
@@ -335,8 +323,8 @@ svg.icon {
 
 nav,
 .navbar {
-  background: var(--colorBackground);
-  color: var(--colorText);
+  background: var(--pst-color-background);
+  color: var(--pst-color-text-base);
 }
 .navbar-burger {
   color: var(--colorTextAlt);
@@ -353,7 +341,7 @@ nav,
 
 a.navbar-item,
 a.navbar-item:visited {
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   text-decoration: none;
 }
 
@@ -367,7 +355,7 @@ a.navbar-item:hover {
 }
 
 .navbar-logo-text {
-  color: var(--colorText);
+  color: var(--pst-color-text-base);
   font-size: 1.25rem;
   font-weight: bold;
 }
@@ -388,6 +376,28 @@ a.navbar-item:hover {
   background: var(--colorPrimaryDark);
 }
 
+/* reboot stuff needed for pydata-sphinx-theme */
+
+pre {
+  font-size: 0.875em;
+  overflow: auto;
+}
+
+/* hide headerlinks until hovered over */
+a.headerlink {
+  visibility: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover > a.headerlink {
+  visibility: visible;
+}
+
 /* Local Variables: */
 /* css-indent-offset: 2 */
 /* End: */
+
+#breadcrumbs {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1.5rem;
+}

@@ -1,11 +1,9 @@
 @media not (prefers-color-scheme: dark) {
   :root {
     /* Now we assign those named colors to various purposes. */
-    --colorBackground: var(--colorSecondaryLight);
     --colorBackgroundAlt: var(--colorPrimaryDark);
     --colorBackgroundAlt2: var(--colorSecondaryDark);
 
-    --colorText: black;
     --colorTextAlt: var(--colorSecondaryDark);
 
     --colorContentLink: var(--colorBrightBlue);
@@ -21,9 +19,5 @@
     --colorTextInverse: var(--colorBackground);
     --colorBackgroundInverse: var(--colorPrimaryDark);
     --colorLinkInverse: var(--colorPrimaryLight);
-
-    /* Color from bulma.css, but this variable is currently only used for
-       dark mode. */
-    --colorCode: #da1039;
   }
 }

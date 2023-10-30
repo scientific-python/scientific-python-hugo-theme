@@ -1,0 +1,14 @@
+{{ if transform.CanHighlight .Type }}
+{{/* Supported Chroma Language*/}}
+<div class="highlight">
+  <pre class="chroma"><code>
+  {{- with transform.HighlightCodeBlock . -}}
+  {{ .Inner | safeHTML }}
+  {{- end -}}</code></pre>
+</div>
+{{- else -}}
+{{/* Unsupported Language */}}
+<div class="highlight">
+  <pre>{{ .Inner }}</pre>
+</div>
+{{ end }}

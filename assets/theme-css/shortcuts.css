@@ -1,43 +1,49 @@
 #shortcuts-container {
   position: sticky;
   align-self: flex-start;
-  top: 6rem;
+  margin-top: 3rem;
+  top: 9rem; /* top + 3rem */
   width: 100%;
   max-width: 150px;
-  margin: 75px 15px;
 }
 
 #shortcuts {
   margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+#shortcuts-header {
+  padding-left: calc(1rem + 2px);
+  padding-bottom: 0.25rem;
 }
 
 #shortcuts > div:not(.active) {
   margin-left: 2px;
-  border-left: 1px solid var(--colorText);
+  border-left: 1px solid var(--pst-color-text-base);
   opacity: 0.75;
 }
 
 #shortcuts > div.active {
   font-weight: bold;
-  color: var(--colorText);
-  border-left: 5px solid var(--colorText);
+  color: var(--pst-color-text-base);
+  border-left: 5px solid var(--pst-color-text-base);
 }
 
 .shortcuts-H2 {
   padding: 5px 5px 0 15px;
-  font-size: 15px;
+  font-size: 95%;
   cursor: pointer;
 }
 
 .shortcuts-H3 {
   padding: 5px 5px 0 25px;
-  font-size: 14px;
+  font-size: 90%;
   cursor: pointer;
 }
 
 .shortcuts-H4 {
   padding: 5px 5px 0 35px;
-  font-size: 12px;
+  font-size: 85%;
   cursor: pointer;
 }
 

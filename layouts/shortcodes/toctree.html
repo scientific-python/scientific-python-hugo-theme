@@ -1,0 +1,22 @@
+<div class="toctree-wrapper">
+  {{- range $section := .Page.Sections }}
+  <ul>
+    <li class="toctree-l1"><a href="{{ $section.RelPermalink }}">{{ $section.Title | safeHTML }}</a></li>
+    {{- range $page := .RegularPages }}
+    <ul>
+      <li class="toctree-l2"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></li>
+      <ul>
+        {{- range .Fragments.Headings -}}
+        {{/* H2 */}}
+        {{- range .Headings }}
+        <li class="toctree-l3">
+          <a href="{{ $page.RelPermalink }}#{{ .ID }}">{{ .Title | safeHTML }}</a>
+        </li>
+        {{- end -}}
+        {{- end }}
+      </ul>
+    </ul>
+    {{- end }}
+  </ul>
+  {{- end }}
+</div>

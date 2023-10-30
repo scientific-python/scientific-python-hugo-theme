@@ -1,0 +1,10 @@
+<ul id="breadcrumbs" class="bd-breadcrumbs">
+  {{- range $index, $ := .Ancestors.Reverse }}
+  {{ if $index }}
+  <li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ else }}
+  <li class="breadcrumb-item breadcrumb-home"><a href="{{ .RelPermalink }}"><i class="fas fa-home"></i></a></li>
+  {{ end }}
+  {{- end }}
+<li class="breadcrumb-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+</ul>
