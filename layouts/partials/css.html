@@ -2,22 +2,25 @@
 {{- $page := . -}}
 
 {{- $inServerMode := .Site.IsServer -}}
-{{- $serverOpts   := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
+{{- $serverOpts := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 {{- $sassCompiler := dict "transpiler" "dartsass" -}}
-{{- $cssOpts      := collections.Merge $sassCompiler $serverOpts -}}
-{{- $sass         := (slice "theme-css/pst/pydata-sphinx-theme.scss") -}}
+{{- $cssOpts := collections.Merge $sassCompiler $serverOpts -}}
+{{- $sass := (slice "theme-css/pst/pydata-sphinx-theme.scss") -}}
 
 <!-- Fonts -->
-{{- $fontName     := .Site.Params.font.name | default "Open Sans" -}}
-{{- $fontFace     := replace $fontName " " "+" -}}
-{{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," -}}
-{{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes -}}
+{{- $fontName := .Site.Params.font.name | default "Open Sans" -}}
+{{- $fontFace := replace $fontName " " "+" -}}
+{{- $fontSizes := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) ";" -}}
+{{- $fontUrl := printf "https://fonts.googleapis.com/css2?family=%s:wght@%s" $fontFace $fontSizes -}}
 
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ $fontUrl }}">
 
-<!-- Fallback font for symbols (such as "🛈"). -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Symbols+2">
+<!-- Fallback font for symbols (such as "🛈"). --
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2">
 
 <!-- SASS -->
 {{- range $sass -}}
