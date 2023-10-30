@@ -1,3 +1,5 @@
 ---
 title: Examples
 ---
+
+{{< toctree >}}
