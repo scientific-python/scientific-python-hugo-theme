@@ -69,7 +69,6 @@
 .level:not(:last-child),
 .message:not(:last-child),
 .progress:not(:last-child),
-.subtitle:not(:last-child),
 .table:not(:last-child),
 .tabs:not(:last-child),
 .title:not(:last-child) {
@@ -592,28 +591,6 @@ a.box:active {
 a.tag:hover {
   text-decoration: underline;
 }
-.subtitle,
-.title {
-  word-break: break-word;
-}
-.subtitle em,
-.subtitle span,
-.title em,
-.title span {
-  font-weight: inherit;
-}
-.subtitle sub,
-.title sub {
-  font-size: 0.75em;
-}
-.subtitle sup,
-.title sup {
-  font-size: 0.75em;
-}
-.subtitle .tag,
-.title .tag {
-  vertical-align: middle;
-}
 .title {
   font-size: 2rem;
   font-weight: 600;
@@ -627,22 +604,6 @@ a.tag:hover {
   margin-top: -1.25rem;
 }
 .title.is-5 {
-  font-size: 1.25rem;
-}
-.subtitle {
-  color: #4a4a4a;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.25;
-}
-.subtitle strong {
-  color: #363636;
-  font-weight: 600;
-}
-.subtitle:not(.is-spaced) + .title {
-  margin-top: -1.25rem;
-}
-.subtitle.is-5 {
   font-size: 1.25rem;
 }
 .heading {

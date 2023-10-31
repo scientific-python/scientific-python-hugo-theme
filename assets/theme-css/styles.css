@@ -402,3 +402,8 @@ a.headerlink {
   padding: 0;
   padding-bottom: 1.5rem;
 }
+
+.subtitle {
+  font-style: italic;
+  margin-top: -0.5rem;
+}
