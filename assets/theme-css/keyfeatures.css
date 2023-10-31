@@ -20,7 +20,7 @@
   border: 0.02em solid var(--pst-color-border);
   box-shadow:
     0 0.2rem 0.5rem var(--pst-color-shadow),
-    0 0 0.0625rem var(--pst-color-shadow) !important;
+    0 0 0.0625rem var(--pst-color-shadow);
 }
 
 .keyfeatures-box-title {
