@@ -18,8 +18,10 @@
   min-width: 275px;
   width: 335px;
   margin: 25px auto;
-  border-radius: 25px;
-  border: 4px solid var(--colorBackgroundInverse);
+  border: 0.02em solid var(--pst-color-border);
+  box-shadow:
+    0 0.2rem 0.5rem var(--pst-color-shadow),
+    0 0 0.0625rem var(--pst-color-shadow) !important;
 }
 
 .keyfeatures-box-title {
@@ -29,6 +31,8 @@
 }
 
 .keyfeatures-box-text {
+  line-height: 1.5;
+  font-size: 0.9em;
   margin: 15px;
   height: 6em;
   overflow: hidden;
