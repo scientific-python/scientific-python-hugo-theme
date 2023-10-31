@@ -22,15 +22,17 @@ Example `version number`
 
 - Autogenerate release notes
 
-      changelist ${ORG}/${REPO} v${PREVIOUS} main --version ${VERSION} --out ${VERSION}.md
+      changelist ${ORG}/${REPO} v${PREVIOUS} main --version ${VERSION} --config pyproject.toml --out ${VERSION}.md
 
 - Put the output of the above command at the top of `CHANGELOG.md`
 
       cat ${VERSION}.md | cat - ${LOG} > temp && mv temp ${LOG}
 
+- Update `version` in `pyproject.toml`.
+
 - Commit changes:
 
-      git add CHANGELOG.md
+      git add pyproject.toml CHANGELOG.md
       git commit -m "Designate ${VERSION} release"
 
 - Tag the release in git:
@@ -50,3 +52,11 @@ Example `version number`
 - Review the github release page:
 
       https://github.com/scientific-python/scientific-python-hugo-theme/tags
+
+- Update `version` in `pyproject.toml`.
+
+- Commit changes:
+
+      git add pyproject.toml
+      git commit -m 'Bump version'
+      git push origin main
