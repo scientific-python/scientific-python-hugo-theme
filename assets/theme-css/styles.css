@@ -58,6 +58,7 @@ a > code {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  line-height: 1.5;
 }
 
 .hero-headline {
