@@ -130,10 +130,6 @@ a > code {
   margin-top: 30px;
 }
 
-p {
-  margin-bottom: 0;
-}
-
 @media only screen and (max-width: 1090px) {
   .hero-content {
     flex-direction: column;
