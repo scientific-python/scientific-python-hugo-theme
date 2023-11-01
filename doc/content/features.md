@@ -9,9 +9,9 @@ title: Features
 
 Blog post layouts:
 
-- `layouts/partials/posts/single.html`: Blog post layout
+- `layouts/partials/posts/post.html`: Blog post layout
 - `layouts/partials/posts/list.html`: Blog post listing layout
-- `layouts/partials/posts/term.html`: Tag page layout
+- `layouts/partials/posts/tag.html`: Tag page layout
 
 ## Shortcut list
 
