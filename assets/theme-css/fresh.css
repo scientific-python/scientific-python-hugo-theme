@@ -1,5 +1,6 @@
 .navbar.is-fresh {
-  position: relative;
+  position: sticky;
+  top: 0px;
   min-height: 3.8rem;
   transition: all 0.3s;
   z-index: 99;
@@ -69,18 +70,6 @@
 }
 .navbar.is-fresh.is-fixed a:hover {
   color: #4fc1ea;
-}
-#navbar-clone {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transform: translateY(-100%);
-  z-index: 100;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
-}
-#navbar-clone.is-active {
-  transform: translateY(0);
 }
 .animated {
   animation-duration: 0.5s;
