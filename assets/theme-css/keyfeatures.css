@@ -10,7 +10,6 @@
 .keyfeatures-box-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .keyfeatures-box-content {
@@ -47,12 +46,6 @@
   height: 1.2em;
 }
 
-/* .keyfeatures-box-content:hover > .keyfeatures-box-text, */
-/* .keyfeatures-box-content:focus > .keyfeatures-box-text, */
-/* .keyfeatures-box-content:active > .keyfeatures-box-text { */
-/*   color: var(--colorPrimaryLight); */
-/* } */
-
 @media only screen and (max-width: 1280px) {
   .keyfeatures .container {
     align-items: center;
@@ -80,8 +73,6 @@
 
 .keyfeatures-underline {
   display: inline-block;
-  vertical-align: middle;
-  /* Black, with 10% opacity */
   position: relative;
   overflow: hidden;
 }
