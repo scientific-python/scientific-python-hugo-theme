@@ -16,6 +16,15 @@
   margin-left: 15px;
 }
 
+.content-container .toctree-wrapper ul:first-child {
+  margin-left: 0;
+  padding-left: 0.75rem;
+}
+
+.content-container .toctree-wrapper ul {
+  margin-left: 0.75rem;
+}
+
 .content-container ol {
   padding: 10px;
   margin-left: 15px;
