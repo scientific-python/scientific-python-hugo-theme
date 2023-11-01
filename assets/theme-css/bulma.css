@@ -199,7 +199,6 @@ section {
   display: block;
 }
 hr {
-  background-color: #f5f5f5;
   border: none;
   display: block;
   height: 2px;
@@ -227,9 +226,6 @@ table th {
 table td:not([align]),
 table th:not([align]) {
   text-align: inherit;
-}
-table th {
-  color: #363636;
 }
 @-webkit-keyframes spinAround {
   from {
@@ -1402,7 +1398,4 @@ a.navbar-item:hover {
   .section {
     padding: 3rem 3rem;
   }
-}
-.footer {
-  padding: 3rem 1.5rem 6rem;
 }
