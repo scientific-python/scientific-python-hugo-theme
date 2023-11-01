@@ -22,26 +22,13 @@ function throttle(fn, interval) {
   };
 }
 
-function scrollNavbar() {
-  const scrollPosition = document.documentElement.scrollTop;
-
-  //Navbar Clone
-  const navbarClone = document.getElementById("navbar-clone");
-
-  // Make navbar sticky, by activating a second, duplicate navbar
-  // that is fixed to the top of the screen.
-  navbarClone.classList.toggle("is-active", scrollPosition > 50);
-}
-
 // Highlight currently scrolled to header in shortcuts
 // Based on https://stackoverflow.com/a/32396543/214686
 // and
 // https://stackoverflow.com/a/57494988/214686
 // which fixes some issues with the first, particularly
 // around scrolling upward.
-function scrollHeadersAndNavbar() {
-  scrollNavbar();
-
+function scrollHeaders() {
   const scrollPosition = document.documentElement.scrollTop;
   const headers = Array.from(
     document.querySelectorAll(":is(h1, h2, h3, h4, h5, h6)[id]"),
@@ -79,14 +66,14 @@ function scrollHeadersAndNavbar() {
   });
 }
 
-const throttledScrollHeadersAndNavbar = throttle(scrollHeadersAndNavbar, 100);
+const throttledScrollHeaders = throttle(scrollHeaders, 100);
 
 function bindScroll() {
-  window.addEventListener("scroll", throttledScrollHeadersAndNavbar);
+  window.addEventListener("scroll", throttledScrollHeaders);
 }
 
 function unbindScroll() {
-  window.removeEventListener("scroll", throttledScrollHeadersAndNavbar);
+  window.removeEventListener("scroll", throttledScrollHeaders);
 }
 
 function remToPx(rem) {
@@ -142,9 +129,6 @@ function setupShortcuts(shortcutDepth = 2) {
           // Done moving to clicked header; re-enable
           // scroll highlighting of shortcuts
           bindScroll();
-
-          // After scroll, display the navbar, if necessary
-          scrollNavbar();
         });
       });
     });
