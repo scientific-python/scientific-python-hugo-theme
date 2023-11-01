@@ -36,8 +36,7 @@
     {{ if .Site.Params.footer }}
     {{ partial "footer.html" . -}}
     {{ end }}
-
-    {{ partial "javascript.html" . -}}
-    {{ partial "analytics.html" . -}}
   </body>
+  {{ partial "javascript.html" . -}}
+  {{ partial "analytics.html" . -}}
 </html>

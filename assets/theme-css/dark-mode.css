@@ -1,3 +1,16 @@
+/* Dark mode is now defined in pydata-sphinx-theme CSS */
+/* See html[data-theme='light'] and html[data-theme='dark'] */
+
+/* This CSS is to override the background to dark, if that is the browser preference,
+   instead of defaulting to light mode rendering. */
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --pst-color-background: #14181e;
+  }
+}
+
+/* Once our colors have all been mapped to PST color names, this section can be removed. */
 @media (prefers-color-scheme: dark) {
   :root {
     /* Basically, we reassign the colors named in the non-dark theme. The
