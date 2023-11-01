@@ -1,15 +1,14 @@
-{{ define "main" }}
-<section class="article content-padding flex-row">
+<section class="post content-padding flex-row">
   <div class="content-container">
     {{ partial "breadcrumbs.html" . }}
     <h1>{{ .Title }}</h1>
     {{ if .Params.Subtitle }}
     <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
     {{ end }}
-    <div class="article-content">
+    <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
+    <div class="post-content">
         {{ .Content }}
     </div>
   </div>
   {{ partial "shortcuts.html" . }}
 </section>
-{{ end }}

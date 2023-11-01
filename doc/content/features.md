@@ -2,13 +2,16 @@
 title: Features
 ---
 
-## Partials
+## Hugo Layouts
 
-The following partials are meant to be overridden:
+- `_default/single.html` : Single page layout
+- `_default/section.html` : Section layout (a section typically has `_index.md` and contains other pages)
 
-- `post_meta.html`: Render meta-data under a post title.
-  We have not yet defined this template, but you can use it to add author information, date, etc.
-- `footer_actions`: This appears in the right-hand side of the footer. E.g., numpy.org uses it for mailing list subscriptions.
+Blog post layouts:
+
+- `layouts/partials/posts/post.html`: Blog post layout
+- `layouts/partials/posts/list.html`: Blog post listing layout
+- `layouts/partials/posts/tag.html`: Tag page layout
 
 ## Shortcut list
 
@@ -146,3 +149,8 @@ graph LR
     B --> D{Rhombus}
     C --> D
 ```
+
+## Creating a blog
+
+Pages that are placed under either `content/posts` or `content/blog`
+will be formatted as blog posts.
