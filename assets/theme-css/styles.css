@@ -11,7 +11,6 @@ hr {
 }
 
 table th {
-  /* Overriding bulma. */
   color: var(--colorTextAlt);
 }
 
@@ -131,30 +130,6 @@ a > code {
   margin-top: 30px;
 }
 
-p {
-  margin-bottom: 0;
-}
-
-.content-container ul {
-  list-style-type: circle;
-  padding: 10px;
-  margin-left: 15px;
-}
-
-.content-container .toctree-wrapper ul:first-child {
-  margin-left: 0;
-  padding-left: 0.75rem;
-}
-
-.content-container .toctree-wrapper ul {
-  margin-left: 0.75rem;
-}
-
-.content-container ol {
-  padding: 10px;
-  margin-left: 15px;
-}
-
 @media only screen and (max-width: 1090px) {
   .hero-content {
     flex-direction: column;
@@ -185,6 +160,9 @@ p {
 }
 
 /* Footer */
+.footer {
+  padding: 3rem 1.5rem 6rem;
+}
 #footer {
   background-color: var(--colorPrimaryDark);
 }
