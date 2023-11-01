@@ -8,7 +8,7 @@ div.post-list {
 }
 
 .post-meta {
-  color: var(--colorSecondaryDark);
+  color: var(--pst-color-text-muted);
 }
 
 .post-list article {

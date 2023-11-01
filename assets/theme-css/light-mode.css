@@ -2,9 +2,6 @@
   :root {
     /* Now we assign those named colors to various purposes. */
     --colorBackgroundAlt: var(--colorPrimaryDark);
-    --colorBackgroundAlt2: var(--colorSecondaryDark);
-
-    --colorTextAlt: var(--colorSecondaryDark);
 
     --colorContentLink: var(--colorBrightBlue);
     --colorHeading: var(--colorPrimaryDark);

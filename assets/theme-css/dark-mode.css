@@ -4,9 +4,6 @@
        exception is the background: it seems to look better as #111
        than as --colorPrimaryDark. */
     --colorBackgroundAlt: var(--colorPrimaryDark);
-    --colorBackgroundAlt2: var(--colorSecondaryDark);
-
-    --colorTextAlt: var(--colorSecondaryLight);
 
     --colorContentLink: var(--colorPrimaryLight);
 

@@ -7,11 +7,11 @@ body {
 }
 
 hr {
-  background-color: var(--colorSecondaryDark);
+  background-color: var(--pst-color-text-muted);
 }
 
 table th {
-  color: var(--colorTextAlt);
+  color: var(--pst-color-text-muted);
 }
 
 /**
@@ -306,16 +306,16 @@ nav,
   color: var(--pst-color-text-base);
 }
 .navbar-burger {
-  color: var(--colorTextAlt);
+  color: var(--pst-color-text-muted);
 }
 .navbar-burger:hover {
   color: var(--colorPrimaryLight);
 }
 .navbar-item {
-  color: var(--colorTextAlt);
+  color: var(--pst-color-text-muted);
 }
 .navbar-menu.is-active {
-  background: var(--colorBackgroundAlt2);
+  background: var(--pst-color-text-muted);
 }
 
 a.navbar-item,
