@@ -179,7 +179,8 @@ a > code {
 }
 
 #footer-logo {
-  height: 75px;
+  height: 4.75em;
+  width: auto;
 }
 
 .footer-column {
