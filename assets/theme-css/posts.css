@@ -7,6 +7,10 @@ div.post-list {
   color: var(--pst-color-text-base) !important;
 }
 
+.post-meta {
+  color: var(--colorSecondaryDark);
+}
+
 .post-list article {
   padding-top: 1.5rem;
 }
@@ -17,7 +21,6 @@ div.post-list {
 }
 
 .post-author {
-  color: var(--colorSecondaryDark);
   display: inline;
 }
 
@@ -25,8 +28,8 @@ div.post-list {
   content: ", ";
 }
 
-.post-list .post-date {
-  color: var(--colorSecondaryDark);
+.post-date {
+  padding-left: 0.5rem;
 }
 
 .post-list .post-summary {
