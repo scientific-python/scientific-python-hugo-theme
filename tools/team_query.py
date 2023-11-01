@@ -62,18 +62,17 @@ members = resp["data"]["organization"]["team"]["members"]["nodes"]
 team_name = resp["data"]["organization"]["team"]["name"]
 
 team_template = string.Template(
-    """
+    """\
 <div class="team">
   <h3 id="${team}" class="team-name">${team_name}</h3>
   <div class="team-members">
-    ${members}
+${members}
   </div>
-</div>
-"""
+</div>"""
 )
 
 member_template = string.Template(
-    """
+    """\
     <div class="team-member">
       <a href="${url}" class="team-member-name">
         <div class="team-member-photo">
@@ -85,8 +84,7 @@ member_template = string.Template(
         </div>
         ${name}
       </a>
-    </div>
-"""
+    </div>"""
 )
 
 members_list = []
