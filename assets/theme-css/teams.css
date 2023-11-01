@@ -2,12 +2,12 @@
   padding-bottom: 2rem;
 }
 
-.team .members {
+.team-members {
   display: flex;
   flex-wrap: wrap;
 }
 
-.team .member {
+.team-member {
   width: 11rem;
   display: flex;
   flex-direction: column;
@@ -18,12 +18,12 @@
   vertical-align: top;
 }
 
-.team .member .photo img {
+.team-member-photo img {
   width: 60px;
   border-radius: 50%;
   margin-bottom: 0.5rem;
 }
 
-.team .member .name {
+.team-member-name {
   font-weight: bold;
 }
