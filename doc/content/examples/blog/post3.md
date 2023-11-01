@@ -1,14 +1,10 @@
 ---
-blogpost: true
+title: Post three with a long-ish title we can use to compare
 date: Jan 03, 2022
-author: jupyter
-location: World
-category: Manual
-tags: one, two, three, four, five, six, seven, eight, nine
-language: English
+author: ["jupyter"]
+tags: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+type: posts
 ---
-
-# Post three with a long-ish title we can use to compare
 
 Here's some text for post 3!
 

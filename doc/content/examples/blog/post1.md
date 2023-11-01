@@ -1,14 +1,10 @@
 ---
-blogpost: true
+title: Post one with a long-ish title we can use to compare
 date: Jan 01, 2022
-author: pydata
-location: World
-category: Manual
-tags: one, two, three
-language: English
+author: ["pydata"]
+tags: ["one", "two", "three"]
+type: posts
 ---
-
-# Post one with a long-ish title we can use to compare
 
 Here's some text for post 1!
 

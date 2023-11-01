@@ -1,14 +1,10 @@
 ---
-blogpost: true
+title: Post title 2 with a longer title to compare in the UI
 date: Jan 02, 2022
-author: jupyter
-location: World
-category: Manual
-tags: one, two, three, four, five, six
-language: English
+author: ["jupyter"]
+tags: ["one", "two", "three", "four", "five", "six"]
+type: posts
 ---
-
-# Post title 2 with a longer title to compare in the UI
 
 Here's some text for post 2!
 
