@@ -1,4 +1,3 @@
-{{ define "main" }}
 <section class="section content-padding flex-row">
   <div class="content-container">
     {{ partial "breadcrumbs.html" . }}
@@ -9,20 +8,10 @@
     {{ if .Content }}
     {{ .Content }}
     {{ end }}
-    {{ if (or (not .Content) .Params.listPages) }}
-    <div class="page-list">
-      <ul>
-        {{ range .Pages }}
-        {{ if .Title }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-        {{ end }}
-        {{ end }}
-      </ul>
-    </div>
-    {{ end }}
+    {{ $posts := .RegularPagesRecursive.ByPublishDate.Reverse }}
+    {{ partial "posts/list-without-summary.html" $posts }}
   </div>
   {{ if .Content }}
   {{ partial "shortcuts.html" . }}
   {{ end }}
 </section>
-{{ end }}
