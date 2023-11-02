@@ -1,7 +1,8 @@
-{{ if  or (eq .Section "posts") (eq .Section "tags") }}
+{{ if (findRE `(\$.*\$)|(\\\\\[.*\\\\\])|(\\\\\(.*\\\\\))` .Content) }}
     <script>
       MathJax = {
         tex: {
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
           inlineMath: [['$', '$'], ['\\(', '\\)']],
         }
       };
