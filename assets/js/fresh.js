@@ -9,11 +9,6 @@ function whenReady() {
         const menu_id = burger.getAttribute("data-target");
         const menu = document.getElementById(menu_id);
         menu.classList.toggle("is-active");
-
-        const navbars = document.getElementsByClassName("navbar is-light");
-        Array.prototype.map.call(navbars, (e) => {
-          e.classList.toggle("is-dark-mobile");
-        });
       });
     });
   }
