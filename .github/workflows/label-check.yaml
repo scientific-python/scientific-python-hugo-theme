@@ -1,13 +1,10 @@
 name: Labels
 
 on:
+  pull_request_review:
+    types: [submitted]
   pull_request:
-    types:
-      - opened
-      - repoened
-      - labeled
-      - unlabeled
-      - synchronize
+    types: [reopened, labeled, unlabeled]
 
 env:
   LABELS: ${{ join( github.event.pull_request.labels.*.name, ' ' ) }}
