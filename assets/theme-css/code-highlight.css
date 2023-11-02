@@ -112,7 +112,7 @@ html[data-theme="dark"] {
   }
   /* NameTag */
   .chroma .nt {
-    color: var(--colorCode);
+    color: #ffb8d1;
   }
   /* Literal */
   .chroma .l {
