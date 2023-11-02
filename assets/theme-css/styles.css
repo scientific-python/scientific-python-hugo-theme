@@ -166,7 +166,7 @@ a > code {
 #footer {
   background-color: var(--colorPrimaryDark);
   position: sticky;
-  top: calc(100vh - 6em);
+  top: calc(100vh - var(--spht-footer-height));
 }
 
 .footer-logo-column {
