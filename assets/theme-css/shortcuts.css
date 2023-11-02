@@ -1,6 +1,7 @@
 #shortcuts-container {
   position: sticky;
   align-self: flex-start;
+  top: 5rem;
   width: 100%;
   max-width: 150px;
 }
