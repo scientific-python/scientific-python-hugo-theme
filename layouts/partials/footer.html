@@ -1,4 +1,5 @@
-{{- $title          := .Site.Params.title }}
+{{- $title       := .Site.Title }}
+{{- $author      := .Site.Params.author.name }}
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
 {{- $quickLinks  := index $footer "quicklinks" }}
@@ -43,7 +44,7 @@
               {{- end }}
             </div>
           </nav>
-          <div class="copyright">&copy; {{ now.Year}} {{ $title }}. All rights reserved.</div>
+          <div class="copyright">&copy; {{ now.Year}} {{ $author }}. All rights reserved.</div>
         </div>
     </div>
   </div>

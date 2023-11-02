@@ -10,6 +10,8 @@ markup:
     noClasses: false
 
 params:
+  author:
+    name: "Scientific Python team"
   description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
     - /images/logo.svg
