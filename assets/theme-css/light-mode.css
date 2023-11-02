@@ -1,7 +1,0 @@
-@media not (prefers-color-scheme: dark) {
-  :root {
-    /* Now we assign those named colors to various purposes. */
-
-    --colorIcon: var(--colorBrightBlue);
-  }
-}

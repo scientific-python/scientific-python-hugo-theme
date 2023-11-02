@@ -9,15 +9,3 @@
     --pst-color-background: #14181e;
   }
 }
-
-/* Once our colors have all been mapped to PST color names, this section can be removed. */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Basically, we reassign the colors named in the non-dark theme. The
-       exception is the background: it seems to look better as #111
-       than as --colorPrimaryDark. */
-
-    /* For, e.g. .news-container */
-    --colorCode: #ffb8d1;
-  }
-}

@@ -210,10 +210,6 @@ a.footer-link {
   color: var(--colorSecondary);
 }
 
-.icon {
-  color: var(--colorIcon);
-}
-
 .copyright {
   font-size: 12px;
   color: var(--colorSecondary);
