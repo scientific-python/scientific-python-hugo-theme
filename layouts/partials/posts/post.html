@@ -1,3 +1,4 @@
+{{- $featuredImage := .Resources.GetMatch "featuredImage" -}}
 <section class="post content-padding flex-row">
   <div class="content-container">
     {{ partial "breadcrumbs.html" . }}
@@ -7,7 +8,10 @@
     {{ end }}
     <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
     <div class="post-content">
-        {{ .Content }}
+      {{ with $featuredImage }}
+      <img src="{{ .RelPermalink }}" {{ if .Params.description }}alt="{{ .Params.description }}"{{ end }}/>
+      {{ end }}
+      {{ .Content }}
     </div>
   </div>
   {{ partial "shortcuts.html" . }}
