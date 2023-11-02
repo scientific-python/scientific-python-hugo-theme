@@ -119,6 +119,10 @@ a > code {
   cursor: pointer;
 }
 
+.cta-button:hover {
+  color: var(--pst-color-link-hover);
+}
+
 #feature-card {
   height: 475px;
 }
