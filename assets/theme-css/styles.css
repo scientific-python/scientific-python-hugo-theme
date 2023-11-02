@@ -111,8 +111,8 @@ a > code {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;
-  color: var(--colorSecondary);
-  background-color: var(--colorBackgroundInverse);
+  color: var(--colorSecondaryLight);
+  background-color: var(--colorPrimaryDark);
   border: none;
   border-radius: 25px;
   outline: none;
@@ -123,7 +123,7 @@ a > code {
   height: 475px;
 }
 #backtotop.visible #backtotop-color:hover {
-  background: var(--colorHighlight);
+  background: var(--colorYellow);
 }
 
 .mt-30 {
@@ -325,7 +325,7 @@ a.navbar-item:visited {
 }
 
 a.navbar-item:hover {
-  color: var(--colorPrimaryLight);
+  color: var(--pst-color-link-hover);
 }
 
 .navbar-logo {
