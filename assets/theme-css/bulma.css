@@ -1,5 +1,4 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
-.button,
 .input,
 .select select {
   -moz-appearance: none;
@@ -20,24 +19,19 @@
   position: relative;
   vertical-align: top;
 }
-.button:active,
-.button:focus,
 .input:active,
 .input:focus,
-.is-active.button,
 .is-active.input,
 .select select.is-active,
 .select select:active,
 .select select:focus {
   outline: 0;
 }
-.button[disabled],
 .input[disabled],
 .select select[disabled] {
   cursor: not-allowed;
 }
 
-.button,
 .file,
 .navbar-link:not(.is-arrowless)::after,
 .select:not(.is-multiple):not(.is-loading)::after {
@@ -149,7 +143,6 @@
 ul {
   list-style: none;
 }
-button,
 input,
 select {
   margin: 0;
@@ -255,120 +248,6 @@ a.box:active {
   box-shadow:
     inset 0 1px 2px rgba(10, 10, 10, 0.2),
     0 0 0 1px #485fc7;
-}
-.button {
-  background-color: #fff;
-  border-color: #dbdbdb;
-  border-width: 1px;
-  color: #363636;
-  cursor: pointer;
-  justify-content: center;
-  padding-bottom: calc(0.5em - 1px);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: calc(0.5em - 1px);
-  text-align: center;
-  white-space: nowrap;
-}
-.button strong {
-  color: inherit;
-}
-.button .icon {
-  height: 1.5em;
-  width: 1.5em;
-}
-.button .icon:first-child:not(:last-child) {
-  margin-left: calc(-0.5em - 1px);
-  margin-right: 0.25em;
-}
-.button .icon:last-child:not(:first-child) {
-  margin-left: 0.25em;
-  margin-right: calc(-0.5em - 1px);
-}
-.button .icon:first-child:last-child {
-  margin-left: calc(-0.5em - 1px);
-  margin-right: calc(-0.5em - 1px);
-}
-
-.button:hover {
-  border-color: #b5b5b5;
-  color: #363636;
-}
-
-.button:focus {
-  border-color: #485fc7;
-  color: #363636;
-}
-
-.button:focus:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
-}
-.button.is-active,
-.button:active {
-  border-color: #4a4a4a;
-  color: #363636;
-}
-.button.is-light {
-  background-color: #f5f5f5;
-  border-color: transparent;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.button.is-light:hover {
-  background-color: #eee;
-  border-color: transparent;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.button.is-light:focus {
-  border-color: transparent;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.button.is-light:focus:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
-}
-.button.is-light.is-active,
-.button.is-light:active {
-  background-color: #e8e8e8;
-  border-color: transparent;
-  color: rgba(0, 0, 0, 0.7);
-}
-.button.is-light[disabled] {
-  background-color: #f5f5f5;
-  border-color: #f5f5f5;
-  box-shadow: none;
-}
-.button[disabled] {
-  background-color: #fff;
-  border-color: #dbdbdb;
-  box-shadow: none;
-  opacity: 0.5;
-}
-.button.is-static {
-  background-color: #f5f5f5;
-  border-color: #dbdbdb;
-  color: #7a7a7a;
-  box-shadow: none;
-  pointer-events: none;
-}
-.buttons {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.buttons .button {
-  margin-bottom: 0.5rem;
-}
-.buttons .button:not(:last-child):not(.is-fullwidth) {
-  margin-right: 0.5rem;
-}
-.buttons:last-child {
-  margin-bottom: -0.5rem;
-}
-.buttons:not(:last-child) {
-  margin-bottom: 1rem;
 }
 .container {
   flex-grow: 1;
