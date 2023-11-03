@@ -11,18 +11,11 @@
   min-width: 100%;
 }
 
-[role="tab"],
-[role="tab"]:focus,
-[role="tab"]:hover {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  margin-top: 4px;
+[role="tab"] {
   padding: 2px 2px 4px;
   background-color: var(--pst-color-background);
   border-color: transparent transparent var(--pst-color-primary);
-  color: var(--pst-color-primary);
+  color: var(--pst-color-text);
   outline: none;
   font-weight: bold;
   max-width: 22%;
@@ -31,15 +24,17 @@
   cursor: pointer;
 }
 
+[role="tab"]:focus,
+[role="tab"]:hover {
+  color: var(--pst-color-primary);
+}
+
 [role="tab"][aria-selected="true"] {
-  padding: 2px 2px 4px;
-  margin-top: 0;
   border-color: transparent transparent var(--pst-color-primary);
   color: var(--pst-color-primary);
 }
 
 [role="tab"][aria-selected="false"] {
-  padding: 2px 2px 4px;
   border-bottom: 1px solid var(--pst-color-text);
 }
 
@@ -48,15 +43,6 @@
   margin: 2px;
   padding: 4px 6px;
 }
-
-/* This makes the tab bounce around */
-/* [role="tab"]:hover span.focus, */
-/* [role="tab"]:focus span.focus, */
-/* [role="tab"]:active span.focus { */
-/*   padding: 2px 2px 4px; */
-/*   border: 1px solid rgb(36 116 214); */
-/*   border-radius: 3px; */
-/* } */
 
 [role="tabpanel"] {
   box-shadow: 0 -0.0625rem var(--pst-color-text-muted),0 .0625rem var(--pst-color-text-muted);
