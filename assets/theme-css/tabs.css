@@ -22,11 +22,12 @@
   overflow: hidden;
   text-align: left;
   cursor: pointer;
+  font-size: 1rem;
 }
 
-[role="tab"]:focus,
 [role="tab"]:hover {
-  color: var(--pst-color-primary);
+  color: var(--pst-color-secondary);
+  border-color: var(--pst-color-secondary) transparent var(--pst-color-secondary);
 }
 
 [role="tab"][aria-selected="true"] {
@@ -34,8 +35,17 @@
   color: var(--pst-color-primary);
 }
 
+[role="tab"][aria-selected="true"]:hover {
+  border-color: var(--pst-color-secondary) transparent var(--pst-color-secondary);
+  color: var(--pst-color-secondary);
+}
+
 [role="tab"][aria-selected="false"] {
-  border-bottom: 1px solid var(--pst-color-text);
+  border-bottom: 0rem solid;
+}
+
+[role="tab"][aria-selected="false"]:hover {
+  border-bottom: 0.0625rem solid var(--pst-color-secondary);
 }
 
 [role="tab"] span.focus {
