@@ -1,5 +1,5 @@
 ---
-title: Sphinx Design Components
+title: Web Design Components
 ---
 
 The PyData Sphinx Theme uses
@@ -10,11 +10,11 @@ components. This theme provides custom CSS to ensure that
 [sphinx-design](https://sphinx-design.readthedocs.io/en/latest/index.html)
 elements look and feel consistent with this theme.
 
-::: seealso
+{{< admonition seealso >}}
 For more information about how to use these extensions, see [the
 sphinx-design
 documentation](https://sphinx-design.readthedocs.io/en/latest/index.html).
-:::
+{{< /admonition >}}
 
 Below you can find some examples of the components created with the
 `sphinx-design` extension.
@@ -166,55 +166,48 @@ panel 2 content ++++++++++++++ panel 2 footer
 
 ## Tabs
 
-::: tab-set
-::: tab-item
-c++
 
+{{< tabs >}}
+
+{{< tab "c++" >}}
 ``` c++
 int main(const int argc, const char **argv) {
     return 0;
 }
 ```
-:::
+{{< /tab >}}
 
-::: tab-item
-python
-
+{{< tab "python" >}}
 ``` python
 def main():
     return
 ```
-:::
+{{< /tab >}}
 
-::: tab-item
-java
-
+{{< tab "java" >}}
 ``` java
 class Main {
     public static void main(String[] args) {
     }
 }
 ```
-:::
+{{< /tab >}}
 
-::: tab-item
-julia
-
+{{< tab "julia" >}}
 ``` julia
 function main()
 end
 ```
-:::
+{{< /tab >}}
 
-::: tab-item
-fortran
-
+{{< tab "fortran" >}}
 ``` fortran
 PROGRAM main
 END PROGRAM main
 ```
-:::
-:::
+{{< /tab >}}
+
+{{< /tabs >}}
 
 ## Dropdowns
 
