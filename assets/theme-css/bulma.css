@@ -39,13 +39,6 @@
 
 .button,
 .file,
-.tabs {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 .navbar-link:not(.is-arrowless)::after,
 .select:not(.is-multiple):not(.is-loading)::after {
   border: 3px solid transparent;
@@ -70,7 +63,6 @@
 .message:not(:last-child),
 .progress:not(:last-child),
 .table:not(:last-child),
-.tabs:not(:last-child),
 .title:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -1233,55 +1225,6 @@ a.navbar-item:hover {
     background-color: #fafafa;
   }
 }
-.tabs {
-  -webkit-overflow-scrolling: touch;
-  align-items: stretch;
-  display: flex;
-  font-size: 1rem;
-  justify-content: space-between;
-  overflow: hidden;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.tabs a {
-  align-items: center;
-  border-bottom-color: #dbdbdb;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  color: #4a4a4a;
-  display: flex;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 0.5em 1em;
-  vertical-align: top;
-}
-.tabs a:hover {
-  border-bottom-color: #363636;
-  color: #363636;
-}
-.tabs li {
-  display: block;
-}
-.tabs li.is-active a {
-  border-bottom-color: #485fc7;
-  color: #485fc7;
-}
-.tabs ul {
-  align-items: center;
-  border-bottom-color: #dbdbdb;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  justify-content: flex-start;
-}
-.tabs .icon:first-child {
-  margin-right: 0.5em;
-}
-.tabs .icon:last-child {
-  margin-left: 0.5em;
-}
 .column {
   display: block;
   flex-basis: 0;
@@ -1332,7 +1275,7 @@ a.navbar-item:hover {
 .hero .navbar {
   background: 0 0;
 }
-.hero .tabs ul {
+.hero ul {
   border-bottom: none;
 }
 .section {
