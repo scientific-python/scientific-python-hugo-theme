@@ -1,6 +1,4 @@
 .panel {
-  border-radius: 6px;
-  box-shadow: none;
   margin: 1em;
 }
 
@@ -81,9 +79,9 @@
 
 .panel-box-action a:hover {
   outline: none;
-  color: var(--colorSecondaryLight);
-  background-color: var(--colorPrimary);
-  border-color: var(--colorPrimary);
+  color: var(--pst-color-info-text);
+  background-color: var(--pst-color-info);
+  border-color: var(--pst-color-info);
   padding-bottom: calc(0.5em - 1px);
   padding-left: 1em;
   padding-right: 1em;
