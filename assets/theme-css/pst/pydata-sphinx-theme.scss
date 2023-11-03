@@ -62,17 +62,17 @@
 @import "./content/toctree";
 //@import "./content/math";
 
-//// Content blocks from Sphinx extensions
+// Content blocks from Sphinx extensions
 //@import "./extensions/ablog";
 //@import "./extensions/bootstrap";
-//@import "./extensions/copybutton";
+@import "./extensions/copybutton";
 //@import "./extensions/ethical-ads";
 //@import "./extensions/execution";
 //@import "./extensions/pydata";
-//@import "./extensions/sphinx_design";
-//@import "./extensions/togglebutton";
+@import "./extensions/sphinx_design";
+@import "./extensions/togglebutton";
 //@import "./extensions/notebooks";
 //@import "./extensions/leaflet";
-//
+
 //// Page-specific CSS
 //@import "./pages/search";
