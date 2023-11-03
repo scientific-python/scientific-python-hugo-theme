@@ -152,12 +152,14 @@ A clickable card
 
 ::: grid
 ::: grid-item-card
+
 ### panel 1 header
 
 panel 1 content more content ++++++++++++++ panel 1 footer
 :::
 
 ::: grid-item-card
+
 ### panel 2 header
 
 panel 2 content ++++++++++++++ panel 2 footer
@@ -166,45 +168,54 @@ panel 2 content ++++++++++++++ panel 2 footer
 
 ## Tabs
 
-
 {{< tabs >}}
 
 {{< tab "c++" >}}
-``` c++
+
+```c++
 int main(const int argc, const char **argv) {
     return 0;
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "python" >}}
-``` python
+
+```python
 def main():
     return
 ```
+
 {{< /tab >}}
 
 {{< tab "java" >}}
-``` java
+
+```java
 class Main {
     public static void main(String[] args) {
     }
 }
 ```
+
 {{< /tab >}}
 
 {{< tab "julia" >}}
-``` julia
+
+```julia
 function main()
 end
 ```
+
 {{< /tab >}}
 
 {{< tab "fortran" >}}
-``` fortran
+
+```fortran
 PROGRAM main
 END PROGRAM main
 ```
+
 {{< /tab >}}
 
 {{< /tabs >}}
@@ -257,7 +268,7 @@ And some content!
 adds a copy button to each of your code cells. You can see it in action
 by hovering over the code cell below:
 
-``` python
+```python
 print("A copybutton in the top-right!")
 ```
 

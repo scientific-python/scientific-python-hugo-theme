@@ -45,7 +45,9 @@
 }
 
 [role="tabpanel"] {
-  box-shadow: 0 -0.0625rem var(--pst-color-text-muted),0 .0625rem var(--pst-color-text-muted);
+  box-shadow:
+    0 -0.0625rem var(--pst-color-text-muted),
+    0 0.0625rem var(--pst-color-text-muted);
   width: 100%;
   overflow: auto;
 }
