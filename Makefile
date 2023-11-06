@@ -42,23 +42,23 @@ theme: doc/content/shortcodes.md
 
 scipy:
 	rm -rf $@
-	git clone https://github.com/scipy/scipy.org $@
+	git clone --depth 1 https://github.com/scipy/scipy.org $@
 	(cd $@ ; hugo --themesDir="../..")
 
 main:
 	rm -rf $@
-	git clone https://github.com/scientific-python/scientific-python.org $@
+	git clone --depth 1 https://github.com/scientific-python/scientific-python.org $@
 	(cd $@ ; git submodule update --init content/specs)
 	(cd $@ ; pip install -q -r requirements.txt)
 	(cd $@ ; hugo --themesDir="../..")
 
 blog:
 	rm -rf $@
-	git clone https://github.com/scientific-python/blog.scientific-python.org $@
+	git clone --depth 1 https://github.com/scientific-python/blog.scientific-python.org $@
 	(cd $@ ; make prepare ; cp -a themes/hugo-atom-feed ../..)
 	(cd $@ ; hugo --themesDir="../..")
 
 learn:
 	rm -rf $@
-	git clone https://github.com/scientific-python/learn.scientific-python.org $@
+	git clone --depth 1 https://github.com/scientific-python/learn.scientific-python.org $@
 	(cd $@ ; hugo --themesDir="../..")
