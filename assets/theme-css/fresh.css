@@ -141,10 +141,7 @@
 section:focus {
   outline: none !important;
 }
-button:focus,
-button:active {
-  outline: none;
-}
+
 #status {
   width: 200px;
   height: 200px;

@@ -11,40 +11,43 @@
   min-width: 100%;
 }
 
-[role="tab"],
-[role="tab"]:focus,
-[role="tab"]:hover {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
-  top: 1px;
-  margin: 0;
-  margin-top: 4px;
+[role="tab"] {
   padding: 2px 2px 4px;
-  border: 1px solid hsl(219deg 1% 72%);
-  border-bottom: 1px solid hsl(219deg 1% 72%);
-  border-radius: 5px 5px 0 0;
+  background-color: var(--pst-color-background);
+  border-color: transparent transparent var(--pst-color-primary);
+  color: var(--pst-color-text);
   outline: none;
   font-weight: bold;
   max-width: 22%;
   overflow: hidden;
   text-align: left;
   cursor: pointer;
+  font-size: 1rem;
+}
+
+[role="tab"]:hover {
+  color: var(--pst-color-secondary);
+  border-color: var(--pst-color-secondary) transparent
+    var(--pst-color-secondary);
 }
 
 [role="tab"][aria-selected="true"] {
-  padding: 2px 2px 4px;
-  margin-top: 0;
-  border-width: 1px;
-  border-top-width: 6px;
-  border-top-color: rgb(36 116 214);
-  border-bottom-color: hsl(220deg 43% 99%);
-  background: hsl(220deg 43% 99%);
+  border-color: transparent transparent var(--pst-color-primary);
+  color: var(--pst-color-primary);
+}
+
+[role="tab"][aria-selected="true"]:hover {
+  border-color: var(--pst-color-secondary) transparent
+    var(--pst-color-secondary);
+  color: var(--pst-color-secondary);
 }
 
 [role="tab"][aria-selected="false"] {
-  padding: 2px 2px 4px;
-  border-bottom: 1px solid hsl(219deg 1% 72%);
+  border-bottom: 0rem solid;
+}
+
+[role="tab"][aria-selected="false"]:hover {
+  border-bottom: 0.0625rem solid var(--pst-color-secondary);
 }
 
 [role="tab"] span.focus {
@@ -53,23 +56,12 @@
   padding: 4px 6px;
 }
 
-/* This makes the tab bounce around */
-/* [role="tab"]:hover span.focus, */
-/* [role="tab"]:focus span.focus, */
-/* [role="tab"]:active span.focus { */
-/*   padding: 2px 2px 4px; */
-/*   border: 1px solid rgb(36 116 214); */
-/*   border-radius: 3px; */
-/* } */
-
 [role="tabpanel"] {
-  padding: 1rem;
-  border: 1px solid hsl(219deg 1% 72%);
-  border-radius: 0 5px 5px;
-  min-height: 10em;
+  box-shadow:
+    0 -0.0625rem var(--pst-color-text-muted),
+    0 0.0625rem var(--pst-color-text-muted);
   width: 100%;
   overflow: auto;
-  background: var(--pst-color-on-background);
 }
 
 [role="tabpanel"].is-hidden {
