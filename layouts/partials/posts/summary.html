@@ -3,5 +3,8 @@
   {{ with $featuredImage }}
   <img src="{{ .RelPermalink }}" {{ if .Params.description }}alt="{{ .Params.description }}"{{ end }}/>
   {{ end }}
-  {{ .Summary }}
+  {{ strings.Chomp .Summary }}
+  <div class="read-more">
+      <a href="{{ .RelPermalink }}">more ⟶</a>
+  </div>
 </div>
