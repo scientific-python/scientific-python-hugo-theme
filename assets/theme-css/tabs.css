@@ -26,7 +26,8 @@
   font-size: 1rem;
 }
 
-[role="tab"]:hover, [role="tab"][aria-selected="true"]:hover {
+[role="tab"]:hover,
+[role="tab"][aria-selected="true"]:hover {
   color: var(--pst-color-secondary);
   border-bottom-color: var(--pst-color-secondary);
   border-bottom-size: 2px;
