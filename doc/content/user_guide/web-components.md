@@ -168,6 +168,8 @@ panel 2 content ++++++++++++++ panel 2 footer
 
 ## Tabs
 
+Code example from the PyData Sphinx Theme's kitchen sink:
+
 {{< tabs >}}
 
 {{< tab "c++" >}}
@@ -216,6 +218,38 @@ PROGRAM main
 END PROGRAM main
 ```
 
+{{< /tab >}}
+
+{{< /tabs >}}
+
+An example with headings
+
+{{< tabs >}}
+
+{{< tab "First example" >}}
+
+### How would this work?
+
+Hello _world_
+
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
+
+```python
+def foo(x):
+    return x + 1
+```
+
+#### What now?
+
+Well, this is a good question.
+
+{{< /tab >}}
+
+{{< tab "Second example" >}}
+Another hello world
 {{< /tab >}}
 
 {{< /tabs >}}
