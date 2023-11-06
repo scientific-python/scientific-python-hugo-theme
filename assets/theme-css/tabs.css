@@ -31,9 +31,17 @@
     0 0.125rem var(--pst-color-secondary);
 }
 
+/* Selected tab behavior */
 [role="tab"][aria-selected="true"] {
   color: var(--pst-color-primary);
   box-shadow: 0 0.125rem var(--pst-color-primary);
+}
+
+[role="tab"][aria-selected="true"]:hover {
+  color: var(--pst-color-secondary);
+  box-shadow:
+    0 -0.125rem var(--pst-color-secondary),
+    0 0.125rem var(--pst-color-secondary);
 }
 
 /* The tab panel is in which the tab contents appear */
