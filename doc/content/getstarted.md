@@ -52,6 +52,18 @@ e.g. to access configuration variables as `{{ .Site.Params.somevar }}`.
 
 Add custom JavaScript to `static/js/*.js`.
 
+### Fonts
+
+By default, this theme doesn't specify a main font, instead falling back to the browser's default as configured by the user.
+
+To set a main font, it's recommended to do so in a CSS file named `assets/css/custom.css`, applying it to the `body` element.  For example:
+
+```css
+body {
+  font-family: "Lato", sans-serif;
+}
+```
+
 ## Next steps
 
 See [features]({{< relref "features" >}}) and [shortcodes]({{< relref "shortcodes" >}}).
