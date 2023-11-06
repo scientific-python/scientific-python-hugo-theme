@@ -33,15 +33,14 @@
 
 [role="tab"][aria-selected="true"] {
   color: var(--pst-color-primary);
-  box-shadow:
-    0 -0.125rem var(--pst-color-primary),
-    0 0.125rem var(--pst-color-primary);
+  box-shadow: 0 0.125rem var(--pst-color-primary);
 }
 
 /* The tab panel is in which the tab contents appear */
 [role="tabpanel"] {
   border-top: 1px solid var(--pst-color-text-muted);
   border-bottom: 1px solid var(--pst-color-text-muted);
+  margin-top: 1px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 100%;
