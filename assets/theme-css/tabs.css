@@ -12,9 +12,10 @@
 }
 
 [role="tab"] {
+  box-sizing: border-box;
   padding: 2px 2px 4px;
   background-color: var(--pst-color-background);
-  border-color: transparent transparent var(--pst-color-primary);
+  border: none;
   color: var(--pst-color-text);
   outline: none;
   font-weight: bold;
@@ -25,29 +26,24 @@
   font-size: 1rem;
 }
 
-[role="tab"]:hover {
+[role="tab"]:hover, [role="tab"][aria-selected="true"]:hover {
   color: var(--pst-color-secondary);
-  border-color: var(--pst-color-secondary) transparent
-    var(--pst-color-secondary);
+  border-bottom-color: var(--pst-color-secondary);
+  border-bottom-size: 2px;
+  border-bottom-style: solid;
+  border-top-color: var(--pst-color-secondary);
+  border-top-size: 2px;
+  border-top-style: solid;
 }
 
 [role="tab"][aria-selected="true"] {
-  border-color: transparent transparent var(--pst-color-primary);
+  border-bottom-color: var(--pst-color-primary);
+  border-bottom-style: solid;
+  border-bottom-size: 2px;
+  border-top-color: transparent;
+  border-top-style: solid;
+  border-top-size: 2px;
   color: var(--pst-color-primary);
-}
-
-[role="tab"][aria-selected="true"]:hover {
-  border-color: var(--pst-color-secondary) transparent
-    var(--pst-color-secondary);
-  color: var(--pst-color-secondary);
-}
-
-[role="tab"][aria-selected="false"] {
-  border-bottom: 0rem solid;
-}
-
-[role="tab"][aria-selected="false"]:hover {
-  border-bottom: 0.0625rem solid var(--pst-color-secondary);
 }
 
 [role="tab"] span.focus {
