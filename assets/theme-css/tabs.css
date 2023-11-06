@@ -6,16 +6,20 @@
   margin-top: 0.5rem;
 }
 
+/* The tab list is the list of tab names */
 [role="tablist"] {
   display: inline-block;
   min-width: 100%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
+/* The tab is the clickable element that selects between tabpanels (see below) */
 [role="tab"] {
-  box-sizing: border-box;
-  padding: 2px 2px 4px;
-  background-color: var(--pst-color-background);
   border: none;
+  padding: 2px 2px 0px;
+  background-color: var(--pst-color-background);
+  margin-bottom: 0;
   color: var(--pst-color-text);
   outline: none;
   font-weight: bold;
@@ -26,25 +30,18 @@
   font-size: 1rem;
 }
 
-[role="tab"]:hover,
-[role="tab"][aria-selected="true"]:hover {
+[role="tab"]:hover {
   color: var(--pst-color-secondary);
-  border-bottom-color: var(--pst-color-secondary);
-  border-bottom-size: 2px;
-  border-bottom-style: solid;
-  border-top-color: var(--pst-color-secondary);
-  border-top-size: 2px;
-  border-top-style: solid;
+  box-shadow:
+    0 -0.125rem var(--pst-color-secondary),
+    0 0.125rem var(--pst-color-secondary);
 }
 
 [role="tab"][aria-selected="true"] {
-  border-bottom-color: var(--pst-color-primary);
-  border-bottom-style: solid;
-  border-bottom-size: 2px;
-  border-top-color: transparent;
-  border-top-style: solid;
-  border-top-size: 2px;
   color: var(--pst-color-primary);
+  box-shadow:
+    0 -0.125rem var(--pst-color-primary),
+    0 0.125rem var(--pst-color-primary);
 }
 
 [role="tab"] span.focus {
@@ -53,18 +50,16 @@
   padding: 4px 6px;
 }
 
+/* The tab panel is in which the tab contents appear */
 [role="tabpanel"] {
-  box-shadow:
-    0 -0.0625rem var(--pst-color-text-muted),
-    0 0.0625rem var(--pst-color-text-muted);
+  border-top: 1px solid var(--pst-color-text-muted);
+  border-bottom: 1px solid var(--pst-color-text-muted);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   width: 100%;
   overflow: auto;
 }
 
 [role="tabpanel"].is-hidden {
   display: none;
-}
-
-[role="tabpanel"] p {
-  margin: 0;
 }
