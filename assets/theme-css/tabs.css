@@ -27,7 +27,8 @@
 
 [role="tab"]:hover {
   color: var(--pst-color-secondary);
-  border-color: var(--pst-color-secondary) transparent var(--pst-color-secondary);
+  border-color: var(--pst-color-secondary) transparent
+    var(--pst-color-secondary);
 }
 
 [role="tab"][aria-selected="true"] {
@@ -36,7 +37,8 @@
 }
 
 [role="tab"][aria-selected="true"]:hover {
-  border-color: var(--pst-color-secondary) transparent var(--pst-color-secondary);
+  border-color: var(--pst-color-secondary) transparent
+    var(--pst-color-secondary);
   color: var(--pst-color-secondary);
 }
 
