@@ -307,18 +307,6 @@ a.box:active {
   background-color: #4a4a4a;
   border: none;
 }
-.progress.is-light::-webkit-progress-value {
-  background-color: #f5f5f5;
-}
-.progress.is-light::-moz-progress-bar {
-  background-color: #f5f5f5;
-}
-.progress.is-light::-ms-fill {
-  background-color: #f5f5f5;
-}
-.progress.is-light:indeterminate {
-  background-image: linear-gradient(to right, #f5f5f5 30%, #ededed 30%);
-}
 .progress:indeterminate {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -369,12 +357,6 @@ a.box:active {
   border-width: 0 0 1px;
   padding: 0.5em 0.75em;
   vertical-align: top;
-}
-.table td.is-light,
-.table th.is-light {
-  background-color: #f5f5f5;
-  border-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.7);
 }
 .table th {
   color: #363636;
@@ -435,10 +417,6 @@ a.box:active {
 .tag:not(body) .delete {
   margin-left: 0.25rem;
   margin-right: -0.375rem;
-}
-.tag:not(body).is-light {
-  background-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.7);
 }
 .tag:not(body) .icon:first-child:not(:last-child) {
   margin-left: -0.375em;
@@ -555,14 +533,6 @@ a.tag:hover {
   max-width: 100%;
   width: 100%;
 }
-.is-light.input {
-  border-color: #f5f5f5;
-}
-.is-light.input:active,
-.is-light.input:focus,
-.is-light.is-active.input {
-  box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
-}
 .input.is-static {
   background-color: transparent;
   border-color: transparent;
@@ -634,21 +604,6 @@ a.tag:hover {
 .select:not(.is-multiple):not(.is-loading):hover::after {
   border-color: #363636;
 }
-.select.is-light:not(:hover)::after {
-  border-color: #f5f5f5;
-}
-.select.is-light select {
-  border-color: #f5f5f5;
-}
-
-.select.is-light select:hover {
-  border-color: #e8e8e8;
-}
-.select.is-light select.is-active,
-.select.is-light select:active,
-.select.is-light select:focus {
-  box-shadow: 0 0 0 0.125em rgba(245, 245, 245, 0.25);
-}
 .file {
   align-items: stretch;
   display: flex;
@@ -668,9 +623,6 @@ a.tag:hover {
   display: block;
   font-size: 0.75rem;
   margin-top: 0.25rem;
-}
-.help.is-light {
-  color: #f5f5f5;
 }
 .field:not(:last-child) {
   margin-bottom: 0.75rem;
@@ -784,65 +736,11 @@ a.tag:hover {
   color: currentColor;
   text-decoration: underline;
 }
-.message.is-light {
-  background-color: #fafafa;
-}
 .navbar {
   background-color: #fff;
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
-}
-.navbar.is-light {
-  background-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.7);
-}
-.navbar.is-light .navbar-brand .navbar-link,
-.navbar.is-light .navbar-brand > .navbar-item {
-  color: rgba(0, 0, 0, 0.7);
-}
-.navbar.is-light .navbar-brand .navbar-link.is-active,
-.navbar.is-light .navbar-brand .navbar-link:focus,
-.navbar.is-light .navbar-brand .navbar-link:hover,
-.navbar.is-light .navbar-brand > a.navbar-item.is-active,
-.navbar.is-light .navbar-brand > a.navbar-item:focus,
-.navbar.is-light .navbar-brand > a.navbar-item:hover {
-  background-color: #e8e8e8;
-  color: rgba(0, 0, 0, 0.7);
-}
-.navbar.is-light .navbar-brand .navbar-link::after {
-  border-color: rgba(0, 0, 0, 0.7);
-}
-.navbar.is-light .navbar-burger {
-  color: rgba(0, 0, 0, 0.7);
-}
-@media screen and (min-width: 1024px) {
-  .navbar.is-light .navbar-end .navbar-link,
-  .navbar.is-light .navbar-end > .navbar-item {
-    color: rgba(0, 0, 0, 0.7);
-  }
-  .navbar.is-light .navbar-end .navbar-link.is-active,
-  .navbar.is-light .navbar-end .navbar-link:focus,
-  .navbar.is-light .navbar-end .navbar-link:hover,
-  .navbar.is-light .navbar-end > a.navbar-item.is-active,
-  .navbar.is-light .navbar-end > a.navbar-item:focus,
-  .navbar.is-light .navbar-end > a.navbar-item:hover {
-    background-color: #e8e8e8;
-    color: rgba(0, 0, 0, 0.7);
-  }
-  .navbar.is-light .navbar-end .navbar-link::after {
-    border-color: rgba(0, 0, 0, 0.7);
-  }
-  .navbar.is-light .navbar-item.has-dropdown.is-active .navbar-link,
-  .navbar.is-light .navbar-item.has-dropdown:focus .navbar-link,
-  .navbar.is-light .navbar-item.has-dropdown:hover .navbar-link {
-    background-color: #e8e8e8;
-    color: rgba(0, 0, 0, 0.7);
-  }
-  .navbar.is-light .navbar-dropdown a.navbar-item.is-active {
-    background-color: #f5f5f5;
-    color: rgba(0, 0, 0, 0.7);
-  }
 }
 .navbar > .container {
   align-items: stretch;
