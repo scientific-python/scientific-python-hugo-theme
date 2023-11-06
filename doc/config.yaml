@@ -6,8 +6,16 @@ relativeURLs: true
 disableKinds: ["taxonomy"]
 
 markup:
-  highlight:
-    noClasses: false
+  defaultMarkdownHandler: pandoc
+
+security:
+  exec:
+    allow:
+    - ^(dart-)?sass(-embedded)?$
+    - ^go$
+    - ^npx$
+    - ^pandoc$
+    - ^postcss$
 
 params:
   author:
