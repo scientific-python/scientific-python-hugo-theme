@@ -140,9 +140,6 @@
   padding: 0;
 }
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-ul {
-  list-style: none;
-}
 input,
 select {
   margin: 0;
