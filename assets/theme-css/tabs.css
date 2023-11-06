@@ -1,15 +1,11 @@
-.tabs {
-  display: block;
-  padding-bottom: 1.5rem;
-}
 .tabs :is(h1, h2, h3, h4, h5, h6) {
   margin-top: 0.5rem;
 }
 
 /* The tab list is the list of tab names */
 [role="tablist"] {
-  display: inline-block;
-  min-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
@@ -17,14 +13,12 @@
 /* The tab is the clickable element that selects between tabpanels (see below) */
 [role="tab"] {
   border: none;
-  padding: 2px 2px 0px;
+  padding: 0.75em 1.3em 0.9em;
   background-color: var(--pst-color-background);
   margin-bottom: 0;
   color: var(--pst-color-text);
-  outline: none;
   font-weight: bold;
   max-width: 22%;
-  overflow: hidden;
   text-align: left;
   cursor: pointer;
   font-size: 1rem;
@@ -42,12 +36,6 @@
   box-shadow:
     0 -0.125rem var(--pst-color-primary),
     0 0.125rem var(--pst-color-primary);
-}
-
-[role="tab"] span.focus {
-  display: inline-block;
-  margin: 2px;
-  padding: 4px 6px;
 }
 
 /* The tab panel is in which the tab contents appear */
