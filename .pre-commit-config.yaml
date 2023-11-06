@@ -3,7 +3,7 @@
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: f71fa2c1f9cf5cb705f73dffe4b21f7c61470ba9 # frozen: v4.4.0
+    rev: c4a0b883114b00d8d76b479c820ce7950211c99b # frozen: v4.5.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -26,7 +26,7 @@ repos:
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/psf/black
-    rev: e87737140f32d3cd7c44ede75f02dcd58e55820e # frozen: 23.9.1
+    rev: 744d23b34800c06e10272149b70752396e90eeb8 # frozen: 23.10.1
     hooks:
       - id: black
 
@@ -36,7 +36,7 @@ repos:
       - id: blacken-docs
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 146c621c9fbe4727ca57be94779b7abecf5058ec # frozen: v0.0.291
+    rev: 3dacd83b1ee8fb950dbdd1001f9b5851728b6077 # frozen: v0.1.4
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix, --target-version=py38]
