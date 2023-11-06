@@ -6,7 +6,8 @@
   <div role="tablist" class="automatic">
     {{- range $idx, $tab := .Scratch.Get "tabs" }}
     <button id="{{ $groupId }}-tab-{{ $idx }}" type="button" role="tab" aria-selected="{{ cond (eq $idx 0) "true" "false" }}" aria-controls="{{ $groupId }}-tabpanel-{{ $idx }}">
-    <span class="focus">{{ .name }}</span>
+      <span class="focus">{{ .name }}</span>
+    </button>
     {{- end }}
   </div>
   {{- range $idx, $tab := .Scratch.Get "tabs" }}
