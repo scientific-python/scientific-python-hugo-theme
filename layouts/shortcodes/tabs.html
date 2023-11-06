@@ -12,9 +12,7 @@
   </div>
   {{- range $idx, $tab := .Scratch.Get "tabs" }}
   <div id="{{ $groupId }}-tabpanel-{{ $idx }}" role="tabpanel" tabindex="0" aria-labelledby="${{ $groupId }}-tab-{{ $idx }}">
-    <p>
-      {{- .content | markdownify -}}
-    </p>
+    {{- .content | markdownify -}}
   </div>
   {{- end }}
 </div>
