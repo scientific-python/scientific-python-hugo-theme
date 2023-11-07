@@ -6,28 +6,22 @@
 {{- $socialMedia := index $footer "socialmedia" }}
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
 
-<footer id="footer" class="footer">
+<footer id="footer">
   <div class="container is-max-widescreen">
     <div id="footer-columns" class="columns">
-      <div class="footer-logo-column">
+      <div id="footer-logo-column">
         <img id="footer-logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
       </div>
       {{- range $quickLinks }}
-        <div class="link-column">
-          <div class="footer-column">
-            <div class="footer-header">
-            </div>
-            <ul class="link-list" style="margin-top: 20px;">
-              {{- range .links }}
-              <li class="link-list">
-                <a class="footer-link" href="{{ .link }}">
-                  {{ .text }}
-                </a>
-              </li>
-              {{- end }}
-            </ul>
-          </div>
+      <div class="footer-column">
+        {{- range .links }}
+        <div class="footer-item">
+          <a href="{{ .link }}">
+            {{ .text }}
+          </a>
         </div>
+        {{- end }}
+      </div>
       {{- end }}
         <div class="footer-actions">
           {{ partial "footer_actions.html" . }}

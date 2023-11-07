@@ -1,0 +1,95 @@
+/* Footer */
+#footer {
+  padding: 3rem 1.5rem 6rem;
+}
+
+#footer {
+  background-color: var(--colorPrimaryDark);
+  position: sticky;
+  top: calc(100vh - var(--spht-footer-height));
+}
+
+#footer-logo-column {
+  padding: 20px 5vw;
+  font-size: 1rem;
+}
+
+#footer-logo {
+  height: 75px;
+}
+
+#footer-columns {
+  display: flex;
+}
+
+.footer-column {
+  padding-left: 0px;
+  margin-top: 20px;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.footer-item a {
+  color: var(--colorSecondary);
+}
+
+.footer-actions {
+  max-width: 25vw;
+  margin: 20px 25px;
+}
+
+.footer-actions > p {
+  padding-top: 0;
+}
+
+.footer-actions p {
+  margin: 0;
+  color: var(--colorSecondary);
+}
+
+@media only screen and (max-width: 850px) {
+  #footer-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-actions {
+    max-width: 50vw;
+  }
+
+  .community-icons {
+    width: 100%;
+  }
+}
+
+#footer .community-icons {
+  /* Icon size slightly enlargened for footer */
+  font-size: 2.3em;
+  max-width: 25rem;
+}
+
+#footer .community-icons a {
+  display: inline-block;
+}
+
+#footer svg.icon {
+  fill: var(--colorSecondary);
+  margin-right: 0.5rem;
+}
+
+#footer svg.icon:hover {
+  fill: #ffffff;
+}
+
+/* For information ⓘ, when icon is missing */
+#footer .icon {
+  font-weight: 900;
+  color: var(--colorSecondary);
+}
+
+#footer nav {
+  background: var(--colorPrimaryDark);
+}
