@@ -4,7 +4,7 @@
   <img src="{{ .RelPermalink }}" {{ if .Params.description }}alt="{{ .Params.description }}"{{ end }}/>
   {{ end }}
   {{ strings.Chomp .Summary }}
-  <div class="read-more">
-      <a href="{{ .RelPermalink }}">more ⟶</a>
-  </div>
+  <span class="read-more">
+      <a href="{{ .RelPermalink }}">Read more...</a>
+  </span>
 </div>
