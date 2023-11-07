@@ -38,6 +38,19 @@ a > code {
   margin-left: 0.5em;
 }
 
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .navbar {
+  background: 0 0;
+}
+.hero ul {
+  border-bottom: none;
+}
+
 .hero-container {
   width: 100vw;
 }
@@ -202,7 +215,6 @@ svg.icon {
 nav,
 .navbar {
   background: var(--pst-color-background);
-  color: var(--pst-color-text-base);
 }
 .navbar-burger {
   color: var(--pst-color-text-muted);
