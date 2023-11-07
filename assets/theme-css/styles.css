@@ -189,6 +189,7 @@ a > code {
 
 #footer-columns > div > div > ul {
   padding-left: 0px;
+  list-style: none;
 }
 
 .link-column {
