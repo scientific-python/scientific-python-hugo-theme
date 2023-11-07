@@ -83,13 +83,13 @@ function remToPx(rem) {
 function setupShortcuts(shortcutDepth = 2) {
   shortcutDepth += 1; // to account for the page title
 
-  // Build a string like ".content-container h2, .content-container h3"
+  // Build a class selector for each header type, and concatenate with commas
   let classes = "";
   for (let i = 2; i <= shortcutDepth; i++) {
     if (i != 2) {
       classes += ",";
     }
-    classes += " .content-container h" + i;
+    classes += " .content-container :not([role='tabpanel']) > h" + i;
   }
 
   // Content Page Shortcuts
