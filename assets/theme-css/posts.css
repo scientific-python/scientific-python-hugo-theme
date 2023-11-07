@@ -85,6 +85,10 @@ div.MathJax_Display {
   margin: 0.5em;
 }
 
+.read-more {
+  font-style: italic;
+}
+
 .tag-cloud {
   position: sticky;
   align-self: flex-start;
