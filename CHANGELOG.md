@@ -1,3 +1,78 @@
+# scientific-python-hugo-theme 0.4
+
+We're happy to announce the release of scientific-python-hugo-theme 0.4!
+
+## Enhancements
+
+- Use box-shadow feature boxes ([#344](https://github.com/scientific-python/scientific-python-hugo-theme/pull/344)).
+- Upstream blog formatting ([#348](https://github.com/scientific-python/scientific-python-hugo-theme/pull/348)).
+- Improve blog post metadata rendering ([#357](https://github.com/scientific-python/scientific-python-hugo-theme/pull/357)).
+- Use pst-color-text-muted (not colorSecondaryDark) ([#360](https://github.com/scientific-python/scientific-python-hugo-theme/pull/360)).
+- Remove navbar clone; instead render navbar using `position: sticky` ([#358](https://github.com/scientific-python/scientific-python-hugo-theme/pull/358)).
+- Reduce flashing on page load ([#359](https://github.com/scientific-python/scientific-python-hugo-theme/pull/359)).
+- Move shortcuts to top of container ([#362](https://github.com/scientific-python/scientific-python-hugo-theme/pull/362)).
+- Add blog CSS ([#367](https://github.com/scientific-python/scientific-python-hugo-theme/pull/367)).
+- Add details shortcode ([#370](https://github.com/scientific-python/scientific-python-hugo-theme/pull/370)).
+- Stick footer to bottom ([#369](https://github.com/scientific-python/scientific-python-hugo-theme/pull/369)).
+- Make button respond to hover and delete cruft ([#373](https://github.com/scientific-python/scientific-python-hugo-theme/pull/373)).
+- Use mathjax ([#366](https://github.com/scientific-python/scientific-python-hugo-theme/pull/366)).
+- Add tabs/tab shortcodes ([#380](https://github.com/scientific-python/scientific-python-hugo-theme/pull/380)).
+- Use PST lists styling ([#383](https://github.com/scientific-python/scientific-python-hugo-theme/pull/383)).
+- Simplify panel styling ([#381](https://github.com/scientific-python/scientific-python-hugo-theme/pull/381)).
+- Add: "More" links after post summaries ([#391](https://github.com/scientific-python/scientific-python-hugo-theme/pull/391)).
+- Tabs tidy and shortcuts ([#387](https://github.com/scientific-python/scientific-python-hugo-theme/pull/387)).
+
+## Bug Fixes
+
+- Move section shortcuts to LHS ([#346](https://github.com/scientific-python/scientific-python-hugo-theme/pull/346)).
+- Team gallery: use less general CSS class names ([#356](https://github.com/scientific-python/scientific-python-hugo-theme/pull/356)).
+- In footer, derive copyright from author name ([#374](https://github.com/scientific-python/scientific-python-hugo-theme/pull/374)).
+- Avoid narrow shrinking of posts on wide screens ([#375](https://github.com/scientific-python/scientific-python-hugo-theme/pull/375)).
+- Fix tabs' borders ([#386](https://github.com/scientific-python/scientific-python-hugo-theme/pull/386)).
+
+## Documentation
+
+- Document release process ([#342](https://github.com/scientific-python/scientific-python-hugo-theme/pull/342)).
+- Fix Scientific Python font in header; also illustrates using custom CSS ([#377](https://github.com/scientific-python/scientific-python-hugo-theme/pull/377)).
+
+## Maintenance
+
+- Ignore bot contributions ([#343](https://github.com/scientific-python/scientific-python-hugo-theme/pull/343)).
+- Remove bulma subheading styling ([#347](https://github.com/scientific-python/scientific-python-hugo-theme/pull/347)).
+- Update mermaid (10.6.0) ([#351](https://github.com/scientific-python/scientific-python-hugo-theme/pull/351)).
+- Update font-awesome ([#352](https://github.com/scientific-python/scientific-python-hugo-theme/pull/352)).
+- Cleanup CSS ([#350](https://github.com/scientific-python/scientific-python-hugo-theme/pull/350)).
+- Add back tag cloud removed by accident ([#364](https://github.com/scientific-python/scientific-python-hugo-theme/pull/364)).
+- Add back featuredImage that was removed by accident ([#363](https://github.com/scientific-python/scientific-python-hugo-theme/pull/363)).
+- Cleanup colors ([#371](https://github.com/scientific-python/scientific-python-hugo-theme/pull/371)).
+- Update theme gallery classes ([#372](https://github.com/scientific-python/scientific-python-hugo-theme/pull/372)).
+- Do label check after first review ([#376](https://github.com/scientific-python/scientific-python-hugo-theme/pull/376)).
+- Remove unused styles ([#379](https://github.com/scientific-python/scientific-python-hugo-theme/pull/379)).
+- Remove unused bulman is-light ([#384](https://github.com/scientific-python/scientific-python-hugo-theme/pull/384)).
+- [pre-commit.ci] pre-commit autoupdate ([#385](https://github.com/scientific-python/scientific-python-hugo-theme/pull/385)).
+- Change: (Makefile) Clone site repos shallowly ([#389](https://github.com/scientific-python/scientific-python-hugo-theme/pull/389)).
+
+## Other
+
+- Use standard font size for key features box ([#378](https://github.com/scientific-python/scientific-python-hugo-theme/pull/378)).
+- Fix tab styling and add user_guide stub ([#382](https://github.com/scientific-python/scientific-python-hugo-theme/pull/382)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.3
 
 We're happy to announce the release of scientific-python-hugo-theme 0.3!
