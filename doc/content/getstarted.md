@@ -50,7 +50,7 @@ This theme is designed to be used as a Git submodule inside the repository that 
    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
    ```
 
-   Load that URL in your browser and you should see the the theme's documentation page, indicating that installation is successful.
+   Load that URL in your browser, and you should see the theme's documentation page, which indicates that the site compiled successfully, and you can now customize it with your own content.
 
 ## Develop your site
 
