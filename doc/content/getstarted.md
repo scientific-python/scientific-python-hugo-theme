@@ -2,15 +2,13 @@
 title: Get Started
 ---
 
-The **Scientific Python Hugo Theme** is a theme for the
-[Hugo](https://gohugo.io) static site generator based on the
-[PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/).
+The **Scientific Python Hugo Theme** is a theme for the [Hugo](https://gohugo.io) static site generator, inspired by the [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/).
 
 To use this theme on your site, follow these instructions.
 
 ## Install Hugo
 
-Hugo is the program that reads the site's source files and generates the HTML and other files that are served to visitors in their Web browsers.
+To use this theme, you will need Hugo.  Hugo is a static site generator, i.e. it takes Markdown source files and transforms them into a website.
 
 1. Install Hugo according to [its installation instructions](https://gohugo.io/installation/).  The standard edition of Hugo is sufficient; you may install the extended edition, but it is not required by this theme.
 
@@ -24,10 +22,10 @@ Hugo is the program that reads the site's source files and generates the HTML an
 
 This theme is designed to be used as a Git submodule inside the repository that contains the Web site's source files, which Hugo builds from.
 
-1. Enter the directory of your site's Git repository.  Or if your site doesn't yet have a Git repository, initialize one in a new directory, e.g. by running the command:
+1. Create a Git repository for your new site:
 
    ```sh
-   mkdir new-site && cd new-site && git init
+   mkdir NEW-SITE && cd NEW-SITE && git init
    ```
 
 2. Add the theme repository as a submodule:
@@ -48,13 +46,13 @@ This theme is designed to be used as a Git submodule inside the repository that 
    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
    ```
 
-   Load that URL in your Web browser and you should see the the theme's documentation page, indicating that installation is successful.
+   Load that URL in your browser and you should see the the theme's documentation page, indicating that installation is successful.
 
 ## Develop your site
 
-Now you may proceed to develop your site, adding content, custom resources like CSS and images, etc.
+Now you may proceed to develop your site by adding content and custom resources like CSS or JavaScript.
 
-As you work, you may see a preview of your site at any time by using the same `make serve` command and viewing it in your browser.
+As you work, a live preview of your site is available via `make serve`.
 
 ### Customization
 
@@ -72,11 +70,11 @@ These files may use Hugo templates.  For example, configuration variables from t
 
 #### JavaScript
 
-Add custom JavaScript files to the `static/js/` directory with a `.js` extension.
+Add custom JavaScript files to the `static/js/` directory with a `.js` extension.  They will automatically be included in the built pages.
 
 ## Build your site
 
-To build your site for deployment, run the command `make html`.  The generated files will be placed in the `public/` directory.
+To build your site for deployment, run `make html`.  The generated files will be placed in the `public/` directory.
 
 ## Next steps
 
