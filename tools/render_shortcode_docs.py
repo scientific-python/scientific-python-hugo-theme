@@ -65,7 +65,9 @@ for shortcode_fn in shortcodes:
     print(f"## `{title}`")
     print()
     print(description)
-    print(f"```\n{example}\n```")
+    # We use an extra backtick here so code blocks embedded in the
+    # examples work correctly.
+    print(f"````\n{example}\n````")
     print("This example renders as:")
     print("___")
     print(code)
