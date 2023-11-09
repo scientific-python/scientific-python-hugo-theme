@@ -18,6 +18,10 @@ To use this theme, you will need Hugo.  Hugo is a static site generator, i.e. it
    hugo v0.120.3-a4892a07b41b7b3f1f143140ee4ec0a9a5cf3970 linux/amd64 BuildDate=2023-11-01T17:57:00Z VendorInfo=gohugoio
    ```
 
+### Install Dart Sass
+
+This theme also uses the [Dart Sass](https://sass-lang.com/dart-sass) CSS transpiler.  To install it, follow [Hugo's Dart Sass installation guide](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass).
+
 ## Install theme
 
 This theme is designed to be used as a Git submodule inside the repository that contains the Web site's source files, which Hugo builds from.
