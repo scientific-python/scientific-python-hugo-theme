@@ -4,32 +4,33 @@ title: Get Started
 
 The **Scientific Python Hugo Theme** is a theme for the [Hugo](https://gohugo.io) static site generator, inspired by the [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/).
 
-To use this theme on your site, follow these instructions.
+To use this theme on your site, follow these instructions:
 
-## Install Hugo
+## Dependencies
 
-To use this theme, you will need Hugo. Hugo is a static site generator, i.e. it takes Markdown source files and transforms them into a website.
+1. [Install Hugo](https://gohugo.io/installation/). Either the standard or extended editions of Hugo will work.
 
-1. Install Hugo according to [its installation instructions](https://gohugo.io/installation/). The standard edition of Hugo is sufficient; you may install the extended edition, but it is not required by this theme.
-
-2. Verify that the `hugo` binary is present in your `PATH` environment variable by running the command `hugo version`, which should output a message like:
+   Verify that `hugo` is on your `PATH`:
 
    ```
+   $ hugo version
    hugo v0.120.3-a4892a07b41b7b3f1f143140ee4ec0a9a5cf3970 linux/amd64 BuildDate=2023-11-01T17:57:00Z VendorInfo=gohugoio
    ```
 
-### Install Dart Sass
+2. [Install Dart Sass](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass).
 
-This theme also uses the [Dart Sass](https://sass-lang.com/dart-sass) CSS transpiler. To install it, follow [Hugo's Dart Sass installation guide](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass).
+You can also [install Hugo as a snap](https://gohugo.io/installation/linux/#snap), which includes Dart Sass.
 
-## Install theme
+## Set up the theme
 
-This theme is designed to be used as a Git submodule inside the repository that contains the Web site's source files, which Hugo builds from.
+This theme is designed to be used as a Git submodule inside your site's source repository.
 
-1. Create a Git repository for your new site:
+1. If you haven't already, create a Git repository for your new site:
 
    ```sh
-   mkdir NEW-SITE && cd NEW-SITE && git init
+   mkdir NEW-SITE
+   cd NEW-SITE
+   git init
    ```
 
 2. Add the theme repository as a submodule:
@@ -44,42 +45,46 @@ This theme is designed to be used as a Git submodule inside the repository that 
    cp -a themes/scientific-python-hugo-theme/doc/* .
    ```
 
-4. Test the site by running `make serve`. The command's output should include a line like:
+4. Test the site:
 
    ```
+   $ make serve
+   ...
    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
    ```
 
-   Load that URL in your browser, and you should see the theme's documentation page, which indicates that the site compiled successfully, and you can now customize it with your own content.
+   Load that URL in your browser. If you see the theme's documentation page, the site compiled successfully and you can customize it with your own content.
 
 ## Develop your site
 
-Now you may proceed to develop your site by adding content and custom resources like CSS or JavaScript.
+Proceed to develop your site by adding content and custom resources like CSS or JavaScript.
 
-As you work, a live preview of your site is available via `make serve`.
+The web server started with `make serve` will recompile your site every time it changes, and automatically refresh the browser.
 
-### Customization
+### Content
 
-#### `config.yaml`
+Place Markdown files in `./contents/`. Also see the [Hugo documentation](https://gohugo.io/content-management/organization/).
 
-The main configuration file is `config.yaml`, in the repository's root directory. It is used to set the name of the site, configure navigation bars, etc.
+### `config.yaml`
 
-For examples of what's possible by editing this file, see these repositories which also use this theme: [scientific-python.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml), [numpy.org](https://github.com/numpy/numpy.org/blob/main/config.yaml.in), and [scipy.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml).
+Your site configuration file is `./config.yaml`. It is used to set the name of the site, configure navigation bars, etc.
+Example `config.yaml` files can be seen in [scientific-python.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml), [numpy.org](https://github.com/numpy/numpy.org/blob/main/config.yaml.in), and [scipy.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml).
 
-#### CSS
+### CSS
 
-To customize styles, add CSS files to the `assets/css/` directory. It's recommended to put your customizations in a `custom.css` file, but you may add additional ones as well.
+To customize styles, add CSS files to the `./assets/css/` directory.
+It's recommended to put your customizations in a file named `custom.css`, but other `css` files added there will also be loaded.
 
-These files may use Hugo templates. For example, configuration variables from the `config.yaml` file may be accessed like `{{ .Site.Params.VARIABLE }}`.
+CSS files are compiled as Hugo templates, i.e. configuration variables from the `config.yaml` file can be accessed as `{{ .Site.Params.VARIABLE }}`.
 
-#### JavaScript
+### JavaScript
 
-Add custom JavaScript files to the `static/js/` directory with a `.js` extension. They will automatically be included in the built pages.
+Add custom JavaScript files to the `./static/js/` directory with a `.js` extension. They will automatically be included in the built pages.
 
-## Build your site
+## Deploy your site
 
-To build your site for deployment, run `make html`. The generated files will be placed in the `public/` directory.
+Build your site for deployment with `make html`. The generated site is in `./public`.
 
 ## Next steps
 
-To learn about the features provided by this theme, see [features]({{< relref "features" >}}) and [shortcodes]({{< relref "shortcodes" >}}).
+Take a minute to learn about the [features]({{< relref "features" >}}) and [shortcodes]({{< relref "shortcodes" >}}) provided by the theme.
