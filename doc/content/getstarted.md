@@ -8,9 +8,9 @@ To use this theme on your site, follow these instructions.
 
 ## Install Hugo
 
-To use this theme, you will need Hugo.  Hugo is a static site generator, i.e. it takes Markdown source files and transforms them into a website.
+To use this theme, you will need Hugo. Hugo is a static site generator, i.e. it takes Markdown source files and transforms them into a website.
 
-1. Install Hugo according to [its installation instructions](https://gohugo.io/installation/).  The standard edition of Hugo is sufficient; you may install the extended edition, but it is not required by this theme.
+1. Install Hugo according to [its installation instructions](https://gohugo.io/installation/). The standard edition of Hugo is sufficient; you may install the extended edition, but it is not required by this theme.
 
 2. Verify that the `hugo` binary is present in your `PATH` environment variable by running the command `hugo version`, which should output a message like:
 
@@ -20,7 +20,7 @@ To use this theme, you will need Hugo.  Hugo is a static site generator, i.e. it
 
 ### Install Dart Sass
 
-This theme also uses the [Dart Sass](https://sass-lang.com/dart-sass) CSS transpiler.  To install it, follow [Hugo's Dart Sass installation guide](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass).
+This theme also uses the [Dart Sass](https://sass-lang.com/dart-sass) CSS transpiler. To install it, follow [Hugo's Dart Sass installation guide](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass).
 
 ## Install theme
 
@@ -44,7 +44,7 @@ This theme is designed to be used as a Git submodule inside the repository that 
    cp -a themes/scientific-python-hugo-theme/doc/* .
    ```
 
-4. Test the site by running `make serve`.  The command's output should include a line like:
+4. Test the site by running `make serve`. The command's output should include a line like:
 
    ```
    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
@@ -62,23 +62,23 @@ As you work, a live preview of your site is available via `make serve`.
 
 #### `config.yaml`
 
-The main configuration file is `config.yaml`, in the repository's root directory.  It is used to set the name of the site, configure navigation bars, etc.
+The main configuration file is `config.yaml`, in the repository's root directory. It is used to set the name of the site, configure navigation bars, etc.
 
 For examples of what's possible by editing this file, see these repositories which also use this theme: [scientific-python.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml), [numpy.org](https://github.com/numpy/numpy.org/blob/main/config.yaml.in), and [scipy.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml).
 
 #### CSS
 
-To customize styles, add CSS files to the `assets/css/` directory.  It's recommended to put your customizations in a `custom.css` file, but you may add additional ones as well.
+To customize styles, add CSS files to the `assets/css/` directory. It's recommended to put your customizations in a `custom.css` file, but you may add additional ones as well.
 
-These files may use Hugo templates.  For example, configuration variables from the `config.yaml` file may be accessed like `{{ .Site.Params.VARIABLE }}`.
+These files may use Hugo templates. For example, configuration variables from the `config.yaml` file may be accessed like `{{ .Site.Params.VARIABLE }}`.
 
 #### JavaScript
 
-Add custom JavaScript files to the `static/js/` directory with a `.js` extension.  They will automatically be included in the built pages.
+Add custom JavaScript files to the `static/js/` directory with a `.js` extension. They will automatically be included in the built pages.
 
 ## Build your site
 
-To build your site for deployment, run `make html`.  The generated files will be placed in the `public/` directory.
+To build your site for deployment, run `make html`. The generated files will be placed in the `public/` directory.
 
 ## Next steps
 
