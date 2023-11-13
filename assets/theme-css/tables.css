@@ -1,3 +1,8 @@
+table th {
+  color: var(--pst-color-text-muted);
+  text-align: inherit;
+}
+
 table td:not(:last-child),
 table th {
   padding-bottom: 0.25rem;
