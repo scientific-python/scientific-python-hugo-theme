@@ -52,11 +52,13 @@ def shortcode_doc(fn):
     )
 
     # Process rendering options.
-    options_match = re.match("^{{/\\*.*^options: +({[^\n]+}) *$.*\\*/}}$", data,
-                             re.MULTILINE | re.DOTALL)
+    options_match = re.match(
+        "^{{/\\*.*^options: +({[^\n]+}) *$.*\\*/}}$", data, re.MULTILINE | re.DOTALL
+    )
     if options_match:
         # Read Python dict of options.
         from ast import literal_eval
+
         options = literal_eval(options_match.group(1))  # Safely read expression.
         assert isinstance(options, dict)
 
