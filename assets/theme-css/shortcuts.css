@@ -46,6 +46,7 @@
   cursor: pointer;
 }
 
+/* FIXME: Should we specify this max-width in ems? */
 @media only screen and (max-width: 1090px) {
   #shortcuts-container {
     display: none;
