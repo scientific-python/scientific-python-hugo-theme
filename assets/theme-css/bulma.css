@@ -209,22 +209,6 @@ table td:not([align]),
 table th:not([align]) {
   text-align: inherit;
 }
-@-webkit-keyframes spinAround {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes spinAround {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 .box {
   background-color: #fff;
   border-radius: 6px;
@@ -330,22 +314,6 @@ a.box:active {
 }
 .progress:indeterminate::-ms-fill {
   animation-name: none;
-}
-@-webkit-keyframes moveIndeterminate {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
-}
-@keyframes moveIndeterminate {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
-  }
 }
 .table {
   background-color: #fff;
