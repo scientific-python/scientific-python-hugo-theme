@@ -2,8 +2,11 @@
   position: sticky;
   align-self: flex-start;
   top: 5rem;
-  width: 100%;
-  max-width: 150px;
+  flex-basis: 15em;
+  /* We disable shrinking for this container, otherwise the single-line
+   items start wrapping to two lines, especially when active and
+   bolded, which causes distracting layout changes. */
+  flex-shrink: 0;
 }
 
 #shortcuts {

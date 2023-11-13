@@ -8,7 +8,7 @@
 /* Full screen two-column layout for desktop etc. */
 @media only screen and (min-width: 75em) {
   .content-container {
-    min-width: 70rem;
+    flex-basis: 70em;
     flex-direction: row;
   }
 
