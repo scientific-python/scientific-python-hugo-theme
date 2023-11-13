@@ -1,3 +1,13 @@
+{{/*
+
+options: {"render": False}
+
+doc: Shows a table-of-contents tree for the Hugo [`Sections`](https://gohugo.io/methods/page/sections/) in the current hierarchy.  In this documentaion, an example of the `toctree` is seen on the [Examples]({{% relref "examples" %}}) page.
+
+{{< toctree >}}
+
+*/}}
+
 <div class="toctree-wrapper">
   {{- range $section := .Page.Sections }}
   <ul>
