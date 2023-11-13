@@ -109,24 +109,3 @@ div.MathJax_Display {
   flex-wrap: wrap;
   column-gap: 2rem;
 }
-
-/* Default: single column layout for mobile */
-.content-container {
-  max-width: 70em;
-  margin: 0 30px;
-  flex-direction: column;
-}
-
-/* Full screen two-column layout for desktop etc. */
-@media only screen and (min-width: 75em) {
-  .content-container {
-    min-width: 70rem;
-    flex-direction: row;
-  }
-
-  article {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: calc(50% - 1rem);
-  }
-}
