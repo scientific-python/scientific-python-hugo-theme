@@ -220,6 +220,12 @@ nav,
 .navbar-menu.is-active {
   background: var(--pst-color-text-muted);
 }
+.navbar-menu.is-active .navbar-item {
+    color: var(--pst-color-background);
+}
+.navbar-menu.is-active .navbar-item:hover {
+    color: var(--pst-color-link-hover);
+}
 
 a.navbar-item,
 a.navbar-item:visited {
