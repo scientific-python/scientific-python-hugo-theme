@@ -1,3 +1,22 @@
+#!/usr/bin/env python3
+
+# NOTE: In each shortcode's HTML file, options may be provided in the
+# form of a Python dict after "options: " at the beginning of a line
+# inside the specially commented preface.  For example:
+
+# {{/*
+#
+# options: {"render": False}
+#
+# doc: Foo bar.
+#
+# {{< foo bar >}}
+#
+# */}}
+
+# That option (currently the only one) disables rendering of the
+# shortcode in the documentation.
+
 import os
 import re
 
@@ -31,6 +50,20 @@ def shortcode_doc(fn):
         .replace("{{% ", "{{%/* ")
         .replace(" %}}", " */%}}")
     )
+
+    # Process rendering options.
+    options_match = re.match("^{{/\\*.*^options: +({[^\n]+}) *$.*\\*/}}$", data,
+                             re.MULTILINE | re.DOTALL)
+    if options_match:
+        # Read Python dict of options.
+        from ast import literal_eval
+        options = literal_eval(options_match.group(1))  # Safely read expression.
+        assert isinstance(options, dict)
+
+        if "render" in options:
+            if not options["render"]:
+                # Disable rendering of the example.
+                code = None
 
     return description, example, code
 
@@ -68,7 +101,9 @@ for shortcode_fn in shortcodes:
     # We use an extra backtick here so code blocks embedded in the
     # examples work correctly.
     print(f"````\n{example}\n````")
-    print("This example renders as:")
-    print("___")
-    print(code)
-    print("___")
+
+    if code:
+        print("This example renders as:")
+        print("___")
+        print(code)
+        print("___")
