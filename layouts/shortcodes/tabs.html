@@ -1,3 +1,32 @@
+{{/*
+
+doc: A tabs panel.
+
+{{< tabs >}}
+
+{{< tab "c++" >}}
+An example program in C++:
+```c++
+int main(const int argc, const char **argv) {
+    return 0;
+}
+```
+It simply returns 0, indicating no errors.
+{{< /tab >}}
+
+{{< tab "python" >}}
+An example program in Python:
+```python
+def main():
+    return True
+```
+It returns `True`, indicating no errors.
+{{< /tab >}}
+
+{{< /tabs >}}
+
+*/}}
+
 <!-- Render inner tabs, which adds them to a scratch variable for this parent shortcode -->
 {{- .Inner -}}
 {{- $groupId := .Page.Scratch.Get "tabgroup" | default 0 -}}

@@ -270,10 +270,6 @@ a.headerlink {
   visibility: visible;
 }
 
-/* Local Variables: */
-/* css-indent-offset: 2 */
-/* End: */
-
 #breadcrumbs {
   margin: 0;
   padding: 0;
@@ -284,3 +280,7 @@ a.headerlink {
   font-style: italic;
   margin-top: -0.5rem;
 }
+
+/* Local Variables: */
+/* css-indent-offset: 2 */
+/* End: */
