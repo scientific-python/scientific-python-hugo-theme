@@ -235,21 +235,6 @@ a.box:active {
   height: auto;
   width: 100%;
 }
-.title {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.125;
-}
-.title strong {
-  color: inherit;
-  font-weight: inherit;
-}
-.title:not(.is-spaced) + .subtitle {
-  margin-top: -1.25rem;
-}
-.title.is-5 {
-  font-size: 1.25rem;
-}
 .heading {
   display: block;
   font-size: 11px;

@@ -2,10 +2,6 @@ body {
   margin: 0;
 }
 
-.title {
-  color: var(--pst-heading-color);
-}
-
 /**
  * See `code.literal` in
  * src/pydata_sphinx_theme/assets/styles/content/_code.scss
