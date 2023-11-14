@@ -2,14 +2,6 @@ body {
   margin: 0;
 }
 
-.title {
-  color: var(--pst-heading-color);
-}
-
-hr {
-  background-color: var(--pst-color-text-muted);
-}
-
 /**
  * See `code.literal` in
  * src/pydata_sphinx_theme/assets/styles/content/_code.scss
@@ -36,6 +28,19 @@ a > code {
   flex-direction: column;
   justify-content: center;
   margin-left: 0.5em;
+}
+
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .navbar {
+  background: 0 0;
+}
+.hero ul {
+  border-bottom: none;
 }
 
 .hero-container {
@@ -202,7 +207,6 @@ svg.icon {
 nav,
 .navbar {
   background: var(--pst-color-background);
-  color: var(--pst-color-text-base);
 }
 .navbar-burger {
   color: var(--pst-color-text-muted);

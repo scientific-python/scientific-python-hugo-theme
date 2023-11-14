@@ -128,10 +128,6 @@
 .navbar-burger {
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
-  background: 0 0;
-  border: none;
-  color: currentColor;
   font-family: inherit;
   font-size: 1em;
   margin: 0;
@@ -165,12 +161,6 @@ footer,
 header,
 section {
   display: block;
-}
-hr {
-  border: none;
-  display: block;
-  height: 2px;
-  margin: 1.5rem 0;
 }
 img {
   height: auto;
@@ -244,21 +234,6 @@ a.box:active {
   display: block;
   height: auto;
   width: 100%;
-}
-.title {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.125;
-}
-.title strong {
-  color: inherit;
-  font-weight: inherit;
-}
-.title:not(.is-spaced) + .subtitle {
-  margin-top: -1.25rem;
-}
-.title.is-5 {
-  font-size: 1.25rem;
 }
 .heading {
   display: block;
@@ -548,12 +523,6 @@ a.box:active {
   color: currentColor;
   text-decoration: underline;
 }
-.navbar {
-  background-color: #fff;
-  min-height: 3.25rem;
-  position: relative;
-  z-index: 30;
-}
 .navbar > .container {
   align-items: stretch;
   display: flex;
@@ -564,24 +533,19 @@ a.box:active {
   align-items: stretch;
   display: flex;
   flex-shrink: 0;
-  min-height: 3.25rem;
 }
 .navbar-brand a.navbar-item:focus,
 .navbar-brand a.navbar-item:hover {
   background-color: transparent;
 }
 .navbar-burger {
-  color: #4a4a4a;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   background: 0 0;
   border: none;
   cursor: pointer;
-  display: block;
-  height: 3.25rem;
   position: relative;
-  width: 3.25rem;
   margin-left: auto;
 }
 .navbar-burger span {
@@ -604,12 +568,6 @@ a.box:active {
 }
 .navbar-burger span:nth-child(3) {
   top: calc(50% + 4px);
-}
-.navbar-burger:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.navbar-burger.is-active span:first-child {
-  transform: translateY(5px) rotate(45deg);
 }
 .navbar-burger.is-active span:nth-child(2) {
   opacity: 0;
@@ -851,18 +809,6 @@ a.navbar-item:hover {
   .is-hidden-mobile {
     display: none !important;
   }
-}
-.hero {
-  align-items: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.hero .navbar {
-  background: 0 0;
-}
-.hero ul {
-  border-bottom: none;
 }
 .section {
   padding: 3rem 1.5rem;
