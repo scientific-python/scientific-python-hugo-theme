@@ -49,8 +49,8 @@
   cursor: pointer;
 }
 
-/* FIXME: Should we specify this max-width in ems? */
-@media only screen and (max-width: 1090px) {
+/* Same breakpoint as burger menu */
+@media screen and (max-width: 1023px) {
   #shortcuts-container {
     display: none;
   }

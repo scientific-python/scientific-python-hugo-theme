@@ -1,38 +1,21 @@
-/* Default: single column layout for mobile */
-.content-container {
-  max-width: 70em;
-  margin: 0 30px;
-  flex-direction: column;
-}
-
-/* Full screen two-column layout for desktop etc. */
-@media only screen and (min-width: 75em) {
-  .content-container {
-    flex-basis: 70em;
-    flex-direction: row;
-  }
-
-  article {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: calc(50% - 1rem);
-  }
-}
-
-/* Other rules. */
-
 .content-padding {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   margin: 1em;
 }
 
-.content-container .divider {
-  height: 3px;
-  border-radius: 50px;
-  background: var(--pst-color-text-base);
-  width: 60px;
-  &.is-centered {
-    margin: 0 auto;
+.content-container {
+  max-width: 70em;
+  flex-basis: 70em;
+  flex-shrink: 1;
+  margin: 0 30px;
+  flex-direction: column;
+}
+
+/* Start wrapping at the same breakpoint as the one that enables the burger menu */
+@media screen and (max-width: 1023px) {
+  .content-padding {
+    flex-wrap: wrap;
   }
 }
