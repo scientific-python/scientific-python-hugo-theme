@@ -77,9 +77,6 @@
   -webkit-animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
 }
-section:focus {
-  outline: none !important;
-}
 
 #status {
   width: 200px;

@@ -158,8 +158,7 @@ article,
 aside,
 figure,
 footer,
-header,
-section {
+header {
   display: block;
 }
 img {
@@ -808,13 +807,5 @@ a.navbar-item:hover {
 @media screen and (max-width: 768px) {
   .is-hidden-mobile {
     display: none !important;
-  }
-}
-.section {
-  padding: 3rem 1.5rem;
-}
-@media screen and (min-width: 1024px) {
-  .section {
-    padding: 3rem 3rem;
   }
 }
