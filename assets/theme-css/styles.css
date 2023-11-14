@@ -6,10 +6,6 @@ body {
   color: var(--pst-heading-color);
 }
 
-hr {
-  background-color: var(--pst-color-text-muted);
-}
-
 /**
  * See `code.literal` in
  * src/pydata_sphinx_theme/assets/styles/content/_code.scss
