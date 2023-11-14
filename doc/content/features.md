@@ -90,8 +90,6 @@ The `tools/team_query.py` file gets a list of team members from GitHub. To
 use it, you will need to set the GH_TOKEN environment variable
 to a personal access token.
 
-The team is rendered using shortcodes (`team`, `team_member`).
-
 Example usage:
 
 ```
