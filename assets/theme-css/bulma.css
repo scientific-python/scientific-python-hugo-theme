@@ -141,11 +141,6 @@ select {
 html {
   box-sizing: border-box;
 }
-*,
-::after,
-::before {
-  box-sizing: inherit;
-}
 img,
 video {
   height: auto;
