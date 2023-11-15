@@ -138,9 +138,6 @@ input,
 select {
   margin: 0;
 }
-html {
-  box-sizing: border-box;
-}
 img,
 video {
   height: auto;
