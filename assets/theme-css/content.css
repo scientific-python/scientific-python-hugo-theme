@@ -6,16 +6,11 @@
 }
 
 .content-container {
-  max-width: 70em;
   flex-basis: 70em;
   flex-shrink: 1;
-  margin: 0 30px;
   flex-direction: column;
-}
+  margin: 0 30px;
 
-/* Start wrapping at the same breakpoint as the one that enables the burger menu */
-@media screen and (max-width: 1023px) {
-  .content-padding {
-    flex-wrap: wrap;
-  }
+  /* Handle code cells overflowing */
+  overflow: auto;
 }
