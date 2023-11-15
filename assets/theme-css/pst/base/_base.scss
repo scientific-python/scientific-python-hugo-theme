@@ -160,11 +160,6 @@ pre {
   border: 1px solid var(--pst-color-border);
   border-radius: $admonition-border-radius;
 
-  // Prevent long, monospaced lines and words in PRE elements from
-  // breaking page layout.  Very non-obvious problem and solution.
-  white-space: pre-wrap;
-  word-break: break-all;
-
   .linenos {
     // minimum opacity to make the line numbers WCAG AA conformant
     opacity: 0.8;
