@@ -180,17 +180,6 @@ figcaption {
   width: 80%;
 }
 
-blockquote {
-  border-left: 6px solid var(--colorSecondary);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-blockquote p {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 /* Icon size for the whole document */
 svg.icon {
   height: 0.75em;
