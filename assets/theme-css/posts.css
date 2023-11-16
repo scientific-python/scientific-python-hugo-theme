@@ -1,5 +1,13 @@
-div.post-list {
-  clear: left;
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.post-list article {
+  flex-grow: 2;
+  flex-basis: 48%;
+  padding-top: 1.5rem;
 }
 
 .post-title a {
@@ -9,10 +17,6 @@ div.post-list {
 
 .post-meta {
   color: var(--pst-color-text-muted);
-}
-
-.post-list article {
-  padding-top: 1.5rem;
 }
 
 .post-list .post-title {
@@ -79,10 +83,11 @@ div.MathJax_Display {
 
 .post-featuredImage img {
   /* FIXME: Use color variable. */
-  border: 0.15em #bbb solid;
-  border-radius: 25px;
+  border: 1px #bbb solid;
   max-width: 20rem;
   margin: 0.5em;
+  float: left;
+  margin-right: 1.25rem;
 }
 
 .read-more {
@@ -102,10 +107,4 @@ div.MathJax_Display {
   font-size: 32px;
   margin-top: 60px;
   padding-bottom: 10px;
-}
-
-.content-container .post-list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 2rem;
 }
