@@ -1,8 +1,4 @@
 // copy-code-blocks.js
-// Copyright: 2023  Scientific Python Developers
-// Author: Adam Porter <adam@alphapapa.net>
-// License: BSD 3-Clause License
-//   see <https://raw.githubusercontent.com/scientific-python/scientific-python-hugo-theme/main/LICENSE>
 
 // This file implements a button attached to code blocks which copies
 // the code to the clipboard.
