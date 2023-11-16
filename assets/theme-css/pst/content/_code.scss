@@ -12,6 +12,19 @@ div.literal-block-wrapper {
   flex-direction: column;
   width: unset;
   border-radius: $admonition-border-radius;
+
+  & .copy-button {
+    bottom: 10px;
+    float: right;
+    font-size: 0.875em;
+    left: 10px;
+    position: relative;
+    visibility: hidden;
+    z-index: 1;
+  }
+  &:hover .copy-button {
+    visibility: visible;
+  }
 }
 
 // Code blocks with captions
