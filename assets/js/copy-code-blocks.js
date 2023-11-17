@@ -11,11 +11,12 @@ const pre_selector = "div.highlight pre";
 document.querySelectorAll(pre_selector).forEach(add_button_to);
 
 function add_button_to(element) {
+    div = document.createElement("div");
+    div.classList.add("copy-button");
     button = document.createElement("button");
-    button.classList.add("copy-button")
-    button.append(document.createTextNode("Copy"));
     button.addEventListener("click", copy_content_of);
-    element.prepend(button);
+    div.append(button);
+    element.prepend(div);
 }
 
 function copy_content_of(event) {

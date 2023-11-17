@@ -25,6 +25,11 @@ div.literal-block-wrapper {
   &:hover .copy-button {
     visibility: visible;
   }
+
+  & button::before {
+    content: var(--fa-copy);
+    font: var(--fa-font-solid);
+  }
 }
 
 // Code blocks with captions
