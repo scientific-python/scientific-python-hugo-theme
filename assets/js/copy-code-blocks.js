@@ -26,11 +26,11 @@ function copy_content_of(event) {
         .then(() => update_button(this) );
 }
 
-function update_button(button, new_text="Copied", reset=true) {
+function update_button(button, new_text="Copied  ", reset=true) {
     old_text = button.innerText;
     button.innerText = new_text;
     if (reset) {
-        setTimeout(update_button, 1000, button, old_text, false);
+        setTimeout(update_button, 2000, button, old_text, false);
     }
 }
 
