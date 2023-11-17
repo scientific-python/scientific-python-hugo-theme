@@ -20,9 +20,8 @@ function add_button_to(element) {
 }
 
 function copy_content_of(event) {
-    // Omit "Copy" prefix from the button itself.
-    target = this.parentElement.textContent.substring(4);
-    navigator.clipboard.writeText(target)
+    content = this.parentElement.parentElement.textContent;
+    navigator.clipboard.writeText(content)
         .then(() => update_button(this));
 }
 
