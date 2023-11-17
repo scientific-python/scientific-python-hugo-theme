@@ -1,6 +1,7 @@
 disableKinds:
   - taxonomy
 params:
+  colorScheme: auto # can be auto (browser setting), light, or dark
   images:
     - /images/logo.svg
   navColor: blue
