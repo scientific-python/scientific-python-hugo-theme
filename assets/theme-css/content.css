@@ -1,21 +1,16 @@
 .content-padding {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   margin: 1em;
 }
 
 .content-container {
-  max-width: 850px;
+  flex-basis: 70em;
+  flex-shrink: 1;
+  flex-direction: column;
   margin: 0 30px;
-  overflow: hidden;
-}
 
-.content-container .divider {
-  height: 3px;
-  border-radius: 50px;
-  background: var(--pst-color-text-base);
-  width: 60px;
-  &.is-centered {
-    margin: 0 auto;
-  }
+  /* Handle code cells overflowing */
+  overflow: auto;
 }
