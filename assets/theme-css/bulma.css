@@ -1,5 +1,4 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
-.file,
 .navbar-link:not(.is-arrowless)::after {
   border: 3px solid transparent;
   border-radius: 2px;
@@ -20,22 +19,8 @@
 .box:not(:last-child),
 .content:not(:last-child),
 .level:not(:last-child),
-.message:not(:last-child),
 .title:not(:last-child) {
   margin-bottom: 1.5rem;
-}
-.loader {
-  -webkit-animation: spinAround 0.5s infinite linear;
-  animation: spinAround 0.5s infinite linear;
-  border: 2px solid #dbdbdb;
-  border-radius: 9999px;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  content: "";
-  display: block;
-  height: 1em;
-  position: relative;
-  width: 1em;
 }
 .navbar-burger {
   -moz-appearance: none;
@@ -138,33 +123,6 @@ a.box:active {
   height: auto;
   width: 100%;
 }
-.heading {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
-.file {
-  align-items: stretch;
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-}
-.label {
-  color: #363636;
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-}
-.label:not(:last-child) {
-  margin-bottom: 0.5em;
-}
-.help {
-  display: block;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
-}
 .field:not(:last-child) {
   margin-bottom: 0.75rem;
 }
@@ -213,21 +171,6 @@ a.box:active {
   .level-item:not(:last-child) {
     margin-bottom: 0.75rem;
   }
-}
-.menu {
-  font-size: 1rem;
-}
-.message {
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-.message strong {
-  color: currentColor;
-}
-.message a:not(.button):not(.dropdown-item) {
-  color: currentColor;
-  text-decoration: underline;
 }
 .navbar > .container {
   align-items: stretch;
