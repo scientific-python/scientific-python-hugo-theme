@@ -41,7 +41,7 @@
 
 {{- range $cssFiles -}}
 
-{{- $targetFile := printf "css/%s.css" . -}}
+{{- $targetFile := printf "css/%s" . -}}
 
 {{ if $inServerMode -}}
 {{ $custom_style := . | resources.ExecuteAsTemplate $targetFile $page -}}
