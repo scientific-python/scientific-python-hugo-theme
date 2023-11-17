@@ -159,30 +159,6 @@ a.box:active {
   text-align: center;
   vertical-align: top;
 }
-
-.radio {
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1.25;
-  position: relative;
-}
-
-.radio input {
-  cursor: pointer;
-}
-
-.radio:hover {
-  color: #363636;
-}
-
-.radio input[disabled],
-.radio[disabled] {
-  color: #7a7a7a;
-  cursor: not-allowed;
-}
-.radio + .radio {
-  margin-left: 0.5em;
-}
 .file {
   align-items: stretch;
   display: flex;
