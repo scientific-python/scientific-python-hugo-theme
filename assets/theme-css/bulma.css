@@ -145,20 +145,6 @@ a.box:active {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
-.number {
-  align-items: center;
-  background-color: #f5f5f5;
-  border-radius: 9999px;
-  display: inline-flex;
-  font-size: 1.25rem;
-  height: 2em;
-  justify-content: center;
-  margin-right: 1.5rem;
-  min-width: 2.5em;
-  padding: 0.25rem 0.5rem;
-  text-align: center;
-  vertical-align: top;
-}
 .file {
   align-items: stretch;
   display: flex;
@@ -181,26 +167,6 @@ a.box:active {
 }
 .field:not(:last-child) {
   margin-bottom: 0.75rem;
-}
-.control {
-  box-sizing: border-box;
-  clear: both;
-  font-size: 1rem;
-  position: relative;
-  text-align: inherit;
-}
-.card {
-  background-color: #fff;
-  border-radius: 0.25rem;
-  box-shadow:
-    0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
-    0 0 0 1px rgba(10, 10, 10, 0.02);
-  color: #4a4a4a;
-  max-width: 100%;
-  position: relative;
-}
-.card .media:not(:last-child) {
-  margin-bottom: 1.5rem;
 }
 .level {
   align-items: center;
@@ -247,34 +213,6 @@ a.box:active {
   .level-item:not(:last-child) {
     margin-bottom: 0.75rem;
   }
-}
-.media {
-  align-items: flex-start;
-  display: flex;
-  text-align: inherit;
-}
-.media .content:not(:last-child) {
-  margin-bottom: 0.75rem;
-}
-.media .media {
-  border-top: 1px solid rgba(219, 219, 219, 0.5);
-  display: flex;
-  padding-top: 0.75rem;
-}
-.media .media .content:not(:last-child),
-.media .media .control:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-.media .media .media {
-  padding-top: 0.5rem;
-}
-.media .media .media + .media {
-  margin-top: 0.5rem;
-}
-.media + .media {
-  border-top: 1px solid rgba(219, 219, 219, 0.5);
-  margin-top: 1rem;
-  padding-top: 1rem;
 }
 .menu {
   font-size: 1rem;
