@@ -12,8 +12,8 @@ document.querySelectorAll(pre_selector).forEach(add_button_to);
 
 function add_button_to(element) {
     div = document.createElement("div");
-    div.classList.add("copy-button");
     button = document.createElement("button");
+    div.classList.add("copy-button");
     button.addEventListener("click", copy_content_of);
     div.append(button);
     element.prepend(div);
@@ -23,7 +23,7 @@ function copy_content_of(event) {
     // Omit "Copy" prefix from the button itself.
     target = this.parentElement.textContent.substring(4);
     navigator.clipboard.writeText(target)
-        .then(() => update_button(this) );
+        .then(() => update_button(this));
 }
 
 function update_button(button, new_text="Copied  ", reset=true) {

@@ -13,6 +13,7 @@ div.literal-block-wrapper {
   width: unset;
   border-radius: $admonition-border-radius;
 
+  // Copy-to-clipboard button.
   & .copy-button {
     bottom: 10px;
     float: right;
@@ -25,7 +26,6 @@ div.literal-block-wrapper {
   &:hover .copy-button {
     visibility: visible;
   }
-
   & button::after {
     content: var(--fa-copy);
     font: var(--fa-font-solid);
