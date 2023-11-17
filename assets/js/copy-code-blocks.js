@@ -11,26 +11,25 @@ const pre_selector = "div.highlight pre";
 document.querySelectorAll(pre_selector).forEach(add_button_to);
 
 function add_button_to(element) {
-    div = document.createElement("div");
-    button = document.createElement("button");
-    div.classList.add("copy-button");
-    button.addEventListener("click", copy_content_of);
-    div.append(button);
-    element.prepend(div);
+  div = document.createElement("div");
+  button = document.createElement("button");
+  div.classList.add("copy-button");
+  button.addEventListener("click", copy_content_of);
+  div.append(button);
+  element.prepend(div);
 }
 
 function copy_content_of(event) {
-    content = this.parentElement.parentElement.textContent;
-    navigator.clipboard.writeText(content)
-        .then(() => update_button(this));
+  content = this.parentElement.parentElement.textContent;
+  navigator.clipboard.writeText(content).then(() => update_button(this));
 }
 
-function update_button(button, new_text="Copied  ", reset=true) {
-    old_text = button.innerText;
-    button.innerText = new_text;
-    if (reset) {
-        setTimeout(update_button, 2000, button, old_text, false);
-    }
+function update_button(button, new_text = "Copied  ", reset = true) {
+  old_text = button.innerText;
+  button.innerText = new_text;
+  if (reset) {
+    setTimeout(update_button, 2000, button, old_text, false);
+  }
 }
 
 // copy-code-blocks.js ends.
