@@ -1,11 +1,25 @@
 /* Dark mode is now defined in pydata-sphinx-theme CSS */
 /* See html[data-theme='light'] and html[data-theme='dark'] */
 
-/* This CSS is to override the background to dark, if that is the browser preference,
-   instead of defaulting to light mode rendering. */
+/* This CSS is to avoid flickering, by setting the background to dark, if that is the browser preference. */
 
+/* prettier-ignore-start */
+
+/* Theme supports light and dark; check browser preference for bg color */
+
+{{- if (eq .Site.Params.colorScheme "auto") -}}
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
     --pst-color-background: #14181e;
   }
 }
+{{- end -}}
+
+/* Theme supports only dark; set background dark */
+{{- if (eq .Site.Params.colorScheme "dark") -}}
+html:not([data-theme]) {
+  --pst-color-background: #14181e;
+}
+{{- end -}}
+
+/* prettier-ignore-end */

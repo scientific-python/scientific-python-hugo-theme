@@ -6,7 +6,7 @@
 
 <!-- Custom JS -->
 <!-- All JS files under static/js are included -->
-{{- $jsFiles := resources.Match "js/*.js" -}}
+{{- $jsFiles := collections.Sort (resources.Match "js/*.js") "Name" -}}
 {{- if $inServerMode -}}
 {{- $js := $jsFiles | resources.Concat "js/bundle.js" }}
 <script type="text/javascript" src={{ $js.RelPermalink }}></script>
