@@ -200,7 +200,7 @@ a.box:active {
 .navbar-burger span {
   background-color: currentColor;
   display: block;
-  height: 1px;
+  height: 2px;
   left: calc(50% - 8px);
   position: absolute;
   transform-origin: center;
@@ -217,6 +217,12 @@ a.box:active {
 }
 .navbar-burger span:nth-child(3) {
   top: calc(50% + 4px);
+}
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.navbar-burger.is-active span:first-child {
+  transform: translateY(5px) rotate(45deg);
 }
 .navbar-burger.is-active span:nth-child(2) {
   opacity: 0;
