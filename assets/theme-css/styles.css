@@ -248,11 +248,11 @@ a.navbar-item:hover {
 }
 
 .navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
-  color: var(--colorPrimaryDark);
+  color: var(--pst-color-link-hover);
 }
 
 .navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link:after {
-  border-color: var(--colorPrimaryDark);
+  border-color: var(--pst-color-link-hover);
 }
 
 /* reboot stuff needed for pydata-sphinx-theme */
