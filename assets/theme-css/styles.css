@@ -197,67 +197,6 @@ svg.icon {
   padding: 10px;
 }
 
-/* navbar */
-
-nav,
-.navbar {
-  background: var(--pst-color-background);
-}
-.navbar-burger {
-  color: var(--pst-color-text-muted);
-}
-.navbar-burger:hover {
-  color: var(--colorPrimaryLight);
-}
-.navbar-item {
-  color: var(--pst-color-text-muted);
-}
-
-@media screen and (max-width: 1023px) {
-  .navbar-menu.is-active {
-    background: var(--pst-color-text-muted);
-  }
-  .navbar-menu.is-active .navbar-item {
-    color: var(--pst-color-background);
-  }
-  .navbar-menu.is-active .navbar-item:hover {
-    color: var(--pst-color-link-hover);
-  }
-}
-
-a.navbar-item,
-a.navbar-item:visited {
-  color: var(--pst-color-text-base);
-  text-decoration: none;
-}
-
-a.navbar-item:hover {
-  color: var(--pst-color-link-hover);
-}
-
-.navbar-logo {
-  height: 28px;
-  padding-right: 1rem;
-}
-
-.navbar-logo-text {
-  color: var(--pst-color-text-base);
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown {
-  border-top-color: var(--colorPrimaryDark);
-}
-
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
-  color: var(--pst-color-link-hover);
-}
-
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link:after {
-  border-color: var(--pst-color-link-hover);
-}
-
 /* reboot stuff needed for pydata-sphinx-theme */
 
 pre {

@@ -1,0 +1,125 @@
+nav,
+.navbar {
+  background: var(--pst-color-background);
+}
+
+.navbar-burger {
+  color: var(--pst-color-text-muted);
+}
+
+.navbar-burger:hover {
+  color: var(--colorPrimaryLight);
+}
+
+.navbar-item {
+  color: var(--pst-color-text-muted);
+}
+
+.navbar-menu.is-active {
+  background: var(--pst-color-text-muted);
+}
+
+.navbar-menu.is-active .navbar-item {
+  color: var(--pst-color-background);
+}
+
+.navbar-menu.is-active .navbar-item:hover {
+  color: var(--pst-color-link-hover);
+}
+
+.navbar-logo {
+  height: 28px;
+  padding-right: 1rem;
+}
+
+.navbar-logo-text {
+  color: var(--pst-color-text-base);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.navbar.is-fresh {
+  position: sticky;
+  top: 0;
+  min-height: 3.8rem;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.navbar.is-fresh .container {
+  min-height: 4rem;
+}
+
+.navbar.is-fresh.no-shadow {
+  box-shadow: none !important;
+}
+
+.navbar.is-fresh .navbar-burger {
+  width: 4rem;
+  height: 4rem;
+}
+
+.navbar.is-fresh .navbar-brand {
+  min-height: 4rem;
+}
+
+.navbar.is-fresh .navbar-brand img {
+  max-height: 36px !important;
+  height: 36px;
+}
+
+.navbar.is-fresh .navbar-end {
+  align-items: center;
+}
+
+a.navbar-item,
+a.navbar-item:visited {
+  color: var(--pst-color-text-base);
+  text-decoration: none;
+}
+
+a.navbar-item:hover {
+  color: var(--pst-color-link-hover);
+}
+
+/* Dropdown menu item text */
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-link {
+  color: #999;
+  text-decoration: none;
+}
+
+/* Reduce space between dropdown item and its dropdown menu */
+.navbar.is-fresh .navbar-item.has-dropdown {
+  padding: 10px 0;
+}
+
+/* Down arrow next to dropdown menu */
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-link:after {
+  top: 55%;
+  height: 0.5em;
+  width: 0.5em;
+  border-width: 2px;
+  border-color: #999;
+}
+
+/* Language dropdown box */
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown {
+  top: 3.4rem;
+  min-width: 220px;
+  margin-top: 4px;
+}
+
+/* Dropdown menu items */
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown .navbar-item {
+  padding: 10px 20px;
+}
+
+/* Dropdown menu hover */
+.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
+  color: var(--pst-color-link-hover);
+}
+
+/* Dropdown menu item hover */
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown .navbar-item:hover {
+  color: var(--pst-color-link-hover);
+}
