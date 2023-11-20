@@ -1,0 +1,26 @@
+// Rules for code blocks, including the copy button.
+
+// Selector from "pst/content/_code.scss".
+div[class*="highlight-"],
+div.highlight,
+div.literal-block-wrapper {
+
+  // Copy-to-clipboard button.
+  & .copy-button {
+    bottom: 10px;
+    float: right;
+    font-size: 0.875em;
+    left: 10px;
+    position: relative;
+    visibility: hidden;
+    z-index: 1;
+  }
+  &:hover .copy-button {
+    visibility: visible;
+  }
+
+  & button::before {
+    content: var(--fa-copy);
+    font: var(--fa-font-solid);
+  }
+}
