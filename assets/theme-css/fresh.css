@@ -22,9 +22,6 @@
   max-height: 36px !important;
   height: 36px;
 }
-.navbar.is-fresh .navbar-brand:hover .navbar-item {
-  background: 0 0 !important;
-}
 .navbar.is-fresh .navbar-end {
   align-items: center;
 }
@@ -33,6 +30,10 @@
 }
 .navbar.is-fresh .navbar-item.has-dropdown .navbar-link {
   color: #999;
+  text-decoration: none;
+}
+.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown .navbar-item:hover {
+  color: var(--pst-color-link-hover);
 }
 .navbar.is-fresh .navbar-item.has-dropdown .navbar-link:after {
   top: 55%;
@@ -45,16 +46,9 @@
   top: 3.4rem;
   min-width: 220px;
   margin-top: 4px;
-  border-top-color: #f39200;
 }
 .navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown .navbar-item {
   padding: 10px 20px;
-}
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
-  color: #f39200;
-}
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link:after {
-  border-color: #f39200;
 }
 .animated {
   animation-duration: 0.5s;
