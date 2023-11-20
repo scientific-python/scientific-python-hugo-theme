@@ -5,7 +5,6 @@
 {{- $serverOpts := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 {{- $sassCompiler := dict "transpiler" "dartsass" -}}
 {{- $cssOpts := collections.Merge $sassCompiler $serverOpts -}}
-{{- $sass := (slice "theme-css/pst/pydata-sphinx-theme.scss") | append (resources.Match "css/*.scss") -}}
 
 <!-- Fonts -->
 {{- $fontName := .Site.Params.font.name | default "Open Sans" -}}
@@ -13,7 +12,7 @@
 {{- $fontSizes := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) ";" -}}
 {{- $fontUrl := printf "https://fonts.googleapis.com/css2?family=%s:wght@%s" $fontFace $fontSizes -}}
 
-<link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
+<link rel="icon" href="{{ " images/favicon.ico" | relURL }}" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +22,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2">
 
 <!-- SASS -->
+{{- $sass := (slice "theme-css/pst/pydata-sphinx-theme.scss") | append (resources.Match "css/*.scss") -}}
 {{- range $sass -}}
 
+{{- $targetFile := printf "%s.scss" . -}}
+
 {{- if $inServerMode -}}
-{{ $css := resources.Get . | toCSS $cssOpts -}}
+{{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts -}}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
 {{ else }}
-{{ $css := resources.Get . | toCSS $cssOpts | minify | fingerprint -}}
+{{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts | minify | fingerprint -}}
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end -}}
 
@@ -41,13 +43,11 @@
 
 {{- range $cssFiles -}}
 
-{{- $targetFile := printf "css/%s" . -}}
-
 {{ if $inServerMode -}}
-{{ $custom_style := . | resources.ExecuteAsTemplate $targetFile $page -}}
+{{ $custom_style := . | resources.ExecuteAsTemplate . $page -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
 {{ else }}
-{{ $custom_style := . | resources.ExecuteAsTemplate $targetFile $page | minify | fingerprint -}}
+{{ $custom_style := . | resources.ExecuteAsTemplate . $page | minify | fingerprint -}}
 <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}" integrity="{{ $custom_style.Data.Integrity }}">
 {{- end -}}
 
