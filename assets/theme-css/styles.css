@@ -127,7 +127,7 @@ a > code {
 }
 
 .cta-button:hover {
-  color: var(--pst-color-link-hover);
+  color: var(--colorPrimaryLight);
 }
 
 #feature-card {
