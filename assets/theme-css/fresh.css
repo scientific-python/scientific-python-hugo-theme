@@ -63,7 +63,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: url(../../images/loaders/rings.svg);
+  background-image: url(../images/loaders/rings.svg);
   background-size: 80px 80px;
   background-repeat: no-repeat;
   background-position: 50%;
