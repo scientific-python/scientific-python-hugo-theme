@@ -72,10 +72,10 @@ Example `config.yaml` files can be seen in [scientific-python.org](https://githu
 
 ### CSS
 
-To customize styles, add CSS files to the `./assets/css/` directory.
-It's recommended to put your customizations in a file named `custom.css`, but other `css` files added there will also be loaded.
+To customize styles, add CSS (`.css`) and Sass (`.scss`) files to the `./assets/css/` directory.
+It's recommended to put your customizations in a file named `custom.css`, but other `.css` and `.scss` files added there will also be loaded.
 
-CSS files are compiled as Hugo templates, i.e. configuration variables from the `config.yaml` file can be accessed as `{{ .Site.Params.VARIABLE }}`.
+CSS and SCSS files are compiled as Hugo templates, i.e. configuration variables from the `config.yaml` file can be accessed as `{{ .Site.Params.VARIABLE }}`.
 
 ### JavaScript
 
