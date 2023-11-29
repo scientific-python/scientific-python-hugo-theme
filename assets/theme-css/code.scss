@@ -19,7 +19,7 @@ div.literal-block-wrapper {
     visibility: visible;
   }
 
-  & button::before {
+  & button::after {
     content: var(--fa-copy);
     font: var(--fa-font-solid);
   }
