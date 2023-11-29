@@ -23,8 +23,8 @@
 
 <!-- Process and include Sass files. -->
 {{- $sass := (slice "theme-css/pst/pydata-sphinx-theme.scss")
-           | append (resources.Match "theme-css/**/*.scss")
-           | append (resources.Match "css/**/*.scss") -}}
+           | append (resources.Match "theme-css/*.scss")
+           | append (resources.Match "css/*.scss") -}}
 
 {{- range $sass -}}
   {{ with . }}  <!-- Skips nil elements from appending empty resources.Match slices. -->
@@ -40,8 +40,8 @@
 {{- end -}}
 
 <!-- Process and include plain CSS files. -->
-{{- $themeCssFiles := resources.Match "theme-css/**/*.css" -}}
-{{- $userCssFiles := resources.Match "css/**/*.css" -}}
+{{- $themeCssFiles := resources.Match "theme-css/*.css" -}}
+{{- $userCssFiles := resources.Match "css/*.css" -}}
 {{- $cssFiles := $themeCssFiles | append $userCssFiles }}
 
 {{- range $cssFiles -}}
