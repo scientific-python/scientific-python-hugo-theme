@@ -19,6 +19,17 @@ div.literal-block-wrapper {
     visibility: visible;
   }
 
+  & button {
+    border: none;
+
+    &:not(.clicked):hover::before {
+      content: "Copy ";
+    }
+    &.clicked::before {
+      content: "Copied ";
+    }
+  }
+
   & button::after {
     content: var(--fa-copy);
     font: var(--fa-font-solid);

@@ -24,11 +24,9 @@ function copy_content_of(event) {
   navigator.clipboard.writeText(content).then(() => update_button(this));
 }
 
-function update_button(button, new_text = "Copied  ", reset = true) {
-  button.innerText = new_text;
-  if (reset) {
-    setTimeout(update_button, 2000, button, "", false);
-  }
+function update_button(button, clicked_class = "clicked", timeout_ms = 2000) {
+  button.classList.add(clicked_class);
+  setTimeout(() => button.classList.remove(clicked_class), timeout_ms);
 }
 
 // copy-code-blocks.js ends.
