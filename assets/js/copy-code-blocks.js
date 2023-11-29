@@ -20,7 +20,7 @@ function add_button_to(element) {
 }
 
 function copy_content_of(event) {
-  content = this.parentElement.parentElement.textContent;
+  content = this.parentElement.parentElement.textContent + "\n";
   navigator.clipboard.writeText(content).then(() => update_button(this));
 }
 
