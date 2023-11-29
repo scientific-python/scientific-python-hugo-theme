@@ -18,22 +18,28 @@ div.literal-block-wrapper {
   &:hover .copy-button {
     visibility: visible;
   }
+  & .chroma .copy-button button {
+    // Fix alignment that the .chroma rules affect.
+    padding: 0.5rem;
+  }
 
   & button {
     background: var(--pst-color-surface);
     border: none;
     color: var(--pst-color-text-base);
 
+    // These classes are changed upon click by the script.
     &:not(.clicked):hover::before {
       content: "Copy ";
     }
     &.clicked::before {
       content: "Copied ";
     }
-  }
 
-  & button::after {
-    content: var(--fa-copy);
-    font: var(--fa-font-regular);
+    &::after {
+      // The Font Awesome copy icon.
+      content: var(--fa-copy);
+      font: var(--fa-font-regular);
+    }
   }
 }
