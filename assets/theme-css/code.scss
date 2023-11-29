@@ -20,7 +20,9 @@ div.literal-block-wrapper {
   }
 
   & button {
+    background: var(--pst-color-surface);
     border: none;
+    color: var(--pst-color-text-base);
 
     &:not(.clicked):hover::before {
       content: "Copy ";
