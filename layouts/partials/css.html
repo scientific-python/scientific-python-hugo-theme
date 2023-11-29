@@ -21,34 +21,35 @@
 <!-- Fallback font for symbols (such as "🛈"). --
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2">
 
-<!-- SASS -->
-{{- $sass := (slice "theme-css/pst/pydata-sphinx-theme.scss") | append (resources.Match "css/*.scss") -}}
+<!-- Process and include Sass files. -->
+{{- $sass := (slice "theme-css/pst/pydata-sphinx-theme.scss")
+           | append (resources.Match "theme-css/*.scss")
+           | append (resources.Match "css/*.scss") -}}
+
 {{- range $sass -}}
-
-{{- $targetFile := printf "%s.scss" . -}}
-
-{{- if $inServerMode -}}
-{{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts -}}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
-{{ else }}
-{{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts | minify | fingerprint -}}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ with . }}  <!-- Skips nil elements from appending empty resources.Match slices. -->
+    {{- $targetFile := printf "%s.scss" . -}}
+    {{- if $inServerMode -}}
+      {{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts -}}
+      <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
+    {{ else }}
+      {{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts | minify | fingerprint -}}
+      <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
-{{- end -}}
-
+<!-- Process and include plain CSS files. -->
 {{- $themeCssFiles := resources.Match "theme-css/*.css" -}}
 {{- $userCssFiles := resources.Match "css/*.css" -}}
 {{- $cssFiles := $themeCssFiles | append $userCssFiles }}
 
 {{- range $cssFiles -}}
-
-{{ if $inServerMode -}}
-{{ $custom_style := . | resources.ExecuteAsTemplate . $page -}}
-<link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
-{{ else }}
-{{ $custom_style := . | resources.ExecuteAsTemplate . $page | minify | fingerprint -}}
-<link rel="stylesheet" href="{{ $custom_style.RelPermalink }}" integrity="{{ $custom_style.Data.Integrity }}">
-{{- end -}}
-
+  {{ if $inServerMode -}}
+    {{ $custom_style := . | resources.ExecuteAsTemplate . $page -}}
+    <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}">
+  {{ else }}
+    {{ $custom_style := . | resources.ExecuteAsTemplate . $page | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $custom_style.RelPermalink }}" integrity="{{ $custom_style.Data.Integrity }}">
+  {{- end -}}
 {{- end -}}
