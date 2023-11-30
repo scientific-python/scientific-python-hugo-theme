@@ -23,7 +23,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.5!
 - Fix color for footer links on hover ([#423](https://github.com/scientific-python/scientific-python-hugo-theme/pull/423)).
 - Fix bulma burger issues ([#425](https://github.com/scientific-python/scientific-python-hugo-theme/pull/425)).
 - Unify dropdown menu hover color with other links ([#426](https://github.com/scientific-python/scientific-python-hugo-theme/pull/426)).
-- Change/Fix: Include "theme-css/*.scss" files ([#429](https://github.com/scientific-python/scientific-python-hugo-theme/pull/429)).
+- Change/Fix: Include "theme-css/\*.scss" files ([#429](https://github.com/scientific-python/scientific-python-hugo-theme/pull/429)).
 
 ## Documentation
 
@@ -32,7 +32,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.5!
 
 ## Maintenance
 
-- Remove unused keyframes and fadeIn* ([#404](https://github.com/scientific-python/scientific-python-hugo-theme/pull/404)).
+- Remove unused keyframes and fadeIn\* ([#404](https://github.com/scientific-python/scientific-python-hugo-theme/pull/404)).
 - Remove unused navbar-clone.html ([#408](https://github.com/scientific-python/scientific-python-hugo-theme/pull/408)).
 - Remove unused bulma table, tags, and progress ([#405](https://github.com/scientific-python/scientific-python-hugo-theme/pull/405)).
 - Remove unused team shortcodes ([#409](https://github.com/scientific-python/scientific-python-hugo-theme/pull/409)).
