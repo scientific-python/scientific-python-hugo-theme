@@ -1,3 +1,69 @@
+# scientific-python-hugo-theme 0.5
+
+We're happy to announce the release of scientific-python-hugo-theme 0.5!
+
+## Enhancements
+
+- Wrap tabs when screen shrinks ([#396](https://github.com/scientific-python/scientific-python-hugo-theme/pull/396)).
+- Reformat footer without unordered lists ([#399](https://github.com/scientific-python/scientific-python-hugo-theme/pull/399)).
+- Docs: Add tabs shortcode example ([#403](https://github.com/scientific-python/scientific-python-hugo-theme/pull/403)).
+- Docs: Add toctree shortcode docs and render option in the Python script ([#406](https://github.com/scientific-python/scientific-python-hugo-theme/pull/406)).
+- Use PST blockquote styling ([#415](https://github.com/scientific-python/scientific-python-hugo-theme/pull/415)).
+- Allow sites to use local Sass files ([#413](https://github.com/scientific-python/scientific-python-hugo-theme/pull/413)).
+
+## Bug Fixes
+
+- Fix footer column link's styling ([#394](https://github.com/scientific-python/scientific-python-hugo-theme/pull/394)).
+- Do not escape heading anchors unnecessarily ([#400](https://github.com/scientific-python/scientific-python-hugo-theme/pull/400)).
+- Docs: Add tabs shortcode example ([#403](https://github.com/scientific-python/scientific-python-hugo-theme/pull/403)).
+- Fix: (styles.css) .navbar-menu colors ([#407](https://github.com/scientific-python/scientific-python-hugo-theme/pull/407)).
+- Use correct color for tabs border ([#412](https://github.com/scientific-python/scientific-python-hugo-theme/pull/412)).
+- Use border-box sizing ([#417](https://github.com/scientific-python/scientific-python-hugo-theme/pull/417)).
+- Fix: (posts, shortcuts) Adjust width, padding for narrower screens ([#402](https://github.com/scientific-python/scientific-python-hugo-theme/pull/402)).
+- Fix color for footer links on hover ([#423](https://github.com/scientific-python/scientific-python-hugo-theme/pull/423)).
+- Fix bulma burger issues ([#425](https://github.com/scientific-python/scientific-python-hugo-theme/pull/425)).
+- Unify dropdown menu hover color with other links ([#426](https://github.com/scientific-python/scientific-python-hugo-theme/pull/426)).
+- Change/Fix: Include "theme-css/*.scss" files ([#429](https://github.com/scientific-python/scientific-python-hugo-theme/pull/429)).
+
+## Documentation
+
+- Docs: (getstarted.md) Update instructions ([#401](https://github.com/scientific-python/scientific-python-hugo-theme/pull/401)).
+- Docs: Add toctree shortcode docs and render option in the Python script ([#406](https://github.com/scientific-python/scientific-python-hugo-theme/pull/406)).
+
+## Maintenance
+
+- Remove unused keyframes and fadeIn* ([#404](https://github.com/scientific-python/scientific-python-hugo-theme/pull/404)).
+- Remove unused navbar-clone.html ([#408](https://github.com/scientific-python/scientific-python-hugo-theme/pull/408)).
+- Remove unused bulma table, tags, and progress ([#405](https://github.com/scientific-python/scientific-python-hugo-theme/pull/405)).
+- Remove unused team shortcodes ([#409](https://github.com/scientific-python/scientific-python-hugo-theme/pull/409)).
+- Cleanup old bulma css ([#395](https://github.com/scientific-python/scientific-python-hugo-theme/pull/395)).
+- Remove unneeded section styling ([#410](https://github.com/scientific-python/scientific-python-hugo-theme/pull/410)).
+- Remove bulma box-sizing ([#411](https://github.com/scientific-python/scientific-python-hugo-theme/pull/411)).
+- Meta: (.dir-locals.el) Set js-indent-level to 2 ([#419](https://github.com/scientific-python/scientific-python-hugo-theme/pull/419)).
+- Navbar clone cleanup ([#421](https://github.com/scientific-python/scientific-python-hugo-theme/pull/421)).
+- Remove style for unused bulma classes ([#422](https://github.com/scientific-python/scientific-python-hugo-theme/pull/422)).
+- Avoid duplicate css extension ([#424](https://github.com/scientific-python/scientific-python-hugo-theme/pull/424)).
+- Allow disabling dark mode in configuration ([#420](https://github.com/scientific-python/scientific-python-hugo-theme/pull/420)).
+- Use old style label-check action ([#427](https://github.com/scientific-python/scientific-python-hugo-theme/pull/427)).
+- Consolidate navbar CSS ([#428](https://github.com/scientific-python/scientific-python-hugo-theme/pull/428)).
+- Update hugo ([#430](https://github.com/scientific-python/scientific-python-hugo-theme/pull/430)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+3 reviewers added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.4
 
 We're happy to announce the release of scientific-python-hugo-theme 0.4!
