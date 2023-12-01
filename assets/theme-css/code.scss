@@ -1,0 +1,44 @@
+// Rules for code blocks, including the copy button.
+
+// Selector from "pst/content/_code.scss".
+div[class*="highlight-"],
+div.highlight,
+div.literal-block-wrapper {
+  // Copy-to-clipboard button.
+  & .copy-button {
+    bottom: 10px;
+    float: right;
+    font-size: 0.875em;
+    left: 10px;
+    position: relative;
+    visibility: hidden;
+    z-index: 1;
+  }
+  &:hover .copy-button {
+    visibility: visible;
+  }
+  & .chroma .copy-button button {
+    // Fix alignment that the .chroma rules affect.
+    padding: 0.5rem;
+  }
+
+  & button {
+    background: var(--pst-color-surface);
+    border: none;
+    color: var(--pst-color-text-base);
+
+    // These classes are changed upon click by the script.
+    &:not(.clicked):hover::before {
+      content: "Copy ";
+    }
+    &.clicked::before {
+      content: "Copied ";
+    }
+
+    &::after {
+      // The Font Awesome copy icon.
+      content: var(--fa-copy);
+      font: var(--fa-font-regular);
+    }
+  }
+}
