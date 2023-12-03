@@ -31,7 +31,7 @@
 .keyfeatures-box-text {
   line-height: 1.5;
   margin: 15px;
-  height: 6em;
+  height: auto;
   overflow: hidden;
 }
 
