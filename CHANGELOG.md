@@ -1,3 +1,34 @@
+# scientific-python-hugo-theme 0.6
+
+We're happy to announce the release of scientific-python-hugo-theme 0.6!
+
+## Enhancements
+
+- Add copy button for code blocks ([#418](https://github.com/scientific-python/scientific-python-hugo-theme/pull/418)).
+- Updated keyfeatures.css ([#431](https://github.com/scientific-python/scientific-python-hugo-theme/pull/431)).
+
+## Maintenance
+
+- Autoupdate pre-commit ([#433](https://github.com/scientific-python/scientific-python-hugo-theme/pull/433)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- [@ApoB-100](https://github.com/ApoB-100)
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+4 reviewers added to this release (alphabetically):
+
+- [@ApoB-100](https://github.com/ApoB-100)
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.5
 
 We're happy to announce the release of scientific-python-hugo-theme 0.5!
