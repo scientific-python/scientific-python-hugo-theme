@@ -1,4 +1,4 @@
-.PHONY: doc-serve shortcode-docs docs scipy main blog learn
+.PHONY: doc-serve shortcode-docs docs scipy main blog learn serve-dev
 .DEFAULT_GOAL := doc-serve
 
 GH_ORG = scientific-python
@@ -24,6 +24,7 @@ doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 	(cd layouts && python ../tools/render_shortcode_docs.py > ../doc/content/shortcodes.md)
 
 # Serve for development purposes.
+serve-dev: doc-serve
 doc-serve: doc/content/shortcodes.md
 	(cd doc && hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
