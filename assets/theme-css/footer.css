@@ -98,13 +98,6 @@
   background: var(--colorPrimaryDark);
 }
 
-.link-column {
-  display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
 .copyright {
   font-size: 12px;
   color: var(--colorSecondary);
