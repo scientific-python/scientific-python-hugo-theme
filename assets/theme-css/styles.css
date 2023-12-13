@@ -67,11 +67,6 @@ a > code {
   line-height: 1.5;
 }
 
-.hero-headline {
-  display: flex;
-  flex-direction: row;
-}
-
 .hero-title {
   align-items: center;
   display: flex;
@@ -129,16 +124,8 @@ a > code {
 .cta-button:hover {
   color: var(--colorPrimaryLight);
 }
-
-#feature-card {
-  height: 475px;
-}
 #backtotop.visible #backtotop-color:hover {
   background: var(--colorYellow);
-}
-
-.mt-30 {
-  margin-top: 30px;
 }
 
 @media only screen and (max-width: 1090px) {
