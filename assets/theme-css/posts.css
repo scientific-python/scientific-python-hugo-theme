@@ -76,11 +76,6 @@
   padding-top: 0.5rem;
 }
 
-div.MathJax_Display {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .post-featuredImage img {
   /* FIXME: Use color variable. */
   border: 1px #bbb solid;
