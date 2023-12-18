@@ -1,3 +1,39 @@
+# scientific-python-hugo-theme 0.7
+
+We're happy to announce the release of scientific-python-hugo-theme 0.7!
+
+## Bug Fixes
+
+- Fix: (css.html) Unify types ([#434](https://github.com/scientific-python/scientific-python-hugo-theme/pull/434)).
+- Fix: (bulma.css) .navbar-dropdown background-color ([#435](https://github.com/scientific-python/scientific-python-hugo-theme/pull/435)).
+
+## Maintenance
+
+- Meta: (Makefile) Add serve-dev rule ([#436](https://github.com/scientific-python/scientific-python-hugo-theme/pull/436)).
+- Update font awesome ([#437](https://github.com/scientific-python/scientific-python-hugo-theme/pull/437)).
+- Bump pre-commit from 3.5.0 to 3.6.0 ([#438](https://github.com/scientific-python/scientific-python-hugo-theme/pull/438)).
+- Update mermaid ([#439](https://github.com/scientific-python/scientific-python-hugo-theme/pull/439)).
+- Update hugo ([#440](https://github.com/scientific-python/scientific-python-hugo-theme/pull/440)).
+- Update dart sass ([#441](https://github.com/scientific-python/scientific-python-hugo-theme/pull/441)).
+- Update PST style ([#442](https://github.com/scientific-python/scientific-python-hugo-theme/pull/442)).
+- Apply purgecss ([#443](https://github.com/scientific-python/scientific-python-hugo-theme/pull/443)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.6
 
 We're happy to announce the release of scientific-python-hugo-theme 0.6!
