@@ -353,35 +353,12 @@ a.navbar-item:hover {
   .navbar {
     min-height: 3.25rem;
   }
-  .navbar.is-transparent .navbar-link.is-active,
-  .navbar.is-transparent .navbar-link:focus,
-  .navbar.is-transparent .navbar-link:hover,
-  .navbar.is-transparent a.navbar-item.is-active,
-  .navbar.is-transparent a.navbar-item:focus,
-  .navbar.is-transparent a.navbar-item:hover {
-    background-color: transparent !important;
-  }
-  .navbar.is-transparent .navbar-item.has-dropdown.is-active .navbar-link,
-  .navbar.is-transparent
-    .navbar-item.has-dropdown.is-hoverable:focus
-    .navbar-link,
-  .navbar.is-transparent
-    .navbar-item.has-dropdown.is-hoverable:focus-within
-    .navbar-link,
-  .navbar.is-transparent
-    .navbar-item.has-dropdown.is-hoverable:hover
-    .navbar-link {
-    background-color: transparent !important;
-  }
   .navbar-dropdown a.navbar-item:focus,
-  .navbar-dropdown a.navbar-item:hover,
-  .navbar.is-transparent .navbar-dropdown a.navbar-item:focus,
-  .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
+  .navbar-dropdown a.navbar-item:hover {
     background-color: #f5f5f5;
     color: #0a0a0a;
   }
-  .navbar-dropdown a.navbar-item.is-active,
-  .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
+  .navbar-dropdown a.navbar-item.is-active {
     background-color: #f5f5f5;
     color: #485fc7;
   }
