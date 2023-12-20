@@ -23,12 +23,29 @@ Below you can find some examples of the components created with the
 
 Here are some of the available badges:
 
-`primary`{.interpreted-text role="bdg-primary"}
-`secondary`{.interpreted-text role="bdg-secondary"}
-`success`{.interpreted-text role="bdg-success"}
-`primary outline`{.interpreted-text role="bdg-primary-line"}
-`secondary outline`{.interpreted-text role="bdg-secondary-line"}
-`success outline`{.interpreted-text role="bdg-success-line"}
+{{< badge primary >}}
+primary
+{{< /badge >}}
+
+{{< badge secondary >}}
+secondary
+{{< /badge >}}
+
+{{< badge success >}}
+success
+{{< /badge >}}
+
+{{< badge primary outline >}}
+primary outline
+{{< /badge >}}
+
+{{< badge secondary outline >}}
+secondary outline
+{{< /badge >}}
+
+{{< badge success outline >}}
+success outline
+{{< /badge >}}
 
 Here are some of the available button-style links, also using semantic
 colors:
