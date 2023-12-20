@@ -47,6 +47,7 @@
 //@import "./components/versionmodified";
 //@import "./components/indices";
 //@import "./components/readthedocs-switcher";
+@import "./components/badges";
 
 // Content blocks in standard Sphinx
 @import "./content/admonitions";
@@ -69,7 +70,7 @@
 //@import "./extensions/ethical-ads";
 //@import "./extensions/execution";
 //@import "./extensions/pydata";
-//@import "./extensions/sphinx_design";
+@import "./extensions/sphinx_design";
 //@import "./extensions/togglebutton";
 //@import "./extensions/notebooks";
 //@import "./extensions/leaflet";
