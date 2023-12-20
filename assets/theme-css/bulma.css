@@ -26,11 +26,6 @@ footer,
 header {
   display: block;
 }
-img {
-  height: auto;
-  max-width: 100%;
-}
-
 input[type="radio"] {
   vertical-align: baseline;
 }
@@ -196,14 +191,10 @@ a.box:active {
   border-top: 0;
   content: " ";
   display: block;
-  height: 0.625em;
   pointer-events: none;
   position: absolute;
-  top: 50%;
   transform: rotate(-45deg);
   transform-origin: center;
-  width: 0.625em;
-  border-color: #485fc7;
   margin-top: -0.375em;
   right: 1.125em;
 }
@@ -215,13 +206,11 @@ a.box:active {
 .navbar > .container {
   align-items: stretch;
   display: flex;
-  min-height: 3.25rem;
   width: 100%;
 }
 .navbar-brand {
   align-items: stretch;
   display: flex;
-  flex-shrink: 0;
 }
 .navbar-burger {
   -moz-appearance: none;
@@ -278,10 +267,6 @@ a.box:active {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
 }
-.navbar-link,
-a.navbar-item {
-  cursor: pointer;
-}
 .navbar-item {
   flex-grow: 0;
   flex-shrink: 0;
@@ -316,8 +301,6 @@ a.navbar-item {
     display: none;
   }
   .navbar-menu {
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
     padding: 0.5rem 0;
   }
   .navbar-menu.is-active {
@@ -328,11 +311,7 @@ a.navbar-item {
   .navbar,
   .navbar-end,
   .navbar-menu {
-    align-items: stretch;
     display: flex;
-  }
-  .navbar {
-    min-height: 3.25rem;
   }
   .navbar-burger {
     display: none;
