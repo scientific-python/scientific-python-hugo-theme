@@ -49,3 +49,4 @@ ci:
     '[pre-commit.ci 🤖] Apply code format tools to PR'
   # Update hook versions every month (so we don't get hit with weekly update PR's)
   autoupdate_schedule: monthly
+  skip: [prettier] # needed until v4 is released, so we don't use pre-releases
