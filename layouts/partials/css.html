@@ -22,9 +22,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2">
 
 <!-- Process and include Sass files. -->
-{{- $sass := append (resources.Get "theme-css/pst/pydata-sphinx-theme.scss")
-                    (resources.Match "theme-css/*.scss")
-           | append (resources.Match "css/*.scss") -}}
+{{- $sass := (resources.Match "theme-css/*.scss") | append (resources.Match "css/*.scss") -}}
 
 {{- range $sass -}}
   {{ with . }}  <!-- Skips nil elements from appending empty resources.Match slices. -->
