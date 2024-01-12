@@ -39,6 +39,7 @@ nav,
 }
 
 .navbar.is-fresh {
+  box-shadow: none !important;
   position: sticky;
   top: 0;
   min-height: 3.8rem;
@@ -48,10 +49,6 @@ nav,
 
 .navbar.is-fresh .container {
   min-height: 4rem;
-}
-
-.navbar.is-fresh.no-shadow {
-  box-shadow: none !important;
 }
 
 .navbar.is-fresh .navbar-burger {
