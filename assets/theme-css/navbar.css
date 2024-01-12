@@ -38,7 +38,7 @@ nav,
   font-weight: 700;
 }
 
-.navbar.is-fresh {
+.navbar {
   box-shadow: none !important;
   position: sticky;
   top: 0;
@@ -47,25 +47,25 @@ nav,
   z-index: 99;
 }
 
-.navbar.is-fresh .container {
+.navbar .container {
   min-height: 4rem;
 }
 
-.navbar.is-fresh .navbar-burger {
+.navbar .navbar-burger {
   width: 4rem;
   height: 4rem;
 }
 
-.navbar.is-fresh .navbar-brand {
+.navbar .navbar-brand {
   min-height: 4rem;
 }
 
-.navbar.is-fresh .navbar-brand img {
+.navbar .navbar-brand img {
   max-height: 36px !important;
   height: 36px;
 }
 
-.navbar.is-fresh .navbar-end {
+.navbar .navbar-end {
   align-items: center;
 }
 
@@ -80,18 +80,18 @@ a.navbar-item:hover {
 }
 
 /* Dropdown menu item text */
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-link {
+.navbar .navbar-item.has-dropdown .navbar-link {
   color: #999;
   text-decoration: none;
 }
 
 /* Reduce space between dropdown item and its dropdown menu */
-.navbar.is-fresh .navbar-item.has-dropdown {
+.navbar .navbar-item.has-dropdown {
   padding: 10px 0;
 }
 
 /* Down arrow next to dropdown menu */
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-link:after {
+.navbar .navbar-item.has-dropdown .navbar-link:after {
   top: 55%;
   height: 0.5em;
   width: 0.5em;
@@ -100,23 +100,23 @@ a.navbar-item:hover {
 }
 
 /* Language dropdown box */
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown {
+.navbar .navbar-item.has-dropdown .navbar-dropdown {
   top: 3.4rem;
   min-width: 220px;
   margin-top: 4px;
 }
 
 /* Dropdown menu items */
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown .navbar-item {
+.navbar .navbar-item.has-dropdown .navbar-dropdown .navbar-item {
   padding: 10px 20px;
 }
 
 /* Dropdown menu hover */
-.navbar.is-fresh .navbar-item.has-dropdown:hover .navbar-link {
+.navbar .navbar-item.has-dropdown:hover .navbar-link {
   color: var(--pst-color-link-hover);
 }
 
 /* Dropdown menu item hover */
-.navbar.is-fresh .navbar-item.has-dropdown .navbar-dropdown .navbar-item:hover {
+.navbar .navbar-item.has-dropdown .navbar-dropdown .navbar-item:hover {
   color: var(--pst-color-link-hover);
 }
