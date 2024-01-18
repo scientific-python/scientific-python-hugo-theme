@@ -36,7 +36,7 @@ def api(query):
     if request.status_code == 200:
         return request.json()
     else:
-        raise RuntimeError("Request received HTTP {request.status_code}: {query}")
+        raise RuntimeError(f"Request received HTTP {request.status_code}: {query}")
 
 
 parser = argparse.ArgumentParser(description="Generate team gallery from GitHub")
