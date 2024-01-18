@@ -2,7 +2,7 @@
 {{- $navbar         := .Site.Params.navbar }}
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
 {{- $navbarLogoShow := .Site.Params.navbarlogoshow }}
-<nav id="nav" class="navbar is-fresh no-shadow" role="navigation" aria-label="main navigation">
+<nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
   <div class="container is-max-widescreen">
     <div class="navbar-brand">
       {{ if or (not .IsHome) ($navbarLogoShow) }}
@@ -21,7 +21,7 @@
       </a>
     </div>
 
-    <div id="navbar-menu" class="navbar-menu is-static">
+    <div id="navbar-menu" class="navbar-menu">
 
       <div class="navbar-end">
         {{- range $navbar }}

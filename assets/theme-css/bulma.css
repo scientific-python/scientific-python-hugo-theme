@@ -184,7 +184,7 @@ a.box:active {
     display: none !important;
   }
 }
-.navbar-link:not(.is-arrowless)::after {
+.navbar-link::after {
   border: 3px solid transparent;
   border-radius: 2px;
   border-right: 0;
@@ -277,7 +277,7 @@ a.box:active {
 .navbar-item.has-dropdown {
   padding: 0;
 }
-.navbar-link:not(.is-arrowless) {
+.navbar-link {
   padding-right: 2.5em;
 }
 .navbar-dropdown {
