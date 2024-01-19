@@ -1,3 +1,39 @@
+# scientific-python-hugo-theme 0.8
+
+We're happy to announce the release of scientific-python-hugo-theme 0.8!
+
+## Enhancements
+
+- Add PDST badges ([#446](https://github.com/scientific-python/scientific-python-hugo-theme/pull/446)).
+
+## Maintenance
+
+- Refactor bulma navbar css ([#444](https://github.com/scientific-python/scientific-python-hugo-theme/pull/444)).
+- Skip autoupdating prettier-mirror ([#448](https://github.com/scientific-python/scientific-python-hugo-theme/pull/448)).
+- Temporarily schedule pre-cmmmit-ci auotupdate weekly ([#449](https://github.com/scientific-python/scientific-python-hugo-theme/pull/449)).
+- Autoupdate pre-commit quarterly ([#451](https://github.com/scientific-python/scientific-python-hugo-theme/pull/451)).
+- Run pre-commit autoupdate ([#452](https://github.com/scientific-python/scientific-python-hugo-theme/pull/452)).
+- Add missing f in f-string ([#455](https://github.com/scientific-python/scientific-python-hugo-theme/pull/455)).
+- Simplify navbar ([#454](https://github.com/scientific-python/scientific-python-hugo-theme/pull/454)).
+- Consolidate navbar styling ([#456](https://github.com/scientific-python/scientific-python-hugo-theme/pull/456)).
+- Group scss components ([#453](https://github.com/scientific-python/scientific-python-hugo-theme/pull/453)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.7
 
 We're happy to announce the release of scientific-python-hugo-theme 0.7!
