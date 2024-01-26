@@ -35,7 +35,7 @@
 }
 
 .footer-item a:hover {
-  color: var(--pst-color-link-hover);
+  color: var(--colorPrimaryLight);
 }
 
 .footer-actions {
