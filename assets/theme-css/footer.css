@@ -4,7 +4,8 @@
 }
 
 #footer {
-  background-color: var(--colorPrimaryDark);
+  background-color: var(--pst-color-background);
+  border-top: 1px solid var(--pst-color-border);
   position: sticky;
   top: calc(100vh - var(--spht-footer-height));
 }
@@ -30,14 +31,6 @@
   flex-shrink: 1;
 }
 
-.footer-item a {
-  color: var(--colorSecondary);
-}
-
-.footer-item a:hover {
-  color: var(--pst-color-link-hover);
-}
-
 .footer-actions {
   max-width: 25vw;
   margin: 20px 25px;
@@ -49,7 +42,6 @@
 
 .footer-actions p {
   margin: 0;
-  color: var(--colorSecondary);
 }
 
 @media only screen and (max-width: 850px) {
@@ -80,25 +72,14 @@
 }
 
 #footer svg.icon {
-  fill: var(--colorSecondary);
   margin-right: 0.5rem;
-}
-
-#footer svg.icon:hover {
-  fill: #ffffff;
 }
 
 /* For information ⓘ, when icon is missing */
 #footer .icon {
   font-weight: 900;
-  color: var(--colorSecondary);
-}
-
-#footer nav {
-  background: var(--colorPrimaryDark);
 }
 
 .copyright {
   font-size: 12px;
-  color: var(--colorSecondary);
 }
