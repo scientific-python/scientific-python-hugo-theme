@@ -116,18 +116,6 @@ nav,
   color: var(--colorPrimaryLight);
 }
 
-.navbar-menu.is-active {
-  background: var(--pst-color-text-muted);
-}
-
-.navbar-menu.is-active .navbar-item {
-  color: var(--pst-color-background);
-}
-
-.navbar-menu.is-active .navbar-item:hover {
-  color: var(--pst-color-link-hover);
-}
-
 .navbar-logo {
   height: 28px;
   padding-right: 1rem;
@@ -223,7 +211,16 @@ a.navbar-item:hover {
     padding: 0.5rem 0;
   }
   .navbar-menu.is-active {
+    background: var(--pst-color-text-muted);
     display: block;
+  }
+
+  .navbar-menu.is-active .navbar-item {
+    color: var(--pst-color-background);
+  }
+
+  .navbar-menu.is-active .navbar-item:hover {
+    color: var(--pst-color-link-hover);
   }
 }
 @media screen and (min-width: 1024px) {
