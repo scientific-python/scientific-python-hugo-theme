@@ -1,0 +1,55 @@
+{{/*
+
+doc: Cards
+
+{{< card title="Only heading" >}}{{< /card >}}
+
+{{< card >}}
+Only body.
+
+But with multiple text paragraphs.
+{{< /card >}}
+
+{{< card title="Heading and body" >}}
+Content of the third card.
+
+{{< badge primary >}}
+Sample badge
+{{< /badge >}}
+
+{{< /card >}}
+
+
+{{< card title="Card Title" header="Header" footer="Footer">}}
+Card content
+{{< /card >}}
+
+
+*/}}
+
+
+
+<div class="bd-content">
+<div class="sd-card sd-shadow-sm sd-mb-3">
+{{ with .Get "header" }}
+<div class="sd-card-header">
+  {{ . | markdownify }}
+</div>
+{{ end }}
+<div class="sd-card-body">
+  {{ with .Get "title" }}
+  <div class="sd-card-title sd-font-weight-bold">
+    {{ . }}
+  </div>
+  {{ end }}
+  {{ with .Inner }}
+    {{ . | markdownify }}
+  {{ end }}
+</div>
+{{ with .Get "footer" }}
+<div class="sd-card-footer">
+  {{ . | markdownify }}
+</div>
+{{ end }}
+</div>
+</div>
