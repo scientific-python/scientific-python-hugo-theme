@@ -12,6 +12,7 @@ Blog post layouts:
 - `layouts/partials/posts/post.html`: Blog post layout
 - `layouts/partials/posts/list.html`: Blog post listing layout
 - `layouts/partials/posts/tag.html`: Tag page layout
+- `layers/partials/posts/comments.html`: Empty by default; can be overridden to place a comments section
 
 ## Shortcut list
 
