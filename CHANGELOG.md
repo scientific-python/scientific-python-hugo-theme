@@ -1,3 +1,40 @@
+# scientific-python-hugo-theme 0.9
+
+We're happy to announce the release of scientific-python-hugo-theme 0.9!
+
+## Enhancements
+
+- Increase color contrast in footer ([#459](https://github.com/scientific-python/scientific-python-hugo-theme/pull/459)).
+- Use default font size for cta button ([#462](https://github.com/scientific-python/scientific-python-hugo-theme/pull/462)).
+- Add a placeholder for blog comments ([#464](https://github.com/scientific-python/scientific-python-hugo-theme/pull/464)).
+
+## Bug Fixes
+
+- Fix navbar / active burger issue (#460) ([#461](https://github.com/scientific-python/scientific-python-hugo-theme/pull/461)).
+
+## Documentation
+
+- Mention comments partial feature ([#465](https://github.com/scientific-python/scientific-python-hugo-theme/pull/465)).
+
+## Maintenance
+
+- Update hugo and dart-sass ([#467](https://github.com/scientific-python/scientific-python-hugo-theme/pull/467)).
+
+## Contributors
+
+2 authors added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.8
 
 We're happy to announce the release of scientific-python-hugo-theme 0.8!
