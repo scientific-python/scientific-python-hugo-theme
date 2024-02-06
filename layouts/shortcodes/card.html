@@ -2,51 +2,54 @@
 
 doc: Cards
 
-{{< card title="Only heading" >}}{{< /card >}}
+{{< card >}}
+title: Only title
+{{< /card >}}
 
 {{< card >}}
-Only body.
+body: |
+  Only body.
 
-But with multiple text paragraphs.
+  But with multiple text paragraphs.
 {{< /card >}}
 
-{{< card title="Heading and body" >}}
-Content of the third card.
-
-{{< badge primary >}}
-Sample badge
-{{< /badge >}}
+{{< card >}}
+title: Heading and body
+body: |
+  Content of the third card.
 
 {{< /card >}}
 
 
-{{< card title="Card Title" header="Header" footer="Footer">}}
-Card content
+{{< card >}}
+header: Header
+title: Card Title
+body: Card content
+footer: Footer
 {{< /card >}}
-
 
 */}}
 
-
+{{ $data := .Inner | transform.Unmarshal }}
 
 <div class="bd-content">
 <div class="sd-card sd-shadow-sm sd-mb-3">
-{{ with .Get "header" }}
+{{ with $data.header }}
 <div class="sd-card-header">
   {{ . | markdownify }}
 </div>
 {{ end }}
 <div class="sd-card-body">
-  {{ with .Get "title" }}
+  {{ with $data.title }}
   <div class="sd-card-title sd-font-weight-bold">
     {{ . }}
   </div>
   {{ end }}
-  {{ with .Inner }}
+  {{ with $data.body }}
     {{ . | markdownify }}
   {{ end }}
 </div>
-{{ with .Get "footer" }}
+{{ with $data.footer }}
 <div class="sd-card-footer">
   {{ . | markdownify }}
 </div>

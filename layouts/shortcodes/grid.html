@@ -4,21 +4,30 @@ doc: Grids.
 
 {{< grid >}}
 
-{{< card title="Only heading" >}}{{< /card >}}
-
 {{< card >}}
-Only body.
-
-But with multiple text paragraphs.
+title: Only title
 {{< /card >}}
 
-{{< card title="Heading and body" >}}
-Content of the third card.
+{{< card >}}
+body: |
+  Only body.
 
-{{< badge primary >}}
-Sample badge
-{{< /badge >}}
+  But with multiple text paragraphs.
+{{< /card >}}
 
+{{< card >}}
+title: Heading and body
+body: |
+  Content of the third card.
+
+{{< /card >}}
+
+
+{{< card >}}
+header: Header
+title: Card Title
+body: Card content
+footer: Footer
 {{< /card >}}
 
 {{< /grid >}}
