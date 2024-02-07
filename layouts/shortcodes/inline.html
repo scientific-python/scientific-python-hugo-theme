@@ -1,7 +1,0 @@
-{{ $body := trim .Inner "\n" }}
-{{- $m := findRE "^[ ]*" $body -}}
-{{- $indent := len (index $m 0) -}}
-{{- $prefix := strings.Repeat $indent " " -}}
-{{- range (split $body "\n") -}}
-{{ $prefix }}{{ . | safeHTML }}
-{{ end }}
