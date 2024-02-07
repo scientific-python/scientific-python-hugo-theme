@@ -15,9 +15,12 @@ body: |
 
 {{< card >}}
 title: Heading and body
-body: |
+body:
   Content of the third card.
 
+  {{< inline >}}
+    {{< badge primary >}}Sample badge{{< /badge >}}
+  {{< /inline >}}
 {{< /card >}}
 
 
@@ -30,22 +33,22 @@ footer: Footer
 
 */}}
 
-{{ $data := .Inner | transform.Unmarshal }}
+{{- $data := .Inner | transform.Unmarshal -}}
 
 <div class="bd-content">
 <div class="sd-card sd-shadow-sm sd-mb-3">
-{{ with $data.header }}
-<div class="sd-card-header">
-  {{ . | markdownify }}
-</div>
-{{ end }}
-<div class="sd-card-body">
+    {{ with $data.header }}
+    <div class="sd-card-header">
+        {{ . | markdownify }}
+    </div>
+    {{ end }}
+    <div class="sd-card-body">
   {{ with $data.title }}
   <div class="sd-card-title sd-font-weight-bold">
     {{ . }}
   </div>
   {{ end }}
-  {{ with $data.body }}
+  {{ with (trim $data.body "\n") }}
     {{ . | markdownify }}
   {{ end }}
 </div>

@@ -27,14 +27,11 @@ success outline
 {{< /badge >}}
 
 */}}
-
 <!-- These CSS classes are irregularly named, so the code to translate
 into them is a bit awkward. -->
-
-{{ $badge_style := .Get 0 }}
-{{ $badge_outline := (eq "outline" (.Get 1)) }}
-{{ $badge_variant := (cond $badge_outline "outline" "bg") }}
-{{ $badge_variant_text := (cond $badge_outline "text" "bg-text") }}
-{{ $badge_label := trim .Inner "\n\r" }}
-
+{{- $badge_style := .Get 0 }}
+{{- $badge_outline := (eq "outline" (.Get 1)) }}
+{{- $badge_variant := (cond $badge_outline "outline" "bg") }}
+{{- $badge_variant_text := (cond $badge_outline "text" "bg-text") }}
+{{- $badge_label := trim .Inner "\n\r" -}}
 <span class="sd-badge sd-{{$badge_variant}}-{{$badge_style}} sd-{{$badge_variant_text}}-{{$badge_style}}">{{$badge_label}}</span>
