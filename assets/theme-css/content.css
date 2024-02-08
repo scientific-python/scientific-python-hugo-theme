@@ -10,6 +10,7 @@
   flex-shrink: 1;
   flex-direction: column;
   margin: 0 30px;
+  padding: 1rem;
 
   /* Handle code cells overflowing */
   overflow: auto;
