@@ -14,6 +14,11 @@
   word-wrap: break-word;
 }
 
+.sd-card-hover:hover {
+  border-color:var(--sd-color-card-border-hover);
+  transform:scale(1.01)
+}
+
 .sd-mb-3 {
   margin-bottom: 1rem !important;
 }
@@ -35,4 +40,11 @@
 
 .sd-font-weight-bold {
   font-weight: 700 !important;
+}
+
+
+.sd-stretched-link::after {
+  position: absolute;
+  z-index: 1;
+  content: "";
 }

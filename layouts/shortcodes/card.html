@@ -23,6 +23,10 @@ Content of the third card.
 '''
 {{< /card >}}
 
+{{< card >}}
+title = 'A clickable card'
+link = 'https://example.com'
+{{< /card >}}
 
 {{< card >}}
 header = 'Header'
@@ -36,26 +40,33 @@ footer = 'Footer'
 {{- $data := .Inner | transform.Unmarshal -}}
 
 <div class="bd-content">
+{{ with $data.link }}
+<div class="sd-card sd-shadow-sm sd-mb-3 sd-card-hover">
+{{ else }}
 <div class="sd-card sd-shadow-sm sd-mb-3">
-    {{ with $data.header }}
-    <div class="sd-card-header">
-        {{ . | markdownify }}
-    </div>
-    {{ end }}
-    <div class="sd-card-body">
-  {{ with $data.title }}
-  <div class="sd-card-title sd-font-weight-bold">
-    {{ . }}
+{{ end }}
+  {{ with $data.header }}
+  <div class="sd-card-header">
+      {{ . | markdownify }}
   </div>
   {{ end }}
-  {{ with (trim $data.body "\n") }}
-    {{ . | markdownify }}
+  <div class="sd-card-body">
+    {{ with $data.title }}
+    <div class="sd-card-title sd-font-weight-bold">
+      {{ . }}
+    </div>
+    {{ end }}
+    {{ with (trim $data.body "\n") }}
+      {{ . | markdownify }}
+    {{ end }}
+  </div>
+  {{ with $data.link }}
+  <a class="sd-stretched-link" href="{{.}}"></a>
   {{ end }}
-</div>
-{{ with $data.footer }}
-<div class="sd-card-footer">
-  {{ . | markdownify }}
-</div>
-{{ end }}
+  {{ with $data.footer }}
+  <div class="sd-card-footer">
+    {{ . | markdownify }}
+  </div>
+  {{ end }}
 </div>
 </div>
