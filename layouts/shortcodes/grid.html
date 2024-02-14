@@ -27,9 +27,50 @@ Content of the third card.
 
 {{< /grid >}}
 
+
+{{< grid >}}
+
+{{< card >}}
+title = 'A card with a dropdown menu'
+body = '''
+{{< dropdown >}}
+title = 'Click to expand dropdown'
+icon = 'fa-solid fa-eye'
+body = 'Hidden content'
+{{< /dropdown >}}
+'''
+{{< /card >}}
+
+{{< card >}}
+title = 'A clickable card'
+link = 'https://example.com'
+{{< /card >}}
+
+{{< /grid >}}
+
+
+{{< grid >}}
+
+{{< card >}}
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+{{< /card >}}
+
+
+{{< card >}}
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+{{< /card >}}
+
+{{< /grid >}}
+
 */}}
 
-<div class="sd-container-fluid">
+<div class="sd-container-fluid sd-mb-4">
 <div class="sd-row">
   {{ .Inner }}
 </div>

@@ -28,7 +28,7 @@ title = 'A card with a dropdown menu'
 body = '''
 {{< dropdown >}}
 title = 'Click to expand dropdown'
-icon = 'eye'
+icon = 'fa-solid fa-eye'
 body = 'Hidden content'
 {{< /dropdown >}}
 '''
@@ -49,13 +49,20 @@ footer = 'Footer'
 */}}
 
 {{- $data := .Inner | transform.Unmarshal -}}
-
-<div class="bd-content">
+{{- with .Parent -}}
+<div class="sd-col sd-d-flex-row">
 {{ with $data.link }}
-<div class="sd-card sd-shadow-sm sd-mb-3 sd-card-hover">
+<div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover">
 {{ else }}
-<div class="sd-card sd-shadow-sm sd-mb-3">
+<div class="sd-card sd-w-100 sd-shadow-sm">
 {{ end }}
+{{- else -}}
+{{ with $data.link }}
+<div class="sd-card sd-mb-3 sd-shadow-sm sd-card-hover">
+{{ else }}
+<div class="sd-card sd-mb-3 sd-shadow-sm">
+{{ end }}
+{{- end -}}
   {{ with $data.header }}
   <div class="sd-card-header">
       {{ . | markdownify }}
@@ -79,5 +86,7 @@ footer = 'Footer'
     {{ . | markdownify }}
   </div>
   {{ end }}
+{{- with .Parent -}}
 </div>
+{{ end }}
 </div>

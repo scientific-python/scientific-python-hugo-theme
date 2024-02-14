@@ -1,0 +1,159 @@
+// Adapted from Bootstrap v5.0.2 (https://getbootstrap.com/)
+// Copyright 2011-2019 The Bootstrap Authors
+// Copyright 2011-2019 Twitter, Inc.
+// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+@use "sass:math";
+
+.sd-card {
+  background-clip: border-box;
+  background-color: var(--sd-color-card-background);
+  border: 1px solid var(--sd-color-card-border);
+  border-radius: 0.25rem;
+  color: var(--sd-color-card-text);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  word-wrap: break-word;
+
+  > hr {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.sd-card-hover:hover {
+  border-color: var(--sd-color-card-border-hover);
+  transform: scale(1.01);
+}
+
+.sd-card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+
+.sd-card-title {
+  margin-bottom: 0.5rem;
+}
+
+.sd-card-subtitle {
+  margin-top: -0.25rem;
+  margin-bottom: 0;
+}
+
+.sd-card-text:last-child {
+  margin-bottom: 0;
+}
+
+.sd-card-link:hover {
+  text-decoration: none;
+}
+
+.sd-card-link + .card-link {
+  margin-left: 1rem;
+}
+
+.sd-card-header {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: var(--sd-color-card-header);
+  border-bottom: 1px solid var(--sd-color-card-border);
+}
+
+.sd-card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.sd-card-footer {
+  padding: 0.5rem 1rem;
+  background-color: var(--sd-color-card-footer);
+  border-top: 1px solid var(--sd-color-card-border);
+}
+
+.sd-card-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+.sd-card-header-tabs {
+  margin-right: -0.5rem;
+  margin-bottom: -0.5rem;
+  margin-left: -0.5rem;
+  border-bottom: 0;
+}
+
+.sd-card-header-pills {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.sd-card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  border-radius: calc(0.25rem - 1px);
+}
+
+.sd-card-img,
+.sd-card-img-bottom,
+.sd-card-img-top {
+  width: 100%;
+}
+
+.sd-card-img,
+.sd-card-img-top {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.sd-card-img,
+.sd-card-img-bottom {
+  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: calc(0.25rem - 1px);
+}
+
+// sd-cards-carousel is not part of bootstrap
+// it is intended to create a single row of scrollable cards
+// with a standard width for each card
+
+.sd-cards-carousel {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+// use to always show the scroll bar
+.sd-cards-carousel.sd-show-scrollbar {
+  overflow-x: auto;
+}
+
+.sd-cards-carousel:hover,
+.sd-cards-carousel:focus {
+  overflow-x: auto;
+}
+
+.sd-cards-carousel > .sd-card {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.sd-cards-carousel > .sd-card:not(:last-child) {
+  margin-right: 3px;
+}
+
+@for $i from 1 through 12 {
+  .sd-card-cols-#{$i} > .sd-card {
+    // we use less than 100% here, so that the (i+1)th card will be slightly visible,
+    // so the user is aware that there are more cards available
+    width: math.div(90%, $i);
+  }
+}
