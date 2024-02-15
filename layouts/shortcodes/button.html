@@ -1,0 +1,47 @@
+{{/*
+
+doc: Create button links in various styles.
+
+{{< button info >}}
+label: Info
+link: http://example.com/
+{{< /button >}}
+
+{{< button success >}}
+label: Success
+link: http://example.com/
+{{< /button >}}
+
+{{< button warning >}}
+label: Warning
+link: http://example.com/
+{{< /button >}}
+
+{{< button danger >}}
+label: Danger
+link: http://example.com/
+{{< /button >}}
+
+{{< button muted >}}
+label: Muted
+link: http://example.com/
+{{< /button >}}
+
+{{< button light >}}
+label: Light
+link: http://example.com/
+{{< /button >}}
+
+{{< button dark >}}
+label: Dark
+link: http://example.com/
+{{< /button >}}
+
+*/}}
+
+{{ $button_style := .Get 0 }}
+{{ $button_data := transform.Unmarshal .Inner }}
+{{ $button_label := $button_data.label }}
+{{ $button_link := $button_data.link }}
+
+<a href="{{$button_link}}"><span class="sd-btn sd-btn-{{$button_style}}">{{$button_label}}</span></a>
