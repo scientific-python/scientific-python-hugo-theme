@@ -1,3 +1,41 @@
+# scientific-python-hugo-theme 0.10
+
+We're happy to announce the release of scientific-python-hugo-theme 0.10!
+
+## Enhancements
+
+- Add PST cards ([#463](https://github.com/scientific-python/scientific-python-hugo-theme/pull/463)).
+- Add PST cards in grid ([#466](https://github.com/scientific-python/scientific-python-hugo-theme/pull/466)).
+- Use toml for card data ([#468](https://github.com/scientific-python/scientific-python-hugo-theme/pull/468)).
+- Implement clickable cards ([#469](https://github.com/scientific-python/scientific-python-hugo-theme/pull/469)).
+- Add PST dropdowns ([#471](https://github.com/scientific-python/scientific-python-hugo-theme/pull/471)).
+- Add dropdown in card ([#473](https://github.com/scientific-python/scientific-python-hugo-theme/pull/473)).
+- Fixing grid shortcode ([#472](https://github.com/scientific-python/scientific-python-hugo-theme/pull/472)).
+- Add FA icons for dropdowns ([#474](https://github.com/scientific-python/scientific-python-hugo-theme/pull/474)).
+- Fix grid layout ([#475](https://github.com/scientific-python/scientific-python-hugo-theme/pull/475)).
+
+## Maintenance
+
+- Update PST scss ([#470](https://github.com/scientific-python/scientific-python-hugo-theme/pull/470)).
+- Keep scss separate ([#478](https://github.com/scientific-python/scientific-python-hugo-theme/pull/478)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+3 reviewers added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.9
 
 We're happy to announce the release of scientific-python-hugo-theme 0.9!
