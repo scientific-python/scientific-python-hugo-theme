@@ -7,12 +7,18 @@
     {{ partial "panel.html" . }}
     {{ end }}
 
-    {{ if .Content }}
-    {{ partial "single/content.html" . }}
-    {{ end }}
-
     {{ if .Site.GetPage "/news" }}
     {{ partial "news.html" . }}
+    {{ end }}
+
+    {{ if .Content }}
+    <section class="article content-padding">
+      <div class="content-container">
+        <div class="article-content">
+          {{ .Content }}
+        </div>
+      </div>
+    </section>
     {{ end }}
 
     {{ if .Site.Params.keyfeatures }}
