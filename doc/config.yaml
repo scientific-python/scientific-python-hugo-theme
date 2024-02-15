@@ -34,17 +34,6 @@ params:
       url: /shortcodes/
     - title: Examples
       url: /examples/
-  keyfeatures:
-    features:
-      - title: Documented
-        text: The theme is documented at https://theme.scientific-python.org.
-      - title: Reusable
-        text: "The theme is being used by
-          [scientific-python.org](https://github.com/scientific-python/scientific-python.org),
-          [numpy.org](https://github.com/numpy/numpy.org), and
-          [scipy.org](https://github.com/scipy/scipy.org)."
-      - title: Community Maintained
-        text: The theme is maintained by the [Theme Team](/about/).
   footer:
     logo: logo.svg
     socialmediatitle: ""
