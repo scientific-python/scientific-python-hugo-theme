@@ -11,6 +11,3 @@ params:
   plausible:
     dataDomain: null
     javaScript: "https://views.scientific-python.org/js/script.js"
-  hero:
-    buttontext: GitHub
-    buttonlink: https://github.com/scientific-python/scientific-python-hugo-theme
