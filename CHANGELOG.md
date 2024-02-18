@@ -1,3 +1,41 @@
+# scientific-python-hugo-theme 0.11
+
+We're happy to announce the release of scientific-python-hugo-theme 0.11!
+
+## Enhancements
+
+- Add button shortcode ([#483](https://github.com/scientific-python/scientific-python-hugo-theme/pull/483)).
+- Move keyfeatures out of config ([#479](https://github.com/scientific-python/scientific-python-hugo-theme/pull/479)).
+- Make hero optional ([#487](https://github.com/scientific-python/scientific-python-hugo-theme/pull/487)).
+- Add blog frontpage shortcode ([#488](https://github.com/scientific-python/scientific-python-hugo-theme/pull/488)).
+- Add kaushalmodi's atom feed sub-theme ([#489](https://github.com/scientific-python/scientific-python-hugo-theme/pull/489)).
+- Add grid columns option ([#490](https://github.com/scientific-python/scientific-python-hugo-theme/pull/490)).
+
+## Documentation
+
+- Update web components ([#491](https://github.com/scientific-python/scientific-python-hugo-theme/pull/491)).
+
+## Maintenance
+
+- Focus social media ([#485](https://github.com/scientific-python/scientific-python-hugo-theme/pull/485)).
+- Update pre-commit repos ([#486](https://github.com/scientific-python/scientific-python-hugo-theme/pull/486)).
+- Use columns on homepage grid ([#492](https://github.com/scientific-python/scientific-python-hugo-theme/pull/492)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+1 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.10
 
 We're happy to announce the release of scientific-python-hugo-theme 0.10!
