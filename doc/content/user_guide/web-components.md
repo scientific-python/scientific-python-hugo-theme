@@ -50,71 +50,42 @@ success outline
 Here are some of the available button-style links, also using semantic
 colors:
 
-::: grid
-auto
+{{< button info >}}
+label: Info
+link: http://example.com/
+{{< /button >}}
 
-::: grid-item
-::: {.button-ref ref-type="ref" color="info" shadow=""}
-badges-buttons
+{{< button success >}}
+label: Success
+link: http://example.com/
+{{< /button >}}
 
-Info
-:::
-:::
+{{< button warning >}}
+label: Warning
+link: http://example.com/
+{{< /button >}}
 
-::: grid-item
-::: {.button-ref ref-type="ref" color="success" shadow=""}
-badges-buttons
+{{< button danger >}}
+label: Danger
+link: http://example.com/
+{{< /button >}}
 
-Success
-:::
-:::
+{{< button muted >}}
+label: Muted
+link: http://example.com/
+{{< /button >}}
 
-::: grid-item
-::: {.button-ref ref-type="ref" color="warning" shadow=""}
-badges-buttons
+{{< button light >}}
+label: Light
+link: http://example.com/
+{{< /button >}}
 
-Warning
-:::
-:::
+{{< button dark >}}
+label: Dark
+link: http://example.com/
+{{< /button >}}
 
-::: grid-item
-::: {.button-ref ref-type="ref" color="danger" shadow=""}
-badges-buttons
-
-Danger
-:::
-:::
-
-::: grid-item
-::: {.button-ref ref-type="ref" color="muted" shadow=""}
-badges-buttons
-
-Muted
-:::
-:::
-
-::: grid-item
-::: {.button-ref ref-type="ref" color="light" shadow=""}
-badges-buttons
-
-Light
-:::
-:::
-
-::: grid-item
-::: {.button-ref ref-type="ref" color="dark" shadow=""}
-badges-buttons
-
-Dark
-:::
-:::
-:::
-
-::: note
-::: title
-Note
-:::
-
+{{< admonition note >}}
 [Sphinx Design
 buttons](https://sphinx-design.readthedocs.io/en/latest/badges_buttons.html)
 are actually links, meaning they are rendered in HTML with `<a>` tags
@@ -122,7 +93,7 @@ instead of `<button>`. Use them if you need a link to look like a
 button, however, be aware that they do not follow accessibility best
 practices for native button components such as using the correct [ARIA
 attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
-:::
+{{< /admonition >}}
 
 If in your site\'s [custom CSS file](custom-css) you override the [CSS
 custom properties](css-variables) `--pst-color-*` (where `*` is one of
@@ -131,57 +102,68 @@ buttons will automatically use the custom color.
 
 ## Cards
 
-::: grid
-::: grid-item-card
-Only heading
-:::
+{{< grid >}}
 
-::: grid-item-card
+{{< card >}}
+title = 'Only title'
+{{< /card >}}
+
+{{< card >}}
+body = '''
 Only body.
 
 But with multiple text paragraphs.
-:::
+'''
+{{< /card >}}
 
-::: grid-item-card
-Heading and body
-
+{{< card >}}
+title = 'Heading and body'
+body = '''
 Content of the third card.
 
-`Sample badge`{.interpreted-text role="bdg-primary"}
-:::
-:::
+{{< badge primary >}}Sample badge{{< /badge >}}
+'''
+{{< /card >}}
 
-::: grid
-::: grid-item-card
-A card with a dropdown menu
+{{< /grid >}}
 
-::: dropdown
-`eye me-1`{.interpreted-text role="fa"} Click to expand dropdown
+{{< grid >}}
 
-Hidden content
-:::
-:::
+{{< card >}}
+title = 'A card with a dropdown menu'
+body = '''
+{{< dropdown >}}
+title = 'Click to expand dropdown'
+icon = 'fa-solid fa-eye'
+body = 'Hidden content'
+{{< /dropdown >}}
+'''
+{{< /card >}}
 
-::: {.grid-item-card link="https://example.com"}
-A clickable card
-:::
-:::
+{{< card >}}
+title = 'A clickable card'
+link = 'https://example.com'
+{{< /card >}}
 
-::: grid
-::: grid-item-card
+{{< /grid >}}
 
-### panel 1 header
+{{< grid >}}
 
-panel 1 content more content ++++++++++++++ panel 1 footer
-:::
+{{< card >}}
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+{{< /card >}}
 
-::: grid-item-card
+{{< card >}}
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+{{< /card >}}
 
-### panel 2 header
-
-panel 2 content ++++++++++++++ panel 2 footer
-:::
-:::
+{{< /grid >}}
 
 ## Tabs
 
@@ -285,33 +267,34 @@ An admonition for reference.
 And some admonition content.
 :::
 
-::: dropdown
-And with no title and some content!
-:::
+{{< dropdown >}}
+body = 'And with no title and some content!'
+{{< /dropdown >}}
 
-::: dropdown
-With a title
+{{< dropdown >}}
+title = 'With a title'
+body = 'And some content!'
+{{< /dropdown >}}
 
-And some content!
-:::
+{{< dropdown >}}
+title = 'With a title and icon'
+icon = 'fa-solid fa-lock-open'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
 
-::: {.dropdown icon="unlock"}
-With a title and icon
+{{< dropdown >}}
+title = 'A primary color dropdown'
+icon = 'fa-solid fa-lock-open'
+color = 'primary'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
 
-And some content and an icon!
-:::
-
-::: {.dropdown color="primary" icon="unlock"}
-A primary color dropdown
-
-And some content!
-:::
-
-::: {.dropdown color="secondary" icon="unlock"}
-A secondary color dropdown
-
-And some content!
-:::
+{{< dropdown >}}
+title = 'A secondary color dropdown'
+icon = 'fa-solid fa-eye'
+color = 'secondary'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
 
 ## Copybuttons
 
