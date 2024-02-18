@@ -2,7 +2,7 @@
 title:
 ---
 
-{{< grid >}}
+{{< grid columns="1 3 3 3" >}}
 
 {{< card >}}
 title = 'Documented'
