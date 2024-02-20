@@ -11,6 +11,9 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    renderHooks:
+      link:
+        enableDefault: true
 
 params:
   author:
