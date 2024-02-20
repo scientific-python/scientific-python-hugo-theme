@@ -87,4 +87,4 @@ Build your site for deployment with `make html`. The generated site is in `./pub
 
 ## Next steps
 
-Take a minute to learn about the [features]({{< relref "features" >}}) and [shortcodes]({{< relref "shortcodes" >}}) provided by the theme.
+Take a minute to learn about the [features](features) and [shortcodes](shortcodes) provided by the theme.
