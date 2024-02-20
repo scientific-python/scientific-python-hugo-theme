@@ -56,7 +56,7 @@ main:
 blog:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/blog.scientific-python.org $@
-	(cd $@ ; make prepare ; cp -a themes/hugo-atom-feed ../..)
+	(cd $@ ; make prepare )
 	(cd $@ ; hugo --themesDir="../..")
 
 learn:
