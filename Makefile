@@ -23,9 +23,12 @@ teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
 doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 	(cd layouts && python ../tools/render_shortcode_docs.py > ../doc/content/shortcodes.md)
 
+prepare: doc/content/shortcodes.md
+	git submodule update --init
+
 # Serve for development purposes.
 serve-dev: doc-serve
-doc-serve: doc/content/shortcodes.md
+doc-serve: prepare
 	(cd doc && hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
 # -----------------------------------
@@ -38,7 +41,7 @@ netlify-preview: theme scipy main blog learn
 	mv blog/public doc/public/blog
 	mv learn/public doc/public/learn
 
-theme: doc/content/shortcodes.md
+theme: prepare
 	(cd doc ; hugo --themesDir="../..")
 
 scipy:
