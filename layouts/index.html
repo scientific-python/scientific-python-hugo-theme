@@ -3,10 +3,6 @@
     {{ partial "hero.html" . }}
     {{ end }}
 
-    {{ if .Site.Params.panel }}
-    {{ partial "panel.html" . }}
-    {{ end }}
-
     {{ if .Site.GetPage "/news" }}
     {{ partial "news.html" . }}
     {{ end }}
