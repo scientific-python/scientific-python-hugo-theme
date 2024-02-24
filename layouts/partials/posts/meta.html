@@ -1,7 +1,16 @@
 <div class="post-meta">
-  <span class="post-authors">
+<span class="post-authors">
     {{- range .Params.author -}}
-    <div class="post-author"><i class="fa-solid fa-user"></i> {{ . }}</div>
+    {{ $author := trim (index (findRE `[^<]*` . 1) 0) "\n\r " }}
+    {{ $handle := index (index (findRESubmatch `<(.*?)>` . 1) 0) 1 }}
+    <div class="post-author">
+    <i class="fa-solid fa-user"></i>
+      {{ if $handle }}
+      <a href="/authors/{{ $handle }}">{{ $author }}</a>
+      {{- else }}
+      {{- $author }}
+      {{- end }}
+    </div>
     {{- end -}}
   </span>
   {{ if .Date }}
