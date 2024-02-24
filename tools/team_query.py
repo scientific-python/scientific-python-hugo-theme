@@ -42,10 +42,13 @@ def api(query):
 parser = argparse.ArgumentParser(description="Generate team gallery from GitHub")
 parser.add_argument("--org", required=True, help="GitHub organization name")
 parser.add_argument("--team", required=True, help="Team name in the organization")
+parser.add_argument("--dir", required=True, help="Directory for team members")
 args = parser.parse_args()
 
 org = args.org
 team = args.team
+directory = os.path.join(args.dir, team)
+os.makedirs(directory, exist_ok=True)
 
 token = os.environ.get("GH_TOKEN", None)
 if token is None:
@@ -61,38 +64,18 @@ resp = api(team_query.substitute(org=org, team=team))
 members = resp["data"]["organization"]["team"]["members"]["nodes"]
 team_name = resp["data"]["organization"]["team"]["name"]
 
-team_template = string.Template(
-    """\
-<div class="team">
-  <h3 id="${team}" class="team-name">${team_name}</h3>
-  <div class="team-members">
-${members}
-  </div>
-</div>"""
-)
-
 member_template = string.Template(
-    """\
-    <div class="team-member">
-      <a href="${url}" class="team-member-name">
-        <div class="team-member-photo">
-          <img
-            src="${avatarUrl}"
-            loading="lazy"
-            alt="Avatar of ${name}"
-          />
-        </div>
-        ${name}
-      </a>
-    </div>"""
+    """---
+title: "${name}"
+avatar: ${avatarUrl}
+repository: ${url}
+---
+"""
 )
 
-members_list = []
 for m in members:
     m["name"] = m["name"] or m["login"]
-    members_list.append(member_template.substitute(**m))
-
-members_str = "".join(members_list)
-team_str = team_template.substitute(members=members_str, team=team, team_name=team_name)
-
-print(team_str)
+    filename = os.path.join(directory, f"{m['name'].lower().replace(' ', '-')}.md")
+    text = member_template.substitute(**m)
+    with open(filename, "w") as file:
+        file.write(text)
