@@ -1,0 +1,10 @@
+{{/*
+
+doc: Include a file with syntax highlighting.
+
+{{< include-code "example.py" "python" >}}
+
+*/}}
+
+{{ $filename := (path.Join .Page.File.Dir (.Get 0)) }}
+{{- highlight (readFile $filename) (.Get 1) -}}
