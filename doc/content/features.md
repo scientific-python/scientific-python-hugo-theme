@@ -85,7 +85,35 @@ in `/news.md`, instead of adding posts to `/news`. Set the
 `newsHeader` parameter in the preamble of that document to populate
 the banner on the front page.
 
-## Team gallery
+## Galleries
+
+The shortcode
+
+```
+{{</* gallery pages="./_gallery" columns="2 4 4 5" */>}}
+```
+
+with
+
+```
+_gallery/
+├── ipython.md
+├── matplotlib.md
+├── networkx.md
+├── numpy.md
+├── pandas.md
+├── scikit-image.md
+├── scikit-learn.md
+├── scipy.md
+├── xarray.md
+└── zarr.md
+```
+
+will
+
+{{< gallery pages="./_gallery" columns="2 4 4 5" >}}
+
+### Team gallery
 
 The `tools/team_query.py` file gets a list of team members from GitHub. To
 use it, you will need to set the GH_TOKEN environment variable

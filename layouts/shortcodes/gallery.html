@@ -1,0 +1,37 @@
+{{ $shortcode := . }}
+
+<div class="sd-container-fluid sd-mb-4">
+{{- with .Get "columns" -}}
+  {{ $columns := split . " " }}
+  {{ $xs := index $columns 0 }}
+  {{ $sm := index $columns 1 }}
+  {{ $md := index $columns 2 }}
+  {{ $lg := index $columns 3 }}
+  <div class="sd-row sd-row-cols-1 sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
+{{- else }}
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-3 sd-row-cols-lg-4 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2">
+{{- end }}
+  {{ $section := .Page.GetPage (.Get "pages") }}
+  {{ range (or $section.Pages ($section.Resources.ByType "page")) }}
+    <div class="sd-col sd-d-flex-row">
+      {{ $link_internal := eq ($shortcode.Get "link") "internal" }}
+      {{ $link_url := or (and $link_internal .RelPermalink) .Params.repository }}
+      <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover">
+        <div class="sd-card-header">
+          <p class="sd-card-text">{{ .Title }}</p>
+        </div>
+        <div class="sd-card-body">
+	  <p class="sd-card-text">
+          <img
+            src="{{ default (relURL "/images/avatar.png") (.Params.avatar) }}"
+            loading="lazy"
+            alt="Avatar of {{ .Title }}"
+          />
+	  </p>
+	</div>
+        <a class="sd-stretched-link" href="{{ $link_url  }}"></a>
+      </div>
+    </div>
+  {{ end }}
+  </div>
+</div>
