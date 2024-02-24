@@ -62,29 +62,24 @@ members = resp["data"]["organization"]["team"]["members"]["nodes"]
 team_name = resp["data"]["organization"]["team"]["name"]
 
 team_template = string.Template(
-    """\
-<div class="team">
-  <h3 id="${team}" class="team-name">${team_name}</h3>
-  <div class="team-members">
-${members}
-  </div>
-</div>"""
+    """---
+draft: true
+---
+
+{{< grid columns="2 4 4 5">}}${members}
+{{< /grid >}}"""
 )
 
 member_template = string.Template(
-    """\
-    <div class="team-member">
-      <a href="${url}" class="team-member-name">
-        <div class="team-member-photo">
-          <img
-            src="${avatarUrl}"
-            loading="lazy"
-            alt="Avatar of ${name}"
-          />
-        </div>
-        ${name}
-      </a>
-    </div>"""
+    """
+{{< card >}}
+header = '${name}'
+body = '''{{< image >}}
+src = '${avatarUrl}"'
+alt = 'Avatar of ${name}'
+{{< /image >}}'''
+link = '${url}'
+{{< /card >}}"""
 )
 
 members_list = []

@@ -11,10 +11,6 @@ input,
 select {
   margin: 0;
 }
-video {
-  height: auto;
-  max-width: 100%;
-}
 iframe {
   border: 0;
 }

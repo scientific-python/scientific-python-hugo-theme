@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := doc-serve
 
 GH_ORG = scientific-python
-TEAMS_DIR = doc/static/teams
+TEAMS_DIR = doc/content/about
 TEAMS = theme-team
 TEAMS_QUERY = python tools/team_query.py
 
@@ -11,11 +11,11 @@ $(TEAMS_DIR):
 
 $(TEAMS_DIR)/%.md: $(TEAMS_DIR)
 	$(eval TEAM_NAME=$(shell python -c "import re; print(' '.join(x.capitalize() for x in re.split('-|_', '$*')))"))
-	$(TEAMS_QUERY) --org $(GH_ORG) --team "$*"  >  $(TEAMS_DIR)/$*.html
+	$(TEAMS_QUERY) --org $(GH_ORG) --team "$*"  >  $(TEAMS_DIR)/$*.md
 
 teams-clean:
 	for team in $(TEAMS); do \
-	  rm -f $(TEAMS_DIR)/$${team}.html ;\
+	  rm -f $(TEAMS_DIR)/$${team}.md ;\
 	done
 
 teams: | teams-clean $(patsubst %,$(TEAMS_DIR)/%.md,$(TEAMS))
