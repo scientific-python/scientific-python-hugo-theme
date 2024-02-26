@@ -35,12 +35,13 @@ object.align-center {
   margin-right: auto;
 }
 
-img.align-default,
-figure.align-default,
-.figure.align-default {
+img,
+figure,
+.figure {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .align-left {
