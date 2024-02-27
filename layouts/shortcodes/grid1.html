@@ -1,0 +1,100 @@
+{{/*
+
+doc: Grids.
+
+{{< grid1 columns="1 2 2 3">}}
+
+[[card]]
+title = 'Only title'
+
+[[card]]
+body = '''
+Only body.
+
+But with multiple text paragraphs.
+'''
+
+[[card]]
+title = 'Heading and body'
+body = '''
+Content of the third card.
+
+{{< badge primary >}}Sample badge{{< /badge >}}
+'''
+
+[[card]]
+title = 'A card with a dropdown menu'
+body = '''
+{{< dropdown >}}
+title = 'Click to expand dropdown'
+icon = 'fa-solid fa-eye'
+body = 'Hidden content'
+{{< /dropdown >}}
+'''
+
+[[card]]
+header = 'A clickable card'
+link = 'https://example.com'
+body = '''{{< image >}}
+src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+alt = 'Cute puppies'
+align = 'center'
+{{< /image >}}'''
+
+[[card]]
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+
+{{< /grid1 >}}
+
+*/}}
+
+<div class="sd-container-fluid sd-mb-4">
+{{- with .Get "columns" -}}
+  {{ $columns := split . " " }}
+  {{ $xs := index $columns 0 }}
+  {{ $sm := index $columns 1 }}
+  {{ $md := index $columns 2 }}
+  {{ $lg := index $columns 3 }}
+  <div class="sd-row sd-row-cols-1 sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
+{{- else }}
+  <div class="sd-row">
+{{- end }}
+  {{ $cards := (index (.Inner | transform.Unmarshal) "card") }}
+  {{- range $key, $d := $cards -}}
+    <div class="sd-col sd-d-flex-row">
+    {{- with $d.link }}
+      <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover">
+    {{- else }}
+      <div class="sd-card sd-w-100 sd-shadow-sm">
+    {{- end }}
+      {{- with $d.header }}
+      <div class="sd-card-header">
+          {{ . | markdownify }}
+      </div>
+      {{- end }}
+      <div class="sd-card-body">
+        {{- with $d.title }}
+        <div class="sd-card-title sd-font-weight-bold">
+          {{ . }}
+        </div>
+        {{- end }}
+        {{- with (trim .body "\n") }}
+          {{ . | markdownify }}
+        {{- end }}
+      </div>
+      {{- with $d.link }}
+      <a class="sd-stretched-link" href="{{.}}"></a>
+      {{- end }}
+      {{- with $d.footer }}
+      <div class="sd-card-footer">
+        {{ . | markdownify }}
+      </div>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+  </div>
+</div>
