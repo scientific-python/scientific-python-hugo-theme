@@ -7,4 +7,4 @@ The **Scientific Python Hugo Theme** is a theme for the
 [Hugo](https://gohugo.io) static site generator built on the
 [Fresh](https://github.com/StefMa/hugo-fresh) theme.
 
-{{< include-html "static/teams/theme-team.html" >}}
+{{< grid1 file="theme-team.toml" columns="2 3 4 5" />}}

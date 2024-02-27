@@ -61,30 +61,17 @@ resp = api(team_query.substitute(org=org, team=team))
 members = resp["data"]["organization"]["team"]["members"]["nodes"]
 team_name = resp["data"]["organization"]["team"]["name"]
 
-team_template = string.Template(
-    """\
-<div class="team">
-  <h3 id="${team}" class="team-name">${team_name}</h3>
-  <div class="team-members">
-${members}
-  </div>
-</div>"""
-)
-
 member_template = string.Template(
     """\
-    <div class="team-member">
-      <a href="${url}" class="team-member-name">
-        <div class="team-member-photo">
-          <img
-            src="${avatarUrl}"
-            loading="lazy"
-            alt="Avatar of ${name}"
-          />
-        </div>
-        ${name}
-      </a>
-    </div>"""
+[[item]]
+type = 'card'
+header = '${name}'
+body = '''{{< image >}}
+src = '${avatarUrl}"'
+alt = 'Avatar of ${name}'
+{{< /image >}}'''
+link = '${url}'
+"""
 )
 
 members_list = []
@@ -92,7 +79,4 @@ for m in members:
     m["name"] = m["name"] or m["login"]
     members_list.append(member_template.substitute(**m))
 
-members_str = "".join(members_list)
-team_str = team_template.substitute(members=members_str, team=team, team_name=team_name)
-
-print(team_str)
+print("\n".join(members_list).rstrip())
