@@ -2,19 +2,42 @@
 
 doc: Grids.
 
-{{< grid1 columns="1 2 2 4">}}
+{{< grid1 columns="1 2 3 4" >}}
 
-[[card]]
+[[item]]
+type = ''
+body = 'A'
+
+[[item]]
+type = ''
+body = 'B'
+
+[[item]]
+type = ''
+body = 'C'
+
+[[item]]
+type = ''
+body = 'D'
+
+{{< /grid1 >}}
+
+{{< grid1 columns="1 2 2 4" >}}
+
+[[item]]
+type = 'card'
 title = 'Only title'
 
-[[card]]
+[[item]]
+type = 'card'
 body = '''
 Only body.
 
 But with multiple text paragraphs.
 '''
 
-[[card]]
+[[item]]
+type = 'card'
 title = 'Heading and body'
 body = '''
 Content of the third card.
@@ -22,7 +45,8 @@ Content of the third card.
 {{< badge primary >}}Sample badge{{< /badge >}}
 '''
 
-[[card]]
+[[item]]
+type = 'card'
 title = 'A card with a dropdown menu'
 body = '''
 {{< dropdown >}}
@@ -32,13 +56,15 @@ body = 'Hidden content'
 {{< /dropdown >}}
 '''
 
-[[card]]
+[[item]]
+type = 'card'
 header = 'Header'
 title = 'Card Title'
 body = 'Card content'
 footer = 'Footer'
 
-[[card]]
+[[item]]
+type = 'card'
 header = 'A clickable image card'
 link = 'https://example.com'
 body = '''{{< image >}}
@@ -47,7 +73,8 @@ alt = 'Cute puppies'
 align = 'center'
 {{< /image >}}'''
 
-[[card]]
+[[item]]
+type = 'card'
 header = 'A clickable figure card'
 link = 'https://example.com'
 body = '''{{< figure
@@ -55,7 +82,8 @@ src="https://source.unsplash.com/200x200/daily?cute+puppy"
 alt="Cute puppies"
 >}}'''
 
-[[card]]
+[[item]]
+type = 'card'
 link = 'https://example.com'
 body = '''{{< figure
 src="https://source.unsplash.com/200x200/daily?cute+puppy"
@@ -68,7 +96,6 @@ caption="Cute puppies"
 */}}
 
 <div class="sd-container-fluid sd-mb-4">
-{{ $cards := "" }}
 {{- with .Get "columns" -}}
   {{ $columns := split . " " }}
   {{ $xs := index $columns 0 }}
@@ -79,16 +106,18 @@ caption="Cute puppies"
 {{- else }}
   <div class="sd-row sd-row-cols-auto sd-row-cols-xs-auto sd-row-cols-sm-auto sd-row-cols-md-auto sd-row-cols-lg-auto">
 {{- end }}
+{{ $items := "" }}
 {{- with .Get "file" -}}
   {{ with $.Page.Resources.Get  . | transform.Unmarshal }}
-    {{ $cards = (index . "card") }}
+    {{ $items = (index . "item") }}
   {{ else }}
     {{ errorf "Unable to get page resource %q" . }}
   {{ end }}
 {{- else }}
-  {{ $cards = (index (.Inner | transform.Unmarshal) "card") }}
+  {{ $items = (index (.Inner | transform.Unmarshal) "item") }}
 {{- end }}
-{{- range $key, $d := $cards -}}
+{{- range $key, $d := $items -}}
+{{ if eq $d.type "card" }}
     <div class="sd-col sd-d-flex-row">
     {{- with $d.link }}
       <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover">
@@ -120,6 +149,15 @@ caption="Cute puppies"
       {{- end }}
     </div>
   </div>
+{{ else }}
+    <div class="sd-col sd-d-flex-column">
+      <p>
+        {{- with (trim .body "\n") }}
+          {{ . | markdownify }}
+        {{- end }}
+      </p>
+    </div>
+{{ end }}
   {{- end }}
   </div>
 </div>
