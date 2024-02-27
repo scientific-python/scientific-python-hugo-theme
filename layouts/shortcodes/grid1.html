@@ -2,7 +2,7 @@
 
 doc: Grids.
 
-{{< grid1 columns="1 2 2 3">}}
+{{< grid1 columns="1 2 2 4">}}
 
 [[card]]
 title = 'Only title'
@@ -33,7 +33,13 @@ body = 'Hidden content'
 '''
 
 [[card]]
-header = 'A clickable card'
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+
+[[card]]
+header = 'A clickable image card'
 link = 'https://example.com'
 body = '''{{< image >}}
 src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
@@ -42,10 +48,20 @@ align = 'center'
 {{< /image >}}'''
 
 [[card]]
-header = 'Header'
-title = 'Card Title'
-body = 'Card content'
-footer = 'Footer'
+header = 'A clickable figure card'
+link = 'https://example.com'
+body = '''{{< figure
+src="https://source.unsplash.com/200x200/daily?cute+puppy"
+alt="Cute puppies"
+>}}'''
+
+[[card]]
+link = 'https://example.com'
+body = '''{{< figure
+src="https://source.unsplash.com/200x200/daily?cute+puppy"
+alt="Cute puppies"
+caption="Cute puppies"
+>}}'''
 
 {{< /grid1 >}}
 
@@ -60,7 +76,7 @@ footer = 'Footer'
   {{ $lg := index $columns 3 }}
   <div class="sd-row sd-row-cols-1 sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
 {{- else }}
-  <div class="sd-row">
+  <div class="sd-row sd-row-cols-auto sd-row-cols-xs-auto sd-row-cols-sm-auto sd-row-cols-md-auto sd-row-cols-lg-auto">
 {{- end }}
   {{ $cards := (index (.Inner | transform.Unmarshal) "card") }}
   {{- range $key, $d := $cards -}}

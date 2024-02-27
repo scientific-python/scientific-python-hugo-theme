@@ -116,6 +116,16 @@ By default, `javaScript` points to the server at
 `https://views.scientific-python.org`. Contact the Scientific
 Python team to have your analytics hosted there.
 
+## Figures
+
+{{< figure src="https://source.unsplash.com/200x200/daily?cute+puppy"
+alt="Cute puppies"
+target="https://unsplash.com/"
+caption="Cute puppies"
+loading="lazy"
+height=200
+width=200 >}}
+
 ## Icons
 
 You can add custom icons (for use in, e.g., the footer) by downloading Material-UI SVGs from [Google Fonts](https://fonts.google.com/icons) to the `/assets/icons` directory.
