@@ -2,7 +2,7 @@
 
 doc: Grids.
 
-{{< grid1 columns="1 2 3 4" >}}
+{{< grid1 columns="1 2 3 4" outline="" >}}
 
 [[item]]
 type = ''
@@ -95,7 +95,11 @@ caption="Cute puppies"
 
 */}}
 
-<div class="sd-container-fluid sd-mb-4">
+{{ $outline := "" }}
+{{ if isset .Params `outline` }}
+  {{ $outline = "sd-border-1" }}
+{{ end }}
+<div class="sd-container-fluid sd-mb-4 {{ $outline | safeHTMLAttr }}">
 {{- with .Get "columns" -}}
   {{ $columns := split . " " }}
   {{ $xs := index $columns 0 }}
