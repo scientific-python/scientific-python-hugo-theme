@@ -1,0 +1,22 @@
+{{/*
+
+doc: Field lists
+
+{{< field-list >}}
+[[entry]]
+term = "John"
+def = 30
+
+[[entry]]
+term = "Will"
+def = 28
+
+[[entry]]
+term = "Joey"
+def = 24
+{{< /field-list >}}
+
+*/}}
+
+{{ $entries := (index (.Inner | transform.Unmarshal) "entry") }}
+{{ partial "_elements/field-list" (dict "ctx" . "entries" $entries) }}

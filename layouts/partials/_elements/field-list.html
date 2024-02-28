@@ -1,0 +1,11 @@
+<dl class="field-list">
+{{ range $i, $entry := .entries }}
+  {{if (modBool $i 2)}}
+  <dt class="field-odd">{{ .term }}<span class="colon">:</span></dt>
+  <dd class="field-odd">{{ .def }}</dd>
+  {{else}}
+  <dt class="field-even">{{ .term }}<span class="colon">:</span></dt>
+  <dd class="field-even">{{ .def }}</dd>
+  {{end}}
+{{end}}
+</dl>
