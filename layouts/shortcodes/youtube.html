@@ -1,21 +1,3 @@
-{{/*
-
-doc: Embed YouTube videos, with foldable captions. The `levelOffset` parameter can be used to control the depth of the video heading and content. The shortcode can be invoked either with an `id` attribute, or by specifying `page`. In the latter case, that page's preamble should provide `youtube_id`, `title`, `venue`, and `date`, and its contents act as the video transcript. Remember the closing tag!
-
-{{< youtube id="EmGSSbwdCZQ" class="talk" title="YouTube: Open Data Science" venue="CU Denver Data Science Symposium 2020" author="Stefan van der Walt" levelOffset=3 >}}
-
-Here, I will give a transcript of the whole video, and say some things about it that you cannot know otherwise without watching the **video**.
-
-### But what is it?
-
-This is it!
-
-{{< /youtube >}}
-
-{{< youtube page="video-page" levelOffset=3 >}}{{< /youtube >}}
-
-*/}}
-
 {{- $id := .Get "id" -}}
 {{- $title := "" -}}
 {{- $about := "" -}}
