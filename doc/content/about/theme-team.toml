@@ -1,5 +1,6 @@
 [[item]]
 type = 'card'
+classcard = 'text-center'
 header = 'Adam Porter'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/601365?v=4"'
@@ -9,6 +10,7 @@ link = 'https://github.com/alphapapa'
 
 [[item]]
 type = 'card'
+classcard = 'text-center'
 header = 'Brian Hawthorne'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/352264?u=1fd523aa28b0451454989400579d97a8c1bc1b9a&v=4"'
@@ -18,6 +20,7 @@ link = 'https://github.com/brianhawthorne'
 
 [[item]]
 type = 'card'
+classcard = 'text-center'
 header = 'Jarrod Millman'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/123428?v=4"'
@@ -27,6 +30,7 @@ link = 'https://github.com/jarrodmillman'
 
 [[item]]
 type = 'card'
+classcard = 'text-center'
 header = 'Stefan van der Walt'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/45071?u=c779b5e06448fbc638bc987cdfe305c7f9a7175e&v=4"'
@@ -36,6 +40,7 @@ link = 'https://github.com/stefanv'
 
 [[item]]
 type = 'card'
+classcard = 'text-center'
 header = 'Pamphile Roy'
 body = '''{{< image >}}
 src = 'https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&v=4"'

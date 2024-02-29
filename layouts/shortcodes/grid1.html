@@ -70,26 +70,27 @@ link = 'https://example.com'
 body = '''{{< image >}}
 src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
 alt = 'Cute puppies'
-align = 'center'
 {{< /image >}}'''
 
 [[item]]
 type = 'card'
-header = 'A clickable figure card'
+classcard = 'text-center'
 link = 'https://example.com'
-body = '''{{< figure
-src="https://source.unsplash.com/200x200/daily?cute+puppy"
-alt="Cute puppies"
->}}'''
+body = '''{{< image >}}
+src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+alt = 'Cute puppies'
+{{< /image >}}
+
+A clickable figure card'''
 
 [[item]]
 type = 'card'
 link = 'https://example.com'
-body = '''{{< figure
-src="https://source.unsplash.com/200x200/daily?cute+puppy"
-alt="Cute puppies"
-caption="Cute puppies"
->}}'''
+body = '''{{< image >}}
+src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+alt = 'Cute puppies'
+{{< /image >}}'''
+footer = 'A clickable figure card'
 
 {{< /grid1 >}}
 
@@ -123,10 +124,12 @@ caption="Cute puppies"
 {{- range $key, $d := $items -}}
 {{ if eq $d.type "card" }}
     <div class="sd-col sd-d-flex-row">
+    {{ $class := "" }}
+    {{- with $d.classcard }}{{ $class = . }}{{- end }}
     {{- with $d.link }}
-      <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover">
+    <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover {{ $class }}">
     {{- else }}
-      <div class="sd-card sd-w-100 sd-shadow-sm">
+    <div class="sd-card sd-w-100 sd-shadow-sm {{ $class }}">
     {{- end }}
       {{- with $d.header }}
       <div class="sd-card-header">
