@@ -35,9 +35,9 @@ object.align-center {
   margin-right: auto;
 }
 
-img,
-figure,
-.figure {
+img.align-default,
+figure.align-default,
+.figure.align-default {
   display: block;
   margin-left: auto;
   margin-right: auto;
