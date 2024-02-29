@@ -4,14 +4,14 @@ doc: Images
 
 {{< image >}}
 src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
-alt = 'Cute puppies laying in the door of a tiny plastic house'
+alt = 'Cute puppies'
 {{< /image >}}
 
 A clickable image:
 
 {{< image >}}
 src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
-alt = 'Cute puppies laying in the door of a tiny plastic house'
+alt = 'Cute puppies'
 target = 'https://unsplash.com/'
 height = 200
 width = 200
@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {{< image >}}
 src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
-alt = 'Cute puppies laying in the door of a tiny plastic house'
+alt = 'Cute puppies'
 align = 'right'
 height = 200
 width = 200
@@ -31,17 +31,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-{{< admonition note >}}
-For more options, see Hugo embedded [figure shortcode](https://gohugo.io/content-management/shortcodes/#figure).
-{{< /admonition >}}
-
 */}}
 
 {{- $data := .Inner | transform.Unmarshal -}}
 {{- if $data.target -}}<a href="{{ $data.target }}">{{- end -}}
 <img src="{{ $data.src }}" alt="{{ $data.alt }}"
-         {{- with $data.align }} class="align-{{ . }}"{{ end -}}
-         {{- with $data.width }} width="{{ . }}"{{ end -}}
-         {{- with $data.height }} height="{{ . }}"{{ end -}}
-><!-- Closing img tag -->
+  {{- with $data.align }} class="align-{{ . }}"{{ end -}}
+  {{- with $data.width }} width="{{ . }}"{{ end -}}
+  {{- with $data.height }} height="{{ . }}"{{ end -}}
+>
 {{- if $data.target }}</a>{{ end -}}
