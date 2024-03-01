@@ -91,7 +91,6 @@ a.box:active {
   display: flex;
 }
 .level.is-mobile .level-item:not(:last-child) {
-  margin-bottom: 0;
   margin-right: 0.75rem;
 }
 .level.is-mobile .level-item:not(.is-narrow) {
@@ -104,14 +103,6 @@ a.box:active {
   .level > .level-item:not(.is-narrow) {
     flex-grow: 1;
   }
-}
-.level-item {
-  align-items: center;
-  display: flex;
-  flex-basis: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-  justify-content: center;
 }
 .level-item .subtitle,
 .level-item .title {
