@@ -80,6 +80,10 @@
   display: inline-block;
 }
 
+#footer .community-icons a:not(:last-child) {
+  margin-right: 0.75rem;
+}
+
 #footer svg.icon {
   fill: var(--colorSecondary);
   margin-right: 0.5rem;

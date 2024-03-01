@@ -75,18 +75,6 @@ a.box:active {
 .field:not(:last-child) {
   margin-bottom: 0.75rem;
 }
-.level img {
-  display: inline-block;
-  vertical-align: top;
-}
-.level.is-mobile .level-item:not(:last-child) {
-  margin-right: 0.75rem;
-}
-@media screen and (max-width: 768px) {
-  .level-item:not(:last-child) {
-    margin-bottom: 0.75rem;
-  }
-}
 .column {
   display: block;
   flex-basis: 0;
