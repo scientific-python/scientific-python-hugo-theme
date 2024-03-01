@@ -96,10 +96,6 @@ a > code {
   margin-left: 0.5em;
 }
 
-#backtotop.visible #backtotop-color:hover {
-  background: var(--colorYellow);
-}
-
 @media only screen and (max-width: 600px) {
   .flex-column {
     margin: 0 30px;
