@@ -2,7 +2,6 @@
 .block:not(:last-child),
 .box:not(:last-child),
 .content:not(:last-child),
-.level:not(:last-child),
 .title:not(:last-child) {
   margin-bottom: 1.5rem;
 }
@@ -87,9 +86,6 @@ a.box:active {
   display: inline-block;
   vertical-align: top;
 }
-.level.is-mobile {
-  display: flex;
-}
 .level.is-mobile .level-item:not(:last-child) {
   margin-right: 0.75rem;
 }
@@ -103,10 +99,6 @@ a.box:active {
   .level > .level-item:not(.is-narrow) {
     flex-grow: 1;
   }
-}
-.level-item .subtitle,
-.level-item .title {
-  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .level-item:not(:last-child) {
