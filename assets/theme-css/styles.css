@@ -68,6 +68,13 @@ figure.align-default,
   text-align: right;
 }
 
+aside.sidebar {
+  width: 40%;
+  float: right;
+  clear: right;
+  overflow-x: auto;
+}
+
 /**
  * See `code.literal` in
  * src/pydata_sphinx_theme/assets/styles/content/_code.scss
