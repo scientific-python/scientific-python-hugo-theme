@@ -73,10 +73,15 @@
   /* Icon size slightly enlargened for footer */
   font-size: 2.3em;
   max-width: 25rem;
+  margin-bottom: 1.5rem;
 }
 
 #footer .community-icons a {
   display: inline-block;
+}
+
+#footer .community-icons a:not(:last-child) {
+  margin-right: 0.75rem;
 }
 
 #footer svg.icon {

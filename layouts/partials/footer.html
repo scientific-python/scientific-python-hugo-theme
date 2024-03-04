@@ -25,19 +25,17 @@
       {{- end }}
         <div class="footer-actions">
           {{ partial "footer_actions.html" . }}
-          <nav class="level is-mobile">
-            <div class="community-icons">
-              {{- range $socialMedia }}
-              <a class="level-item" href="{{ .link }}" aria-label="{{ .link }}">
-                {{if .icon -}}
-                {{- partial "svg-icon" .icon -}}
-                {{- else -}}
-                <span class="icon">ⓘ</span>
-                {{- end }}
-              </a>
+          <div class="community-icons">
+            {{- range $socialMedia }}
+            <a href="{{ .link }}" aria-label="{{ .link }}">
+              {{if .icon -}}
+              {{- partial "svg-icon" .icon -}}
+              {{- else -}}
+              <span class="icon">ⓘ</span>
               {{- end }}
-            </div>
-          </nav>
+            </a>
+            {{- end }}
+          </div>
           <div class="copyright">&copy; {{ now.Year}} {{ $author }}. All rights reserved.</div>
         </div>
     </div>
