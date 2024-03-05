@@ -49,9 +49,17 @@ Example `version number`
   where `origin` is the name of the `github.com:scientific-python/scientific-python-hugo-theme`
   repository
 
-- Review the github release page:
+- Create release from tag
 
-      https://github.com/scientific-python/scientific-python-hugo-theme/tags
+      - go to https://github.com/scientific-python/scientific-python-hugo-theme/releases/new?tag=v${VERSION}
+      - add v${VERSION} for the `Release title`
+      - paste contents (or upload) of ${VERSION}.md in the `Describe this release section`
+      - if pre-release check the box labelled `Set as a pre-release`
+
+- Update https://github.com/scientific-python/scientific-python-hugo-theme/milestones:
+
+      - close old milestone
+      - ensure new milestone exists (perhaps setting due date)
 
 - Update `version` in `pyproject.toml`.
 
