@@ -27,7 +27,9 @@
   display: block;
   width: 46px;
   height: 46px;
-  background-color: #66676b;
+  background-color: var(
+    --pst-color-link
+  ); /* may want something like #35293 --pst-semantic-teal-dark ?*/
   opacity: 1;
   transition: all 0.3s;
   border-radius: 50%;
@@ -36,7 +38,7 @@
 }
 body #backtotop a {
   outline: none;
-  color: #fff;
+  color: var(--colorSecondary);
 }
 #backtotop a:after {
   outline: none;
@@ -48,5 +50,5 @@ body #backtotop a {
   transform: translateY(-55%);
 }
 #backtotop.visible #backtotop-color:hover {
-  background: var(--colorYellow);
+  background: var(--pst-color-link-hover);
 }
