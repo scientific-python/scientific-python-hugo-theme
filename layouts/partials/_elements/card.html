@@ -1,0 +1,33 @@
+{{- $class := "" }}
+{{- with .classcard }}{{ $class = . }}{{- end }}
+<div class="sd-col sd-d-flex-row">
+ {{- with .link }}
+  <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover {{ $class }}">
+ {{- else }}
+  <div class="sd-card sd-w-100 sd-shadow-sm {{ $class }}">
+ {{- end }}
+  {{- with .header }}
+   <div class="sd-card-header">
+     {{ . | markdownify }}
+   </div>
+  {{- end }}
+   <div class="sd-card-body">
+    {{- with .title }}
+    <div class="sd-card-title sd-font-weight-bold">
+      {{ . }}
+    </div>
+    {{- end }}
+    {{- with (trim .body "\n") }}
+      {{ . | markdownify }}
+    {{- end }}
+   </div>
+  {{- with .footer }}
+   <div class="sd-card-footer">
+    {{ . | markdownify }}
+   </div>
+  {{- end }}
+ {{- with .link }}
+    <a class="sd-stretched-link" href="{{.}}"></a>
+ {{- end }}
+  </div>
+</div>

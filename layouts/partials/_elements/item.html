@@ -1,0 +1,7 @@
+    <div class="sd-col sd-d-flex-column">
+      <p>
+        {{- with (trim .body "\n") }}
+          {{ . | markdownify }}
+        {{- end }}
+      </p>
+    </div>
