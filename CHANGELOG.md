@@ -1,3 +1,64 @@
+# scientific-python-hugo-theme 0.12
+
+We're happy to announce the release of scientific-python-hugo-theme 0.12!
+
+## Enhancements
+
+- Add include-code shortcode ([#502](https://github.com/scientific-python/scientific-python-hugo-theme/pull/502)).
+- Add author profiles ([#503](https://github.com/scientific-python/scientific-python-hugo-theme/pull/503)).
+- Add image shortcode ([#505](https://github.com/scientific-python/scientific-python-hugo-theme/pull/505)).
+- Add include shortcode ([#506](https://github.com/scientific-python/scientific-python-hugo-theme/pull/506)).
+- Use toml for grids ([#509](https://github.com/scientific-python/scientific-python-hugo-theme/pull/509)).
+- Add file option to grid shortcode ([#511](https://github.com/scientific-python/scientific-python-hugo-theme/pull/511)).
+- Support grid items and cards ([#512](https://github.com/scientific-python/scientific-python-hugo-theme/pull/512)).
+- Add grid outline option ([#513](https://github.com/scientific-python/scientific-python-hugo-theme/pull/513)).
+- Use grid of cards for team gallery ([#510](https://github.com/scientific-python/scientific-python-hugo-theme/pull/510)).
+- Add field list shortcode and partial ([#515](https://github.com/scientific-python/scientific-python-hugo-theme/pull/515)).
+- Update image and grid shortcodes ([#520](https://github.com/scientific-python/scientific-python-hugo-theme/pull/520)).
+- Add sidebar ([#526](https://github.com/scientific-python/scientific-python-hugo-theme/pull/526)).
+- Use PST colors for backtotop ([#524](https://github.com/scientific-python/scientific-python-hugo-theme/pull/524)).
+
+## Bug Fixes
+
+- Add atom xml feed as subtheme ([#497](https://github.com/scientific-python/scientific-python-hugo-theme/pull/497)).
+
+## Documentation
+
+- Fix fosstodon link ([#493](https://github.com/scientific-python/scientific-python-hugo-theme/pull/493)).
+- Document figures ([#508](https://github.com/scientific-python/scientific-python-hugo-theme/pull/508)).
+
+## Maintenance
+
+- Fix blog build ([#495](https://github.com/scientific-python/scientific-python-hugo-theme/pull/495)).
+- Update hugo ([#494](https://github.com/scientific-python/scientific-python-hugo-theme/pull/494)).
+- Remove panel ([#498](https://github.com/scientific-python/scientific-python-hugo-theme/pull/498)).
+- Remove keyfeatures ([#499](https://github.com/scientific-python/scientific-python-hugo-theme/pull/499)).
+- Update hugo ([#500](https://github.com/scientific-python/scientific-python-hugo-theme/pull/500)).
+- Update mermaid ([#501](https://github.com/scientific-python/scientific-python-hugo-theme/pull/501)).
+- Move icon styling out of bulma ([#514](https://github.com/scientific-python/scientific-python-hugo-theme/pull/514)).
+- Update requirements ([#516](https://github.com/scientific-python/scientific-python-hugo-theme/pull/516)).
+- Hide deprecated shortcodes ([#517](https://github.com/scientific-python/scientific-python-hugo-theme/pull/517)).
+- Update hugo ([#518](https://github.com/scientific-python/scientific-python-hugo-theme/pull/518)).
+- Add back image-default ([#519](https://github.com/scientific-python/scientific-python-hugo-theme/pull/519)).
+- Separate hero css ([#521](https://github.com/scientific-python/scientific-python-hugo-theme/pull/521)).
+- Separate backtotop css ([#523](https://github.com/scientific-python/scientific-python-hugo-theme/pull/523)).
+- Remove level css ([#525](https://github.com/scientific-python/scientific-python-hugo-theme/pull/525)).
+- Update hugo ([#527](https://github.com/scientific-python/scientific-python-hugo-theme/pull/527)).
+
+## Contributors
+
+2 authors added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.11
 
 We're happy to announce the release of scientific-python-hugo-theme 0.11!
@@ -33,8 +94,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.11!
 
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.10
 
@@ -71,8 +131,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.10!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.9
 
@@ -108,8 +167,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.9!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.8
 
@@ -144,8 +202,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.8!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.7
 
@@ -180,8 +237,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.7!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.6
 
@@ -211,8 +267,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.6!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.5
 
@@ -352,8 +407,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.4!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.3
 
@@ -456,8 +510,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.2!
 
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.1
 
