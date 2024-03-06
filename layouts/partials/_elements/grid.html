@@ -1,0 +1,26 @@
+{{- $outline := default "false" .outline -}}
+{{- $columns := default "auto" .columns -}}
+{{- $items := .items -}}
+{{- if eq $outline "true" -}}
+  {{- $outline = "sd-border-1" -}}
+{{- end -}}
+<div class="sd-container-fluid sd-mb-4 {{ $outline | safeHTMLAttr }}">
+{{- if eq $columns "auto"}}
+  <div class="sd-row sd-row-cols-auto sd-row-cols-xs-auto sd-row-cols-sm-auto sd-row-cols-md-auto sd-row-cols-lg-auto">
+{{- else }}
+  {{- $columns := split $columns " " }}
+  {{- $xs := index $columns 0 }}
+  {{- $sm := index $columns 1 }}
+  {{- $md := index $columns 2 }}
+  {{- $lg := index $columns 3 }}
+  <div class="sd-row sd-row-cols-1 sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
+{{- end }}
+{{- range $key, $d := $items -}}
+  {{- if eq $d.type "card" }}
+    {{- partial "_elements/card.html" $d -}}
+  {{- else }}
+    {{- partial "_elements/item.html" $d -}}
+  {{- end }}
+{{- end }}
+  </div>
+</div>
