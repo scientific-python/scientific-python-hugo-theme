@@ -66,11 +66,11 @@ member_template = string.Template(
 [[item]]
 type = 'card'
 classcard = 'text-center'
-header = '${name}'
 body = '''{{< image >}}
 src = '${avatarUrl}"'
 alt = 'Avatar of ${name}'
-{{< /image >}}'''
+{{< /image >}}
+${name}'''
 link = '${url}'
 """
 )
