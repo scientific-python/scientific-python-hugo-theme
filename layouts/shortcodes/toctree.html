@@ -8,15 +8,21 @@ doc: Shows a table-of-contents tree for the Hugo [`Sections`](https://gohugo.io/
 
 */}}
 
+{{- $levels := 3 }}
+{{- with (.Get "levels") }}
+  {{- $levels = . }}
+{{- end }}
 <div class="toctree-wrapper">
   {{- range $section := .Page.Sections }}
   <ul>
     <li class="toctree-l1"><a href="{{ $section.RelPermalink }}">{{ $section.Title | safeHTML }}</a></li>
+    {{- if gt $levels 1 }}
     {{- range $page := .RegularPages }}
     <ul>
       <li class="toctree-l2"><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></li>
+      {{- if gt $levels 2 }}
       <ul>
-        {{- range .Fragments.Headings -}}
+      {{- range .Fragments.Headings -}}
         {{/* H2 */}}
         {{- range .Headings }}
         <li class="toctree-l3">
@@ -25,7 +31,9 @@ doc: Shows a table-of-contents tree for the Hugo [`Sections`](https://gohugo.io/
         {{- end -}}
         {{- end }}
       </ul>
+      {{- end }}
     </ul>
+    {{- end }}
     {{- end }}
   </ul>
   {{- end }}
