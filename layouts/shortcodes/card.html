@@ -1,42 +1,56 @@
-{{- $data := .Inner | transform.Unmarshal -}}
+{{/*
+
+doc: Cards
+
+{{< card >}}
+title = 'Only title'
+{{< /card >}}
+
+{{< card >}}
+body = '''
+Only body.
+
+But with multiple text paragraphs.
+'''
+{{< /card >}}
+
+{{< card >}}
+title = 'Heading and body'
+body = '''
+Content of the third card.
+
+{{< badge primary >}}Sample badge{{< /badge >}}
+'''
+{{< /card >}}
+
+{{< card >}}
+title = 'A card with a dropdown menu'
+body = '''
+{{< dropdown >}}
+title = 'Click to expand dropdown'
+icon = 'fa-solid fa-eye'
+body = 'Hidden content'
+{{< /dropdown >}}
+'''
+{{< /card >}}
+
+{{< card >}}
+title = 'A clickable card'
+link = 'https://example.com'
+{{< /card >}}
+
+{{< card >}}
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+{{< /card >}}
+
+*/}}
+
+{{- $card := .Inner | transform.Unmarshal -}}
 {{- with .Parent -}}
-<div class="sd-col sd-d-flex-row">
-{{ with $data.link }}
-<div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover">
-{{ else }}
-<div class="sd-card sd-w-100 sd-shadow-sm">
-{{ end }}
+  {{- partial "_elements/card.html" (dict "grid_item_card" true "card" $card) -}}
 {{- else -}}
-{{ with $data.link }}
-<div class="sd-card sd-mb-3 sd-shadow-sm sd-card-hover">
-{{ else }}
-<div class="sd-card sd-mb-3 sd-shadow-sm">
-{{ end }}
+  {{- partial "_elements/card.html" (dict "grid_item_card" false "card" $card) -}}
 {{- end -}}
-  {{ with $data.header }}
-  <div class="sd-card-header">
-      {{ . | markdownify }}
-  </div>
-  {{ end }}
-  <div class="sd-card-body">
-    {{ with $data.title }}
-    <div class="sd-card-title sd-font-weight-bold">
-      {{ . }}
-    </div>
-    {{ end }}
-    {{ with (trim $data.body "\n") }}
-      {{ . | markdownify }}
-    {{ end }}
-  </div>
-  {{ with $data.link }}
-  <a class="sd-stretched-link" href="{{.}}"></a>
-  {{ end }}
-  {{ with $data.footer }}
-  <div class="sd-card-footer">
-    {{ . | markdownify }}
-  </div>
-  {{ end }}
-{{- with .Parent -}}
-</div>
-{{ end }}
-</div>

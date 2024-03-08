@@ -1,33 +1,42 @@
-{{- $class := "" }}
-{{- with .classcard }}{{ $class = . }}{{- end }}
+{{- $grid_item_card := default false .grid_item_card -}}
+{{- $card := .card -}}
+{{- $class := "" }}{{- with $card.classcard }}{{ $class = . }}{{- end }}
+{{- if $grid_item_card -}}
 <div class="sd-col sd-d-flex-row">
- {{- with .link }}
+ {{ with $card.link }}
   <div class="sd-card sd-w-100 sd-shadow-sm sd-card-hover {{ $class }}">
- {{- else }}
+ {{ else }}
   <div class="sd-card sd-w-100 sd-shadow-sm {{ $class }}">
- {{- end }}
-  {{- with .header }}
+ {{ end }}
+{{- else -}}
+ {{ with $card.link }}
+  <div class="sd-card sd-mb-3 sd-shadow-sm sd-card-hover {{ $class }}">
+ {{ else }}
+  <div class="sd-card sd-mb-3 sd-shadow-sm {{ $class }}">
+ {{ end }}
+{{- end -}}
+  {{- with $card.header }}
    <div class="sd-card-header">
      {{ . | markdownify }}
    </div>
   {{- end }}
    <div class="sd-card-body">
-    {{- with .title }}
+    {{- with $card.title }}
     <div class="sd-card-title sd-font-weight-bold">
       {{ . }}
     </div>
     {{- end }}
-    {{- with (trim .body "\n") }}
+    {{- with (trim $card.body "\n") }}
       {{ . | markdownify }}
     {{- end }}
    </div>
-  {{- with .footer }}
+  {{- with $card.footer }}
    <div class="sd-card-footer">
     {{ . | markdownify }}
    </div>
   {{- end }}
- {{- with .link }}
+ {{- with $card.link }}
     <a class="sd-stretched-link" href="{{.}}"></a>
  {{- end }}
   </div>
-</div>
+{{ if $grid_item_card -}}</div>{{- end }}
