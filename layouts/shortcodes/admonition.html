@@ -52,9 +52,6 @@ This is our values.
 
 */}}
 
-<div class="admonition {{ .Get 0 }}">
-  <div class="admonition-title"> {{ .Get 0 | humanize }}</div>
-  <p>
-    {{ .Inner | markdownify }}
-  </p>
-</div>
+{{- $title := .Get 0 -}}
+{{- $body := .Inner -}}
+{{- partial "_elements/admonition.html" (dict "title" $title "body" $body) -}}
