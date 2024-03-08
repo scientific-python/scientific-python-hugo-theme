@@ -1,0 +1,6 @@
+<div class="admonition {{ .title }}">
+  <div class="admonition-title"> {{ .title | humanize }}</div>
+  <p>
+    {{ .body | markdownify }}
+  </p>
+</div>
