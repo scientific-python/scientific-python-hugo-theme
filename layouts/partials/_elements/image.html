@@ -1,0 +1,7 @@
+{{- if .data.target -}}<a href="{{ .data.target }}">{{- end -}}
+<img src="{{ .data.src }}" alt="{{ .data.alt }}"
+  {{- with .data.align }} class="align-{{ . }}"{{ end -}}
+  {{- with .data.width }} width="{{ . }}"{{ end -}}
+  {{- with .data.height }} height="{{ . }}"{{ end -}}
+>
+{{- if .data.target }}</a>{{ end -}}
