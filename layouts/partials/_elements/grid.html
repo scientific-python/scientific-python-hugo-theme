@@ -15,11 +15,11 @@
   {{- $lg := index $columns 3 }}
   <div class="sd-row sd-row-cols-{{ $xs }} sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
 {{- end }}
-{{- range $key, $d := $items -}}
-  {{- if eq $d.type "card" }}
-    {{- partial "_elements/card.html" $d -}}
+{{- range $key, $item := $items -}}
+  {{- if eq $item.type "card" }}
+    {{- partial "_elements/card.html" (dict "grid_item_card" true "card" $item) -}}
   {{- else }}
-    {{- partial "_elements/item.html" $d -}}
+    {{- partial "_elements/item.html" $item -}}
   {{- end }}
 {{- end }}
   </div>
