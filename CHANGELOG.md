@@ -1,3 +1,41 @@
+# scientific-python-hugo-theme 0.13
+
+We're happy to announce the release of scientific-python-hugo-theme 0.13!
+
+## Enhancements
+
+- Refactor cards and items into partials ([#529](https://github.com/scientific-python/scientific-python-hugo-theme/pull/529)).
+- Refactor grid into partial ([#530](https://github.com/scientific-python/scientific-python-hugo-theme/pull/530)).
+- Add optional levels parameter to toctree ([#531](https://github.com/scientific-python/scientific-python-hugo-theme/pull/531)).
+- Update team galleries ([#533](https://github.com/scientific-python/scientific-python-hugo-theme/pull/533)).
+- Use card partial in card shortcode ([#538](https://github.com/scientific-python/scientific-python-hugo-theme/pull/538)).
+- Use admonition partial ([#539](https://github.com/scientific-python/scientific-python-hugo-theme/pull/539)).
+- Use image partial ([#540](https://github.com/scientific-python/scientific-python-hugo-theme/pull/540)).
+
+## Bug Fixes
+
+- Use column value for smallest screens ([#537](https://github.com/scientific-python/scientific-python-hugo-theme/pull/537)).
+
+## Maintenance
+
+- Update release process notes ([#528](https://github.com/scientific-python/scientific-python-hugo-theme/pull/528)).
+- Remove fresh cruft ([#535](https://github.com/scientific-python/scientific-python-hugo-theme/pull/535)).
+- Update hugo ([#534](https://github.com/scientific-python/scientific-python-hugo-theme/pull/534)).
+- Update dart sass ([#536](https://github.com/scientific-python/scientific-python-hugo-theme/pull/536)).
+
+## Contributors
+
+1 authors added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.12
 
 We're happy to announce the release of scientific-python-hugo-theme 0.12!
