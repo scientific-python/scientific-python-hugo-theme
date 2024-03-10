@@ -17,25 +17,6 @@
 
 <script type="text/javascript">setupShortcuts(maxLevel={{ default 2 .Page.Params.shortcutDepth }});</script>
 
-{{- if .HasShortcode "youtube" }}
-<script type="text/javascript">
-  var buttons = document.getElementsByClassName("video-transcript-button");
-  var i;
-
-  for (i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-</script>
-{{ end -}}
-
 {{- if .Page.Store.Get "hasMermaid" }}
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.esm.min.mjs';
