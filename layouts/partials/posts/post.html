@@ -8,10 +8,12 @@
     {{ end }}
     <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
     <div class="post-content">
-      {{ if and $featuredImage $featuredImage.Params.showOnTop }}
+      {{ with $featuredImage }}
+      {{ if .Params.showOnTop }}
       <div class="post-featuredImage">
-        <img src="{{ $featuredImage.RelPermalink }}" {{ if $featuredImage.Params.description }}alt="{{ $featuredImage.Params.description }}"{{ end }}/>
+        <img src="{{ .RelPermalink }}" {{ with .Params.description }}alt="{{ . }}"{{ end }}/>
       </div>
+      {{ end }}
       {{ end }}
       {{ .Content }}
       {{ partial "posts/comments.html" .}}
