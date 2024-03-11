@@ -8,9 +8,9 @@
     {{ end }}
     <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
     <div class="post-content">
-      {{ with $featuredImage }}
+      {{ if and $featuredImage $featuredImage.Params.showOnTop }}
       <div class="post-featuredImage">
-        <img src="{{ .RelPermalink }}" {{ if .Params.description }}alt="{{ .Params.description }}"{{ end }}/>
+        <img src="{{ $featuredImage.RelPermalink }}" {{ if $featuredImage.Params.description }}alt="{{ $featuredImage.Params.description }}"{{ end }}/>
       </div>
       {{ end }}
       {{ .Content }}
