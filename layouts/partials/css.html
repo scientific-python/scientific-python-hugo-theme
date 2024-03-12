@@ -30,12 +30,12 @@
 
 {{- range $sass -}}
   {{ with . }}  <!-- Skips nil elements from appending empty resources.Match slices. -->
-    {{- $targetFile := printf "%s.scss" . -}}
+    {{- $targetFile := printf "%s.css" .RelPermalink -}}
     {{- if $inServerMode -}}
-      {{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts -}}
+      {{ $css := resources.ExecuteAsTemplate $targetFile $page . | toCSS $cssOpts -}}
       <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}">
     {{ else }}
-      {{ $css := resources.Get . | resources.ExecuteAsTemplate $targetFile $page | toCSS $cssOpts | minify | fingerprint -}}
+      {{ $css := resources.ExecuteAsTemplate $targetFile $page . | toCSS $cssOpts | minify | fingerprint -}}
       <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
     {{- end -}}
   {{- end -}}
