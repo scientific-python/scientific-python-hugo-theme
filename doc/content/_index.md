@@ -4,14 +4,15 @@ title:
 
 {{< grid columns="1 3 3 3" >}}
 
-{{< card >}}
+[[item]]
+type = 'card'
 title = 'Documented'
 body = '''
 The theme is documented at https://theme.scientific-python.org.
 '''
-{{< /card >}}
 
-{{< card >}}
+[[item]]
+type = 'card'
 title = 'Reusable'
 body = '''
 The theme is being used by
@@ -19,13 +20,12 @@ The theme is being used by
 [numpy.org](https://github.com/numpy/numpy.org), and
 [scipy.org](https://github.com/scipy/scipy.org).
 '''
-{{< /card >}}
 
-{{< card >}}
+[[item]]
+type = 'card'
 title = 'Community Maintained'
 body = '''
 The theme is maintained by the [Theme Team](/about/).
 '''
-{{< /card >}}
 
 {{< /grid >}}
