@@ -1,14 +1,109 @@
-<div class="sd-container-fluid sd-mb-4">
-{{- with .Get "columns" -}}
-  {{ $columns := split . " " }}
-  {{ $xs := index $columns 0 }}
-  {{ $sm := index $columns 1 }}
-  {{ $md := index $columns 2 }}
-  {{ $lg := index $columns 3 }}
-  <div class="sd-row sd-row-cols-1 sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
+{{/*
+
+doc: Grids.
+
+{{< grid1 columns="1 2 3 4" outline="true" >}}
+
+[[item]]
+type = ''
+body = 'A'
+
+[[item]]
+type = ''
+body = 'B'
+
+[[item]]
+type = ''
+body = 'C'
+
+[[item]]
+type = ''
+body = 'D'
+
+{{< /grid1 >}}
+
+{{< grid1 columns="1 2 2 4" >}}
+
+[[item]]
+type = 'card'
+title = 'Only title'
+
+[[item]]
+type = 'card'
+body = '''
+Only body.
+
+But with multiple text paragraphs.
+'''
+
+[[item]]
+type = 'card'
+title = 'Heading and body'
+body = '''
+Content of the third card.
+
+{{< badge primary >}}Sample badge{{< /badge >}}
+'''
+
+[[item]]
+type = 'card'
+title = 'A card with a dropdown menu'
+body = '''
+{{< dropdown >}}
+title = 'Click to expand dropdown'
+icon = 'fa-solid fa-eye'
+body = 'Hidden content'
+{{< /dropdown >}}
+'''
+
+[[item]]
+type = 'card'
+header = 'Header'
+title = 'Card Title'
+body = 'Card content'
+footer = 'Footer'
+
+[[item]]
+type = 'card'
+header = 'A clickable image card'
+link = 'https://example.com'
+body = '''{{< image >}}
+src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+alt = 'Cute puppies'
+{{< /image >}}'''
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+link = 'https://example.com'
+body = '''{{< image >}}
+src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+alt = 'Cute puppies'
+{{< /image >}}
+
+A clickable figure card'''
+
+[[item]]
+type = 'card'
+link = 'https://example.com'
+body = '''{{< image >}}
+src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+alt = 'Cute puppies'
+{{< /image >}}'''
+footer = 'A clickable figure card'
+
+{{< /grid1 >}}
+
+*/}}
+
+{{- $items := "" -}}
+{{- with .Get "file" -}}
+  {{- with $.Page.Resources.Get  . | transform.Unmarshal }}
+    {{- $items = (index . "item") }}
+  {{- else }}
+    {{- errorf "Unable to get page resource %q" . }}
+  {{- end }}
 {{- else }}
-  <div class="sd-row">
+  {{- $items = (index (.Inner | transform.Unmarshal) "item") }}
 {{- end }}
-  {{ .Inner }}
-</div>
-</div>
+{{- partial "_elements/grid.html" (merge .Params (dict "items" $items)) -}}
