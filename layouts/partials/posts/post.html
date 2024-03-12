@@ -9,9 +9,11 @@
     <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
     <div class="post-content">
       {{ with $featuredImage }}
+      {{ if .Params.showOnTop }}
       <div class="post-featuredImage">
-        <img src="{{ .RelPermalink }}" {{ if .Params.description }}alt="{{ .Params.description }}"{{ end }}/>
+        <img src="{{ .RelPermalink }}" {{ with .Params.description }}alt="{{ . }}"{{ end }}/>
       </div>
+      {{ end }}
       {{ end }}
       {{ .Content }}
       {{ partial "posts/comments.html" .}}
