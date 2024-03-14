@@ -1,0 +1,68 @@
+{{/*
+
+doc: Render TOML to an HTML table.
+
+{{< tomlToTable >}}
+
+[[row]]
+type = 'header'
+
+[[row.column]]
+body = 'Project'
+
+[[row.column]]
+body = 'Available Packages'
+
+[[row.column]]
+body = 'Download location'
+
+[[row]]
+
+[[row.column]]
+body = 'NumPy'
+
+[[row.column]]
+body = '''Official *source code* (all platforms) and *binaries* for<br />
+**Windows**, **Linux**, and **Mac OS X**'''
+
+[[row.column]]
+body = '[PyPi page for NumPy](https://pypi.python.org/pypi/numpy)'
+
+[[row]]
+
+[[row.column]]
+body = 'SciPy'
+
+[[row.column]]
+body = '''Official *source code* (all platforms) and *binaries* for<br />
+**Windows**, **Linux**, and **Mac OS X**'''
+
+[[row.column]]
+align = 'right'
+body = '''[SciPy release page](https://github.com/scipy/scipy/releases) (sources)<br />
+[PyPI page for SciPy](https://pypi.python.org/pypi/scipy) (all)'''
+
+{{< /tomlToTable >}}
+
+*/}}
+
+{{ $arg := .Get 0 }}
+{{ $data := .Inner | transform.Unmarshal }}
+
+{{ with $data }}
+<table>
+  {{ range $row := .row }}
+  <tr>
+    {{ $el := "td" }}
+    {{ if (eq $row.type "header") }}
+    {{ $el = "th" }}
+    {{ end }}
+    {{ range $col := .column }}
+    {{ printf "<%s" $el | safeHTML }} colspan="{{ $col.colspan }}" rowspan="{{ $col.rowspan }}" {{ printf ">" | safeHTML }}
+      {{ $col.body | markdownify }}
+    {{ printf "</%s>" $el | safeHTML }}
+    {{ end }}
+  </tr>
+  {{ end }}
+</table>
+{{ end }}
