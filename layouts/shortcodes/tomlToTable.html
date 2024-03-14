@@ -50,12 +50,16 @@ body = '''[SciPy release page](https://github.com/scipy/scipy/releases) (sources
 {{ $data := .Inner | transform.Unmarshal }}
 
 {{ with $data }}
-<table>
-  {{ range $row := .row }}
-  <tr>
+<table class="table">
+  {{ range $i, $row := .row }}
+  {{if (modBool $i 2)}}
+  <tr class="row-odd">
+  {{else}}
+  <tr class="row-even">
+  {{end}}
     {{ $el := "td" }}
     {{ if (eq $row.type "header") }}
-    {{ $el = "th" }}
+    {{ $el = "th class='head'" }}
     {{ end }}
     {{ range $col := .column }}
     {{ printf "<%s" $el | safeHTML }} colspan="{{ $col.colspan }}" rowspan="{{ $col.rowspan }}" {{ printf ">" | safeHTML }}

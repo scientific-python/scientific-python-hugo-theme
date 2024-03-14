@@ -14,7 +14,36 @@ caption = '''
 A figure is an image with a caption. Figures may also include a tile, legend, and/or attribution.
 '''
 legend = '''
-**TODO: use tomltotable (https://github.com/scientific-python/scientific-python-hugo-theme/pull/548)**
+{{< tomlToTable >}}
+
+[[row]]
+type = 'header'
+
+[[row.column]]
+body = 'Project'
+
+[[row.column]]
+body = 'Available Packages'
+
+[[row]]
+
+[[row.column]]
+body = 'NumPy'
+
+[[row.column]]
+body = '''Official *source code* (all platforms) and *binaries* for<br />
+**Windows**, **Linux**, and **Mac OS X**'''
+
+[[row]]
+
+[[row.column]]
+body = 'SciPy'
+
+[[row.column]]
+body = '''Official *source code* (all platforms) and *binaries* for<br />
+**Windows**, **Linux**, and **Mac OS X**'''
+
+{{< /tomlToTable >}}
 
 This paragraph is also part of the legend.
 '''
@@ -59,7 +88,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </span>
 {{- with $figure.legend }}
 <div class="legend">
-{{ . | markdownify -}}
+{{- with (trim . "\n") }}
+  {{ . | safeHTML }}
+{{- end }}
 </div>
 {{- end }}
 </figcaption>
