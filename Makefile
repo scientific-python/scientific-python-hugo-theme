@@ -32,10 +32,9 @@ doc-serve: doc/content/shortcodes.md
 # The following is for use on netlify
 # -----------------------------------
 
-netlify-preview: theme scipy main blog learn
+netlify-preview: theme scipy main learn
 	mv scipy/public doc/public/scipy
 	mv main/public doc/public/main
-	mv blog/public doc/public/blog
 	mv learn/public doc/public/learn
 
 theme: doc/content/shortcodes.md
