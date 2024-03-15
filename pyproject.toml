@@ -1,6 +1,6 @@
 [project]
 name = "scientific-python-hugo-theme"
-version = "0.14"
+version = "0.15rc0.dev0"
 
 [tool.changelist]
 # Profiles that are excluded from the contributor list.
