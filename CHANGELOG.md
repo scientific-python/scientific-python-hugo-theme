@@ -1,3 +1,39 @@
+# scientific-python-hugo-theme 0.14
+
+We're happy to announce the release of scientific-python-hugo-theme 0.14!
+
+## Enhancements
+
+- Add figure shortcode with PST styling ([#546](https://github.com/scientific-python/scientific-python-hugo-theme/pull/546)).
+- Add loading attribute to image partial ([#547](https://github.com/scientific-python/scientific-python-hugo-theme/pull/547)).
+
+## Bug Fixes
+
+- BUG: fixed `showOnTop` ([#541](https://github.com/scientific-python/scientific-python-hugo-theme/pull/541)).
+- Fix processing of scss ([#542](https://github.com/scientific-python/scientific-python-hugo-theme/pull/542)).
+
+## Maintenance
+
+- Replace grid with grid1 shortcode ([#543](https://github.com/scientific-python/scientific-python-hugo-theme/pull/543)).
+- Use new grid syntax ([#545](https://github.com/scientific-python/scientific-python-hugo-theme/pull/545)).
+- Remove old team gallery styling ([#544](https://github.com/scientific-python/scientific-python-hugo-theme/pull/544)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Aditi Juneja ([@Schefflera-Arboricola](https://github.com/Schefflera-Arboricola))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.13
 
 We're happy to announce the release of scientific-python-hugo-theme 0.13!
