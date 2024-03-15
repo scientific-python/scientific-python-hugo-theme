@@ -4,6 +4,12 @@ doc: Render TOML to an HTML table.
 
 {{< tomlToTable >}}
 
+caption = 'Table caption'
+align = [ "left", "left", "right" ]
+header-rows = 1
+footer-rows = 3
+stub-columns = 1
+
 [[row]]
 type = 'header'
 
