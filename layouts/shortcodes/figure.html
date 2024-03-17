@@ -7,7 +7,12 @@ src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
 alt = 'Cute puppies'
 height = 200
 width = 200
-caption = 'A figure is an image with a caption and/or a legend:'
+title = 'Figure title'
+attribution = 'Figure Credits: Daily cute puppy image from unslash.com'
+attributionlink = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+caption = '''
+A figure is an image with a caption. Figures may also include a tile, legend, and/or attribution.
+'''
 legend = '''
 **TODO: need to convert yamltotable to tomltotable**
 
@@ -18,6 +23,8 @@ This paragraph is also part of the legend.
 {{< figure >}}
 src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
 alt = 'Cute puppies'
+attribution = 'from unslash.com'
+attributionlink = 'https://source.unsplash.com/200x200/daily?cute+puppy'
 align = 'left'
 height = 150
 width = 150
@@ -36,14 +43,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {{- $align := default "default" $figure.align -}}
 {{- $id := printf "id%03d" $.Ordinal -}}
 <figure class="align-{{ $align }}" id="{{ $id }}">
-{{- $m := newScratch -}}
-{{- $m.Set "image" $figure -}}
-{{- $m.SetInMap "image" "align" "center" -}}
-{{ partial "_elements/image.html" (dict "data" $m.Values.image) }}
+{{ partial "_elements/image.html" (dict "data" $figure) }}
 <figcaption>
+{{- with $figure.title -}}
+<strong class="caption-title">{{ . }}</strong><a class="headerlink" href="#{{ $id  }}" title="Link to this image">#</a><br>
+{{- end }}
+{{- if $figure.attribution -}}
+{{- with $figure.attributionlink -}}<a href="{{ . }}">{{- end -}}{{- $figure.attribution -}}{{- if $figure.attributionlink -}}</a>{{- end -}}
+{{- end }}
 <p><span class="caption-text">
 {{- $figure.caption | markdownify -}}
-</span><a class="headerlink" href="#{{ $id  }}" title="Link to this image">#</a></p>
+</span>
 {{- with $figure.legend }}
 <div class="legend">
 {{ . | markdownify -}}
