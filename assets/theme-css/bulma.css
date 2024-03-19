@@ -1,28 +1,15 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
-.block:not(:last-child),
-.content:not(:last-child),
 .title:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-input,
-select {
-  margin: 0;
-}
 iframe {
   border: 0;
 }
 article,
-figure,
 footer,
 header {
   display: block;
-}
-input[type="radio"] {
-  vertical-align: baseline;
-}
-small {
-  font-size: 0.875em;
 }
 span {
   font-style: inherit;
@@ -48,9 +35,6 @@ span {
   .container:not(.is-max-desktop):not(.is-max-widescreen) {
     max-width: 1344px;
   }
-}
-.field:not(:last-child) {
-  margin-bottom: 0.75rem;
 }
 @media screen and (max-width: 768px) {
   .is-hidden-mobile {
