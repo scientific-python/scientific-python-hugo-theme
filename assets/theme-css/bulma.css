@@ -52,42 +52,6 @@ span {
 .field:not(:last-child) {
   margin-bottom: 0.75rem;
 }
-.column {
-  display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  padding: 0.75rem 0.75rem 0rem 0.75rem;
-}
-.columns.is-mobile > .column.is-5 {
-  flex: none;
-  width: 41.66667%;
-}
-@media screen and (min-width: 769px), print {
-  .column.is-5 {
-    flex: none;
-    width: 41.66667%;
-  }
-}
-.columns {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  margin-top: 1rem;
-}
-.columns:last-child {
-  margin-bottom: -0.75rem;
-}
-.columns:not(:last-child) {
-  margin-bottom: calc(1.5rem - 0.75rem);
-}
-.columns.is-mobile {
-  display: flex;
-}
-@media screen and (min-width: 769px), print {
-  .columns:not(.is-desktop) {
-    display: flex;
-  }
-}
 @media screen and (max-width: 768px) {
   .is-hidden-mobile {
     display: none !important;
