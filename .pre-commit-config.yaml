@@ -26,7 +26,7 @@ repos:
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/psf/black
-    rev: 6fdf8a4af28071ed1d079c01122b34c5d587207a # frozen: 24.2.0
+    rev: 552baf822992936134cbd31a38f69c8cfe7c0f05 # frozen: 24.3.0
     hooks:
       - id: black
 
@@ -36,7 +36,7 @@ repos:
       - id: blacken-docs
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 1bd02b3569e3ac5cc66552b1336a96a8880d1bae # frozen: v0.2.1
+    rev: c22645f6b45188216151a407c040a9eec1795ab0 # frozen: v0.3.3
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix, --target-version=py38]
