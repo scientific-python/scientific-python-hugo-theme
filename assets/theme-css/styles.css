@@ -52,6 +52,10 @@ figure.align-default,
   text-align: center;
 }
 
+strong.caption-title {
+  font-weight: bold;
+}
+
 .align-left {
   text-align: left;
 }
