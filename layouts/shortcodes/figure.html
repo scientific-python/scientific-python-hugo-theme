@@ -43,7 +43,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {{- $align := default "default" $figure.align -}}
 {{- $id := printf "id%03d" $.Ordinal -}}
 <figure class="align-{{ $align }}" id="{{ $id }}">
-{{ partial "_elements/image.html" (dict "data" $figure) }}
+{{- $m := newScratch -}}
+{{- $m.Set "image" $figure -}}
+{{- $m.SetInMap "image" "align" "center" -}}
+{{ partial "_elements/image.html" (dict "data" $m.Values.image) }}
 <figcaption>
 {{- with $figure.title -}}
 <strong class="caption-title">{{ . }}</strong><a class="headerlink" href="#{{ $id  }}" title="Link to this image">#</a><br>
