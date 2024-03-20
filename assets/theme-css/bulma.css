@@ -1,7 +1,4 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
-.title:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 iframe {
   border: 0;
