@@ -1,3 +1,33 @@
+# scientific-python-hugo-theme 0.15
+
+We're happy to announce the release of scientific-python-hugo-theme 0.15!
+
+## Enhancements
+
+- Add figure functionality for numpy.org ([#550](https://github.com/scientific-python/scientific-python-hugo-theme/pull/550)).
+- Add blog & tools to netlify preview build ([#549](https://github.com/scientific-python/scientific-python-hugo-theme/pull/549)).
+- Center image in figures ([#554](https://github.com/scientific-python/scientific-python-hugo-theme/pull/554)).
+
+## Maintenance
+
+- Update pre-commit repos ([#551](https://github.com/scientific-python/scientific-python-hugo-theme/pull/551)).
+- Remove bulma box styling ([#553](https://github.com/scientific-python/scientific-python-hugo-theme/pull/553)).
+- Remove grid1 shortcode ([#552](https://github.com/scientific-python/scientific-python-hugo-theme/pull/552)).
+- Remove bulma columns class ([#555](https://github.com/scientific-python/scientific-python-hugo-theme/pull/555)).
+- Remove unused bulma css ([#556](https://github.com/scientific-python/scientific-python-hugo-theme/pull/556)).
+
+## Contributors
+
+1 authors added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 # scientific-python-hugo-theme 0.14
 
 We're happy to announce the release of scientific-python-hugo-theme 0.14!
