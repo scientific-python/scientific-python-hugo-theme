@@ -1,3 +1,7 @@
+iframe {
+  border: 0;
+}
+
 .youtube {
   width: 100%;
   display: flex;
