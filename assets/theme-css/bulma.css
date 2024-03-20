@@ -1,17 +1,5 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-iframe {
-  border: 0;
-}
-article,
-footer,
-header {
-  display: block;
-}
-span {
-  font-style: inherit;
-  font-weight: inherit;
-}
 .container {
   flex-grow: 1;
   margin: 0 auto;
