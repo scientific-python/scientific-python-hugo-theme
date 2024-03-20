@@ -28,6 +28,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.15!
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
 _These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.14
 
 We're happy to announce the release of scientific-python-hugo-theme 0.14!
