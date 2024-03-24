@@ -1,18 +1,17 @@
 {{- $title          := .Site.Params.title }}
 {{- $navbar         := .Site.Params.navbar }}
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
-{{- $navbarLogoShow := .Site.Params.navbarlogoshow }}
 <nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
-      {{ if or (not .IsHome) ($navbarLogoShow) }}
+      {{- if or (not .IsHome) (not .Site.Params.hero) }}
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
         <img class="navbar-logo" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
         <div class="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
       </a>
       {{- end}}
-      {{ end }}
+      {{- end }}
 
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
         <span aria-hidden="true"></span>
@@ -39,14 +38,8 @@
             {{- end }}
           </div>
         </div>
-        {{- else if .button }}
-        <a href="{{ .url }}" class="navbar-item">
-          <span class="button signup-button rounded secondary-btn raised">
-            {{ .title }}
-          </span>
-        </a>
         {{- else }}
-        <a href="{{ .url }}" class="navbar-item is-secondary">
+        <a href="{{ .url }}" class="navbar-item">
           {{ .title }}
         </a>
         {{- end }}
