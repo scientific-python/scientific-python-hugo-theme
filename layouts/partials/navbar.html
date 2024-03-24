@@ -3,7 +3,7 @@
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
 {{- $navbarLogoShow := .Site.Params.navbarlogoshow }}
 <nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
-  <div class="container is-max-widescreen">
+  <div class="container">
     <div class="navbar-brand">
       {{ if or (not .IsHome) ($navbarLogoShow) }}
       {{- if $navbarLogo}}
