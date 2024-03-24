@@ -1,22 +1,39 @@
 nav,
 .navbar {
   background: var(--pst-color-background);
+  box-shadow: none !important;
+  position: sticky;
+  top: 0;
+  min-height: 3.8rem;
+  transition: all 0.3s;
+  z-index: 99;
+}
+.navbar > .container {
+  width: 100%;
+}
+.navbar-brand {
+  align-items: stretch;
+  display: flex;
+  min-height: 4rem;
+}
+.navbar-logo {
+  height: 28px;
+  padding-right: 1rem;
+}
+.navbar-logo-text {
+  color: var(--pst-color-text-base);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.navbar .container {
+  min-height: 4rem;
 }
 
-.navbar-link::after {
-  border: 3px solid transparent;
-  border-radius: 2px;
-  border-right: 0;
-  border-top: 0;
-  content: " ";
-  display: block;
-  pointer-events: none;
-  position: absolute;
-  transform: rotate(-45deg);
-  transform-origin: center;
-  margin-top: -0.375em;
-  right: 1.125em;
+.navbar-brand img {
+  max-height: 36px !important;
+  height: 36px;
 }
+
 .navbar-burger {
   font-family: inherit;
   font-size: 1em;
@@ -32,16 +49,6 @@ nav,
   width: 4rem;
   height: 4rem;
   color: var(--pst-color-text-base);
-}
-.navbar > .container {
-  align-items: stretch;
-  display: flex;
-  width: 100%;
-}
-.navbar-brand {
-  align-items: stretch;
-  display: flex;
-  min-height: 4rem;
 }
 .navbar-burger span {
   background-color: currentColor;
@@ -72,6 +79,9 @@ nav,
 }
 .navbar-burger.is-active span:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
+}
+.navbar-burger:hover {
+  color: var(--pst-color-link-hover);
 }
 .navbar-menu {
   display: none;
@@ -110,43 +120,6 @@ nav,
 .navbar-dropdown .navbar-item {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.navbar-burger:hover {
-  color: var(--pst-color-link-hover);
-}
-
-.navbar-logo {
-  height: 28px;
-  padding-right: 1rem;
-}
-
-.navbar-logo-text {
-  color: var(--pst-color-text-base);
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.navbar {
-  box-shadow: none !important;
-  position: sticky;
-  top: 0;
-  min-height: 3.8rem;
-  transition: all 0.3s;
-  z-index: 99;
-}
-
-.navbar .container {
-  min-height: 4rem;
-}
-
-.navbar-brand img {
-  max-height: 36px !important;
-  height: 36px;
-}
-
-.navbar-end {
-  align-items: center;
 }
 
 a.navbar-item,
@@ -197,15 +170,9 @@ a.navbar-item:hover {
 }
 
 @media screen and (max-width: 1023px) {
-  .navbar > .container {
-    display: block;
-  }
   .navbar-brand .navbar-item {
     align-items: center;
     display: flex;
-  }
-  .navbar-link::after {
-    display: none;
   }
   .navbar-menu {
     padding: 0.5rem 0;
@@ -232,6 +199,16 @@ a.navbar-item:hover {
   .navbar-burger {
     display: none;
   }
+  .navbar > .container {
+    align-items: stretch;
+    display: flex;
+  }
+  .navbar > .container .navbar-brand {
+    margin-left: -0.75rem;
+  }
+  .navbar > .container .navbar-menu {
+    margin-right: -0.75rem;
+  }
   .navbar-item,
   .navbar-link {
     align-items: center;
@@ -241,9 +218,9 @@ a.navbar-item:hover {
     align-items: stretch;
   }
   .navbar-item.is-active .navbar-dropdown,
-  .navbar-item.is-hoverable:focus .navbar-dropdown,
-  .navbar-item.is-hoverable:focus-within .navbar-dropdown,
-  .navbar-item.is-hoverable:hover .navbar-dropdown {
+  .navbar-item.has-dropdown:focus .navbar-dropdown,
+  .navbar-item.has-dropdown:focus-within .navbar-dropdown,
+  .navbar-item.has-dropdown:hover .navbar-dropdown {
     display: block;
   }
   .navbar-menu {
@@ -251,6 +228,7 @@ a.navbar-item:hover {
     flex-shrink: 0;
   }
   .navbar-end {
+    align-items: center;
     justify-content: flex-end;
     margin-left: auto;
   }
@@ -275,12 +253,18 @@ a.navbar-item:hover {
   .navbar-dropdown a.navbar-item {
     padding-right: 3rem;
   }
-  .container > .navbar .navbar-brand,
-  .navbar > .container .navbar-brand {
-    margin-left: -0.75rem;
-  }
-  .container > .navbar .navbar-menu,
-  .navbar > .container .navbar-menu {
-    margin-right: -0.75rem;
+  .navbar-link::after {
+    border: 3px solid transparent;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    content: " ";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin-top: -0.375em;
+    right: 1.125em;
   }
 }
