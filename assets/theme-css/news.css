@@ -39,7 +39,7 @@
 @media only screen and (max-width: 1090px) {
   .news-container {
     flex-direction: column;
-    padding: 30px;
+    padding: 1.875rem;
   }
 
   .news-date {

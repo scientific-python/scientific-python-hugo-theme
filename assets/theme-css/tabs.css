@@ -8,7 +8,7 @@
   flex-flow: row wrap;
   row-gap: 0.25rem;
   margin-bottom: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 /* The tab is the clickable element that selects between tabpanels (see below) */

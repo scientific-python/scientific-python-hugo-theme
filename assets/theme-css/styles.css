@@ -130,7 +130,7 @@ svg.icon {
 }
 
 .chroma {
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 /* reboot stuff needed for pydata-sphinx-theme */

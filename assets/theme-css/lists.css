@@ -6,13 +6,13 @@ dl.field-list {
 dl.field-list > dt {
   font-weight: bold;
   word-break: break-word;
-  padding-left: 0.5em;
-  padding-right: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.313rem;
 }
 
 dl.field-list > dd {
-  padding-left: 0.5em;
-  margin-top: 0em;
-  margin-left: 0em;
-  margin-bottom: 0em;
+  padding-left: 0.5rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
