@@ -34,7 +34,7 @@
   transition: all 0.3s;
   border-radius: 50%;
   text-align: center;
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 body #backtotop a {
   outline: none;
