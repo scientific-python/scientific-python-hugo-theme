@@ -10,7 +10,7 @@
 }
 
 #shortcuts {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-size: 0.9rem;
 }
 
@@ -20,7 +20,7 @@
 }
 
 #shortcuts > div:not(.active) {
-  margin-left: 2px;
+  margin-left: 0.125rem;
   border-left: 1px solid var(--pst-color-text-base);
   opacity: 0.75;
 }

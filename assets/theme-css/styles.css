@@ -109,7 +109,7 @@ a > code {
 
 @media only screen and (max-width: 600px) {
   .flex-column {
-    margin: 0 30px;
+    margin: 0 1.875rem;
   }
 }
 

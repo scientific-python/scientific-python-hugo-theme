@@ -9,7 +9,7 @@
   flex-basis: 70em;
   flex-shrink: 1;
   flex-direction: column;
-  margin: 0 30px;
+  margin: 0 1.875rem;
   padding: 1rem;
 
   /* Handle code cells overflowing */

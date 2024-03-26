@@ -7,7 +7,7 @@
   display: flex;
   flex-flow: row wrap;
   row-gap: 0.25rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding-bottom: 0;
 }
 
@@ -48,7 +48,7 @@
 [role="tabpanel"] {
   border-top: 1px solid var(--pst-color-border);
   border-bottom: 1px solid var(--pst-color-border);
-  margin-top: 1px;
+  margin-top: 0.063rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   width: 100%;
