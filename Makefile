@@ -62,12 +62,12 @@ main:
 blog:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/blog.scientific-python.org $@
-	(cd $@ ; make prepare )
 	(cd $@ ; hugo --themesDir="../..")
 
 learn:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/learn.scientific-python.org $@
+	(cd $@ ; perl -pi -e 's;/development/;https://learn.scientific-python.org/development/;g' content/_index.md)
 	(cd $@ ; hugo --themesDir="../..")
 
 tools:
