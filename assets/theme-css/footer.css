@@ -10,7 +10,7 @@
 }
 
 #footer-logo-column {
-  padding: 20px 5vw;
+  padding: 1.25rem 5vw;
   font-size: 1rem;
 }
 
@@ -23,8 +23,8 @@
 }
 
 .footer-column {
-  padding-left: 0px;
-  margin-top: 20px;
+  padding-left: 0;
+  margin-top: 1.25rem;
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
@@ -40,7 +40,7 @@
 
 .footer-actions {
   max-width: 25vw;
-  margin: 20px 25px;
+  margin: 1.25rem 1.563rem;
 }
 
 .footer-actions > p {
@@ -104,6 +104,6 @@
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--colorSecondary);
 }

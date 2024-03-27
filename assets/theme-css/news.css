@@ -20,10 +20,10 @@
 .news-title {
   display: flex;
   letter-spacing: 1.5px;
-  font-size: 27px;
+  font-size: 1.688rem;
   font-weight: bold;
-  margin: 10px;
-  margin-right: 20px;
+  margin: 0.625rem;
+  margin-right: 1.25rem;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -39,7 +39,7 @@
 @media only screen and (max-width: 1090px) {
   .news-container {
     flex-direction: column;
-    padding: 30px;
+    padding: 1.875rem;
   }
 
   .news-date {
