@@ -1,7 +1,7 @@
 filename = "doc/content/_index.md"
 preview_links = """
 {{< admonition attention >}}
-See scientific python, [blog](blog), learn, [tools](tools), scipy, and numpy.
+See [scientific-python](main), [blog](blog), learn, [tools](tools), scipy, and numpy.
 {{< /admonition >}}
 """
 

@@ -56,6 +56,7 @@ main:
 	git clone --depth 1 https://github.com/scientific-python/scientific-python.org $@
 	(cd $@ ; git submodule update --init content/specs)
 	(cd $@ ; pip install -q -r requirements.txt)
+	(cd $@ ; make calendars ; make core-project-json)
 	(cd $@ ; hugo --themesDir="../..")
 
 blog:
