@@ -1,6 +1,8 @@
 {{/*
 
 {{< yamlToTable >}}
+caption: 'Table caption'
+
 headers:
   - Project
   - Available Packages
@@ -34,9 +36,13 @@ rows:
 
 {{ $arg := .Get 0 }}
 {{ $data := .Inner | transform.Unmarshal }}
+{{- $id := printf "id%03d" $.Ordinal -}}
 
 {{ with $data }}
-<table>
+<table class="table" id="{{ $id }}">
+  {{- with .caption -}}
+  <caption><span class="caption-text">{{ . }}</span><a class="headerlink" href="#{{ $id  }}" title="Link to this table">#</a></caption>
+  {{- end }}
   {{ range .format }}
   <col
     {{ range $key, $val := . }}
@@ -46,7 +52,7 @@ rows:
   {{ end }}
 
   {{ range .headers }}
-  <th>{{ . | markdownify }}</th>
+  <th class="head">{{ . | markdownify }}</th>
   {{ end }}
 
   {{ range $row := .rows }}
