@@ -1,3 +1,48 @@
+# scientific-python-hugo-theme 0.16
+
+We're happy to announce the release of scientific-python-hugo-theme 0.16!
+
+## Enhancements
+
+- Update navbar styling ([#564](https://github.com/scientific-python/scientific-python-hugo-theme/pull/564)).
+- Unify navbar link styling (following PST) ([#567](https://github.com/scientific-python/scientific-python-hugo-theme/pull/567)).
+- Add tables to examples with PST styling ([#571](https://github.com/scientific-python/scientific-python-hugo-theme/pull/571)).
+- Refactor tabs ([#579](https://github.com/scientific-python/scientific-python-hugo-theme/pull/579)).
+
+## Documentation
+
+- Remove yamlToTable documentation ([#570](https://github.com/scientific-python/scientific-python-hugo-theme/pull/570)).
+
+## Maintenance
+
+- Remove bulma title css ([#557](https://github.com/scientific-python/scientific-python-hugo-theme/pull/557)).
+- Remove unneeded bulma css ([#558](https://github.com/scientific-python/scientific-python-hugo-theme/pull/558)).
+- Remove unused class styling ([#560](https://github.com/scientific-python/scientific-python-hugo-theme/pull/560)).
+- Remove reference to unused class is-max-desktop ([#562](https://github.com/scientific-python/scientific-python-hugo-theme/pull/562)).
+- Remove is-max-widescreen class ([#563](https://github.com/scientific-python/scientific-python-hugo-theme/pull/563)).
+- Refactor navbar css ([#565](https://github.com/scientific-python/scientific-python-hugo-theme/pull/565)).
+- Use rem for fonts, margins, and padding ([#561](https://github.com/scientific-python/scientific-python-hugo-theme/pull/561)).
+- Add links to preview sites for PRs ([#569](https://github.com/scientific-python/scientific-python-hugo-theme/pull/569)).
+- Add link to scientific-python.org preview ([#574](https://github.com/scientific-python/scientific-python-hugo-theme/pull/574)).
+- Add link to learn preview ([#576](https://github.com/scientific-python/scientific-python-hugo-theme/pull/576)).
+- Bump pre-commit from 3.6.2 to 3.7.0 ([#577](https://github.com/scientific-python/scientific-python-hugo-theme/pull/577)).
+- [pre-commit.ci] pre-commit autoupdate ([#578](https://github.com/scientific-python/scientific-python-hugo-theme/pull/578)).
+- Update hugo ([#580](https://github.com/scientific-python/scientific-python-hugo-theme/pull/580)).
+
+## Contributors
+
+1 authors added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.15
 
 We're happy to announce the release of scientific-python-hugo-theme 0.15!
