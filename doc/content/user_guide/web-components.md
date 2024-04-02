@@ -171,7 +171,9 @@ Code example from the PyData Sphinx Theme's kitchen sink:
 
 {{< tabs >}}
 
-{{< tab "c++" >}}
+[[tab]]
+name = 'c++'
+content = '''
 
 ```c++
 int main(const int argc, const char **argv) {
@@ -179,18 +181,22 @@ int main(const int argc, const char **argv) {
 }
 ```
 
-{{< /tab >}}
+'''
 
-{{< tab "python" >}}
+[[tab]]
+name = 'python'
+content = '''
 
 ```python
 def main():
     return
 ```
 
-{{< /tab >}}
+'''
 
-{{< tab "java" >}}
+[[tab]]
+name = 'java'
+content = '''
 
 ```java
 class Main {
@@ -199,25 +205,29 @@ class Main {
 }
 ```
 
-{{< /tab >}}
+'''
 
-{{< tab "julia" >}}
+[[tab]]
+name = 'julia'
+content = '''
 
 ```julia
 function main()
 end
 ```
 
-{{< /tab >}}
+'''
 
-{{< tab "fortran" >}}
+[[tab]]
+name ='fortran'
+content = '''
 
 ```fortran
 PROGRAM main
 END PROGRAM main
 ```
 
-{{< /tab >}}
+'''
 
 {{< /tabs >}}
 
@@ -225,7 +235,9 @@ An example with headings
 
 {{< tabs >}}
 
-{{< tab "First example" >}}
+[[tab]]
+name = 'First example'
+content = '''
 
 ### How would this work?
 
@@ -244,12 +256,13 @@ def foo(x):
 #### What now?
 
 Well, this is a good question.
+'''
 
-{{< /tab >}}
-
-{{< tab "Second example" >}}
+[[tab]]
+name = 'Second example'
+content = '''
 Another hello world
-{{< /tab >}}
+'''
 
 {{< /tabs >}}
 
