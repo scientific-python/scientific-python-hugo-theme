@@ -1,0 +1,16 @@
+{{- $groupId := .groupId }}
+{{- $tabs := .tabs }}
+<div class="tabs">
+  <div role="tablist" class="automatic">
+    {{- range $idx, $tab := $tabs }}
+    <button id="{{ $groupId }}-tab-{{ $idx }}" type="button" role="tab" aria-selected="{{ cond (eq $idx 0) "true" "false" }}" aria-controls="{{ $groupId }}-tabpanel-{{ $idx }}">
+      {{ .name }}
+    </button>
+    {{- end }}
+  </div>
+  {{- range $idx, $tab := $tabs }}
+  <div id="{{ $groupId }}-tabpanel-{{ $idx }}" role="tabpanel" tabindex="0" aria-labelledby="${{ $groupId }}-tab-{{ $idx }}">
+    {{- .content | markdownify -}}
+  </div>
+  {{- end }}
+</div>

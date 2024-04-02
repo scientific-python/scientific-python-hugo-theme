@@ -4,7 +4,9 @@ doc: A tabs panel.
 
 {{< tabs >}}
 
-{{< tab "c++" >}}
+[[tab]]
+name = 'c++'
+content = '''
 An example program in C++:
 ```c++
 int main(const int argc, const char **argv) {
@@ -12,36 +14,23 @@ int main(const int argc, const char **argv) {
 }
 ```
 It simply returns 0, indicating no errors.
-{{< /tab >}}
+'''
 
-{{< tab "python" >}}
+[[tab]]
+name = 'python'
+content = '''
 An example program in Python:
 ```python
 def main():
     return True
 ```
 It returns `True`, indicating no errors.
-{{< /tab >}}
+'''
 
 {{< /tabs >}}
 
 */}}
 
-<!-- Render inner tabs, which adds them to a scratch variable for this parent shortcode -->
-{{- .Inner -}}
-{{- $groupId := .Page.Scratch.Get "tabgroup" | default 0 -}}
-{{- .Page.Scratch.Set "tabgroup" (add $groupId 1) -}}
-<div class="tabs">
-  <div role="tablist" class="automatic">
-    {{- range $idx, $tab := .Scratch.Get "tabs" }}
-    <button id="{{ $groupId }}-tab-{{ $idx }}" type="button" role="tab" aria-selected="{{ cond (eq $idx 0) "true" "false" }}" aria-controls="{{ $groupId }}-tabpanel-{{ $idx }}">
-      {{ .name }}
-    </button>
-    {{- end }}
-  </div>
-  {{- range $idx, $tab := .Scratch.Get "tabs" }}
-  <div id="{{ $groupId }}-tabpanel-{{ $idx }}" role="tabpanel" tabindex="0" aria-labelledby="${{ $groupId }}-tab-{{ $idx }}">
-    {{- .content | markdownify -}}
-  </div>
-  {{- end }}
-</div>
+{{- $groupId := printf "%03d" $.Ordinal -}}
+{{- $tabs := (index (.Inner | transform.Unmarshal) "tab") -}}
+{{ partial "_elements/tabs" (dict "groupId" $groupId "tabs" $tabs) }}
