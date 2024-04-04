@@ -6,6 +6,7 @@ doc: Render TOML to an HTML table.
 
 caption = 'Table caption'
 align = ["left", "left", "right"]
+width = "80%"
 widths = ["10%", "50%", "20%"]
 headerrows = 1
 footer-rows = 3
@@ -59,7 +60,7 @@ body = '''[SciPy release page](https://github.com/scipy/scipy/releases) (sources
 {{- $header := first $headerrows $data.row }}
 {{- $body := last (math.Sub $numrows $headerrows) $data.row }}
 
-<table class="table" id="{{ $id }}">
+<table class="table" id="{{ $id }}" {{- with $data.width }}style="width: {{ . }}"{{- end }}>
   {{- with $data.caption }}
     <caption><span class="caption-text">{{ . }}</span><a class="headerlink" href="#{{ $id }}" title="Link to this table">#</a></caption>
   {{- end }}
