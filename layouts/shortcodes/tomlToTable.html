@@ -10,7 +10,7 @@ width = "80%"
 widths = ["10%", "50%", "20%"]
 headerrows = 1
 footer-rows = 3
-stub-columns = 1
+stubcolumns = 1
 
 [[row]]
 column = [
@@ -61,7 +61,9 @@ column = [
     {{ if (modBool $row_idx 2) }}<tr class="row-odd">{{- else }}<tr class="row-even">{{- end }}
     {{- range $col_idx, $col := $row.column }}
       {{- $alignment := or (index $align $col_idx) "left" }}
-      <th class="head" style="text-align:{{ $alignment }}">
+      {{- $isStub := compare.Lt $col_idx $data.stubcolumns }}
+      {{- $class := cond $isStub "head stub" "head" }}
+      <th class="{{ $class }}" style="text-align:{{ $alignment }}">
         {{ $col | markdownify }}
       </th>
     {{- end }}
@@ -74,9 +76,14 @@ column = [
     {{ if (modBool (add $row_idx $headerrows) 2) }}<tr class="row-odd">{{- else }}<tr class="row-even">{{- end }}
     {{- range $col_idx, $col := $row.column }}
       {{- $alignment := or (index $align $col_idx) "left" }}
-      <td class="head" style="text-align:{{ $alignment }}">
+      {{- $isStub := compare.Lt $col_idx $data.stubcolumns }}
+      {{- if $isStub }}
+      <th class="stub" style="text-align:{{ $alignment }}">
+      {{- else }}
+      <td style="text-align:{{ $alignment }}">
+      {{- end }}
         {{ $col | markdownify }}
-      </td>
+      {{ cond $isStub "</th>" "</td>" | safeHTML }}
     {{- end }}
      </tr>
   {{- end }}
