@@ -13,40 +13,25 @@ footer-rows = 3
 stub-columns = 1
 
 [[row]]
-
-[[row.column]]
-body = 'Project'
-
-[[row.column]]
-body = 'Available Packages'
-
-[[row.column]]
-body = 'Download location'
+column = [
+  "Project",
+  "Available Packages",
+  "Download location"
+]
 
 [[row]]
-
-[[row.column]]
-body = 'NumPy'
-
-[[row.column]]
-body = '''Official *source code* (all platforms) and *binaries* for<br />
-**Windows**, **Linux**, and **Mac OS X**'''
-
-[[row.column]]
-body = '[PyPi page for NumPy](https://pypi.python.org/pypi/numpy)'
+column = [
+  "NumPy",
+  "Official *source code* (all platforms) and *binaries* for<br/>\n**Windows**, **Linux**, and **Mac OS X**\n",
+  "[PyPi page for NumPy](https://pypi.python.org/pypi/numpy)"
+]
 
 [[row]]
-
-[[row.column]]
-body = 'SciPy'
-
-[[row.column]]
-body = '''Official *source code* (all platforms) and *binaries* for<br />
-**Windows**, **Linux**, and **Mac OS X**'''
-
-[[row.column]]
-body = '''[SciPy release page](https://github.com/scipy/scipy/releases) (sources)<br />
-[PyPI page for SciPy](https://pypi.python.org/pypi/scipy) (all)'''
+column = [
+  "SciPy",
+  "Official *source code* (all platforms) and *binaries* for<br/>\n**Windows**, **Linux** and **Mac OS X**\n",
+  "[SciPy release page](https://github.com/scipy/scipy/releases) (sources)<br/>\n[PyPI page for SciPy](https://pypi.python.org/pypi/scipy) (all)\n"
+]
 
 {{< /tomlToTable >}}
 
@@ -74,10 +59,10 @@ body = '''[SciPy release page](https://github.com/scipy/scipy/releases) (sources
   {{- if $header }}<thead>
   {{- range $row_idx, $row := $header }}
     {{ if (modBool $row_idx 2) }}<tr class="row-odd">{{- else }}<tr class="row-even">{{- end }}
-    {{- range $col_idx, $col := .column }}
+    {{- range $col_idx, $col := $row.column }}
       {{- $alignment := or (index $align $col_idx) "left" }}
       <th class="head" style="text-align:{{ $alignment }}">
-        {{ $col.body | markdownify }}
+        {{ $col | markdownify }}
       </th>
     {{- end }}
     </tr>
@@ -87,10 +72,10 @@ body = '''[SciPy release page](https://github.com/scipy/scipy/releases) (sources
   <tbody>
   {{- range $row_idx, $row := $body }}
     {{ if (modBool (add $row_idx $headerrows) 2) }}<tr class="row-odd">{{- else }}<tr class="row-even">{{- end }}
-    {{- range $col_idx, $col := .column }}
+    {{- range $col_idx, $col := $row.column }}
       {{- $alignment := or (index $align $col_idx) "left" }}
       <td class="head" style="text-align:{{ $alignment }}">
-        {{ $col.body | markdownify }}
+        {{ $col | markdownify }}
       </td>
     {{- end }}
      </tr>

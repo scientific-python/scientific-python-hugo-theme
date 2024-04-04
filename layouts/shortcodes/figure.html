@@ -17,31 +17,25 @@ legend = '''
 {{< tomlToTable >}}
 
 [[row]]
-type = 'header'
-
-[[row.column]]
-body = 'Project'
-
-[[row.column]]
-body = 'Available Packages'
+column = [
+  "Project",
+  "Available Packages",
+  "Download location"
+]
 
 [[row]]
-
-[[row.column]]
-body = 'NumPy'
-
-[[row.column]]
-body = '''Official *source code* (all platforms) and *binaries* for<br />
-**Windows**, **Linux**, and **Mac OS X**'''
+column = [
+  "NumPy",
+  "Official *source code* (all platforms) and *binaries* for<br/>\n**Windows**, **Linux**, and **Mac OS X**\n",
+  "[PyPi page for NumPy](https://pypi.python.org/pypi/numpy)"
+]
 
 [[row]]
-
-[[row.column]]
-body = 'SciPy'
-
-[[row.column]]
-body = '''Official *source code* (all platforms) and *binaries* for<br />
-**Windows**, **Linux**, and **Mac OS X**'''
+column = [
+  "SciPy",
+  "Official *source code* (all platforms) and *binaries* for<br/>\n**Windows**, **Linux** and **Mac OS X**\n",
+  "[SciPy release page](https://github.com/scipy/scipy/releases) (sources)<br/>\n[PyPI page for SciPy](https://pypi.python.org/pypi/scipy) (all)\n"
+]
 
 {{< /tomlToTable >}}
 
