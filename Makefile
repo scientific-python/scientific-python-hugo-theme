@@ -58,20 +58,24 @@ main:
 	(cd $@ ; git submodule update --init content/specs)
 	(cd $@ ; pip install -q -r requirements.txt)
 	(cd $@ ; make calendars ; make core-project-json)
+	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
 
 blog:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/blog.scientific-python.org $@
+	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
 
 learn:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/learn.scientific-python.org $@
 	(cd $@ ; perl -pi -e 's;/development/;https://learn.scientific-python.org/development/;g' content/_index.md)
+	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
 
 tools:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/tools.scientific-python.org $@
+	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
