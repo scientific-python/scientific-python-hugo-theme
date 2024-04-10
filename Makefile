@@ -49,8 +49,8 @@ theme: doc/content/shortcodes.md
 scipy:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scipy/scipy.org $@
-	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
+	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 
 main:
 	rm -rf $@
