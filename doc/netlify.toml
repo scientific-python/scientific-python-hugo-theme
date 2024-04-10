@@ -35,5 +35,6 @@
 
   # Some links in the site previews are necessarily broken when served from
   # local copies: mark them as "todo" so the failures will be allowed.
-  todoPatterns = ["^/install", "^/community", "^/contribute",
-                  "^/citing-scipy", "^/faq", "^/terms", "^/privacy", "^/press-kit"]
+  todoPatterns = ["public/install", "public/community",
+    "public/contribute", "public/citing-scipy", "public/faq",
+    "public/terms", "public/privacy", "public/press-kit"]
