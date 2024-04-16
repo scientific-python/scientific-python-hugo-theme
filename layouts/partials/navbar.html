@@ -7,7 +7,9 @@
       {{- if or (not .IsHome) (not .Site.Params.hero) }}
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
-        <img class="navbar-logo" src="{{ printf "/images/%s" $navbarLogo.image | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
+        {{- with $navbarLogo.image }}
+        <img class="navbar-logo" src="{{ printf "/images/%s" . | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
+	{{- end }}
         <div class="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
       </a>
       {{- end}}
