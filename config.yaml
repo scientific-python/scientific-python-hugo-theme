@@ -1,3 +1,6 @@
+# TODO: Consider renaming this file to "hugo.yaml" in accordance with
+# recommendations since v0.109 of Hugo.
+
 disableKinds:
   - taxonomy
 theme:
