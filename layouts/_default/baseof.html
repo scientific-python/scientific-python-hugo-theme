@@ -20,6 +20,11 @@
 
     <!-- Add twitter card for logo and images. You can preview cards in the X compose window. -->
     {{ template "_internal/twitter_cards.html" . }}
+
+    {{/* Math equation support.  See <https://gohugo.io/content-management/mathematics/#step-3>. */}}
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
   </head>
   <body>
     {{ block "navbar" . }}
