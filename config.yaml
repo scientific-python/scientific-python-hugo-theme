@@ -13,6 +13,7 @@ params:
   colorScheme: auto # can be auto (browser setting), light, or dark
   images:
     - /images/logo.svg
+  math: true
   navColor: blue
   font:
     name: "Lato"
@@ -20,3 +21,19 @@ params:
   plausible:
     dataDomain: null
     javaScript: "https://views.scientific-python.org/js/script.js"
+
+# Math equations.
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
