@@ -8,9 +8,6 @@
     <!-- Render theme css -->
     {{ partial "css.html" . -}}
 
-    <!-- Render custom header -->
-    {{ partial "head.html" . -}}
-
     <!-- Refer: https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/ -->
     {{ if .IsTranslated }}
       {{ range .Translations }}
@@ -20,6 +17,11 @@
 
     <!-- Add twitter card for logo and images. You can preview cards in the X compose window. -->
     {{ template "_internal/twitter_cards.html" . }}
+
+    {{/* Math equation support.  See <https://gohugo.io/content-management/mathematics/#step-3>. */}}
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
   </head>
   <body>
     {{ block "navbar" . }}
