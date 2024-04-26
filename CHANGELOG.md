@@ -1,3 +1,36 @@
+# scientific-python-hugo-theme 0.17
+
+We're happy to announce the release of scientific-python-hugo-theme 0.17!
+
+## Enhancements
+
+- Don't display missing logo ([#585](https://github.com/scientific-python/scientific-python-hugo-theme/pull/585)).
+- Error for missing breadcrumbs (scientific-python/blog.scientific-python.org#158) ([#584](https://github.com/scientific-python/scientific-python-hugo-theme/pull/584)).
+- Update PST SCSS ([#590](https://github.com/scientific-python/scientific-python-hugo-theme/pull/590)).
+
+## Maintenance
+
+- Add link to scipy preview ([#582](https://github.com/scientific-python/scientific-python-hugo-theme/pull/582)).
+- Fix previews using relativeURLs ([#583](https://github.com/scientific-python/scientific-python-hugo-theme/pull/583)).
+- Update hugo ([#586](https://github.com/scientific-python/scientific-python-hugo-theme/pull/586)).
+- Simplify page layout ([#581](https://github.com/scientific-python/scientific-python-hugo-theme/pull/581)).
+- Update dart sass ([#587](https://github.com/scientific-python/scientific-python-hugo-theme/pull/587)).
+- Update pre-commit repos ([#588](https://github.com/scientific-python/scientific-python-hugo-theme/pull/588)).
+- Update hugo ([#591](https://github.com/scientific-python/scientific-python-hugo-theme/pull/591)).
+
+## Contributors
+
+2 authors added to this release (alphabetically):
+
+- Adam Porter ([@alphapapa](https://github.com/alphapapa))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+1 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.16
 
 We're happy to announce the release of scientific-python-hugo-theme 0.16!
