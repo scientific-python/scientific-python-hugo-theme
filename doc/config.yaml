@@ -29,10 +29,10 @@ params:
     title: Scientific Python Theme
     image: logo.svg
     buttontext: Get Started
-    buttonlink: /getstarted/
+    buttonlink: /user_guide/getstarted/
   navbar:
-    - title: Features
-      url: /features/
+    - title: User Guide
+      url: /user_guide/
     - title: Shortcodes
       url: /shortcodes/
     - title: Examples
