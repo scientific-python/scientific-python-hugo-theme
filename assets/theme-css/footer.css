@@ -4,7 +4,7 @@
 }
 
 #footer {
-  background-color: var(--colorPrimaryDark);
+  background-color: var(--spht-color-dark);
   color: var(--spht-color-light);
   position: sticky;
   top: calc(100vh - var(--spht-footer-height));
@@ -36,7 +36,7 @@
 }
 
 .footer-item a:hover {
-  color: var(--colorPrimaryLight);
+  color: var(--spht-color-link-hover);
 }
 
 .footer-actions {
@@ -90,7 +90,7 @@
 }
 
 #footer svg.icon:hover {
-  fill: #ffffff;
+  fill: var(--spht-color-link-hover);
 }
 
 /* For information ⓘ, when icon is missing */
@@ -99,7 +99,7 @@
 }
 
 #footer nav {
-  background: var(--colorPrimaryDark);
+  background: var(--spht-color-dark);
 }
 
 .copyright {
