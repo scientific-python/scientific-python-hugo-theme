@@ -2,17 +2,9 @@
 :root {
   --fontFamily: "{{ .Site.Params.font.name }}", "Noto Sans Symbols 2";
 
-  --colorPrimaryDark: rgb(1, 50, 67);
-  --colorPrimary: rgb(77, 119, 207);
-  --colorPrimaryLight: rgb(77, 171, 207);
-
-  --colorSecondaryDark: rgb(108, 122, 137);
-  --colorSecondary: rgb(238, 238, 238);
-  --colorSecondaryLight: rgb(255, 255, 255);
-
-  --colorBrightBlue: rgb(30, 135, 240);
-  --colorYellow: rgb(255, 197, 83);
-
+  --spht-color-dark: rgb(1, 50, 67);
+  --spht-color-light: rgb(255, 255, 255);
+  --spht-color-link-hover: rgb(77, 171, 207);
   --spht-footer-height: 6em;
 
   /* Font Awesome icon variables. */

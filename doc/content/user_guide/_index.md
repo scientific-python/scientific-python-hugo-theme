@@ -17,4 +17,11 @@ There are a number of options for configuring your site’s look and feel.
 
 - [Get Started](/user_guide/getstarted)
 - [Features](/user_guide/features)
+
+## Content and features
+
 - [Web Components](/user_guide/web-components)
+
+## Theming and Style
+
+- [Theme variables and CSS](/user_guide/styling)

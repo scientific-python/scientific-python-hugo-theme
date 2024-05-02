@@ -25,48 +25,10 @@ preamble. It defaults to 2.
 Each page should contain a `summary` in the preamble, otherwise the
 site description is provided as metadata.
 
-## Custom stylesheets
-
-Custom styles should be added to `/assets/css/my_css.css` (where
-`my_css` can be any name, other than those already in the theme).
-
 ## Custom JavaScript
 
 Custom JavaScript can be added as `/assets/js/my_js.js` (where `my_js`
 can be any name).
-
-## Code styling
-
-To enable code styling, add the following to your config file:
-
-```yaml
-markup:
-  highlight:
-    noClasses: false
-```
-
-The default theme is [Witch Hazel](https://github.com/theacodes/witchhazel),
-but with a blue background.
-To use a different theme, [generate a new
-stylesheet](https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode)
-using:
-
-```
-hugo gen chromastyles --style=monokai > /assets/css/code-highlight.css
-```
-
-You can replace `monokai` with any of the themes supported by
-[Chroma](https://github.com/alecthomas/chroma), as listed in their
-[gallery](https://xyproto.github.io/splash/docs/).
-
-Then, use fenced code blocks and remember to specify the language:
-
-````md
-```python
-def foo(x):
-    return x**2
-```
-````
 
 ## News
 

@@ -4,17 +4,17 @@
   align-items: center;
   width: 100vw;
   min-height: 45px;
-  background-color: var(--colorPrimaryDark);
-  color: var(--colorSecondaryLight);
+  background-color: var(--spht-color-dark);
+  color: var(--spht-color-light);
   white-space: nowrap;
 }
 
 .news-container a {
-  color: var(--colorSecondaryLight);
+  color: var(--spht-color-light);
 }
 
 .news-container a:hover {
-  color: var(--colorPrimaryLight);
+  color: var(--spht-color-link-hover);
 }
 
 .news-title {
