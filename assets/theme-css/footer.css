@@ -5,6 +5,7 @@
 
 #footer {
   background-color: var(--colorPrimaryDark);
+  color: var(--spht-color-light);
   position: sticky;
   top: calc(100vh - var(--spht-footer-height));
 }
@@ -31,7 +32,7 @@
 }
 
 .footer-item a {
-  color: var(--colorSecondary);
+  color: var(--spht-color-light);
 }
 
 .footer-item a:hover {
@@ -49,7 +50,6 @@
 
 .footer-actions p {
   margin: 0;
-  color: var(--colorSecondary);
 }
 
 @media only screen and (max-width: 850px) {
@@ -85,7 +85,7 @@
 }
 
 #footer svg.icon {
-  fill: var(--colorSecondary);
+  fill: var(--spht-color-light);
   margin-right: 0.5rem;
 }
 
@@ -96,7 +96,6 @@
 /* For information ⓘ, when icon is missing */
 #footer .icon {
   font-weight: 900;
-  color: var(--colorSecondary);
 }
 
 #footer nav {
@@ -105,5 +104,4 @@
 
 .copyright {
   font-size: 0.75rem;
-  color: var(--colorSecondary);
 }
