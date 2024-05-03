@@ -12,6 +12,15 @@ body {
   text-align: center !important;
 }
 
+html:not([data-theme]) {
+  .light-theme {
+    display: none;
+  }
+  .dark-theme {
+    display: none;
+  }
+}
+
 html[data-theme="dark"] {
   .light-theme {
     display: none;
