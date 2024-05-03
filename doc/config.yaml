@@ -16,11 +16,8 @@ markup:
         enableDefault: true
 
 params:
-  author:
-    name: "Scientific Python team"
+  author: "Scientific Python team"
   description: "Documentation & template site for the Scientific Python Hugo Theme."
-  images:
-    - /images/logo.svg
   navbarlogo:
     image: logo.svg
     text: Scientific Python Hugo Theme

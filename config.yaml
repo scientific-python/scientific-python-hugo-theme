@@ -4,8 +4,6 @@ theme:
   - scientific-python-hugo-theme/themes/hugo-atom-feed
 params:
   colorScheme: auto # can be auto (browser setting), light, or dark
-  images:
-    - /images/logo.svg
   navColor: blue
   font:
     name: "Lato"
