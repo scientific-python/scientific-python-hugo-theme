@@ -1,7 +1,5 @@
 /* prettier-ignore */
 :root {
-  --fontFamily: "{{ .Site.Params.font.name }}", "Noto Sans Symbols 2";
-
   --spht-color-dark: rgb(1, 50, 67);
   --spht-color-light: rgb(255, 255, 255);
   --spht-color-link-hover: rgb(77, 171, 207);

@@ -12,6 +12,43 @@ Custom styles should be added to `/assets/css/my_css.css` (where
 
 ## CSS theme variables
 
+## Fonts
+
+To override the fonts used, add a custom CSS file and set the following variables:
+
+```css
+// General text
+:root {
+  --pst-font-family-base: "Open Sans";
+  --pst-font-family-heading: "Open Sans";
+  --pst-font-family-monospace: "Open Sans";
+}
+
+// Navigation bar
+.navbar-logo-text {
+  font-family: "Open Sans";
+}
+```
+
+After setting the font, we still need to ensure that it is loaded.
+If you are happy loading your fonts from Google Fonts, add them to your `config.yaml`:
+
+```yaml
+params:
+  fonts:
+    - name: "Lato"
+      weights: [400, 900]
+```
+
+Alternatively, create `layouts/partials/head.html` and add what you need to load the font, e.g.:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900"
+/>
+```
+
 ### Color variables
 
 We mostly rely on PyData Sphinx Theme's

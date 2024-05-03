@@ -7,9 +7,6 @@ params:
   images:
     - /images/logo.svg
   navColor: blue
-  font:
-    name: "Lato"
-    sizes: [400, 900]
   plausible:
     dataDomain: null
     javaScript: "https://views.scientific-python.org/js/script.js"
