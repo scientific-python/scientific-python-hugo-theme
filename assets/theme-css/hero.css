@@ -31,7 +31,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-family: var(--fontFamily), sans-serif;
+  font-family: var(--pst-font-family-heading), sans-serif;
   font-weight: 900;
   font-size: 6em;
   color: var(--pst-color-text-base);
