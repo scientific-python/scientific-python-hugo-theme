@@ -1,5 +1,5 @@
-{{ if .data.target -}}<a href="{{ .data.target }}">{{ end -}}
 {{- if .data.src }}
+{{- if .data.target -}}<a href="{{ .data.target }}">{{ end -}}
 <img src="{{ .data.src }}" alt="{{ .data.alt }}"
   {{- with .data.align }} class="align-{{ . }}"{{ end -}}
   {{- with .data.width }} width="{{ . }}"{{ end -}}
@@ -9,6 +9,7 @@
 {{- if .data.target }}</a>{{ end -}}
 {{- else if ( and .data.lightsrc .data.darksrc ) }}
 {{- with .data.lightsrc }}
+{{ if $.data.target -}}<a href="{{ $.data.target }}">{{ end -}}
 <img src="{{ . }}" class="light-theme" alt="{{ $.data.alt }}"
   {{- with $.data.align }} class="align-{{ . }}"{{ end -}}
   {{- with $.data.width }} width="{{ . }}"{{ end -}}
@@ -18,6 +19,7 @@
 {{- if $.data.target }}</a>{{ end -}}
 {{- end }}
 {{- with .data.darksrc }}
+{{ if $.data.target -}}<a href="{{ $.data.target }}">{{ end -}}
 <img src="{{ . }}" class="dark-theme" alt="{{ $.data.alt }}"
   {{- with $.data.align }} class="align-{{ . }}"{{ end -}}
   {{- with $.data.width }} width="{{ . }}"{{ end -}}
@@ -26,4 +28,7 @@
 >
 {{- if $.data.target }}</a>{{ end -}}
 {{- end }}
+{{ end }}
+
+{{ define "partials/_elements/inlineimage.html" }}
 {{ end }}
