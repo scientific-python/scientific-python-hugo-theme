@@ -12,6 +12,18 @@ body {
   text-align: center !important;
 }
 
+html[data-theme="dark"] {
+  .light-theme {
+    display: none;
+  }
+}
+
+html[data-theme="light"] {
+  .dark-theme {
+    display: none;
+  }
+}
+
 img {
   max-width: 100%;
 }

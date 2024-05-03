@@ -1,4 +1,5 @@
 {{ if .data.target -}}<a href="{{ .data.target }}">{{ end -}}
+{{- if .data.src }}
 <img src="{{ .data.src }}" alt="{{ .data.alt }}"
   {{- with .data.align }} class="align-{{ . }}"{{ end -}}
   {{- with .data.width }} width="{{ . }}"{{ end -}}
@@ -6,3 +7,23 @@
   {{- with .data.loading }} loading="{{ . }}"{{ end -}}
 >
 {{- if .data.target }}</a>{{ end -}}
+{{- else if ( and .data.lightsrc .data.darksrc ) }}
+{{- with .data.lightsrc }}
+<img src="{{ . }}" class="light-theme" alt="{{ $.data.alt }}"
+  {{- with $.data.align }} class="align-{{ . }}"{{ end -}}
+  {{- with $.data.width }} width="{{ . }}"{{ end -}}
+  {{- with $.data.height }} height="{{ . }}"{{ end -}}
+  {{- with $.data.loading }} loading="{{ . }}"{{ end -}}
+>
+{{- if $.data.target }}</a>{{ end -}}
+{{- end }}
+{{- with .data.darksrc }}
+<img src="{{ . }}" class="dark-theme" alt="{{ $.data.alt }}"
+  {{- with $.data.align }} class="align-{{ . }}"{{ end -}}
+  {{- with $.data.width }} width="{{ . }}"{{ end -}}
+  {{- with $.data.height }} height="{{ . }}"{{ end -}}
+  {{- with $.data.loading }} loading="{{ . }}"{{ end -}}
+>
+{{- if $.data.target }}</a>{{ end -}}
+{{- end }}
+{{ end }}
