@@ -1,7 +1,19 @@
-    <div class="sd-col sd-d-flex-column">
-      <p>
+{{- $columns := default "" .columns -}}
+  {{- if eq $columns ""}}
+    <div class="sd-col sd-d-flex-row">
+  {{- else if eq $columns "auto"}}
+    <div class="sd-col sd-d-flex-row sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto">
+  {{- else }}
+    {{- $columns := split $columns " " }}
+    {{- $xs := index $columns 0 }}
+    {{- $sm := index $columns 1 }}
+    {{- $md := index $columns 2 }}
+    {{- $lg := index $columns 3 }}
+    <div class="sd-col sd-d-flex-row sd-col-{{ $xs }} sd-col-xs-{{ $xs }} sd-col-sm-{{ $sm }} sd-col-md-{{ $md }} sd-col-lg-{{ $lg }}">
+  {{- end }}
+      <div>
         {{- with (trim .body "\n") }}
           {{ . | markdownify }}
         {{- end }}
-      </p>
+      </div>
     </div>
