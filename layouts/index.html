@@ -1,4 +1,6 @@
 {{ define "main" }}
+    {{ partial "search.html" . }}
+
     {{ if .Site.Params.hero }}
     {{ partial "hero.html" . }}
     {{ end }}

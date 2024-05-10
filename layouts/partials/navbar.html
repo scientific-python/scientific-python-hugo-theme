@@ -25,6 +25,10 @@
     <div id="navbar-menu" class="navbar-menu">
 
       <div class="navbar-end">
+        <button class="search-button">
+          <i class="fa-solid fa-magnifying-glass fa-lg" title="Search (Ctrl+k)"></i>
+        </button>
+
         {{- range $navbar }}
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown">
@@ -50,6 +54,7 @@
         {{- if .IsTranslated }}
         {{ partial "translation.html" . }}
         {{- end }}
+
       </div>
     </div>
   </div>
