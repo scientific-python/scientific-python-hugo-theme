@@ -14,6 +14,10 @@ Blog post layouts:
 - `layouts/partials/posts/tag.html`: Tag page layout
 - `layers/partials/posts/comments.html`: Empty by default; can be overridden to place a comments section
 
+## Add custom HTML header content
+
+- `layouts/partials/head.html`
+
 ## Shortcut list
 
 The depths of the shortcut list on the left of each post can be
