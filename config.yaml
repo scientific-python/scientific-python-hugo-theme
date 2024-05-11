@@ -7,6 +7,7 @@ params:
   images:
     - /images/logo.svg
   navColor: blue
+  search: true
   plausible:
     dataDomain: null
     javaScript: "https://views.scientific-python.org/js/script.js"
