@@ -1,0 +1,74 @@
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<style>
+  .search-button {
+      border-radius: 20px;
+      padding: 8px;
+      margin-right: 15px;
+      cursor: pointer;
+  }
+  .search-container {
+      padding: 10px 15px;
+  }
+  .search-container input {
+      padding: 10px 15px;
+      color: #333;
+  }
+  .pagefind-ui button {
+      border: none;
+  }
+  .pagefind-ui__result-title.svelte-4xnkmf .pagefind-ui__result-link.svelte-4xnkmf {
+      color: unset;
+  }
+  input.pagefind-ui__search-input.svelte-e9gkc3 {
+      color: unset;
+  }
+</style>
+
+<div class="search-container" style="display: none"></div>
+
+<script>
+  let getElem = (className) => document.getElementsByClassName(className)[0];
+
+  window.addEventListener('DOMContentLoaded', (evt) => {
+    new PagefindUI({
+        element: ".search-container",
+        autofocus: true,
+        resetStyles: false,
+        showSubResults: true,
+    });
+
+    let searchContainer = getElem('search-container');
+    let searchInput = getElem('pagefind-ui__search-input');
+
+    let showSearch = () => {
+      searchContainer.style.display  ='block';
+      searchInput.focus();
+    }
+
+    let hideSearch = () => {
+      searchContainer.style.display  ='none';
+      searchInput.blur();
+    }
+
+    let toggleSearch = (evt) => {
+      if (searchContainer.style.display === 'none') {
+        showSearch();
+      } else {
+        hideSearch();
+      }
+    };
+
+    window.addEventListener('keydown', (evt) => {
+        if (evt.key === 'Escape') {
+          hideSearch();
+        }
+        if (evt.key === 'k' && evt.ctrlKey) {
+            toggleSearch();
+        }
+    });
+
+   getElem('search-button').addEventListener('click', toggleSearch);
+  });
+</script>

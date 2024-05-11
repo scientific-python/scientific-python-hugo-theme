@@ -6,7 +6,7 @@ help:
 
 themes/scientific-python-hugo-theme:
 	@if [ ! -d "$<" ]; then \
-	  echo "*** ERROR: missing theme" ; \
+      echo "*** ERROR: missing theme" ; \
 	  echo ; \
 	  echo "It looks as though you are missing the themes directory."; \
 	  echo "You need to add the scientific-python-hugo-theme as a submodule."; \
@@ -24,10 +24,11 @@ themes: themes/scientific-python-hugo-theme
 html: ## Build site in `./public`
 html: themes content/shortcodes.md
 	hugo
+	yes | npx pagefind --site public
 
 serve: ## Serve site, typically on http://localhost:1313
-serve: themes content/shortcodes.md
-	@hugo --printI18nWarnings server
+serve: html
+	@hugo --printI18nWarnings serve
 
 clean: ## Remove built files
 clean:
