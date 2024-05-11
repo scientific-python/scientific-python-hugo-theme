@@ -31,7 +31,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-family: var(--fontFamily), sans-serif;
+  font-family: var(--pst-font-family-heading), sans-serif;
   font-weight: 900;
   font-size: 6em;
   color: var(--pst-color-text-base);
@@ -72,8 +72,8 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 500;
-  color: var(--colorSecondaryLight);
-  background-color: var(--colorPrimaryDark);
+  color: var(--spht-color-light);
+  background-color: var(--spht-color-dark);
   border: none;
   border-radius: 25px;
   outline: none;
@@ -81,7 +81,7 @@
 }
 
 .cta-button:hover {
-  color: var(--colorPrimaryLight);
+  color: var(--spht-color-link-hover);
 }
 
 @media only screen and (max-width: 1090px) {

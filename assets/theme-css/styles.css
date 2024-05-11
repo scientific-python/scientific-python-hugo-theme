@@ -12,6 +12,29 @@ body {
   text-align: center !important;
 }
 
+/* Handle selective display depending on light/dark theme */
+
+html:not([data-theme]) {
+  .light-theme {
+    display: none;
+  }
+  .dark-theme {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] {
+  .light-theme {
+    display: none;
+  }
+}
+
+html[data-theme="light"] {
+  .dark-theme {
+    display: none;
+  }
+}
+
 img {
   max-width: 100%;
 }

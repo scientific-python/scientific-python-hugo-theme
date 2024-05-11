@@ -95,10 +95,12 @@ practices for native button components such as using the correct [ARIA
 attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
 {{< /admonition >}}
 
+<!-- FIXME
 If in your site\'s [custom CSS file](custom-css) you override the [CSS
 custom properties](css-variables) `--pst-color-*` (where `*` is one of
 the semantic color names, such as `primary`, `danger`), badges and
 buttons will automatically use the custom color.
+-->
 
 ## Cards
 
