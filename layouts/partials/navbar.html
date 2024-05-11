@@ -25,9 +25,11 @@
     <div id="navbar-menu" class="navbar-menu">
 
       <div class="navbar-end">
+        {{- if .Site.Params.search }}
         <button class="search-button">
           <i class="fa-solid fa-magnifying-glass fa-lg" title="Search (Ctrl+k)"></i>
         </button>
+        {{- end }}
 
         {{- range $navbar }}
         {{- if .sublinks }}
