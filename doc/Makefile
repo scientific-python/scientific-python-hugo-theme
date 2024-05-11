@@ -6,7 +6,7 @@ help:
 
 themes/scientific-python-hugo-theme:
 	@if [ ! -d "$<" ]; then \
-      echo "*** ERROR: missing theme" ; \
+	  echo "*** ERROR: missing theme" ; \
 	  echo ; \
 	  echo "It looks as though you are missing the themes directory."; \
 	  echo "You need to add the scientific-python-hugo-theme as a submodule."; \
