@@ -68,7 +68,7 @@ Place Markdown files in `./contents/`. Also see the [Hugo documentation](https:/
 ### `config.yaml`
 
 Your site configuration file is `./config.yaml`. It is used to set the name of the site, configure navigation bars, etc.
-Example `config.yaml` files can be seen in [scientific-python.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml), [numpy.org](https://github.com/numpy/numpy.org/blob/main/config.yaml.in), and [scipy.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml).
+Example `config.yaml` files can be seen in [scientific-python.org](https://github.com/scientific-python/scientific-python.org/blob/main/config.yaml), [numpy.org](https://github.com/numpy/numpy.org/blob/main/config.yaml.in), and [scipy.org](https://github.com/scipy/scipy.org/blob/main/config.yaml).
 
 ### CSS
 
