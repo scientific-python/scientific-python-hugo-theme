@@ -1,7 +1,7 @@
 <!-- Include all theme CSS filenames here -->
 {{- $page := . -}}
 
-{{- $inServerMode := .Site.IsServer -}}
+{{- $inServerMode := hugo.IsServer -}}
 {{- $serverOpts := cond ($inServerMode) (dict "enableSourceMap" true) (dict "outputStyle" "compressed") -}}
 {{- $sassCompiler := dict "transpiler" "dartsass" -}}
 {{- $cssOpts := collections.Merge $sassCompiler $serverOpts -}}
