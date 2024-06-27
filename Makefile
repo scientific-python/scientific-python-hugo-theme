@@ -26,7 +26,10 @@ doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 # Serve for development purposes.
 serve-dev: doc-serve
 doc-serve: doc/content/shortcodes.md
-	(cd doc && hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
+	(cd doc; \
+	hugo; \
+	yes | npx pagefind --site public; \
+	hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
 # -----------------------------------
 # The following is for use on netlify
@@ -44,7 +47,7 @@ preview-theme:
 	python tools/add_preview_links.py
 
 theme: doc/content/shortcodes.md
-	(cd doc ; hugo --themesDir="../..")
+	(cd doc ; hugo --themesDir="../.."; yes | npx pagefind --site public)
 
 scipy:
 	rm -rf $@
