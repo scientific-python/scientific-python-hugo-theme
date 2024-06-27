@@ -8,10 +8,16 @@
       margin-right: 15px;
       cursor: pointer;
   }
-  .search-container {
-      padding: 10px 15px;
+  .search-dialog {
+      padding: 15px;
+      width: 80%;
+      border-radius: 1rem;
   }
-  .search-container input {
+  .search-dialog::backdrop {
+    background-color: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+   }
+  .search-dialog input {
       padding: 10px 15px;
       color: #333;
   }
@@ -26,39 +32,50 @@
   }
 </style>
 
-<div class="search-container" style="display: none"></div>
+<dialog class="search-dialog"></dialog>
 
 <script>
-  let getElem = (className) => document.getElementsByClassName(className)[0];
-
-  window.addEventListener('DOMContentLoaded', (evt) => {
+  window.addEventListener('DOMContentLoaded', () => {
     new PagefindUI({
-        element: ".search-container",
+        element: '.search-dialog',
         autofocus: true,
         resetStyles: false,
         showSubResults: true,
     });
 
-    let searchContainer = getElem('search-container');
-    let searchInput = getElem('pagefind-ui__search-input');
+    let searchDialog = document.querySelector('.search-dialog');
+    let searchInput = document.querySelector('.pagefind-ui__search-input');
 
-    let showSearch = () => {
-      searchContainer.style.display  ='block';
-      searchInput.focus();
-    }
+    let showSearch = () => searchDialog.showModal();
+    let hideSearch = () => searchDialog.close();
 
-    let hideSearch = () => {
-      searchContainer.style.display  ='none';
-      searchInput.blur();
-    }
-
-    let toggleSearch = (evt) => {
-      if (searchContainer.style.display === 'none') {
+    let toggleSearch = () => {
+      if (!searchDialog.open) {
         showSearch();
       } else {
         hideSearch();
       }
     };
+
+    let isClickOutside = (elem, clickEvt) => {
+      const elemDims = elem.getBoundingClientRect();
+      return (
+        clickEvt.clientX < elemDims.left ||
+        clickEvt.clientX > elemDims.right ||
+        clickEvt.clientY < elemDims.top ||
+        clickEvt.clientY > elemDims.bottom
+      );
+    };
+
+    // Close the search dialog if user clicks outside of it when it is open.
+    // This feels like functionality that should really be natively supported
+    // by the dialog element already.
+    // https://blog.webdevsimplified.com/2023-04/html-dialog/
+    searchDialog.addEventListener('click', (evt) => {
+      if (searchDialog.open && isClickOutside(searchDialog, evt)) {
+        hideSearch();
+      }
+    });
 
     window.addEventListener('keydown', (evt) => {
         if (evt.key === 'Escape') {
@@ -69,6 +86,6 @@
         }
     });
 
-   getElem('search-button').addEventListener('click', toggleSearch);
+   document.querySelector('.search-button').addEventListener('click', showSearch);
   });
 </script>
