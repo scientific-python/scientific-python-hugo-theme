@@ -1,3 +1,53 @@
+# scientific-python-hugo-theme 0.18
+
+We're happy to announce the release of scientific-python-hugo-theme 0.18!
+
+## Enhancements
+
+- Add image support for dark and light themes ([#599](https://github.com/scientific-python/scientific-python-hugo-theme/pull/599)).
+- Refactor font loading ([#597](https://github.com/scientific-python/scientific-python-hugo-theme/pull/597)).
+- Implement columns for grid items ([#603](https://github.com/scientific-python/scientific-python-hugo-theme/pull/603)).
+- Add integrity check for font-awesome ([#610](https://github.com/scientific-python/scientific-python-hugo-theme/pull/610)).
+
+## Bug Fixes
+
+- Fix grid item ([#604](https://github.com/scientific-python/scientific-python-hugo-theme/pull/604)).
+- Fix breadcrumbs ([#605](https://github.com/scientific-python/scientific-python-hugo-theme/pull/605)).
+
+## Documentation
+
+- Organize into User Guide ([#595](https://github.com/scientific-python/scientific-python-hugo-theme/pull/595)).
+- Document how to add custom html header content ([#613](https://github.com/scientific-python/scientific-python-hugo-theme/pull/613)).
+- Correct link to SciPy's config.yaml file ([#621](https://github.com/scientific-python/scientific-python-hugo-theme/pull/621)).
+
+## Maintenance
+
+- Improve color handling ([#594](https://github.com/scientific-python/scientific-python-hugo-theme/pull/594)).
+- Update hugo ([#608](https://github.com/scientific-python/scientific-python-hugo-theme/pull/608)).
+- Update dart sass ([#609](https://github.com/scientific-python/scientific-python-hugo-theme/pull/609)).
+- Bump pre-commit from 3.7.0 to 3.7.1 ([#617](https://github.com/scientific-python/scientific-python-hugo-theme/pull/617)).
+- fix link in makefile ([#620](https://github.com/scientific-python/scientific-python-hugo-theme/pull/620)).
+- Update pre-commit repos ([#622](https://github.com/scientific-python/scientific-python-hugo-theme/pull/622)).
+- Handle hugo deprecation ([#624](https://github.com/scientific-python/scientific-python-hugo-theme/pull/624)).
+- Update hugo (0.126.2) ([#625](https://github.com/scientific-python/scientific-python-hugo-theme/pull/625)).
+- Update dart sass (1.77.5) ([#626](https://github.com/scientific-python/scientific-python-hugo-theme/pull/626)).
+
+## Contributors
+
+4 authors added to this release (alphabetically):
+
+- Jake Bowhay ([@j-bowhay](https://github.com/j-bowhay))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Kai Striega ([@Kai-Striega](https://github.com/Kai-Striega))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.17
 
 We're happy to announce the release of scientific-python-hugo-theme 0.17!
