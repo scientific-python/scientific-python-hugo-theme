@@ -21,10 +21,11 @@
   background: #f39200;
 }
 #backtotop a {
+  display: flex;
+  align-items: center;
   outline: none;
   text-decoration: none;
   border: 0;
-  display: block;
   width: 46px;
   height: 46px;
   background-color: var(
@@ -35,20 +36,14 @@
   border-radius: 50%;
   text-align: center;
   font-size: 1.625rem;
+  color: var(--spht-color-light);
 }
-body #backtotop a {
-  outline: none;
-  color: var(--colorSecondary);
-}
-#backtotop a:after {
-  outline: none;
-  content: "⮝";
-  position: relative;
+
+#backtotop svg {
+  margin: 0 auto;
   display: block;
-  top: 50%;
-  -webkit-transform: translateY(-55%);
-  transform: translateY(-55%);
 }
+
 #backtotop.visible #backtotop-color:hover {
   background: var(--pst-color-link-hover);
 }
