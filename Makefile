@@ -27,8 +27,8 @@ doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 serve-dev: doc-serve
 doc-serve: doc/content/shortcodes.md
 	(cd doc; \
-	hugo; \
-	yes | npx pagefind --site public; \
+	hugo --themesDir="../.."; \
+	npx --yes pagefind --site public; \
 	hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
 # -----------------------------------
@@ -47,7 +47,7 @@ preview-theme:
 	python tools/add_preview_links.py
 
 theme: doc/content/shortcodes.md
-	(cd doc ; hugo --themesDir="../.."; yes | npx pagefind --site public)
+	(cd doc ; hugo --themesDir="../.."; npx --yes pagefind --site public)
 
 scipy:
 	rm -rf $@

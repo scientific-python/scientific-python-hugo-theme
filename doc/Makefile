@@ -24,7 +24,7 @@ themes: themes/scientific-python-hugo-theme
 html: ## Build site in `./public`
 html: themes content/shortcodes.md
 	hugo
-	yes | npx pagefind --site public
+	npx --yes pagefind --site public
 
 serve: ## Serve site, typically on http://localhost:1313
 serve: html
