@@ -1,13 +1,13 @@
 "use strict";
 
-window.addEventListener('DOMContentLoaded', () => {
-  let searchDialog = document.querySelector('.search-dialog');
+window.addEventListener("DOMContentLoaded", () => {
+  let searchDialog = document.querySelector(".search-dialog");
 
   // Do nothing here if search is not enabled.
   if (!searchDialog) return;
 
   new PagefindUI({
-    element: '.search-dialog',
+    element: ".search-dialog",
     autofocus: true,
     resetStyles: false,
     showSubResults: true,
@@ -38,17 +38,19 @@ window.addEventListener('DOMContentLoaded', () => {
   // This feels like functionality that should really be natively supported
   // by the dialog element already.
   // https://blog.webdevsimplified.com/2023-04/html-dialog/
-  searchDialog.addEventListener('click', (evt) => {
+  searchDialog.addEventListener("click", (evt) => {
     if (searchDialog.open && isClickOutside(searchDialog, evt)) {
       hideSearch();
     }
   });
 
-  window.addEventListener('keydown', (evt) => {
-    if (evt.key === 'k' && evt.ctrlKey) {
+  window.addEventListener("keydown", (evt) => {
+    if (evt.key === "k" && evt.ctrlKey) {
       toggleSearch();
     }
   });
 
-  document.querySelector('.search-button').addEventListener('click', showSearch);
+  document
+    .querySelector(".search-button")
+    .addEventListener("click", showSearch);
 });
