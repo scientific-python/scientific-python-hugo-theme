@@ -25,6 +25,12 @@
     <div id="navbar-menu" class="navbar-menu">
 
       <div class="navbar-end">
+        {{- if .Site.Params.search }}
+        <button class="search-button" title="Search (Ctrl+k)">
+          <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+        </button>
+        {{- end }}
+
         {{- range $navbar }}
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown">
@@ -50,6 +56,7 @@
         {{- if .IsTranslated }}
         {{ partial "translation.html" . }}
         {{- end }}
+
       </div>
     </div>
   </div>

@@ -21,6 +21,7 @@ params:
   description: "Documentation & template site for the Scientific Python Hugo Theme."
   images:
     - /images/logo.svg
+  search: true
   navbarlogo:
     image: logo.svg
     text: Scientific Python Hugo Theme

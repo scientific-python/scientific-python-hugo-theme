@@ -30,7 +30,8 @@
                     (resources.Get "theme-css/pst/pydata-sphinx-theme.scss")
                     (resources.Get "theme-css/spht/index.scss")
                     (resources.Match "theme-css/*.scss")
-           | append (resources.Match "css/*.scss") -}}
+           | append (resources.Match "css/*.scss")
+-}}
 
 {{- range $sass -}}
   {{ with . }}  <!-- Skips nil elements from appending empty resources.Match slices. -->
