@@ -20,10 +20,7 @@
 .pagefind-ui button {
   border: none;
 }
-.pagefind-ui__result-title.svelte-4xnkmf
-  .pagefind-ui__result-link.svelte-4xnkmf {
-  color: unset;
-}
-input.pagefind-ui__search-input.svelte-e9gkc3 {
-  color: unset;
+/* unset a pagefind color setting to make results more legible in dark mode */
+.pagefind-ui__result-title > .pagefind-ui__result-link {
+  color: unset !important;
 }
