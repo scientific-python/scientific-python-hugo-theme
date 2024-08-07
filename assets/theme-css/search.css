@@ -12,7 +12,7 @@
 .search-dialog::backdrop {
   background-color: rgb(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
- }
+}
 .search-dialog input {
   padding: 10px 15px;
   color: #333;
@@ -20,7 +20,8 @@
 .pagefind-ui button {
   border: none;
 }
-.pagefind-ui__result-title.svelte-4xnkmf .pagefind-ui__result-link.svelte-4xnkmf {
+.pagefind-ui__result-title.svelte-4xnkmf
+  .pagefind-ui__result-link.svelte-4xnkmf {
   color: unset;
 }
 input.pagefind-ui__search-input.svelte-e9gkc3 {
