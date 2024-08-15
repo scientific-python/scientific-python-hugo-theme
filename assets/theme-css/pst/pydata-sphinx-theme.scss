@@ -1,3 +1,9 @@
+// Next line added by SPHT, to add missing bootstrap-provided variables
+$zindex-tooltip: 1080;
+
+// The rest of file comes verbatim from PDST, with unused modules
+// commented.
+
 //// Import Bootstrap core
 //@import "~bootstrap/scss/functions";
 @import "variables/bootstrap";
