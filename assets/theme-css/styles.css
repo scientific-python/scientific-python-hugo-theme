@@ -183,6 +183,18 @@ a.headerlink {
   margin-top: -0.5rem;
 }
 
+.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  font-size: 80%;
+  background: var(--pst-color-on-background);
+  border: 1px solid var(--pst-color-border);
+  pointer-events: none;
+  z-index: 100;
+}
+
 /* Local Variables: */
 /* css-indent-offset: 2 */
 /* End: */
