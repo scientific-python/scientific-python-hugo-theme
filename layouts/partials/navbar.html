@@ -35,20 +35,20 @@
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown">
           <a class="navbar-link">
-            {{ .title }}
+            {{ .title | safeHTML }}
           </a>
 
           <div class="navbar-dropdown">
             {{- range .sublinks }}
             <a href="{{ .url }}" class="navbar-item">
-              {{ .title }}
+              {{ .title | safeHTML }}
             </a>
             {{- end }}
           </div>
         </div>
         {{- else }}
         <a href="{{ .url }}" class="navbar-item">
-          {{ .title }}
+          {{ .title | safeHTML }}
         </a>
         {{- end }}
         {{- end }}

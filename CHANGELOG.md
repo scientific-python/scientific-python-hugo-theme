@@ -1,3 +1,34 @@
+# scientific-python-hugo-theme 0.19
+
+We're happy to announce the release of scientific-python-hugo-theme 0.19!
+
+## Enhancements
+
+- Use FontAwesome for backtotop icon ([#629](https://github.com/scientific-python/scientific-python-hugo-theme/pull/629)).
+- Allow specifying a canonical page URL ([#631](https://github.com/scientific-python/scientific-python-hugo-theme/pull/631)).
+- Allow HTML in navbar titles (useful for fontawesome) ([#633](https://github.com/scientific-python/scientific-python-hugo-theme/pull/633)).
+
+## Maintenance
+
+- Update hugo (0.128.2) ([#628](https://github.com/scientific-python/scientific-python-hugo-theme/pull/628)).
+- Bump pre-commit from 3.7.1 to 3.8.0 ([#630](https://github.com/scientific-python/scientific-python-hugo-theme/pull/630)).
+- Update hugo (0.132.2) ([#635](https://github.com/scientific-python/scientific-python-hugo-theme/pull/635)).
+
+## Contributors
+
+2 authors added to this release (alphabetically):
+
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+2 reviewers added to this release (alphabetically):
+
+- Brigitta Sipőcz ([@bsipocz](https://github.com/bsipocz))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.18
 
 We're happy to announce the release of scientific-python-hugo-theme 0.18!
