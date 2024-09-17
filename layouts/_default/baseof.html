@@ -32,6 +32,10 @@
     {{ partial "navbar.html" . -}}
     {{ end }}
 
+    {{ if .Site.Params.search }}
+    {{ partial "search.html" . }}
+    {{ end }}
+
     {{ block "main" . }}
     {{ end }}
 
