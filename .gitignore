@@ -6,3 +6,6 @@ resources
 # Auto-generated
 doc/content/shortcodes.md
 public
+
+# vim droppings
+.*.swp

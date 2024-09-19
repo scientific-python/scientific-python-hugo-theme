@@ -5,6 +5,7 @@ GH_ORG = scientific-python
 TEAMS_DIR = doc/content/about
 TEAMS = theme-team
 TEAMS_QUERY = python tools/team_query.py
+SEARCH = (echo "Installing \`pagefind\` and generating search index..." && npx --yes pagefind --site public)
 
 $(TEAMS_DIR):
 	mkdir -p $(TEAMS_DIR)
@@ -26,7 +27,10 @@ doc/content/shortcodes.md: $(wildcard layouts/shortcodes/*.html)
 # Serve for development purposes.
 serve-dev: doc-serve
 doc-serve: doc/content/shortcodes.md
-	(cd doc && hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
+	(cd doc; \
+	hugo --themesDir="../.."; \
+	$(SEARCH); \
+	hugo --printI18nWarnings serve --themesDir="../.." --disableFastRender --poll 1000ms)
 
 # -----------------------------------
 # The following is for use on netlify
@@ -44,7 +48,7 @@ preview-theme:
 	python tools/add_preview_links.py
 
 theme: doc/content/shortcodes.md
-	(cd doc ; hugo --themesDir="../..")
+	(cd doc ; hugo --themesDir="../.."; $(SEARCH))
 
 scipy:
 	rm -rf $@
