@@ -20,7 +20,7 @@
   <div class="post-tags">
     <i class="fa-solid fa-tag"></i>
     {{- range .Params.tags -}}
-    {{- $tag := lower . }}
+    {{- $tag := urlize . }}
     <span class="post-tag"><a href="{{ path.Join "/tags/" $tag | relURL }}">#{{ $tag }}</a></span>
     {{- end -}}
   </div>
