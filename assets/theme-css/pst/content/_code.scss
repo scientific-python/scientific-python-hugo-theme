@@ -12,6 +12,7 @@ div.literal-block-wrapper {
   flex-direction: column;
   width: unset;
   border-radius: $admonition-border-radius;
+  break-inside: avoid;
 }
 
 // Code blocks with captions
@@ -38,6 +39,7 @@ div.literal-block-wrapper {
   div[class*="highlight-"] {
     margin: 0;
     border-radius: 0;
+
     pre {
       border: none;
       box-shadow: none;
@@ -57,12 +59,6 @@ code.literal {
 
 a > code {
   color: var(--pst-color-inline-code-links);
-}
-
-// Fix for Sphinx's "highlight" directive - this is an issue with our accessible pygments theme
-// and the colour we are using for the background of the code blocks.
-html[data-theme="light"] .highlight .nf {
-  color: #0078a1 !important;
 }
 
 // Minimum opacity needed for linenos to be WCAG AA conformant
