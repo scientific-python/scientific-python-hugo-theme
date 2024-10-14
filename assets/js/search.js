@@ -46,6 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("keydown", (evt) => {
     if (evt.key === "k" && (evt.ctrlKey || evt.metaKey)) {
+      evt.preventDefault();
       toggleSearch();
     }
   });
