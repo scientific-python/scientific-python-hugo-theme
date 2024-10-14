@@ -1,3 +1,41 @@
+# scientific-python-hugo-theme 0.20
+
+We're happy to announce the release of scientific-python-hugo-theme 0.20!
+
+## Enhancements
+
+- Add Pagefind Search ([#615](https://github.com/scientific-python/scientific-python-hugo-theme/pull/615)).
+- Correctly convert spaces in tags to dashes ([#637](https://github.com/scientific-python/scientific-python-hugo-theme/pull/637)).
+- Update PST styling ([#642](https://github.com/scientific-python/scientific-python-hugo-theme/pull/642)).
+
+## Bug Fixes
+
+- Render mathjax partial with context ([#638](https://github.com/scientific-python/scientific-python-hugo-theme/pull/638)).
+- Style mermaid tooltips ([#639](https://github.com/scientific-python/scientific-python-hugo-theme/pull/639)).
+
+## Maintenance
+
+- Update hugo (0.134.3) ([#640](https://github.com/scientific-python/scientific-python-hugo-theme/pull/640)).
+- Update font-awesome (6.6.0) ([#643](https://github.com/scientific-python/scientific-python-hugo-theme/pull/643)).
+- Update mermaid (10.9.2) ([#645](https://github.com/scientific-python/scientific-python-hugo-theme/pull/645)).
+- Update pre-commit ([#646](https://github.com/scientific-python/scientific-python-hugo-theme/pull/646)).
+
+## Contributors
+
+3 authors added to this release (alphabetically):
+
+- Brian Hawthorne ([@brianhawthorne](https://github.com/brianhawthorne))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+3 reviewers added to this release (alphabetically):
+
+- Brian Hawthorne ([@brianhawthorne](https://github.com/brianhawthorne))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.19
 
 We're happy to announce the release of scientific-python-hugo-theme 0.19!
@@ -26,8 +64,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.19!
 - Brigitta Sipőcz ([@bsipocz](https://github.com/bsipocz))
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.18
 
@@ -154,8 +191,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.16!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.15
 
@@ -221,8 +257,7 @@ We're happy to announce the release of scientific-python-hugo-theme 0.14!
 - Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
 - Stefan van der Walt ([@stefanv](https://github.com/stefanv))
 
-_These lists are automatically generated, and may not be complete or may contain
-duplicates._
+_These lists are automatically generated, and may not be complete or may contain duplicates._
 
 # scientific-python-hugo-theme 0.13
 
