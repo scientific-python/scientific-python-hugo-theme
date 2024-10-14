@@ -45,10 +45,11 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("keydown", (evt) => {
-    if (evt.key === "k" && evt.ctrlKey) {
+    if (evt.key === "k" && (evt.ctrlKey || evt.metaKey)) {
       toggleSearch();
     }
   });
+
 
   document
     .querySelector(".search-button")
