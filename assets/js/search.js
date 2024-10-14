@@ -51,7 +51,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   document
     .querySelector(".search-button")
     .addEventListener("click", showSearch);
