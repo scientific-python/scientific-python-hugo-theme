@@ -2,9 +2,13 @@
 
 window.addEventListener("DOMContentLoaded", () => {
   let searchDialog = document.querySelector(".search-dialog");
+  let searchButton = document.getElementById("search-button");
 
   // Do nothing here if search is not enabled.
-  if (!searchDialog) return;
+  if (!searchDialog || !searchButton) return;
+
+  const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent);
+  searchButton.title = `Search (${isMac ? "⌘" : "Ctrl"} + K)`;
 
   new PagefindUI({
     element: ".search-dialog",
@@ -45,7 +49,11 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("keydown", (evt) => {
-    if (evt.key === "k" && evt.ctrlKey) {
+    if (
+      ((isMac && evt.metaKey) || (!isMac && evt.ctrlKey)) &&
+      evt.key === "k"
+    ) {
+      evt.preventDefault(); // prevents default browser behaviour
       toggleSearch();
     }
   });
