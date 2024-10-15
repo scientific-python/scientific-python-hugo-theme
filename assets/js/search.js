@@ -50,8 +50,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("keydown", (evt) => {
     if (
-      evt.key === "k" &&
-      ((isMac && evt.metaKey) || (!isMac && evt.ctrlKey))
+      ((isMac && evt.metaKey) || (!isMac && evt.ctrlKey)) &&
+      evt.key === "k"
     ) {
       evt.preventDefault(); // prevents default browser behaviour
       toggleSearch();
