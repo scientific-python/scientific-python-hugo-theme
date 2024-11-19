@@ -42,7 +42,7 @@ This theme is designed to be used as a Git submodule inside your site's source r
 3. Copy the theme's documentation site as a template for your site:
 
    ```sh
-   cp -a themes/scientific-python-hugo-theme/doc/* .
+   cp -a themes/scientific-python-hugo-theme/exampleSite/* .
    ```
 
 4. Test the site:
