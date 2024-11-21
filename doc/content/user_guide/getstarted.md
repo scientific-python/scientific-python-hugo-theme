@@ -39,16 +39,16 @@ This theme is designed to be used as a Git submodule inside your site's source r
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
    ```
 
-3. Copy the theme's documentation site as a template for your site:
+3. Copy the theme's example site as a template:
 
    ```sh
-   cp -a themes/scientific-python-hugo-theme/doc/* .
+   cp -a themes/scientific-python-hugo-theme/exampleSite/* .
    ```
 
 4. Test the site:
 
    ```
-   $ make serve
+   $ hugo server
    ...
    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
    ```
