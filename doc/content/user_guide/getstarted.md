@@ -48,7 +48,7 @@ This theme is designed to be used as a Git submodule inside your site's source r
 4. Test the site:
 
    ```
-   $ make serve
+   $ hugo server
    ...
    Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
    ```
