@@ -23,6 +23,7 @@
 #backtotop a {
   display: flex;
   align-items: center;
+  justify-content: center;
   outline: none;
   text-decoration: none;
   border: 0;
