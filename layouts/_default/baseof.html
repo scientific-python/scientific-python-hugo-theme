@@ -6,7 +6,7 @@
     {{ with .Params.canonicalURL -}}
     <link rel="canonical" href="{{ . }}">
     {{- end }}
-    <title>{{ block "title" . }}{{ .Site.Title }}{{ if not (eq .Site.Title .Title) }} - {{ .Title }}{{end}}{{ end }}</title>
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ if .Title }} - {{ .Title }}{{ end }}{{ end }}</title>
 
     <!-- Render theme css -->
     {{ partial "css.html" . -}}
