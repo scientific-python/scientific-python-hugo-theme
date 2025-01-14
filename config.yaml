@@ -1,13 +1,60 @@
-disableKinds:
-  - taxonomy
-theme:
-  - scientific-python-hugo-theme/themes/hugo-atom-feed
+baseURL: "https://example.com/"
+languageCode: "en-us"
+title: "Example Site"
+theme: scientific-python-hugo-theme
+relativeURLs: true
+disableKinds: ["taxonomy"]
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    renderHooks:
+      link:
+        enableDefault: true
+
 params:
-  colorScheme: auto # can be auto (browser setting), light, or dark
+  author:
+    name: "Example Team"
+  description: "Example"
   images:
     - /images/logo.svg
-  navColor: blue
-  search: false
-  plausible:
-    dataDomain: null
-    javaScript: "https://views.scientific-python.org/js/script.js"
+  search: true
+  navbarlogo:
+    image: logo.svg
+    text: Scientific Python Hugo Theme
+    link: /
+  fonts:
+    - name: "Lato"
+      weights: [400, 900]
+  hero:
+    title: Example Site
+    image: logo.svg
+    buttontext: Get Started
+    buttonlink: "#"
+  navbar:
+    - title: User Guide
+      url: /
+  footer:
+    logo: logo.svg
+    socialmediatitle: ""
+    socialmedia:
+      - link: https://github.com/
+        icon: github
+
+    quicklinks:
+      column1:
+        title: ""
+        links:
+          - text: About
+            link: /
+          - text: Theme GitHub
+            link: https://github.com/scientific-python/scientific-python-hugo-theme
+      column2:
+        links:
+          - text: Scientific Python Forum
+            link: https://discuss.scientific-python.org
+      column3:
+        links:
