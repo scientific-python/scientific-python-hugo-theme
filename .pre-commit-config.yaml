@@ -26,7 +26,7 @@ repos:
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 89c421dff2e1026ba12cdb9ebd731f4a83aa8021 # frozen: v0.8.6
+    rev: 73413df07b4ab0bf103ca1ae73c7cec5c0ace593 # frozen: v0.9.2
     hooks:
       - id: ruff
         args:
@@ -37,6 +37,11 @@ repos:
             "--target-version=py38",
           ]
       - id: ruff-format
+
+  - repo: https://github.com/woodruffw/zizmor-pre-commit
+    rev: 4dcc98ccce605605fd6d5202bf803a8c8bc34e8d # v1.1.1
+    hooks:
+      - id: zizmor
 
 ci:
   # This ensures that PR's aren't autofixed by the bot, rather you call
