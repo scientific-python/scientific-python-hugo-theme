@@ -1,3 +1,47 @@
+# scientific-python-hugo-theme 0.21
+
+We're happy to announce the release of scientific-python-hugo-theme 0.21!
+
+## Enhancements
+
+- Use `⌘` (`KeyboardEvent.metaKey`) with Pagefind search toggle on macOS ([#647](https://github.com/scientific-python/scientific-python-hugo-theme/pull/647)).
+- style: align `backtotop` icon along main axis ([#655](https://github.com/scientific-python/scientific-python-hugo-theme/pull/655)).
+- Update scss from pst ([#661](https://github.com/scientific-python/scientific-python-hugo-theme/pull/661)).
+
+## Documentation
+
+- Add basic example site ([#653](https://github.com/scientific-python/scientific-python-hugo-theme/pull/653)).
+
+## Maintenance
+
+- Update hugo ([#649](https://github.com/scientific-python/scientific-python-hugo-theme/pull/649)).
+- Update dart-sass ([#650](https://github.com/scientific-python/scientific-python-hugo-theme/pull/650)).
+- Update mermaid ([#651](https://github.com/scientific-python/scientific-python-hugo-theme/pull/651)).
+- Update mermaid (11.4.0) ([#652](https://github.com/scientific-python/scientific-python-hugo-theme/pull/652)).
+- Use Python 3.13 on netlify ([#654](https://github.com/scientific-python/scientific-python-hugo-theme/pull/654)).
+- [pre-commit.ci] pre-commit autoupdate ([#656](https://github.com/scientific-python/scientific-python-hugo-theme/pull/656)).
+- Update hugo ([#659](https://github.com/scientific-python/scientific-python-hugo-theme/pull/659)).
+- Update dart sass ([#660](https://github.com/scientific-python/scientific-python-hugo-theme/pull/660)).
+- Remove custom youtube shortcode ([#662](https://github.com/scientific-python/scientific-python-hugo-theme/pull/662)).
+- Add zizmor pre-commit ([#663](https://github.com/scientific-python/scientific-python-hugo-theme/pull/663)).
+
+## Contributors
+
+4 authors added to this release (alphabetically):
+
+- Agriya Khetarpal ([@agriyakhetarpal](https://github.com/agriyakhetarpal))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Muhammad Haris ([@headlessNode](https://github.com/headlessNode))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+3 reviewers added to this release (alphabetically):
+
+- Agriya Khetarpal ([@agriyakhetarpal](https://github.com/agriyakhetarpal))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain duplicates._
+
 # scientific-python-hugo-theme 0.20
 
 We're happy to announce the release of scientific-python-hugo-theme 0.20!
