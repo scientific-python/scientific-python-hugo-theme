@@ -169,7 +169,7 @@ function setupShortcuts(shortcutDepth = 2) {
     document.querySelectorAll("#shortcuts div:not(#shortcuts-header)"),
   );
   const shortcutsContainer = document.getElementById("shortcuts-container");
-  
+
   if (shortcutsContainer) {
     if (shortcuts.length == 0) {
       shortcutsContainer.style.display = "none";
