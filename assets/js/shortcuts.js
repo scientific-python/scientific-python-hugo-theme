@@ -99,6 +99,7 @@ function setupShortcuts(shortcutDepth = 2) {
   shortcutDepth += 1; // to account for the page title
 
   // Build a class selector for each header type, and concatenate with commas
+  // This adds selectors for leaf bundles (index.md files).
   let classes = "";
   for (let i = 2; i <= shortcutDepth; i++) {
     if (i != 2) {
