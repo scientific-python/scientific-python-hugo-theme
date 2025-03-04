@@ -168,15 +168,13 @@ function setupShortcuts(shortcutDepth = 2) {
   const shortcuts = Array.from(
     document.querySelectorAll("#shortcuts div:not(#shortcuts-header)"),
   );
-  if (shortcuts.length == 0) {
-    const shortcutsContainer = document.getElementById("shortcuts-container");
-    if (shortcutsContainer) {
+  const shortcutsContainer = document.getElementById("shortcuts-container");
+  
+  if (shortcutsContainer) {
+    if (shortcuts.length == 0) {
       shortcutsContainer.style.display = "none";
-    }
-  } else {
-    const shortcutsContainer = document.getElementById("shortcuts-container");
-    if (shortcutsContainer && shortcutsContainer.style.display === "none") {
-      shortcutsContainer.style.display = "";
+    } else {
+      shortcutsContainer.style.display = ""; // make shortcuts display visible, if hidden
     }
   }
 
