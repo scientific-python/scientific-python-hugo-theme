@@ -33,9 +33,12 @@ function scrollHeaders() {
   const headers = Array.from(
     document.querySelectorAll(":is(h1, h2, h3, h4, h5, h6)[id]"),
   );
-  const allShortcuts = Array.from(
-    document.querySelectorAll("#shortcuts > div"),
-  );
+  const shortcuts = document.getElementById("shortcuts");
+
+  // Exit early if shortcuts container doesn't exist
+  if (!shortcuts) return;
+
+  const allShortcuts = Array.from(shortcuts.querySelectorAll("div"));
 
   headers.map((currentSection) => {
     // get the position of the section
@@ -81,6 +84,18 @@ function remToPx(rem) {
 }
 
 function setupShortcuts(shortcutDepth = 2) {
+  // Find the shortcut target container in the sidebar
+  const shortcutsTarget = document.getElementById("shortcuts");
+
+  /*
+   * Exit early if shortcuts container doesn't exist
+   * This is important to avoid errors when the theme
+   * is used on pages that don't have the shortcuts sidebar
+   */
+  if (!shortcutsTarget) {
+    return;
+  }
+
   shortcutDepth += 1; // to account for the page title
 
   // Build a class selector for each header type, and concatenate with commas
@@ -92,11 +107,25 @@ function setupShortcuts(shortcutDepth = 2) {
     classes += " .content-container :not([role='tabpanel']) > h" + i;
   }
 
-  // Content Page Shortcuts
-  const shortcutsTarget = document.getElementById("shortcuts");
-  if (shortcutsTarget) {
-    const classElements = Array.from(document.querySelectorAll(classes));
+  /*
+   * Add selectors for branch bundles (_index.md files). In this case,
+   * branch bundles often have a different DOM structure than leaf bundles,
+   * so we need to include headers that are direct children of the content
+   * container here.
+   */
+  for (let i = 2; i <= shortcutDepth; i++) {
+    classes += ", .content-container > h" + i;
+  }
+
+  const classElements = Array.from(document.querySelectorAll(classes));
+
+  // Only proceed if we found headers (to avoid creating an empty shortcuts section)
+  if (classElements.length > 0) {
     classElements.map((el) => {
+      if (!el.id) {
+        return;
+      }
+
       const title = el.innerHTML;
       const elId = el.id;
       // Gets the element type (e.g. h2, h3)
@@ -143,6 +172,11 @@ function setupShortcuts(shortcutDepth = 2) {
     const shortcutsContainer = document.getElementById("shortcuts-container");
     if (shortcutsContainer) {
       shortcutsContainer.style.display = "none";
+    }
+  } else {
+    const shortcutsContainer = document.getElementById("shortcuts-container");
+    if (shortcutsContainer && shortcutsContainer.style.display === "none") {
+      shortcutsContainer.style.display = "";
     }
   }
 
