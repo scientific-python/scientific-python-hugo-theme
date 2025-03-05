@@ -98,24 +98,24 @@ function setupShortcuts(shortcutDepth = 2) {
 
   shortcutDepth += 1; // to account for the page title
 
-  // Build a class selector for each header type, and concatenate with commas
-  // This adds selectors for leaf bundles (index.md files).
+  /*
+   * Build selectors for both patterns:
+   * 1. Direct children of .content-container (for headers directly in the container)
+   * 2. Headers within wrappers inside .content-container (for when content-wrapper is used)
+   *
+   * This works with both DOM structures we might encounter, whether the templates
+   * have been updated to use content-wrapper or not (just in case).
+   */
   let classes = "";
   for (let i = 2; i <= shortcutDepth; i++) {
     if (i != 2) {
       classes += ",";
     }
-    classes += " .content-container :not([role='tabpanel']) > h" + i;
+    classes += " .content-container > h" + i;
   }
 
-  /*
-   * Add selectors for branch bundles (_index.md files). In this case,
-   * branch bundles often have a different DOM structure than leaf bundles,
-   * so we need to include headers that are direct children of the content
-   * container here.
-   */
   for (let i = 2; i <= shortcutDepth; i++) {
-    classes += ", .content-container > h" + i;
+    classes += ", .content-wrapper > h" + i;
   }
 
   const classElements = Array.from(document.querySelectorAll(classes));
