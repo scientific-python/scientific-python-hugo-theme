@@ -35,7 +35,9 @@
     <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
     {{ end }}
     {{ if .Content }}
-    {{ .Content }}
+    <div class="content-wrapper">
+      {{ .Content }}
+    </div>
     {{ end }}
     {{ $posts := .RegularPagesRecursive.ByPublishDate.Reverse }}
     {{ partial "posts/list-without-summary.html" $posts }}
