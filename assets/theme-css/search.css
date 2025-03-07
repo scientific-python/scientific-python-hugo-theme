@@ -24,3 +24,10 @@
 .pagefind-ui__result-title > .pagefind-ui__result-link {
   color: unset !important;
 }
+.pagefind-ui__search-clear{
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.pagefind-ui__search-clear:hover{
+  background-color: #333;
+  color: #fff;
+}
