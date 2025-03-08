@@ -34,9 +34,9 @@
         {{- range $navbar }}
         {{- if .sublinks }}
         <div class="navbar-item has-dropdown">
-          <a class="navbar-link">
+          <span class="navbar-link">
             {{ .title | safeHTML }}
-          </a>
+          </span>
 
           <div class="navbar-dropdown">
             {{- range .sublinks }}
