@@ -98,24 +98,13 @@ function setupShortcuts(shortcutDepth = 2) {
 
   shortcutDepth += 1; // to account for the page title
 
-  /*
-   * Build selectors for both patterns:
-   * 1. Direct children of .content-container (for headers directly in the container)
-   * 2. Headers within wrappers inside .content-container (for when content-wrapper is used)
-   *
-   * This works with both DOM structures we might encounter, whether the templates
-   * have been updated to use content-wrapper or not (just in case).
-   */
+  // Build a class selector for each header type, and concatenate with commas
   let classes = "";
   for (let i = 2; i <= shortcutDepth; i++) {
     if (i != 2) {
       classes += ",";
     }
     classes += " .content-container > h" + i;
-  }
-
-  for (let i = 2; i <= shortcutDepth; i++) {
-    classes += ", .content-wrapper > h" + i;
   }
 
   const classElements = Array.from(document.querySelectorAll(classes));
