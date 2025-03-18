@@ -98,22 +98,13 @@ function setupShortcuts(shortcutDepth = 2) {
 
   shortcutDepth += 1; // to account for the page title
 
-  /*
-   * We have build selectors to find headers in different contexts.
-   * i. direct children of .content-container (main structure)
-   * i. headers within tabpanels (for tabbed content)
-   */
+  // Build a class selector for each header type, and concatenate with commas
   let classes = "";
-
   for (let i = 2; i <= shortcutDepth; i++) {
     if (i != 2) {
       classes += ",";
     }
     classes += " .content-container > h" + i;
-  }
-
-  for (let i = 2; i <= shortcutDepth; i++) {
-    classes += ", [role='tabpanel'] > h" + i;
   }
 
   const classElements = Array.from(document.querySelectorAll(classes));
