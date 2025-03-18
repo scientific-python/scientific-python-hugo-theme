@@ -99,12 +99,14 @@ function setupShortcuts(shortcutDepth = 2) {
   shortcutDepth += 1; // to account for the page title
 
   // Build a class selector for each header type, and concatenate with commas
+  // Note the intentional lack of a space between .content-container and
+  // :not([role='tabpanel']) here.
   let classes = "";
   for (let i = 2; i <= shortcutDepth; i++) {
     if (i != 2) {
       classes += ",";
     }
-    classes += " .content-container > h" + i;
+    classes += " .content-container:not([role='tabpanel']) > h" + i;
   }
 
   const classElements = Array.from(document.querySelectorAll(classes));
