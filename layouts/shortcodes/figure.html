@@ -39,14 +39,31 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 */}}
 
-{{- $figure := .Inner | transform.Unmarshal -}}
+{{- $useParams := true -}}
+{{- $figure := dict -}}
+
+{{- if strings.TrimSpace .Inner -}}
+    {{- if not .IsNamedParams -}}
+    {{- $useParams = false -}}
+    {{- $figure = .Inner | transform.Unmarshal -}}
+    {{- end -}}
+{{- end -}}
+
+{{/* If we're using params, collect them. */}}
+{{- if $useParams -}}
+    {{- range $key, $value := .Params -}}
+    {{- $figure = merge $figure (dict $key $value) -}}
+    {{- end -}}
+{{- end -}}
+
 {{- $align := default "default" $figure.align -}}
 {{- $id := printf "id%03d" $.Ordinal -}}
+
 <figure class="align-{{ $align }}" id="{{ $id }}">
-{{- $m := newScratch -}}
-{{- $m.Set "image" $figure -}}
-{{- $m.SetInMap "image" "align" "center" -}}
-{{ partial "_elements/image.html" (dict "data" $m.Values.image) }}
+{{/* Create a clean copy of figure data with align center for image */}}
+{{- $image := merge $figure (dict "align" "center") -}}
+{{ partial "_elements/image.html" (dict "data" $image) }}
+
 <figcaption>
 {{- with $figure.title -}}
 <strong class="caption-title">{{ . }}</strong><a class="headerlink" href="#{{ $id  }}" title="Link to this image">#</a><br>
