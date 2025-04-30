@@ -3,13 +3,13 @@
 doc: Figures
 
 {{< figure >}}
-src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
 alt = 'Cute puppies'
 height = 200
-width = 200
+width = 400
 title = 'Figure title'
-attribution = 'Figure Credits: Daily cute puppy image from unslash.com'
-attributionlink = 'https://source.unsplash.com/200x200/daily?cute+puppy'
+attribution = 'Figure Credits: Cute puppies image from unsplash.com'
+attributionlink = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
 caption = '''
 A figure is an image with a caption. Figures may also include a tile, legend, and/or attribution.
 '''
@@ -21,13 +21,13 @@ This paragraph is also part of the legend.
 {{< /figure >}}
 
 {{< figure >}}
-src = 'https://source.unsplash.com/200x200/daily?cute+puppy'
-alt = 'Cute puppies'
-attribution = 'from unslash.com'
-attributionlink = 'https://source.unsplash.com/200x200/daily?cute+puppy'
-align = 'left'
+src = "https://images.unsplash.com/photo-1546238232-20216dec9f72"
+alt = "Cute puppies"
+attribution = "Figure Credits: Cute puppies image from unsplash.com"
+attributionlink = "https://images.unsplash.com/photo-1546238232-20216dec9f72"
+align = "left"
 height = 150
-width = 150
+width = 300
 caption = '''
 A figure with left alignment.
 '''
@@ -37,16 +37,52 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+This shortcode can also be used with named parameters. The following example shows how to do so:
+
+{{< figure
+    src = "https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt = "Cute puppies"
+    attribution = "Figure Credits: Cute puppies image from unsplash.com"
+    attributionlink = "https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    align = "right"
+    height = 150
+    width = 300
+    caption = "A figure with right alignment."
+>}}
+
+{{< /figure >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 */}}
 
-{{- $figure := .Inner | transform.Unmarshal -}}
+{{- $useParams := true -}}
+{{- $figure := dict -}}
+
+{{- if strings.TrimSpace .Inner -}}
+    {{- if not .IsNamedParams -}}
+    {{- $useParams = false -}}
+    {{- $figure = .Inner | transform.Unmarshal -}}
+    {{- end -}}
+{{- end -}}
+
+{{/* If we're using params, collect them. */}}
+{{- if $useParams -}}
+    {{- range $key, $value := .Params -}}
+    {{- $figure = merge $figure (dict $key $value) -}}
+    {{- end -}}
+{{- end -}}
+
 {{- $align := default "default" $figure.align -}}
 {{- $id := printf "id%03d" $.Ordinal -}}
+
 <figure class="align-{{ $align }}" id="{{ $id }}">
-{{- $m := newScratch -}}
-{{- $m.Set "image" $figure -}}
-{{- $m.SetInMap "image" "align" "center" -}}
-{{ partial "_elements/image.html" (dict "data" $m.Values.image) }}
+{{/* Create a clean copy of figure data with align center for image */}}
+{{- $image := merge $figure (dict "align" "center") -}}
+{{ partial "_elements/image.html" (dict "data" $image) }}
+
 <figcaption>
 {{- with $figure.title -}}
 <strong class="caption-title">{{ . }}</strong><a class="headerlink" href="#{{ $id  }}" title="Link to this image">#</a><br>
@@ -55,7 +91,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {{- with $figure.attributionlink -}}<a href="{{ . }}">{{- end -}}{{- $figure.attribution -}}{{- if $figure.attributionlink -}}</a>{{- end -}}
 {{- end }}
 <p><span class="caption-text">
-{{- $figure.caption | markdownify -}}
+{{- $figure.caption | markdownify | plainify -}}
 </span>
 {{- with $figure.legend }}
 <div class="legend">
