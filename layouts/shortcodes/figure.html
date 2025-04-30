@@ -91,7 +91,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {{- with $figure.attributionlink -}}<a href="{{ . }}">{{- end -}}{{- $figure.attribution -}}{{- if $figure.attributionlink -}}</a>{{- end -}}
 {{- end }}
 <p><span class="caption-text">
-{{- $figure.caption | markdownify -}}
+{{- $figure.caption | markdownify | plainify -}}
 </span>
 {{- with $figure.legend }}
 <div class="legend">
