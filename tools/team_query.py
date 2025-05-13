@@ -69,7 +69,8 @@ classcard = 'text-center'
 body = '''
 {{< image
     src="${avatarUrl}"
-    alt="Avatar of ${name}" >}}
+    alt="Avatar of ${name}"
+>}}
 ${name}'''
 link = '${url}'
 """
