@@ -47,8 +47,10 @@ def shortcode_doc(fn):
     example = (
         code.replace("{{< ", "{{</* ")
         .replace(" >}}", " */>}}")
+        .replace("\n>}}", "\n*/>}}")
         .replace("{{% ", "{{%/* ")
         .replace(" %}}", " */%}}")
+        .replace("\n%}}", "\n*/%}}")
     )
 
     # Process rendering options.
