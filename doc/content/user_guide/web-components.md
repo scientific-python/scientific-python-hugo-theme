@@ -50,54 +50,51 @@ success outline
 Here are some of the available button-style links, also using semantic
 colors:
 
-{{< button
-style="info"
-label="Info"
-link="http://example.com/"
-
-> }}
+<!-- prettier-ignore-start -->
 
 {{< button
-style="success"
-label="Success"
-link="http://example.com/"
-
-> }}
-
-{{< button
-style="warning"
-label="Warning"
-link="http://example.com/"
-
-> }}
+    style="info"
+    label="Info"
+    link="http://example.com/"
+>}}
 
 {{< button
-style="danger"
-label="Danger"
-link="http://example.com/"
-
-> }}
-
-{{< button
-style="muted"
-label="Muted"
-link="http://example.com/"
-
-> }}
+    style="success"
+    label="Success"
+    link="http://example.com/"
+>}}
 
 {{< button
-style="light"
-label="Light"
-link="http://example.com/"
-
-> }}
+    style="warning"
+    label="Warning"
+    link="http://example.com/"
+>}}
 
 {{< button
-style="dark"
-label="Dark"
-link="http://example.com/"
+    style="danger"
+    label="Danger"
+    link="http://example.com/"
+>}}
 
-> }}
+{{< button
+    style="muted"
+    label="Muted"
+    link="http://example.com/"
+>}}
+
+{{< button
+    style="light"
+    label="Light"
+    link="http://example.com/"
+>}}
+
+{{< button
+    style="dark"
+    label="Dark"
+    link="http://example.com/"
+>}}
+
+<!-- prettier-ignore-end -->
 
 {{< admonition note >}}
 [Sphinx Design
@@ -117,6 +114,8 @@ buttons will automatically use the custom color.
 -->
 
 ## Cards
+
+<!-- prettier-ignore-start -->
 
 {{< grid >}}
 
@@ -152,10 +151,9 @@ body = '''
 title="Click to expand dropdown"
 icon="fa-solid fa-eye"
 body="Hidden content"
-
-> }}
-> '''
-> {{< /card >}}
+>}}
+'''
+{{< /card >}}
 
 {{< card >}}
 title = 'A clickable card'
@@ -181,6 +179,8 @@ footer = 'Footer'
 {{< /card >}}
 
 {{< /grid >}}
+
+<!-- prettier-ignore-end -->
 
 ## Tabs
 
@@ -299,34 +299,34 @@ And some admonition content.
 
 {{< dropdown body="And with no title and some content!" >}}
 
+<!-- prettier-ignore-start -->
+
 {{< dropdown
 title="With a title"
 body="And some content!"
-
-> }}
+>}}
 
 {{< dropdown
 title="With a title and icon"
 icon="fa-solid fa-lock-open"
 body="And some content and an icon!"
-
-> }}
+>}}
 
 {{< dropdown
 title="A primary color dropdown"
 icon="fa-solid fa-lock-open"
 color="primary"
 body="And some content and an icon!"
-
-> }}
+>}}
 
 {{< dropdown
 title="A secondary color dropdown"
 icon="fa-solid fa-eye"
 color="secondary"
 body="And some content and an icon!"
+>}}
 
-> }}
+<!-- prettier-ignore-end -->
 
 ## Copybuttons
 
