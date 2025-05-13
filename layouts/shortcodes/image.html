@@ -2,33 +2,30 @@
 
 doc: Images
 
-{{< image >}}
-src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
-alt = 'Cute puppies'
-height = 200
-width = 400
-{{< /image >}}
+{{< image
+    src="https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt="Cute puppies"
+    height=200
+    width=400 >}}
 
 A clickable image:
 
-{{< image >}}
-src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
-alt = 'Cute puppies'
-target = 'https://unsplash.com/'
-height = 200
-width = 400
-{{< /image >}}
+{{< image
+    src="https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt="Cute puppies"
+    target="https://unsplash.com/"
+    height=200
+    width=400 >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-{{< image >}}
-src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
-alt = 'Cute puppies'
-align = 'right'
-height = 200
-width = 400
-loading = 'lazy'
-{{< /image >}}
+{{< image
+    src="https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt="Cute puppies"
+    align="right"
+    height=200
+    width=400
+    loading="lazy" >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -36,5 +33,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 */}}
 
-{{- $data := .Inner | transform.Unmarshal -}}
-{{- partial "_elements/image.html" (dict "data" $data) -}}
+{{- $image := dict -}}
+{{- range $key, $value := .Params -}}
+{{- $image = merge $image (dict $key $value) -}}
+{{- end -}}
+{{- partial "_elements/image.html" (dict "data" $image) -}}

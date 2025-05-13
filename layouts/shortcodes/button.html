@@ -2,83 +2,83 @@
 
 doc: Create button links in various styles.
 
-{{< button info >}}
-label: Info
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="info"
+    label="Info"
+    link="http://example.com/" >}}
 
-{{< button success >}}
-label: Success
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="success"
+    label="Success"
+    link="http://example.com/" >}}
 
-{{< button warning >}}
-label: Warning
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="warning"
+    label="Warning"
+    link="http://example.com/" >}}
 
-{{< button danger >}}
-label: Danger
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="danger"
+    label="Danger"
+    link="http://example.com/" >}}
 
-{{< button muted >}}
-label: Muted
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="muted"
+    label="Muted"
+    link="http://example.com/" >}}
 
-{{< button light >}}
-label: Light
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="light"
+    label="Light"
+    link="http://example.com/" >}}
 
-{{< button dark >}}
-label: Dark
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="dark"
+    label="Dark"
+    link="http://example.com/" >}}
 
 <p>
 
-{{< button outline-info >}}
-label: Info
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-info"
+    label="Info"
+    link="http://example.com/" >}}
 
-{{< button outline-success >}}
-label: Success
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-success"
+    label="Success"
+    link="http://example.com/" >}}
 
-{{< button outline-warning >}}
-label: Warning
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-warning"
+    label="Warning"
+    link="http://example.com/" >}}
 
-{{< button outline-danger >}}
-label: Danger
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-danger"
+    label="Danger"
+    link="http://example.com/" >}}
 
-{{< button outline-muted >}}
-label: Muted
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-muted"
+    label="Muted"
+    link="http://example.com/" >}}
 
-{{< button outline-light >}}
-label: Light
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-light"
+    label="Light"
+    link="http://example.com/" >}}
 
-{{< button outline-dark >}}
-label: Dark
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="outline-dark"
+    label="Dark"
+    link="http://example.com/" >}}
 
 */}}
 
-{{ $button_style := .Get 0 }}
-{{ $button_data := transform.Unmarshal .Inner }}
-{{ $button_label := $button_data.label }}
-{{ $button_link := $button_data.link }}
+{{- $button := dict -}}
+{{- range $key, $value := .Params -}}
+{{- $button = merge $button (dict $key $value) -}}
+{{- end -}}
 
-<a href="{{$button_link}}"><span class="sd-btn sd-btn-{{$button_style}}">{{$button_label}}</span></a>
+<a href="{{$button.link}}"><span class="sd-btn sd-btn-{{$button.style}}">{{$button.label}}</span></a>

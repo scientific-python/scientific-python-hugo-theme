@@ -2,55 +2,54 @@
 
 doc: Dropdowns
 
-{{< dropdown >}}
-body = 'And with no title and some content!'
-{{< /dropdown >}}
+{{< dropdown
+    body="And with no title and some content!" >}}
 
-{{< dropdown >}}
-title = 'With a title'
-body = 'And some content!'
-{{< /dropdown >}}
+{{< dropdown
+    title="With a title"
+    body="And some content!" >}}
 
-{{< dropdown >}}
-title = 'With a title and icon'
-icon = 'fa-solid fa-lock-open'
-body = 'And some content and an icon!'
-{{< /dropdown >}}
+{{< dropdown
+    title="With a title and icon"
+    icon="fa-solid fa-lock-open"
+    body="And some content and an icon!" >}}
 
-{{< dropdown >}}
-title = 'A primary color dropdown'
-icon = 'fa-solid fa-lock-open'
-color = 'primary'
-body = 'And some content and an icon!'
-{{< /dropdown >}}
+{{< dropdown
+    title="A primary color dropdown"
+    icon="fa-solid fa-lock-open"
+    color="primary"
+    body="And some content and an icon!" >}}
 
-{{< dropdown >}}
-title = 'A secondary color dropdown'
-icon = 'fa-solid fa-eye'
-color = 'secondary'
-body = 'And some content and an icon!'
-{{< /dropdown >}}
+{{< dropdown
+    title="A secondary color dropdown"
+    icon="fa-solid fa-eye"
+    color="secondary"
+    body="And some content and an icon!" >}}
 
 */}}
 
-{{- $data := .Inner | transform.Unmarshal -}}
+{{- $dropdown := dict -}}
+{{- range $key, $value := .Params -}}
+{{- $dropdown = merge $dropdown (dict $key $value) -}}
+{{- end -}}
+
 <details class="sd-card sd-dropdown sd-mb-3">
-  {{- with $data.color }}
+  {{- with $dropdown.color }}
   <summary class="sd-summary-title sd-card-header sd-bg-{{ . }} sd-bg-text-{{ . }}">
   {{- else }}
     <summary class="sd-summary-title sd-card-header">
   {{- end }}
-  {{- with $data.icon }}
+  {{- with $dropdown.icon }}
   <span class="sd-summary-icon"><i class="fa {{ . }}"></i></span>
   {{- end }}
-  {{- with $data.title }}
+  {{- with $dropdown.title }}
   {{- . }}
   {{- else }}
   <i class="fas fa-ellipsis-h"></i>&nbsp;
   {{- end }}
   </summary>
   <div class="sd-summary-content sd-card-body">
-    {{- with (trim $data.body "\n") }}
+    {{- with (trim $dropdown.body "\n") }}
       {{- . | markdownify }}
     {{- end }}
   </div>

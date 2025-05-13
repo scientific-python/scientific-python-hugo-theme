@@ -49,11 +49,10 @@ Content of the third card.
 type = 'card'
 title = 'A card with a dropdown menu'
 body = '''
-{{< dropdown >}}
-title = 'Click to expand dropdown'
-icon = 'fa-solid fa-eye'
-body = 'Hidden content'
-{{< /dropdown >}}
+{{< dropdown
+    title="Click to expand dropdown"
+    icon="fa-solid fa-eye"
+    body="Hidden content" >}}
 '''
 
 [[item]]
@@ -66,30 +65,31 @@ footer = 'Footer'
 [[item]]
 type = 'card'
 header = 'A clickable image card'
-link = 'https://example.com'
-body = '''{{< image >}}
-src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
-alt = 'Cute puppies'
-{{< /image >}}'''
+link='https://example.com'
+body='''
+{{< image
+    src="https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt="Cute puppies" >}}
+'''
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
 link = 'https://example.com'
-body = '''{{< image >}}
-src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
-alt = 'Cute puppies'
-{{< /image >}}
+body = '''
+{{< image
+    src="https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt="Cute puppies" >}}
 
 A clickable figure card'''
 
 [[item]]
 type = 'card'
 link = 'https://example.com'
-body = '''{{< image >}}
-src = 'https://images.unsplash.com/photo-1546238232-20216dec9f72'
-alt = 'Cute puppies'
-{{< /image >}}'''
+body = '''
+{{< image
+    src="https://images.unsplash.com/photo-1546238232-20216dec9f72"
+    alt="Cute puppies" >}}'''
 footer = 'A clickable figure card'
 
 {{< /grid >}}

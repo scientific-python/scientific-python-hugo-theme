@@ -50,40 +50,40 @@ success outline
 Here are some of the available button-style links, also using semantic
 colors:
 
-{{< button info >}}
-label: Info
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="info"
+    label="Info"
+    link="http://example.com/" >}}
 
-{{< button success >}}
-label: Success
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="success"
+    label="Success"
+    link="http://example.com/" >}}
 
-{{< button warning >}}
-label: Warning
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="warning"
+    label="Warning"
+    link="http://example.com/" >}}
 
-{{< button danger >}}
-label: Danger
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="danger"
+    label="Danger"
+    link="http://example.com/" >}}
 
-{{< button muted >}}
-label: Muted
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="muted"
+    label="Muted"
+    link="http://example.com/" >}}
 
-{{< button light >}}
-label: Light
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="light"
+    label="Light"
+    link="http://example.com/" >}}
 
-{{< button dark >}}
-label: Dark
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="dark"
+    label="Dark"
+    link="http://example.com/" >}}
 
 {{< admonition note >}}
 [Sphinx Design
@@ -134,11 +134,10 @@ Content of the third card.
 {{< card >}}
 title = 'A card with a dropdown menu'
 body = '''
-{{< dropdown >}}
-title = 'Click to expand dropdown'
-icon = 'fa-solid fa-eye'
-body = 'Hidden content'
-{{< /dropdown >}}
+{{< dropdown
+    title="Click to expand dropdown"
+    icon="fa-solid fa-eye"
+    body="Hidden content" >}}
 '''
 {{< /card >}}
 
@@ -284,32 +283,27 @@ And some admonition content.
 
 {{< dropdown >}}
 body = 'And with no title and some content!'
-{{< /dropdown >}}
+
+{{< dropdown
+    title="With a title"
+    body="And some content!" >}}
 
 {{< dropdown >}}
-title = 'With a title'
-body = 'And some content!'
-{{< /dropdown >}}
+title="With a title and icon"
+icon="fa-solid fa-lock-open"
+body="And some content and an icon!" >}}
 
 {{< dropdown >}}
-title = 'With a title and icon'
-icon = 'fa-solid fa-lock-open'
-body = 'And some content and an icon!'
-{{< /dropdown >}}
+title="A primary color dropdown"
+icon="fa-solid fa-lock-open"
+color="primary"
+body="And some content and an icon!" >}}
 
 {{< dropdown >}}
-title = 'A primary color dropdown'
-icon = 'fa-solid fa-lock-open'
-color = 'primary'
-body = 'And some content and an icon!'
-{{< /dropdown >}}
-
-{{< dropdown >}}
-title = 'A secondary color dropdown'
-icon = 'fa-solid fa-eye'
-color = 'secondary'
-body = 'And some content and an icon!'
-{{< /dropdown >}}
+title="A secondary color dropdown"
+icon="fa-solid fa-eye"
+color="secondary"
+body="And some content and an icon!" >}}
 
 ## Copybuttons
 
