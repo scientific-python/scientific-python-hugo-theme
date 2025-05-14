@@ -9,3 +9,5 @@ public
 
 # vim droppings
 .*.swp
+
+.DS_Store
