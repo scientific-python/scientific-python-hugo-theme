@@ -178,9 +178,9 @@ And here is some more content after the inner dropdown.
       <i class="fas {{ $chevronIcon }}"></i>
     </span>
   </summary>
-  <div class="sd-summary-content sd-card-body docutils">
-    {{- with (trim $data.body "\n") -}}
-      {{- . | markdownify -}}
-    {{- end -}}
+  <div class="sd-summary-content sd-card-body">
+    {{- with (trim $data.body "\n") }}
+      {{- . | markdownify }}
+    {{- end }}
   </div>
 </details>
