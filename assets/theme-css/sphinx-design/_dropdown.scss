@@ -5,10 +5,31 @@ details.sd-dropdown {
     font-weight: 700;
     // don't overlap the chevron
     padding-right: 3em !important;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
     user-select: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .sd-summary-text {
+      flex-grow: 1;
+      line-height: 1.5;
+      padding-right: 0.5rem;
+    }
+
+    .sd-summary-state-marker {
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &:hover .sd-summary-state-marker svg {
+      opacity: 1;
+    }
   }
 
   &:hover {
@@ -54,7 +75,6 @@ details.sd-dropdown {
   summary:hover .sd-summary-up svg,
   summary:hover .sd-summary-down svg {
     opacity: 1;
-    transform: scale(1.1);
   }
 
   .sd-summary-up svg,
@@ -77,6 +97,42 @@ details.sd-dropdown {
 
   &:not([open]) > .sd-summary-title .sd-summary-up {
     visibility: hidden;
+  }
+
+  // Chevron transitions
+  .sd-summary-chevron-right i,
+  .sd-summary-chevron-down i {
+    display: inline-block;
+    transform-origin: center;
+    transition:
+      transform 0.25s ease-in-out,
+      opacity 0.25s ease-in-out;
+    opacity: 0.6;
+  }
+
+  // The chevron rotation animations are applied to
+  // the icon inside the dropdown title div
+  &[open] > .sd-summary-title .sd-summary-chevron-right i {
+    transform: rotate(90deg);
+  }
+
+  &[open] > .sd-summary-title .sd-summary-chevron-down i {
+    transform: rotate(180deg);
+  }
+
+  &:hover .sd-summary-chevron-right i,
+  &:hover .sd-summary-chevron-down i {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  // Combined transform for open state with hover
+  &[open]:hover > .sd-summary-title .sd-summary-chevron-right i {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  &[open]:hover > .sd-summary-title .sd-summary-chevron-down i {
+    transform: rotate(180deg) scale(1.1);
   }
 
   // Hide the card body border when not open
