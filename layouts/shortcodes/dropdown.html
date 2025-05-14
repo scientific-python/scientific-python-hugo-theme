@@ -39,12 +39,25 @@ body = "And some content and an icon!"
 {{< /dropdown >}}
 
 {{< dropdown >}}
-title = 'Open dropdown by default'
-icon = 'fa-solid fa-eye'
-color = 'info'
-open = true
-body = 'This dropdown is open by default!'
+title = "A dropdown inside a dropdown"
+icon = "fa-solid fa-exclamation-triangle"
+body='''
+  Here is a dropdown again!
+{{< dropdown >}}
+    title="A nested dropdown"
+    icon="fa-solid fa-bell"
+    body="And some content!"
 {{< /dropdown >}}
+'''
+{{< /dropdown >}}
+
+{{< dropdown
+    title="Open dropdown by default"
+    icon="fa-solid fa-eye"
+    color="info"
+    open="true"
+    body="This dropdown is open by default!"
+>}}
 
 {{< dropdown >}}
 title = 'Fade in animation'
