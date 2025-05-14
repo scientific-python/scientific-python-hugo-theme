@@ -31,33 +31,20 @@ color = 'secondary'
 body = 'And some content and an icon!'
 {{< /dropdown >}}
 
-{{< dropdown >}}</dropdown>
-title = "A success color dropdown"
-icon = "fa-solid fa-check"
-color = "success"
-body = "And some content and an icon!"
+{{< dropdown >}}
+title = 'A success color dropdown'
+icon = 'fa-solid fa-check'
+color = 'success'
+body = 'And some content and an icon!'
 {{< /dropdown >}}
 
 {{< dropdown >}}
-title = "A dropdown inside a dropdown"
-icon = "fa-solid fa-exclamation-triangle"
-body='''
-  Here is a dropdown again!
-{{< dropdown >}}
-    title="A nested dropdown"
-    icon="fa-solid fa-bell"
-    body="And some content!"
+title = 'Open dropdown by default'
+icon = 'fa-solid fa-eye'
+color = 'info'
+open = true
+body = 'This dropdown is open by default!'
 {{< /dropdown >}}
-'''
-{{< /dropdown >}}
-
-{{< dropdown
-    title="Open dropdown by default"
-    icon="fa-solid fa-eye"
-    color="info"
-    open="true"
-    body="This dropdown is open by default!"
->}}
 
 {{< dropdown >}}
 title = 'Fade in animation'
@@ -161,7 +148,7 @@ And more content after the inner dropdown.
     {{- $summaryClasses = $summaryClasses | append (printf "sd-bg-%s" .) -}}
     {{- $summaryClasses = $summaryClasses | append (printf "sd-bg-text-%s" .) -}}
   {{- end -}}
-  
+
   <summary class="{{ delimit $summaryClasses " " }}">
     {{- with $data.icon }}
     <span class="sd-summary-icon"><i class="fa {{ . }}"></i></span>
@@ -181,25 +168,5 @@ And more content after the inner dropdown.
     {{- with (trim $data.body "\n") -}}
       {{- . | markdownify -}}
     {{- end -}}
-    
-    <summary class="{{ delimit $summaryClasses " " }}">
-      {{- with $data.icon }}
-      <span class="sd-summary-icon"><i class="fa {{ . }}"></i></span>
-      {{- end }}
-      <span class="sd-summary-text">
-      {{- with $data.title }}
-        {{- . }}
-      {{- else }}
-        <i class="fas fa-ellipsis-h no-title sd-octicon"></i>
-      {{- end }}
-      </span>
-      <span class="sd-summary-state-marker {{ $chevronClass }}">
-        <i class="fas {{ $chevronIcon }}"></i>
-      </span>
-    </summary>
-    <div class="sd-summary-content sd-card-body docutils">
-      {{- with (trim $data.body "\n") -}}
-        {{- . | markdownify -}}
-      {{- end -}}
-    </div>
-  </details>
+  </div>
+</details>
