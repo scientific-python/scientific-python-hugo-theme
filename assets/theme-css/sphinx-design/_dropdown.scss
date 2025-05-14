@@ -27,6 +27,8 @@ details.sd-dropdown {
       align-items: center;
     }
 
+    // The hover effect should only change opacity, not transform.
+    // We are transforming the chevron elements instead, see below.
     &:hover .sd-summary-state-marker svg {
       opacity: 1;
     }
@@ -123,7 +125,34 @@ details.sd-dropdown {
   &:hover .sd-summary-chevron-right i,
   &:hover .sd-summary-chevron-down i {
     opacity: 1;
+  }
+
+  // Combined transforms for each state with hover. These cover
+  // the cases where the chevron is rotated, say, when the dropdown
+  // is open or if the chevron starts rotated (e.g. in the down-up
+  // state).
+  &:not([open]):hover .sd-summary-chevron-right i {
     transform: scale(1.1);
+  }
+
+  &:not([open]):hover .sd-summary-chevron-down i {
+    transform: scale(1.1);
+  }
+
+  &[open]:hover .sd-summary-chevron-right i {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  &[open]:hover .sd-summary-chevron-down i {
+    transform: rotate(180deg) scale(1.1);
+  }
+
+  &[open]:hover > .sd-summary-title .sd-summary-chevron-right i {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  &[open]:hover > .sd-summary-title .sd-summary-chevron-down i {
+    transform: rotate(180deg) scale(1.1);
   }
 
   // Hide the card body border when not open
