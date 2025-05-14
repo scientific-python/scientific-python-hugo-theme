@@ -147,11 +147,11 @@ Content of the third card.
 {{< card >}}
 title = 'A card with a dropdown menu'
 body = '''
-{{< dropdown
-title="Click to expand dropdown"
-icon="fa-solid fa-eye"
-body="Hidden content"
->}}
+{{< dropdown >}}
+title = 'Click to expand dropdown'
+icon = 'fa-solid fa-eye'
+body = 'Hidden content'
+{{< /dropdown >}}
 '''
 {{< /card >}}
 
@@ -297,36 +297,34 @@ An admonition for reference.
 And some admonition content.
 :::
 
-{{< dropdown body="And with no title and some content!" >}}
+{{< dropdown >}}
+body = 'And with no title and some content!'
+{{< /dropdown >}}
 
-<!-- prettier-ignore-start -->
+{{< dropdown >}}
+title = 'With a title'
+body = 'And some content!'
+{{< /dropdown >}}
 
-{{< dropdown
-title="With a title"
-body="And some content!"
->}}
+{{< dropdown >}}
+title = 'With a title and icon'
+icon = 'fa-solid fa-lock-open'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
 
-{{< dropdown
-title="With a title and icon"
-icon="fa-solid fa-lock-open"
-body="And some content and an icon!"
->}}
+{{< dropdown >}}
+title = 'A primary color dropdown'
+icon = 'fa-solid fa-lock-open'
+color = 'primary'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
 
-{{< dropdown
-title="A primary color dropdown"
-icon="fa-solid fa-lock-open"
-color="primary"
-body="And some content and an icon!"
->}}
-
-{{< dropdown
-title="A secondary color dropdown"
-icon="fa-solid fa-eye"
-color="secondary"
-body="And some content and an icon!"
->}}
-
-<!-- prettier-ignore-end -->
+{{< dropdown >}}
+title = 'A secondary color dropdown'
+icon = 'fa-solid fa-eye'
+color = 'secondary'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
 
 ## Copybuttons
 
