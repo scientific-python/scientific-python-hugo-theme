@@ -25,6 +25,8 @@ details.sd-dropdown {
       pointer-events: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
+      width: 0.75em;
     }
 
     // The hover effect should only change opacity, not transform.
