@@ -139,14 +139,6 @@ details.sd-dropdown {
     transform: scale(1.1);
   }
 
-  &[open]:hover .sd-summary-chevron-right i {
-    transform: rotate(90deg) scale(1.1);
-  }
-
-  &[open]:hover .sd-summary-chevron-down i {
-    transform: rotate(180deg) scale(1.1);
-  }
-
   &[open]:hover > .sd-summary-title .sd-summary-chevron-right i {
     transform: rotate(90deg) scale(1.1);
   }
