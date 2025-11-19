@@ -93,6 +93,48 @@ To use them elsewhere, e.g. in Hugo templates, we provide an `svg-icon` partial.
 {{ partial "svg-icon" "my-icon" }}
 ```
 
+## External links
+
+Links in the navbar and footer can be marked as external by adding `is_external: true`. This displays an external link indicator icon (↗)
+next to the link text and opens the link in a new tab.
+
+### Navbar external links
+
+```yaml
+params:
+  navbar:
+    - title: Documentation
+      url: /docs/
+    - title: GitHub
+      url: https://github.com/your-org/your-repo
+      is_external: true
+    - title: More
+      sublinks:
+        - title: Internal Page
+          url: /internal/
+        - title: External Resource
+          url: https://example.com
+          is_external: true
+```
+
+### Footer external links
+
+```yaml
+params:
+  footer:
+    quicklinks:
+      column1:
+        title: "Links"
+        links:
+          - text: About
+            link: /about/
+          - text: GitHub Repository
+            link: https://github.com/your-org/your-repo
+            is_external: true
+```
+
+The external link indicator automatically adapts to both light and dark colour modes.
+
 ## Mermaid diagrams
 
 [Mermaid](https://mermaid.js.org/) diagrams are rendered from code blocks:
