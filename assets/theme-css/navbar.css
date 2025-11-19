@@ -42,6 +42,15 @@ a.navbar-item:hover,
   text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
 }
 
+a.navbar-item.nav-external::after,
+.navbar-dropdown a.navbar-item.nav-external::after {
+  font: var(--fa-font-solid);
+  content: "\f35d";
+  font-size: 0.75em;
+  margin-left: 0.3em;
+  display: inline-block;
+}
+
 .navbar-burger {
   font-family: inherit;
   font-size: 1em;
