@@ -39,6 +39,10 @@
   color: var(--spht-color-link-hover);
 }
 
+.footer-item a.nav-external {
+  white-space: nowrap;
+}
+
 .footer-item a.nav-external::after {
   font: var(--fa-font-solid);
   content: "\f35d";
