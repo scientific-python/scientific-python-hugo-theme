@@ -10,7 +10,7 @@
   <div class="container">
     <div id="footer-columns">
       <div id="footer-logo-column">
-        <img id="footer-logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
+        <img id="footer-logo" class="dark-light" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
       </div>
       {{- range $quickLinks }}
       <div class="footer-column">
