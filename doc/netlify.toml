@@ -1,7 +1,7 @@
 [build.environment]
   PYTHON_VERSION = "3.13"
-  HUGO_VERSION = "0.141.0"
-  DART_SASS_VERSION = "1.83.4"
+  HUGO_VERSION = "0.152.2"
+  DART_SASS_VERSION = "1.93.2"
   DART_SASS_URL = "https://github.com/sass/dart-sass/releases/download/"
 
 [context.production.environment]
@@ -31,4 +31,4 @@
   package = "netlify-plugin-checklinks"
 
   [plugins.inputs]
-  skipPatterns = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', 'https://cdn.jsdelivr.net']
+  skipPatterns = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', 'https://cdn.jsdelivr.net', 'https://cdnjs.cloudflare.com']
