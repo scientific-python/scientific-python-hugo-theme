@@ -23,6 +23,8 @@
      tar -xf ${DART_SASS_TARBALL} && \
      rm ${DART_SASS_TARBALL}) && \
     export PATH=/tmp/dart-sass:$PATH && \
+    python -m venv .py3 && \
+    source .py3/bin/activate && \
     (cd ../.. && ln -s repo scientific-python-hugo-theme) && \
     (cd .. && make ${BUILD_TARGET})
     """
