@@ -38,7 +38,6 @@ format:
 rows:
 
 - columns:
-
   - "NumPy"
   - |
     Official _source code_ (all platforms) and _binaries_ for<br/>
