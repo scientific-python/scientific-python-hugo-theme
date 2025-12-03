@@ -39,6 +39,18 @@
   color: var(--spht-color-link-hover);
 }
 
+.footer-item a.nav-external {
+  white-space: nowrap;
+}
+
+.footer-item a.nav-external::after {
+  font: var(--fa-font-solid);
+  content: "\f35d";
+  font-size: 0.75em;
+  margin-left: 0.3em;
+  display: inline-block;
+}
+
 .footer-actions {
   max-width: 25vw;
   margin: 1.25rem 1.563rem;
