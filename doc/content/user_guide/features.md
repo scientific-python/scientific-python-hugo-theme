@@ -95,8 +95,8 @@ To use them elsewhere, e.g. in Hugo templates, we provide an `svg-icon` partial.
 
 ## External links
 
-Links in the navbar and footer can be marked as external by adding `is_external: true`. This displays an external link indicator icon (&#62301;)
-next to the link text and opens the link in a new tab.
+Links in the navbar and footer can be marked as external by adding `is_external: true`. This displays an external link indicator icon
+(<span style="font-family: 'Font Awesome 6 Free', FontAwesome;"></span>) next to the link text and opens the link in a new tab.
 
 ### Navbar external links
 
