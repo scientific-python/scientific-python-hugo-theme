@@ -16,7 +16,7 @@
       <div class="footer-column">
         {{- range .links }}
         <div class="footer-item">
-          <a href="{{ .link }}">
+          <a href="{{ .link }}"{{ if .is_external }} class="nav-external" target="_blank" rel="noopener"{{ end }}>
             {{ .text }}
           </a>
         </div>
