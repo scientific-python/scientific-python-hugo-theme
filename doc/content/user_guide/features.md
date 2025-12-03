@@ -95,7 +95,7 @@ To use them elsewhere, e.g. in Hugo templates, we provide an `svg-icon` partial.
 
 ## External links
 
-Links in the navbar and footer can be marked as external by adding `is_external: true`. This displays an external link indicator icon (↗)
+Links in the navbar and footer can be marked as external by adding `is_external: true`. This displays an external link indicator icon ()
 next to the link text and opens the link in a new tab.
 
 ### Navbar external links
