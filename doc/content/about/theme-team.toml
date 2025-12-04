@@ -1,71 +1,49 @@
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''
-{{< image
-    src='https://avatars.githubusercontent.com/u/601365?v=4"'
-    alt="Avatar of Adam Porter"
+body = '''{{< image
+    src="https://avatars.githubusercontent.com/u/74401230?u=546fa4d9e02a02f5ddde49e159b4ddb7464fb987&v=4"
+    alt="Avatar of Agriya Khetarpal"
 >}}
-Adam Porter
-'''
-link = 'https://github.com/alphapapa'
+Agriya Khetarpal'''
+link = 'https://github.com/agriyakhetarpal'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''
-{{< image
-    src='https://avatars.githubusercontent.com/u/352264?u=1fd523aa28b0451454989400579d97a8c1bc1b9a&v=4"'
+body = '''{{< image
+    src="https://avatars.githubusercontent.com/u/352264?u=67a524f2ca43af69e415c67968a903e0acdbec10&v=4"
     alt="Avatar of Brian Hawthorne"
 >}}
-Brian Hawthorne
-'''
+Brian Hawthorne'''
 link = 'https://github.com/brianhawthorne'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''
-{{< image
-    src='https://avatars.githubusercontent.com/u/123428?v=4"'
+body = '''{{< image
+    src="https://avatars.githubusercontent.com/u/123428?v=4"
     alt="Avatar of Jarrod Millman"
 >}}
-Jarrod Millman
-'''
+Jarrod Millman'''
 link = 'https://github.com/jarrodmillman'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''
-{{< image
-    src='https://avatars.githubusercontent.com/u/45071?u=c779b5e06448fbc638bc987cdfe305c7f9a7175e&v=4"'
+body = '''{{< image
+    src="https://avatars.githubusercontent.com/u/45071?u=ef2af0a29229833cd2ae0e5aeb90283881e8c1e0&v=4"
     alt="Avatar of Stefan van der Walt"
 >}}
-Stefan van der Walt
-'''
+Stefan van der Walt'''
 link = 'https://github.com/stefanv'
 
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''
-{{< image
-    src='https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&v=4"'
+body = '''{{< image
+    src="https://avatars.githubusercontent.com/u/23188539?u=64445b52dbf3f75de8006ed4264fdd2afaed97a3&v=4"
     alt="Avatar of Pamphile Roy"
 >}}
-Pamphile Roy
-'''
+Pamphile Roy'''
 link = 'https://github.com/tupui'
-
-[[item]]
-type = 'card'
-classcard = 'text-center'
-body = '''
-{{< image
-    src='https://avatars.githubusercontent.com/u/74401230?v=4"'
-    alt='Avatar of Agriya Khetarpal'
->}}
-Agriya Khetarpal
-'''
-link = 'https://github.com/agriyakhetarpal'
