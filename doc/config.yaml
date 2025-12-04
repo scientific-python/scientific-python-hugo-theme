@@ -56,14 +56,14 @@ params:
     socialmedia:
       - link: https://github.com/scientific-python/
         icon: github
-      - link: https://www.youtube.com/c/ScientificPython-org
-        icon: youtube
       - link: https://fosstodon.org/@scientific_python
         icon: mastodon
       - link: https://discuss.scientific-python.org
         icon: discourse
       - link: https://discord.com/invite/vur45CbwMz
         icon: discord
+      - link: https://bsky.app/profile/scientific-python.org
+        icon: bluesky
       - link: https://linkedin.com/company/scientific-python
         icon: linkedin
 
