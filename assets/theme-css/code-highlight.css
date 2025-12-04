@@ -306,7 +306,6 @@ html[data-theme="light"] {
   /* LineNumbersTable */
   .chroma .lnt {
     white-space: pre;
-    -webkit-user-select: none;
     user-select: none;
     margin-right: 0.4em;
     padding: 0 0.4em 0 0.4em;
@@ -315,7 +314,6 @@ html[data-theme="light"] {
   /* LineNumbers */
   .chroma .ln {
     white-space: pre;
-    -webkit-user-select: none;
     user-select: none;
     margin-right: 0.4em;
     padding: 0 0.4em 0 0.4em;

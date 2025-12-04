@@ -10,9 +10,7 @@
   border: 1px solid var(--sd-color-card-border);
   border-radius: 0.25rem;
   color: var(--sd-color-card-text);
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
   position: relative;
@@ -30,7 +28,6 @@
 }
 
 .sd-card-body {
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
@@ -125,7 +122,6 @@
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  -ms-flex-direction: row;
   flex-direction: row;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
