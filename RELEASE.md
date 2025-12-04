@@ -51,12 +51,14 @@ Example `version number`
 
 - Create release from tag
 
-      - go to https://github.com/scientific-python/scientific-python-hugo-theme/releases/new?tag=v${VERSION}
-      - add v${VERSION} for the `Release title`
+      - go to https://github.com/scientific-python/scientific-python-hugo-theme/releases/tags
+      - click the 3 dots: create a release
+      - use v${VERSION} for the `Release title`
       - paste contents (or upload) of ${VERSION}.md in the `Describe this release section`
       - if pre-release check the box labelled `Set as a pre-release`
 
-- Update https://github.com/scientific-python/scientific-python-hugo-theme/milestones:
+- If a full release, update
+  https://github.com/scientific-python/scientific-python-hugo-theme/milestones:
 
       - close old milestone
       - ensure new milestone exists (perhaps setting due date)
