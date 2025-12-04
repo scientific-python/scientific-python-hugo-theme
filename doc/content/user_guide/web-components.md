@@ -50,40 +50,51 @@ success outline
 Here are some of the available button-style links, also using semantic
 colors:
 
-{{< button info >}}
-label: Info
-link: http://example.com/
-{{< /button >}}
+<!-- prettier-ignore-start -->
 
-{{< button success >}}
-label: Success
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="info"
+    label="Info"
+    link="http://example.com/"
+>}}
 
-{{< button warning >}}
-label: Warning
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="success"
+    label="Success"
+    link="http://example.com/"
+>}}
 
-{{< button danger >}}
-label: Danger
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="warning"
+    label="Warning"
+    link="http://example.com/"
+>}}
 
-{{< button muted >}}
-label: Muted
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="danger"
+    label="Danger"
+    link="http://example.com/"
+>}}
 
-{{< button light >}}
-label: Light
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="muted"
+    label="Muted"
+    link="http://example.com/"
+>}}
 
-{{< button dark >}}
-label: Dark
-link: http://example.com/
-{{< /button >}}
+{{< button
+    style="light"
+    label="Light"
+    link="http://example.com/"
+>}}
+
+{{< button
+    style="dark"
+    label="Dark"
+    link="http://example.com/"
+>}}
+
+<!-- prettier-ignore-end -->
 
 {{< admonition note >}}
 [Sphinx Design
@@ -103,6 +114,8 @@ buttons will automatically use the custom color.
 -->
 
 ## Cards
+
+<!-- prettier-ignore-start -->
 
 {{< grid >}}
 
@@ -166,6 +179,8 @@ footer = 'Footer'
 {{< /card >}}
 
 {{< /grid >}}
+
+<!-- prettier-ignore-end -->
 
 ## Tabs
 
