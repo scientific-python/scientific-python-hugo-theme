@@ -64,8 +64,14 @@ params:
         icon: discourse
       - link: https://discord.com/invite/vur45CbwMz
         icon: discord
+      - link: https://bsky.app/profile/scientific-python.org
+        icon: bluesky
       - link: https://linkedin.com/company/scientific-python
         icon: linkedin
+      - link: https://tiktok.com/@scientific.python
+        icon: tiktok
+      - link: https://instagram.com/scientific.python
+        icon: instagram
 
     quicklinks:
       column1:
