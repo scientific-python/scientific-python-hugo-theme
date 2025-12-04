@@ -66,8 +66,7 @@ member_template = string.Template(
 [[item]]
 type = 'card'
 classcard = 'text-center'
-body = '''
-{{< image
+body = '''{{< image
     src="${avatarUrl}"
     alt="Avatar of ${name}"
 >}}
