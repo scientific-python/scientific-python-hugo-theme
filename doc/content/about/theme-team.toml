@@ -57,3 +57,15 @@ body = '''
 Pamphile Roy
 '''
 link = 'https://github.com/tupui'
+
+[[item]]
+type = 'card'
+classcard = 'text-center'
+body = '''
+{{< image
+    src='https://avatars.githubusercontent.com/u/74401230?v=4"'
+    alt='Avatar of Agriya Khetarpal'
+>}}
+Agriya Khetarpal
+'''
+link = 'https://github.com/agriyakhetarpal'
