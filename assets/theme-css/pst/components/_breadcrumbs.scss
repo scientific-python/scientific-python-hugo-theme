@@ -1,6 +1,10 @@
 /**
  * Breadcrumbs for parent pages meant for the article header
  */
+nav[aria-label="Breadcrumb"] {
+  width: fit-content;
+}
+
 ul.bd-breadcrumbs {
   list-style: none;
   padding-left: 0;
