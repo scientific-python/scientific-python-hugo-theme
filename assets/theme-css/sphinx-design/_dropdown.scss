@@ -5,10 +5,35 @@ details.sd-dropdown {
     font-weight: 700;
     // don't overlap the chevron
     padding-right: 3em !important;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
     user-select: none;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .sd-summary-text {
+      flex-grow: 1;
+      line-height: 1.5;
+      padding-right: 0.5rem;
+    }
+
+    .sd-summary-state-marker {
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 0.75em;
+    }
+
+    // The hover effect should only change opacity, not transform.
+    // We are transforming the chevron elements instead, see below.
+    &:hover .sd-summary-state-marker svg {
+      opacity: 1;
+    }
   }
 
   &:hover {
@@ -54,7 +79,6 @@ details.sd-dropdown {
   summary:hover .sd-summary-up svg,
   summary:hover .sd-summary-down svg {
     opacity: 1;
-    transform: scale(1.1);
   }
 
   .sd-summary-up svg,
@@ -79,6 +103,61 @@ details.sd-dropdown {
     visibility: hidden;
   }
 
+  // Chevron transitions
+  .sd-summary-chevron-right i,
+  .sd-summary-chevron-down i {
+    display: inline-block;
+    transform-origin: center;
+    opacity: 0.6;
+  }
+
+  // The chevron rotation animations are applied to
+  // the icon inside the dropdown title div
+  &[open] > .sd-summary-title .sd-summary-chevron-right i {
+    transform: rotate(90deg);
+    animation: rotate-to-90 0.25s ease-in-out;
+  }
+
+  &[open] > .sd-summary-title .sd-summary-chevron-down i {
+    transform: rotate(-180deg);
+    animation: rotate-to-negative-180 0.25s ease-in-out;
+  }
+
+  &:not([open]) > .sd-summary-title .sd-summary-chevron-right i {
+    transform: rotate(0deg);
+    animation: rotate-to-0-from-90 0.25s ease-in-out;
+  }
+
+  &:not([open]) > .sd-summary-title .sd-summary-chevron-down i {
+    transform: rotate(0deg);
+    animation: rotate-to-0-from-negative-180 0.25s ease-in-out;
+  }
+
+  > .sd-summary-title:hover .sd-summary-chevron-right i,
+  > .sd-summary-title:hover .sd-summary-chevron-down i {
+    opacity: 1;
+  }
+
+  // Combined transforms for each state with hover. These cover
+  // the cases where the chevron is rotated, say, when the dropdown
+  // is open or if the chevron starts rotated (e.g. in the down-up
+  // state).
+  &:not([open]) > .sd-summary-title:hover .sd-summary-chevron-right i {
+    transform: scale(1.1);
+  }
+
+  &:not([open]) > .sd-summary-title:hover .sd-summary-chevron-down i {
+    transform: scale(1.1);
+  }
+
+  &[open] > .sd-summary-title:hover .sd-summary-chevron-right i {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  &[open] > .sd-summary-title:hover .sd-summary-chevron-down i {
+    transform: rotate(-180deg) scale(1.1);
+  }
+
   // Hide the card body border when not open
   &:not([open]).sd-card {
     border: none;
@@ -90,18 +169,10 @@ details.sd-dropdown {
 
   // Transition animation
   &.sd-fade-in[open] summary ~ * {
-    -moz-animation: sd-fade-in 0.5s ease-in-out;
-    -webkit-animation: sd-fade-in 0.5s ease-in-out;
     animation: sd-fade-in 0.5s ease-in-out;
   }
 
   &.sd-fade-in-slide-down[open] summary ~ * {
-    -moz-animation:
-      sd-fade-in 0.5s ease-in-out,
-      sd-slide-down 0.5s ease-in-out;
-    -webkit-animation:
-      sd-fade-in 0.5s ease-in-out,
-      sd-slide-down 0.5s ease-in-out;
     animation:
       sd-fade-in 0.5s ease-in-out,
       sd-slide-down 0.5s ease-in-out;
@@ -135,3 +206,43 @@ details.sd-dropdown {
     transform: translate(0, 0);
   }
 }
+
+@keyframes rotate-to-90 {
+  from {
+    transform: rotate(0deg) scale(1.1);
+  }
+  to {
+    transform: rotate(90deg) scale(1.1);
+  }
+}
+
+@keyframes rotate-to-0-from-90 {
+  from {
+    transform: rotate(90deg) scale(1.1);
+  }
+  to {
+    transform: rotate(0deg) scale(1.1);
+  }
+}
+
+// TODO: These keyframes are disabled for now to maintain
+// parity with Sphinx Design upstream, which does not implement
+// the down-up chevron animation.
+
+// @keyframes rotate-to-negative-180 {
+//   from {
+//     transform: rotate(0deg) scale(1.1);
+//   }
+//   to {
+//     transform: rotate(-180deg) scale(1.1);
+//   }
+// }
+
+// @keyframes rotate-to-0-from-negative-180 {
+//   from {
+//     transform: rotate(-180deg) scale(1.1);
+//   }
+//   to {
+//     transform: rotate(0deg) scale(1.1);
+//   }
+// }
