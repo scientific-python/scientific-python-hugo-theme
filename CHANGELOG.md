@@ -1,3 +1,50 @@
+# scientific-python-hugo-theme 0.22
+
+## Enhancements
+
+- Fix the rendering of shortcuts with branch bundles, and improve shortcut header performance ([#668](https://github.com/scientific-python/scientific-python-hugo-theme/pull/668)).
+- Add bluesky icon ([#673](https://github.com/scientific-python/scientific-python-hugo-theme/pull/673)).
+- Restore functionality for external link indicators ([#678](https://github.com/scientific-python/scientific-python-hugo-theme/pull/678)).
+- Enhancements for dropdowns: animations, open at initial state, and chevron indicators ([#675](https://github.com/scientific-python/scientific-python-hugo-theme/pull/675)).
+- Add LinkedIn icon ([#677](https://github.com/scientific-python/scientific-python-hugo-theme/pull/677)).
+- Support named parameters for applicable shortcodes ([#674](https://github.com/scientific-python/scientific-python-hugo-theme/pull/674)).
+
+## Bug Fixes
+
+- Do not adjust logos for viewing in dark mode ([#679](https://github.com/scientific-python/scientific-python-hugo-theme/pull/679)).
+- Resize the "breadcrumbs" navigation section to fit the content, and stack it below the top navigation bar ([#680](https://github.com/scientific-python/scientific-python-hugo-theme/pull/680)).
+
+## Documentation
+
+- Update readme ([#665](https://github.com/scientific-python/scientific-python-hugo-theme/pull/665)).
+- docs: assert correct location to use for custom JavaScript files ([#676](https://github.com/scientific-python/scientific-python-hugo-theme/pull/676)).
+
+## Maintenance
+
+- Update netlify config ([#683](https://github.com/scientific-python/scientific-python-hugo-theme/pull/683)).
+- Fix new Ubuntu image build errors ([#684](https://github.com/scientific-python/scientific-python-hugo-theme/pull/684)).
+- Bump to Font Awesome 7 ([#682](https://github.com/scientific-python/scientific-python-hugo-theme/pull/682)).
+- Remove some non-standard CSS properties ([#686](https://github.com/scientific-python/scientific-python-hugo-theme/pull/686)).
+- Highlight more of Scientific Python's social media in our footer ([#685](https://github.com/scientific-python/scientific-python-hugo-theme/pull/685)).
+
+## Contributors
+
+5 authors added to this release (alphabetically):
+
+- Agriya Khetarpal ([@agriyakhetarpal](https://github.com/agriyakhetarpal))
+- Ankit Pokhrel ([@ankitpokhrel08](https://github.com/ankitpokhrel08))
+- Gonzalo Peña-Castellanos ([@goanpeca](https://github.com/goanpeca))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+5 reviewers added to this release (alphabetically):
+
+- Agriya Khetarpal ([@agriyakhetarpal](https://github.com/agriyakhetarpal))
+- Brigitta Sipőcz ([@bsipocz](https://github.com/bsipocz))
+- Jarrod Millman ([@jarrodmillman](https://github.com/jarrodmillman))
+- Juanita Gomez ([@juanis2112](https://github.com/juanis2112))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
 # scientific-python-hugo-theme 0.21
 
 We're happy to announce the release of scientific-python-hugo-theme 0.21!
