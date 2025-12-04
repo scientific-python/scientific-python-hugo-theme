@@ -54,8 +54,6 @@ a.navbar-item.nav-external::after,
   font-family: inherit;
   font-size: 1em;
   padding: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   background: 0 0;
   border: none;
