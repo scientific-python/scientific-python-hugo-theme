@@ -1,4 +1,3 @@
-nav,
 .navbar {
   background: var(--pst-color-background);
   position: sticky;
@@ -40,6 +39,15 @@ a.navbar-item:hover,
   color: var(--pst-color-link-hover);
   text-decoration: underline;
   text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+}
+
+a.navbar-item.nav-external::after,
+.navbar-dropdown a.navbar-item.nav-external::after {
+  font: var(--fa-font-solid);
+  content: "\f35d";
+  font-size: 0.75em;
+  margin-left: 0.3em;
+  display: inline-block;
 }
 
 .navbar-burger {

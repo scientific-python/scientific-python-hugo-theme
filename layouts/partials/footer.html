@@ -10,13 +10,13 @@
   <div class="container">
     <div id="footer-columns">
       <div id="footer-logo-column">
-        <img id="footer-logo" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
+        <img id="footer-logo" class="dark-light" src="{{ printf "/images/%s" $logo | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
       </div>
       {{- range $quickLinks }}
       <div class="footer-column">
         {{- range .links }}
         <div class="footer-item">
-          <a href="{{ .link }}">
+          <a href="{{ .link }}"{{ if .is_external }} class="nav-external" target="_blank" rel="noopener"{{ end }}>
             {{ .text }}
           </a>
         </div>

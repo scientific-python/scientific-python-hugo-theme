@@ -79,7 +79,7 @@ CSS and SCSS files are compiled as Hugo templates, i.e. configuration variables 
 
 ### JavaScript
 
-Add custom JavaScript files to the `./static/js/` directory with a `.js` extension. They will automatically be included in the built pages.
+Add custom JavaScript files to the `./assets/js/` directory with a `.js` extension. They will automatically be included in the built pages.
 
 ## Deploy your site
 

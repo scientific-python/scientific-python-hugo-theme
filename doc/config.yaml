@@ -41,6 +41,9 @@ params:
       url: /shortcodes/
     - title: Examples
       url: /examples/
+    - title: Repository
+      url: https://github.com/scientific-python/scientific-python-hugo-theme
+      is_external: true
     - title: More
       sublinks:
         - title: Dropdown item
@@ -61,6 +64,8 @@ params:
         icon: discourse
       - link: https://discord.com/invite/vur45CbwMz
         icon: discord
+      - link: https://linkedin.com/company/scientific-python
+        icon: linkedin
 
     quicklinks:
       column1:
@@ -70,9 +75,11 @@ params:
             link: /about/
           - text: Theme GitHub
             link: https://github.com/scientific-python/scientific-python-hugo-theme
+            is_external: true
       column2:
         links:
           - text: Scientific Python Forum
             link: https://discuss.scientific-python.org
+            is_external: true
       column3:
         links:

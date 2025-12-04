@@ -31,23 +31,152 @@ color = 'secondary'
 body = 'And some content and an icon!'
 {{< /dropdown >}}
 
+{{< dropdown >}}
+title = 'A success color dropdown'
+icon = 'fa-solid fa-check'
+color = 'success'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'A warning color dropdown'
+icon = 'fa-solid fa-exclamation'
+color = 'warning'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'A danger color dropdown'
+icon = 'fa-solid fa-exclamation-triangle'
+color = 'danger'
+body = 'And some content and an icon!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Open dropdown by default'
+icon = 'fa-solid fa-eye'
+color = 'info'
+open = true
+body = 'This dropdown is open by default!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Fade in animation'
+icon = 'fa-solid fa-magic'
+animate = 'fade-in'
+body = 'This dropdown fades in when opened!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Fade in and slide down animation'
+icon = 'fa-solid fa-chart-line'
+animate = 'fade-in-slide-down'
+body = 'This dropdown fades in and slides down when opened!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Using chevron: down-up'
+icon = 'fa-solid fa-cog'
+chevron = 'down-up'
+body = 'Notice the different chevron direction when opened!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Custom chevron with a fade-in animation'
+icon = 'fa-solid fa-star'
+chevron = 'down-up'
+animate = 'fade-in'
+color = 'warning'
+body = 'Combining different features!'
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Multi-line content'
+icon = 'fa-solid fa-align-left'
+body = '''
+This is multi-line content.
+
+It can include **markdown** and multiple paragraphs.
+And even lists:
+
+- Item 1
+- Item 2
+- Item 3
+'''
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Dropdown with code'
+icon = 'fa-solid fa-code'
+color = 'success'
+body = '''
+Here's some code inside a dropdown:
+
+```python
+def hello_world():
+    print("Hello from a dropdown!")
+    return 42
+```
+
+And more content after the code.
+'''
+{{< /dropdown >}}
+
+{{< dropdown >}}
+title = 'Nested dropdowns'
+icon = 'fa-solid fa-folder'
+body = '''
+This is a dropdown with a dropdown inside it.
+
+{{< dropdown >}}
+title = 'Inner dropdown'
+icon = 'fa-solid fa-code'
+body = '''
+I'm inside a dropdown in a dropdown!
+'''
+{{< /dropdown >}}
+
+And here is some more content after the inner dropdown.
+'''
+{{< /dropdown >}}
+
 */}}
 
 {{- $data := .Inner | transform.Unmarshal -}}
-<details class="sd-card sd-dropdown sd-mb-3">
-  {{- with $data.color }}
-  <summary class="sd-summary-title sd-card-header sd-bg-{{ . }} sd-bg-text-{{ . }}">
-  {{- else }}
-    <summary class="sd-summary-title sd-card-header">
-  {{- end }}
-  {{- with $data.icon }}
-  <span class="sd-summary-icon"><i class="fa {{ . }}"></i></span>
-  {{- end }}
-  {{- with $data.title }}
-  {{- . }}
-  {{- else }}
-  <i class="fas fa-ellipsis-h"></i>&nbsp;
-  {{- end }}
+
+{{- $chevronClass := "sd-summary-chevron-right" -}}
+{{- $chevronIcon := "fa-chevron-right" -}}
+{{- if eq $data.chevron "down-up" -}}
+  {{- $chevronClass = "sd-summary-chevron-down" -}}
+  {{- $chevronIcon = "fa-chevron-down" -}}
+{{- end -}}
+
+{{- $detailsClasses := slice "sd-sphinx-override" "sd-dropdown" "sd-card" "sd-mb-3" -}}
+{{- with $data.animate -}}
+  {{- $detailsClasses = $detailsClasses | append (printf "sd-%s" .) -}}
+{{- end -}}
+
+<details class="{{ delimit $detailsClasses " " }}"{{ if $data.open }} open="open"{{ end }}>
+  {{- $summaryClasses := slice "sd-summary-title" "sd-card-header" -}}
+  {{- with $data.color -}}
+    {{- $summaryClasses = $summaryClasses | append (printf "sd-bg-%s" .) -}}
+    {{- $summaryClasses = $summaryClasses | append (printf "sd-bg-text-%s" .) -}}
+  {{- end -}}
+
+  <summary class="{{ delimit $summaryClasses " " }}">
+    {{- with $data.icon }}
+    <span class="sd-summary-icon"><i class="fa {{ . }}"></i></span>
+    {{- end }}
+    <span class="sd-summary-text">
+    {{- with $data.title }}
+      {{- . }}
+    {{- else }}
+      <i class="fas fa-ellipsis-h no-title sd-octicon"></i>
+    {{- end }}
+    </span>
+    <span class="sd-summary-state-marker {{ $chevronClass }}">
+      <i class="fas {{ $chevronIcon }}"></i>
+    </span>
   </summary>
   <div class="sd-summary-content sd-card-body">
     {{- with (trim $data.body "\n") }}

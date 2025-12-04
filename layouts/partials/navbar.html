@@ -8,7 +8,7 @@
       {{- if $navbarLogo}}
       <a class="navbar-item" href="{{ $navbarLogo.link }}">
         {{- with $navbarLogo.image }}
-        <img class="navbar-logo" src="{{ printf "/images/%s" . | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
+        <img class="navbar-logo dark-light" src="{{ printf "/images/%s" . | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
 	{{- end }}
         <div class="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
       </a>
@@ -40,14 +40,14 @@
 
           <div class="navbar-dropdown">
             {{- range .sublinks }}
-            <a href="{{ .url }}" class="navbar-item">
+            <a href="{{ .url }}" class="navbar-item{{ if .is_external }} nav-external{{ end }}"{{ if .is_external }} target="_blank" rel="noopener"{{ end }}>
               {{ .title | safeHTML }}
             </a>
             {{- end }}
           </div>
         </div>
         {{- else }}
-        <a href="{{ .url }}" class="navbar-item">
+        <a href="{{ .url }}" class="navbar-item{{ if .is_external }} nav-external{{ end }}"{{ if .is_external }} target="_blank" rel="noopener"{{ end }}>
           {{ .title | safeHTML }}
         </a>
         {{- end }}
