@@ -29,5 +29,6 @@ title = 'Community Maintained'
 body = '''
 The theme is maintained by the [Theme Team](/about/).
 '''
+link = '/about/'
 
 {{< /grid >}}
