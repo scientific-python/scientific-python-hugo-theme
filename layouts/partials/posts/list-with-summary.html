@@ -2,7 +2,7 @@
 
 <div class="post-list">
   {{ range $posts }}
-    {{ with partial "_decorators/post.html" . }}
+    {{ with partial "_decorators/article.html" . }}
       {{ partial "posts/meta.html" . }}
       {{ partial "posts/summary.html" . }}
     {{ end }}
