@@ -7,6 +7,7 @@ title:
 [[item]]
 type = 'card'
 title = 'Documented'
+link = 'https://theme.scientific-python.org/user_guide/'
 body = '''
 The theme is documented at https://theme.scientific-python.org.
 '''
