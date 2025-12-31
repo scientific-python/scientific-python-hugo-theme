@@ -21,6 +21,7 @@ The theme is being used by
 [numpy.org](https://github.com/numpy/numpy.org), and
 [scipy.org](https://github.com/scipy/scipy.org).
 '''
+link = 'https://github.com/search?q=scientific-python-hugo-theme+path:.gitmodules+(org:scientific-python+OR+repo:numpy/numpy.org+OR+repo:scipy/scipy.org)&type=code'
 
 [[item]]
 type = 'card'
