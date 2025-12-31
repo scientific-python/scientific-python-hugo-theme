@@ -2,11 +2,10 @@
 
 <div class="post-list">
   {{ range $posts }}
-  <article>
-    <div class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-    <div class="post-meta">
-      <div>{{ partial "posts/meta.html" . }}</div>
-    </div>
-  </article>
+    {{ with partial "_decorators/post.html" . }}
+      <div class="post-meta">
+        <div>{{ partial "posts/meta.html" . }}</div>
+      </div>
+    {{ end }}
   {{ end }}
 </div>
