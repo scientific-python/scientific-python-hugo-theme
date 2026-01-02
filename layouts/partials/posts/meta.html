@@ -1,6 +1,9 @@
+{{- if .Params.Author -}}
+  {{- errorf "Page %q uses deprecated 'author' field. Please use 'authors' instead." .File.Path -}}
+{{- end -}}
 <div class="post-meta">
 <span class="post-authors">
-    {{- range .Params.author -}}
+    {{- range .Params.Authors -}}
     {{ $author := trim (index (findRE `[^<]*` . 1) 0) "\n\r " }}
     {{ $handle := index (index (findRESubmatch `<(.*?)>` . 1) 0) 1 }}
     <div class="post-author">
