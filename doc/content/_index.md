@@ -7,6 +7,7 @@ title:
 [[item]]
 type = 'card'
 title = 'Documented'
+link = 'https://theme.scientific-python.org/user_guide/'
 body = '''
 The theme is documented at https://theme.scientific-python.org.
 '''
@@ -20,6 +21,7 @@ The theme is being used by
 [numpy.org](https://github.com/numpy/numpy.org), and
 [scipy.org](https://github.com/scipy/scipy.org).
 '''
+link = 'https://github.com/search?q=scientific-python-hugo-theme+path:.gitmodules+(org:scientific-python+OR+repo:numpy/numpy.org+OR+repo:scipy/scipy.org)&type=code'
 
 [[item]]
 type = 'card'
@@ -27,5 +29,6 @@ title = 'Community Maintained'
 body = '''
 The theme is maintained by the [Theme Team](/about/).
 '''
+link = '/about/'
 
 {{< /grid >}}
