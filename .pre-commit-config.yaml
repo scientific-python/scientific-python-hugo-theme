@@ -42,6 +42,7 @@ repos:
     rev: 7fc963270df722f37707d47ff41265fe8f460822 # frozen: v1.20.0
     hooks:
       - id: zizmor
+        args: ["--fix"]
 
 ci:
   # This ensures that PR's aren't autofixed by the bot, rather you call
