@@ -19,14 +19,14 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: 14abee445aea04b39069c19b4bd54efff6775819 # frozen: v3.7.4
+    rev: c2bc67fe8f8f549cc489e00ba8b45aa18ee713b1 # frozen: v3.8.1
     hooks:
       - id: prettier
         types_or: [yaml, toml, markdown, css, scss, javascript, json]
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 5ba58aca0bd5bc7c0e1c0fc45af2e88d6a2bde83 # frozen: v0.14.10
+    rev: 45ef068da5f21267bb2a7ec4a623092959f09ce5 # frozen: v0.14.14
     hooks:
       - id: ruff
         args:
@@ -39,7 +39,7 @@ repos:
       - id: ruff-format
 
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.19.0
+    rev: b546b77c44c466a54a42af5499dcc0dcc1a3193f # frozen: v1.22.0
     hooks:
       - id: zizmor
 
