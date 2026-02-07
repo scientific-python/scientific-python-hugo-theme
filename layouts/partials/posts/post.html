@@ -6,7 +6,9 @@
     {{ if .Params.Subtitle }}
     <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
     {{ end }}
-    <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
+    <div class="post-meta">{{ partial "posts/meta.html" . }}
+      <span class="please-comment">🖊️ Please add your comments <a href="#discourse-comments">below!</a></span>
+    </div>
     <div class="post-content">
       {{ with $featuredImage }}
       {{ if .Params.showOnTop }}
