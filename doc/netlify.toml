@@ -28,9 +28,3 @@
     (cd ../.. && ln -s repo scientific-python-hugo-theme) && \
     (cd .. && make ${BUILD_TARGET})
     """
-
-[[plugins]]
-  package = "netlify-plugin-checklinks"
-
-  [plugins.inputs]
-  skipPatterns = ['https://fonts.gstatic.com', 'https://fonts.googleapis.com', 'https://cdn.jsdelivr.net', 'https://cdnjs.cloudflare.com']
