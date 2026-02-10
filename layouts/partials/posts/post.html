@@ -1,11 +1,6 @@
 {{- $featuredImage := .Resources.GetMatch "featuredImage" -}}
 <section class="post content-padding">
-  <div class="content-container">
-    {{ partial "breadcrumbs.html" . }}
-    <h1>{{ .Title }}</h1>
-    {{ if .Params.Subtitle }}
-    <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
-    {{ end }}
+  {{ with partial "_decorators/content-container.html" . }}
     <div class="post-meta">{{ partial "posts/meta.html" . }}</div>
     <div class="post-content">
       {{ with $featuredImage }}
@@ -18,6 +13,6 @@
       {{ .Content }}
       {{ partial "posts/comments.html" .}}
     </div>
-  </div>
+  {{ end }}
   {{ partial "shortcuts.html" . }}
 </section>
