@@ -85,6 +85,10 @@
   margin-right: 1.25rem;
 }
 
+.post-please-comment {
+  display: none;
+}
+
 .read-more {
   font-style: italic;
 }
