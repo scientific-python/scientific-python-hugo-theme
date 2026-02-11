@@ -1,6 +1,6 @@
 /* Footer */
 #footer {
-  padding: 3rem 1.5rem 6rem;
+  padding: 3rem 0 6rem;
 }
 
 #footer {
@@ -11,8 +11,9 @@
 }
 
 #footer-logo-column {
-  padding: 1.25rem 5vw;
+  padding: 1.25rem 0;
   font-size: 1rem;
+  flex: 1;
 }
 
 #footer-logo {
@@ -21,14 +22,17 @@
 
 #footer-columns {
   display: flex;
+  width: 100%;
+  gap: 6rem;
+  align-items: flex-start;
 }
 
 .footer-column {
   padding-left: 0;
   margin-top: 1.25rem;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer-item a {
@@ -52,8 +56,11 @@
 }
 
 .footer-actions {
-  max-width: 25vw;
-  margin: 1.25rem 1.563rem;
+  margin: 1.25rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer-actions > p {
@@ -116,4 +123,5 @@
 
 .copyright {
   font-size: 0.75rem;
+  text-align: left;
 }

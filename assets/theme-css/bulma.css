@@ -5,15 +5,16 @@
   margin: 0 auto;
   position: relative;
   width: auto;
+  padding: 0 calc(1.875rem + 1em);
 }
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 960px;
+    max-width: calc(70em + 15em + 1.875rem);
   }
 }
 @media screen and (min-width: 1216px) {
   .container {
-    max-width: 1152px;
+    max-width: calc(70em + 15em + 1.875rem);
   }
 }
 @media screen and (max-width: 768px) {
