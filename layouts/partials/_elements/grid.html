@@ -19,7 +19,9 @@
   {{- $gSm := $gXs -}}
   {{- $gMd := $gXs -}}
   {{- $gLg := $gXs -}}
-  {{- if gt (len $gutterParts) 1 -}}
+  {{- if and (gt (len $gutterParts) 1) (ne (len $gutterParts) 4) -}}
+    {{- errorf "grid gutter must be either 1 or 4 values (but got %d): %q" (len $gutterParts) $gutter -}}
+  {{- else if eq (len $gutterParts) 4 -}}
     {{- $gSm = index $gutterParts 1 -}}
     {{- $gMd = index $gutterParts 2 -}}
     {{- $gLg = index $gutterParts 3 -}}
