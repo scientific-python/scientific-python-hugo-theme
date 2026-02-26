@@ -21,8 +21,13 @@
 
 <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" />
 
-<!-- Fallback font for symbols (such as "🛈"). --
+<!-- Fallback font for symbols (such as "🛈"). -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2">
+
+<!-- Default theme font (Lato). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700">
 
 <!-- Process and include Sass files. -->
 {{- $sass := append (resources.Get "theme-css/sphinx-design/index.scss")
