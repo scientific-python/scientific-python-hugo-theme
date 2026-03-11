@@ -1,9 +1,9 @@
-{{- $featuredImage := .Resources.GetMatch "featuredImage" -}}
 <section class="post content-padding">
   {{ with partial "_decorators/content-container.html" . }}
     <div class="post-meta">{{ partial "posts/meta.html" . }}
       <span class="post-please-comment">🖊️ Please add your comments <a href="#discourse-comments">below!</a></span>
     </div>
+    {{- $featuredImage := .Resources.GetMatch "featuredImage" -}}
     <div class="post-content">
       {{ with $featuredImage }}
       {{ if .Params.showOnTop }}
