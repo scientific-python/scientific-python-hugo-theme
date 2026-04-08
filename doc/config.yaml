@@ -26,9 +26,6 @@ params:
     image: logo.svg
     text: Scientific Python Hugo Theme
     link: /
-  fonts:
-    - name: "Lato"
-      weights: [400, 900]
   hero:
     title: Scientific Python Theme
     image: logo.svg
