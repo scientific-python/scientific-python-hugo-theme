@@ -9,6 +9,9 @@
   {{ .Content }}
   {{ else }}
   {{ range .Pages }}
+  {{- if .Params.Author -}}
+    {{- errorf "Page %q uses deprecated 'author' field. Please use 'authors' instead." .File.Path -}}
+  {{- end -}}
   <div class="post-list">
     <article>
       <div class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>

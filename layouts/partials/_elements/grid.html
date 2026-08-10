@@ -1,5 +1,6 @@
 {{- $outline := default "false" .outline -}}
 {{- $columns := default "auto" .columns -}}
+{{- $gutter := default "2" .gutter -}}
 {{- $items := .items -}}
 {{- if eq $outline "true" -}}
   {{- $outline = "sd-border-1" -}}
@@ -13,7 +14,19 @@
   {{- $sm := index $columns 1 }}
   {{- $md := index $columns 2 }}
   {{- $lg := index $columns 3 }}
-  <div class="sd-row sd-row-cols-{{ $xs }} sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-2 sd-g-xs-{{ $xs }} sd-g-sm-{{ $sm }} sd-g-md-{{ $md }} sd-g-lg-{{ $lg }}">
+  {{- $gutterParts := split $gutter " " -}}
+  {{- $gXs := index $gutterParts 0 -}}
+  {{- $gSm := $gXs -}}
+  {{- $gMd := $gXs -}}
+  {{- $gLg := $gXs -}}
+  {{- if and (gt (len $gutterParts) 1) (ne (len $gutterParts) 4) -}}
+    {{- errorf "grid gutter must be either 1 or 4 values (but got %d): %q" (len $gutterParts) $gutter -}}
+  {{- else if eq (len $gutterParts) 4 -}}
+    {{- $gSm = index $gutterParts 1 -}}
+    {{- $gMd = index $gutterParts 2 -}}
+    {{- $gLg = index $gutterParts 3 -}}
+  {{- end -}}
+  <div class="sd-row sd-row-cols-{{ $xs }} sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-{{ $gXs }} sd-g-xs-{{ $gXs }} sd-g-sm-{{ $gSm }} sd-g-md-{{ $gMd }} sd-g-lg-{{ $gLg }}">
 {{- end }}
 {{- range $key, $item := $items -}}
   {{- if eq $item.type "card" }}

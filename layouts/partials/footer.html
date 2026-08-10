@@ -36,7 +36,7 @@
             </a>
             {{- end }}
           </div>
-          <div class="copyright">&copy; {{ now.Year}} {{ $author }}. All rights reserved.</div>
+          <div class="copyright">&copy; {{ now.Year}}{{ with $author }} {{ . }}{{ end }}. All rights reserved.</div>
         </div>
     </div>
   </div>
