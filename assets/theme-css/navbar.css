@@ -10,6 +10,9 @@
   align-items: stretch;
   display: flex;
   min-height: 4rem;
+
+  /* Cancel the first item's padding so the logo sits on the page edge. */
+  margin-left: -0.75rem;
 }
 .navbar-logo {
   height: 28px;
@@ -167,9 +170,6 @@ a.navbar-item.nav-external::after,
   .navbar > .container {
     align-items: stretch;
     display: flex;
-  }
-  .navbar > .container .navbar-brand {
-    margin-left: -0.75rem;
   }
   .navbar > .container .navbar-menu {
     margin-right: -0.75rem;

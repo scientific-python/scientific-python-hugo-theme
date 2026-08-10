@@ -1,5 +1,6 @@
 /* Footer */
 #footer {
+  /* Horizontal padding comes from .container. */
   padding: 3rem 0 6rem;
 }
 
@@ -13,7 +14,6 @@
 #footer-logo-column {
   padding: 1.25rem 0;
   font-size: 1rem;
-  flex: 1;
 }
 
 #footer-logo {
@@ -22,17 +22,16 @@
 
 #footer-columns {
   display: flex;
-  width: 100%;
-  gap: 6rem;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: 3rem;
 }
 
 .footer-column {
   padding-left: 0;
   margin-top: 1.25rem;
-  flex-basis: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .footer-item a {
@@ -56,11 +55,8 @@
 }
 
 .footer-actions {
-  margin: 1.25rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  max-width: 24rem;
+  margin: 1.25rem 0 1.25rem auto;
 }
 
 .footer-actions > p {
@@ -80,7 +76,9 @@
   }
 
   .footer-actions {
-    max-width: 50vw;
+    /* Undo the right-aligning auto margin. */
+    margin: 1.25rem 0;
+    max-width: 100%;
   }
 
   .community-icons {
@@ -123,5 +121,4 @@
 
 .copyright {
   font-size: 0.75rem;
-  text-align: left;
 }
