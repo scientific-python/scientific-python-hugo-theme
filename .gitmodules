@@ -1,4 +1,3 @@
 [submodule "themes/hugo-atom-layout"]
 	path = themes/hugo-atom-layout
 	url = https://github.com/FAST-HEP/hugo-atom-layout
-	
