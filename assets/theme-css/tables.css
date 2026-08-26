@@ -1,3 +1,11 @@
+/* Make wide tables scroll on their own, since the content column does not. */
+table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 table th {
   color: var(--pst-color-text-muted);
   text-align: inherit;

@@ -1,17 +1,25 @@
 .content-padding {
   display: flex;
   flex-wrap: nowrap;
+  width: 100%;
+  max-width: var(--spht-page-width);
+  margin: 1em auto;
+  padding: 0 var(--spht-page-padding);
+  gap: 1.875rem;
+}
+
+/* The home page centres its content, as there is no logo for us to align with. */
+.content-padding.is-centered {
   justify-content: center;
-  margin: 1em;
 }
 
 .content-container {
+  /* Left-anchored, so content doesn't shift on pages without the sidebar. */
   flex-basis: 70em;
   flex-shrink: 1;
   flex-direction: column;
-  margin: 0 1.875rem;
-  padding: 1rem;
+  padding: 1rem 0;
 
-  /* Handle code cells overflowing */
-  overflow: auto;
+  /* Allow the column to shrink. */
+  min-width: 0;
 }
