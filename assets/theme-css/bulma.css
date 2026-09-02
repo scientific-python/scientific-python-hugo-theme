@@ -4,17 +4,9 @@
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
-  width: auto;
-}
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media screen and (min-width: 1216px) {
-  .container {
-    max-width: 1152px;
-  }
+  width: 100%;
+  max-width: var(--spht-page-width);
+  padding: 0 var(--spht-page-padding);
 }
 @media screen and (max-width: 768px) {
   .is-hidden-mobile {

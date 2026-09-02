@@ -5,7 +5,25 @@
 {{- if eq $outline "true" -}}
   {{- $outline = "sd-border-1" -}}
 {{- end -}}
-<div class="sd-container-fluid sd-mb-4 {{ $outline | safeHTMLAttr }}">
+{{- $gutterParts := split $gutter " " -}}
+{{- $gXs := index $gutterParts 0 -}}
+{{- $gSm := $gXs -}}
+{{- $gMd := $gXs -}}
+{{- $gLg := $gXs -}}
+{{- if and (gt (len $gutterParts) 1) (ne (len $gutterParts) 4) -}}
+  {{- errorf "grid gutter must be either 1 or 4 values (but got %d): %q" (len $gutterParts) $gutter -}}
+{{- else if eq (len $gutterParts) 4 -}}
+  {{- $gSm = index $gutterParts 1 -}}
+  {{- $gMd = index $gutterParts 2 -}}
+  {{- $gLg = index $gutterParts 3 -}}
+{{- end -}}
+{{- /* Both need the classes: the container for its padding, and the row
+  because its base rule overrides the inherited variable. */ -}}
+{{- $gutterClasses := printf "sd-g-%s sd-g-xs-%s sd-g-sm-%s sd-g-md-%s sd-g-lg-%s" $gXs $gXs $gSm $gMd $gLg -}}
+{{- if eq $columns "auto" -}}
+  {{- $gutterClasses = "" -}}
+{{- end -}}
+<div class="sd-container-fluid sd-mb-4 {{ $outline | safeHTMLAttr }} {{ $gutterClasses }}">
 {{- if eq $columns "auto"}}
   <div class="sd-row sd-row-cols-auto sd-row-cols-xs-auto sd-row-cols-sm-auto sd-row-cols-md-auto sd-row-cols-lg-auto">
 {{- else }}
@@ -14,19 +32,7 @@
   {{- $sm := index $columns 1 }}
   {{- $md := index $columns 2 }}
   {{- $lg := index $columns 3 }}
-  {{- $gutterParts := split $gutter " " -}}
-  {{- $gXs := index $gutterParts 0 -}}
-  {{- $gSm := $gXs -}}
-  {{- $gMd := $gXs -}}
-  {{- $gLg := $gXs -}}
-  {{- if and (gt (len $gutterParts) 1) (ne (len $gutterParts) 4) -}}
-    {{- errorf "grid gutter must be either 1 or 4 values (but got %d): %q" (len $gutterParts) $gutter -}}
-  {{- else if eq (len $gutterParts) 4 -}}
-    {{- $gSm = index $gutterParts 1 -}}
-    {{- $gMd = index $gutterParts 2 -}}
-    {{- $gLg = index $gutterParts 3 -}}
-  {{- end -}}
-  <div class="sd-row sd-row-cols-{{ $xs }} sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} sd-g-{{ $gXs }} sd-g-xs-{{ $gXs }} sd-g-sm-{{ $gSm }} sd-g-md-{{ $gMd }} sd-g-lg-{{ $gLg }}">
+  <div class="sd-row sd-row-cols-{{ $xs }} sd-row-cols-xs-{{ $xs }} sd-row-cols-sm-{{ $sm }} sd-row-cols-md-{{ $md }} sd-row-cols-lg-{{ $lg }} {{ $gutterClasses }}">
 {{- end }}
 {{- range $key, $item := $items -}}
   {{- if eq $item.type "card" }}

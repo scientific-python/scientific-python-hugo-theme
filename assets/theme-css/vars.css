@@ -5,6 +5,15 @@
   --spht-color-link-hover: rgb(77, 171, 207);
   --spht-footer-height: 6em;
 
+  /* Page width and edge padding shared by the navbar, content, and footer.
+     The values are taken from the PST, see:
+     - https://github.com/pydata/pydata-sphinx-theme/blob/3cffc437857105e0852b1caf0dc09e7f36ff07f6/src/pydata_sphinx_theme/assets/styles/variables/_layout.scss#L23
+     - https://github.com/pydata/pydata-sphinx-theme/blob/3cffc437857105e0852b1caf0dc09e7f36ff07f6/src/pydata_sphinx_theme/assets/styles/sections/_container.scss#L11-L17
+     - https://github.com/pydata/pydata-sphinx-theme/blob/3cffc437857105e0852b1caf0dc09e7f36ff07f6/src/pydata_sphinx_theme/assets/styles/sections/_header.scss#L37-L42
+     - https://github.com/pydata/pydata-sphinx-theme/blob/3cffc437857105e0852b1caf0dc09e7f36ff07f6/src/pydata_sphinx_theme/assets/styles/sections/_footer.scss#L5-L10 */
+  --spht-page-width: 88rem;
+  --spht-page-padding: 1rem;
+
   /* Font Awesome icon variables. */
   --fa-copy: "\f0c5";  /* fa-solid fa-copy */
 }

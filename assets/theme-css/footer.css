@@ -1,6 +1,7 @@
 /* Footer */
 #footer {
-  padding: 3rem 1.5rem 6rem;
+  /* Horizontal padding comes from .container. */
+  padding: 3rem 0 6rem;
 }
 
 #footer {
@@ -11,7 +12,7 @@
 }
 
 #footer-logo-column {
-  padding: 1.25rem 5vw;
+  padding: 1.25rem 0;
   font-size: 1rem;
 }
 
@@ -21,6 +22,8 @@
 
 #footer-columns {
   display: flex;
+  flex-wrap: wrap;
+  column-gap: 3rem;
 }
 
 .footer-column {
@@ -52,8 +55,8 @@
 }
 
 .footer-actions {
-  max-width: 25vw;
-  margin: 1.25rem 1.563rem;
+  max-width: 24rem;
+  margin: 1.25rem 0 1.25rem auto;
 }
 
 .footer-actions > p {
@@ -73,7 +76,9 @@
   }
 
   .footer-actions {
-    max-width: 50vw;
+    /* Undo the right-aligning auto margin. */
+    margin: 1.25rem 0;
+    max-width: 100%;
   }
 
   .community-icons {
