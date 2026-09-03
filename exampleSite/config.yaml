@@ -1,5 +1,5 @@
 baseURL: "https://example.com/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Example Site"
 theme: scientific-python-hugo-theme
 relativeURLs: true
