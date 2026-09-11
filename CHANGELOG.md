@@ -1,3 +1,57 @@
+# scientific-python-hugo-theme 0.23
+
+We're happy to announce the release of scientific-python-hugo-theme 0.23!
+
+## Enhancements
+
+- Unify news posts and blog posts, and standardise "authors" vs "author" in frontmatter ([#695](https://github.com/scientific-python/scientific-python-hugo-theme/pull/695)).
+- Add text to encourage comments on blog post; invisible by default ([#700](https://github.com/scientific-python/scientific-python-hugo-theme/pull/700)).
+- Add support for grid gutters to control spacing between grid items ([#693](https://github.com/scientific-python/scientific-python-hugo-theme/pull/693)).
+- First version of replacing hugo-atom-feed (issue #714) ([#715](https://github.com/scientific-python/scientific-python-hugo-theme/pull/715)).
+
+## Bug Fixes
+
+- fix: remove extra space when author is empty ([#707](https://github.com/scientific-python/scientific-python-hugo-theme/pull/707)).
+- Fix navbar and footer alignments with the main content ([#699](https://github.com/scientific-python/scientific-python-hugo-theme/pull/699)).
+
+## Documentation
+
+- Add Agriya to team page ([#689](https://github.com/scientific-python/scientific-python-hugo-theme/pull/689)).
+
+## Maintenance
+
+- Address Hugo v0.148.0 deprecation for Goldmark link renderer hook ([#690](https://github.com/scientific-python/scientific-python-hugo-theme/pull/690)).
+- [pre-commit.ci] pre-commit autoupdate ([#696](https://github.com/scientific-python/scientific-python-hugo-theme/pull/696)).
+- Bump pre-commit from 4.2.0 to 4.5.1 ([#694](https://github.com/scientific-python/scientific-python-hugo-theme/pull/694)).
+- Temporarily disable link checking ([#701](https://github.com/scientific-python/scientific-python-hugo-theme/pull/701)).
+- Add links to front page cards to make them clickable examples ([#691](https://github.com/scientific-python/scientific-python-hugo-theme/pull/691)).
+- Unify news posts and blog posts, and standardise "authors" vs "author" in frontmatter ([#695](https://github.com/scientific-python/scientific-python-hugo-theme/pull/695)).
+- [pre-commit.ci] pre-commit autoupdate ([#708](https://github.com/scientific-python/scientific-python-hugo-theme/pull/708)).
+- Bump pre-commit from 4.5.1 to 4.6.0 ([#709](https://github.com/scientific-python/scientific-python-hugo-theme/pull/709)).
+- [pre-commit.ci] pre-commit autoupdate ([#710](https://github.com/scientific-python/scientific-python-hugo-theme/pull/710)).
+- Bump pre-commit from 4.6.0 to 4.6.1 ([#713](https://github.com/scientific-python/scientific-python-hugo-theme/pull/713)).
+- Bump pre-commit from 4.6.1 to 4.6.2 ([#716](https://github.com/scientific-python/scientific-python-hugo-theme/pull/716)).
+- Add partial decorators for better composability ([#692](https://github.com/scientific-python/scientific-python-hugo-theme/pull/692)).
+- Change .Site.LanguageCode to .Site.Language.Locale ([#712](https://github.com/scientific-python/scientific-python-hugo-theme/pull/712)).
+
+## Contributors
+
+4 authors added to this release (alphabetically):
+
+- Agriya Khetarpal ([@agriyakhetarpal](https://github.com/agriyakhetarpal))
+- Henry Schreiner ([@henryiii](https://github.com/henryiii))
+- Luke Kreczko ([@kreczko](https://github.com/kreczko))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+3 reviewers added to this release (alphabetically):
+
+- Agriya Khetarpal ([@agriyakhetarpal](https://github.com/agriyakhetarpal))
+- Luke Kreczko ([@kreczko](https://github.com/kreczko))
+- Stefan van der Walt ([@stefanv](https://github.com/stefanv))
+
+_These lists are automatically generated, and may not be complete or may contain
+duplicates._
+
 # scientific-python-hugo-theme 0.22
 
 ## Enhancements
