@@ -4,10 +4,10 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 {{/* Advertise feeds (Atom, RSS) so that feed readers can discover them from any page. */}}
 {{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ if $.IsHome }}{{ site.Title }}{{ else }}{{ $.Title }}{{ end }}">
 {{ end -}}
 {{ if not .IsHome -}}
 {{ range site.Home.AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ site.Title }}">
 {{ end -}}
 {{ end -}}
