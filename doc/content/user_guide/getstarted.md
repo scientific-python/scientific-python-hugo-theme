@@ -37,6 +37,7 @@ This theme is designed to be used as a Git submodule inside your site's source r
 
    ```sh
    git submodule add https://github.com/scientific-python/scientific-python-hugo-theme themes/scientific-python-hugo-theme
+   git submodule update --init --recursive
    ```
 
 3. Copy the theme's example site as a template:
@@ -54,6 +55,25 @@ This theme is designed to be used as a Git submodule inside your site's source r
    ```
 
    Load that URL in your browser. If you see the theme's documentation page, the site compiled successfully and you can customize it with your own content.
+
+## Update the theme
+
+To move your site to a newer theme release, check out the tag inside the
+submodule and refresh its nested submodules:
+
+```sh
+cd themes/scientific-python-hugo-theme
+git fetch --tags
+git checkout v0.23
+git submodule update --init --recursive
+cd ../..
+```
+
+Then commit the updated submodule pointer. Anything that clones your site,
+such as a `Makefile` target or a CI workflow, should also fetch submodules
+recursively. For example, use `git clone --recurse-submodules`,
+`git submodule update --init --recursive`, or `submodules: recursive` with
+`actions/checkout`. Netlify already clones submodules recursively.
 
 ## Develop your site
 
