@@ -3,8 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 {{/* Advertise feeds (Atom, RSS) so that feed readers can discover them from any page. */}}
+{{- $pageFeedTitle := site.Title -}}
+{{- if not .IsHome -}}{{- $pageFeedTitle = printf "%s — %s" site.Title .Title -}}{{- end }}
 {{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ if $.IsHome }}{{ site.Title }}{{ else }}{{ $.Title }}{{ end }}">
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $pageFeedTitle }}">
 {{ end -}}
 {{ if not .IsHome -}}
 {{ range site.Home.AlternativeOutputFormats -}}
