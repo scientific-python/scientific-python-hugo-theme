@@ -1,4 +1,4 @@
-.PHONY: doc-serve shortcode-docs netlify-preview preview-theme theme docs scipy main blog learn tools serve-dev
+.PHONY: doc-serve shortcode-docs netlify-preview preview-theme theme docs scipy main blog learn tools serve-dev linkcheck
 .DEFAULT_GOAL := doc-serve
 
 GH_ORG = scientific-python
@@ -83,3 +83,6 @@ tools:
 	git clone --depth 1 https://github.com/scientific-python/tools.scientific-python.org $@
 	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
+
+linkcheck:
+	lychee --config lychee.toml 'doc/content/**/*.md' 'exampleSite/content/**/*.md' README.md CHANGELOG.md
