@@ -74,13 +74,15 @@ To enable Plausible analytics, add to your `config.yaml`:
 ```yaml
 params:
   plausible:
-    dataDomain: your-domain.org
-    javaScript: https://your.plausible.io/javascript/path.js
+    script: https://your.plausible.io/js/pa-XXXXXXXX.js
 ```
 
-By default, `javaScript` points to the server at
-`https://views.scientific-python.org`. Contact the Scientific
-Python team to have your analytics hosted there.
+The script URL is specific to your site; find it in the Plausible dashboard
+under **Site settings → Site installation**. Contact the Scientific Python
+team to have your analytics hosted at `https://views.scientific-python.org`.
+
+The older `dataDomain` / `javaScript` options still work but are deprecated
+and will be removed in a future release.
 
 ## Icons
 
