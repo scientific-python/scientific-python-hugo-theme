@@ -1,4 +1,4 @@
-.PHONY: doc-serve shortcode-docs netlify-preview preview-theme theme docs scipy main blog learn tools serve-dev
+.PHONY: doc-serve shortcode-docs netlify-preview preview-theme theme docs scipy main blog tools serve-dev
 .DEFAULT_GOAL := doc-serve
 
 GH_ORG = scientific-python
@@ -36,11 +36,10 @@ doc-serve: doc/content/shortcodes.md
 # The following is for use on netlify
 # -----------------------------------
 
-netlify-preview: preview-theme theme scipy main blog learn tools
+netlify-preview: preview-theme theme scipy main blog tools
 	mv scipy/public doc/public/scipy
 	mv main/public doc/public/main
 	mv blog/public doc/public/blog
-	mv learn/public doc/public/learn
 	mv tools/public doc/public/tools
 	git restore doc/content/_index.md
 
@@ -68,13 +67,6 @@ main:
 blog:
 	rm -rf $@
 	git clone --depth 1 https://github.com/scientific-python/blog.scientific-python.org $@
-	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
-	(cd $@ ; hugo --themesDir="../..")
-
-learn:
-	rm -rf $@
-	git clone --depth 1 https://github.com/scientific-python/learn.scientific-python.org $@
-	(cd $@ ; perl -pi -e 's;/development/;https://learn.scientific-python.org/development/;g' content/_index.md)
 	(cd $@ ; perl -pi -e 'print "relativeURLs: true\n" if $$. == 1' config.yaml)
 	(cd $@ ; hugo --themesDir="../..")
 
