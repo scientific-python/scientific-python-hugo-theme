@@ -1,10 +1,9 @@
-import os
-import sys
 import argparse
+import os
 import string
+import sys
 
 import requests
-
 
 team_query = string.Template(
     """
