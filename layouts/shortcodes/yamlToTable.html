@@ -39,6 +39,7 @@ rows:
 {{- $id := printf "id%03d" $.Ordinal -}}
 
 {{ with $data }}
+<div class="table-wrapper">
 <table class="table" id="{{ $id }}">
   {{- with .caption -}}
   <caption><span class="caption-text">{{ . }}</span><a class="headerlink" href="#{{ $id  }}" title="Link to this table">#</a></caption>
@@ -72,4 +73,5 @@ rows:
   {{ end }}
 
 </table>
+</div>
 {{ end }}

@@ -1,7 +1,5 @@
-/* Make wide tables scroll on their own, since the content column does not. */
-table {
-  display: block;
-  width: max-content;
+/* Make wide content tables scroll on their own, since the content column does not. */
+.table-wrapper {
   max-width: 100%;
   overflow-x: auto;
 }
