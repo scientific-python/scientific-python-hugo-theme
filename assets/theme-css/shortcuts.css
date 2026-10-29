@@ -19,13 +19,19 @@
   padding-bottom: 0.25rem;
 }
 
-#shortcuts > div:not(.active) {
+#shortcuts > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+#shortcuts > a:not(.active) {
   margin-left: 0.125rem;
   border-left: 1px solid var(--pst-color-text-base);
   opacity: 0.75;
 }
 
-#shortcuts > div.active {
+#shortcuts > a.active {
   font-weight: bold;
   color: var(--pst-color-text-base);
   border-left: 5px solid var(--pst-color-text-base);

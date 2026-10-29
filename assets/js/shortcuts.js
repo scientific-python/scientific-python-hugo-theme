@@ -38,7 +38,7 @@ function scrollHeaders() {
   // Exit early if shortcuts container doesn't exist
   if (!shortcuts) return;
 
-  const allShortcuts = Array.from(shortcuts.querySelectorAll("div"));
+  const allShortcuts = Array.from(shortcuts.querySelectorAll("a"));
 
   headers.map((currentSection) => {
     // get the position of the section
@@ -116,18 +116,26 @@ function setupShortcuts(shortcutDepth = 2) {
         return;
       }
 
-      const title = el.innerHTML;
       const elId = el.id;
       // Gets the element type (e.g. h2, h3)
       const elType = el.tagName;
-      // Adds snake-case title as an id attribute to target element
-      shortcutsTarget.insertAdjacentHTML(
-        "beforeend",
-        `<div id="${elId}-shortcut" class="shortcuts-${elType}" href="#${elId}">${title}</div>`,
-      );
 
-      const shortcut = document.getElementById(`${elId}-shortcut`);
-      shortcut.addEventListener("click", () => {
+      // Copy the heading's content without its links: links cannot nest, and
+      // the permalink ("#") does not belong in the list.
+      const title = el.cloneNode(true);
+      title.querySelectorAll(".headerlink").forEach((a) => a.remove());
+      title
+        .querySelectorAll("a")
+        .forEach((a) => a.replaceWith(...a.childNodes));
+
+      const shortcut = document.createElement("a");
+      shortcut.id = `${elId}-shortcut`;
+      shortcut.className = `shortcuts-${elType}`;
+      shortcut.href = `#${elId}`;
+      shortcut.append(...title.childNodes);
+      shortcutsTarget.append(shortcut);
+
+      shortcut.addEventListener("click", (event) => {
         event.preventDefault();
 
         // We don't want the shortcuts to flash through highlights while
@@ -137,10 +145,10 @@ function setupShortcuts(shortcutDepth = 2) {
         // Replace what's in the location bar, without changing browser history
         // and without triggering a page scroll
         history.replaceState(null, null, `#${elId}`);
-        const shortcutDivs = Array.from(
-          document.querySelectorAll("#shortcuts > div"),
+        const shortcutLinks = Array.from(
+          document.querySelectorAll("#shortcuts > a"),
         );
-        shortcutDivs.forEach((e) => e.classList.remove("active"));
+        shortcutLinks.forEach((e) => e.classList.remove("active"));
         shortcut.classList.add("active");
 
         let headerOffset = el.offsetTop - 60;
@@ -155,9 +163,7 @@ function setupShortcuts(shortcutDepth = 2) {
 
   // Removes the shortcuts container if no shortcuts exist.
   // Also removes the 'Get Help' link.
-  const shortcuts = Array.from(
-    document.querySelectorAll("#shortcuts div:not(#shortcuts-header)"),
-  );
+  const shortcuts = Array.from(document.querySelectorAll("#shortcuts a"));
   const shortcutsContainer = document.getElementById("shortcuts-container");
 
   if (shortcutsContainer) {
