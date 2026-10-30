@@ -1,86 +1,47 @@
-// throttle function, enforces a minimum time interval
-function throttle(fn, interval) {
-  var lastCall, timeoutId;
-  return function () {
-    var now = new Date().getTime();
-    if (lastCall && now < lastCall + interval) {
-      // if we are inside the interval we remove
-      // the existing timer and set up a new one
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(
-        function () {
-          lastCall = now;
-          fn.call();
-        },
-        interval - (now - lastCall),
-      );
-    } else {
-      // otherwise, we directly call the function
-      lastCall = now;
-      fn.call();
-    }
-  };
+// The shortcuts list highlights the entry for the last heading at or above the top of the
+// viewport (below the sticky header), or the last entry when the page is scrolled to the bottom.
+// A clicked entry stays highlighted until the reader scrolls by hand, because a short page may not
+// bring its heading to the top.
+let shortcutEntries = []; // { shortcut, target } in document order
+let activeEntry = null;
+let pinnedEntry = null;
+
+function activate(entry) {
+  if (entry === activeEntry) return;
+  activeEntry?.shortcut.classList.remove("active");
+  activeEntry = entry;
+  entry?.shortcut.classList.add("active");
 }
 
-// Highlight currently scrolled to header in shortcuts
-// Based on https://stackoverflow.com/a/32396543/214686
-// and
-// https://stackoverflow.com/a/57494988/214686
-// which fixes some issues with the first, particularly
-// around scrolling upward.
-function scrollHeaders() {
-  const scrollPosition = document.documentElement.scrollTop;
-  const headers = Array.from(
-    document.querySelectorAll(":is(h1, h2, h3, h4, h5, h6)[id]"),
-  );
-  const shortcuts = document.getElementById("shortcuts");
+function updateShortcuts() {
+  if (pinnedEntry) return activate(pinnedEntry);
 
-  // Exit early if shortcuts container doesn't exist
-  if (!shortcuts) return;
+  const atBottom =
+    window.scrollY > 0 &&
+    window.innerHeight + Math.round(window.scrollY) >=
+      document.documentElement.scrollHeight;
+  if (atBottom) return activate(shortcutEntries[shortcutEntries.length - 1]);
 
-  const allShortcuts = Array.from(shortcuts.querySelectorAll("div"));
-
-  headers.map((currentSection) => {
-    // get the position of the section
-    // emulates JQuery's .position().top
-    const marginTop = parseInt(getComputedStyle(currentSection).marginTop, 10);
-    var sectionTop = currentSection.offsetTop - marginTop;
-    var sectionHeight = currentSection.getBoundingClientRect().height;
-    var overall = scrollPosition + sectionHeight;
-    var headerOffset = remToPx(4);
-
-    if (scrollPosition < headerOffset) {
-      allShortcuts.map((shortcut) => shortcut.classList.remove("active"));
-      return;
-    }
-
-    // user has scrolled over the top of the section
-    if (
-      scrollPosition + headerOffset >= sectionTop &&
-      scrollPosition < overall
-    ) {
-      const id = currentSection.id;
-      const shortcut = document.getElementById(`${id}-shortcut`);
-      if (shortcut) {
-        allShortcuts.map((shortcut) => shortcut.classList.remove("active"));
-        shortcut.classList.add("active");
-      }
-    }
-  });
+  // A jump to a heading leaves it at `scroll-padding-top`, give or take a pixel.
+  const top =
+    parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) ||
+    0;
+  let found = null;
+  for (const entry of shortcutEntries) {
+    // Skip headings that are not rendered, e.g. inside a closed <details>.
+    if (!entry.target.getClientRects().length) continue;
+    if (entry.target.getBoundingClientRect().top > top + 4) break;
+    found = entry;
+  }
+  activate(found);
 }
 
-const throttledScrollHeaders = throttle(scrollHeaders, 100);
-
-function bindScroll() {
-  window.addEventListener("scroll", throttledScrollHeaders);
-}
-
-function unbindScroll() {
-  window.removeEventListener("scroll", throttledScrollHeaders);
-}
-
-function remToPx(rem) {
-  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+// Follow the URL fragment (back/forward, in-page links); a fragment that is not a shortcut
+// releases the pin.
+function syncShortcutsToHash() {
+  const target = document.querySelector(":target");
+  pinnedEntry = shortcutEntries.find((e) => e.target === target) ?? null;
+  updateShortcuts();
 }
 
 function setupShortcuts(shortcutDepth = 2) {
@@ -127,28 +88,18 @@ function setupShortcuts(shortcutDepth = 2) {
       );
 
       const shortcut = document.getElementById(`${elId}-shortcut`);
-      shortcut.addEventListener("click", () => {
-        event.preventDefault();
+      const entry = { shortcut, target: el };
+      shortcutEntries.push(entry);
 
-        // We don't want the shortcuts to flash through highlights while
-        // we scroll to the desired header
-        unbindScroll();
+      shortcut.addEventListener("click", (event) => {
+        event.preventDefault();
 
         // Replace what's in the location bar, without changing browser history
         // and without triggering a page scroll
         history.replaceState(null, null, `#${elId}`);
-        const shortcutDivs = Array.from(
-          document.querySelectorAll("#shortcuts > div"),
-        );
-        shortcutDivs.forEach((e) => e.classList.remove("active"));
-        shortcut.classList.add("active");
-
-        let headerOffset = el.offsetTop - 60;
-        scrollToThen(headerOffset, () => {
-          // Done moving to clicked header; re-enable
-          // scroll highlighting of shortcuts
-          bindScroll();
-        });
+        pinnedEntry = entry;
+        updateShortcuts();
+        el.scrollIntoView();
       });
     });
   }
@@ -168,25 +119,22 @@ function setupShortcuts(shortcutDepth = 2) {
     }
   }
 
-  bindScroll();
-}
+  if (shortcutEntries.length == 0) {
+    return;
+  }
 
-/**
- * Modified from https://stackoverflow.com/a/55686711/214686
- */
-function scrollToThen(offset, callback) {
-  const onScroll = throttle(() => {
-    const fixedOffset = offset.toFixed();
-    if (window.pageYOffset.toFixed() === fixedOffset) {
-      window.removeEventListener("scroll", onScroll);
-      callback();
-    }
-  }, 100);
-
-  window.addEventListener("scroll", onScroll);
-  onScroll();
-  window.scrollTo({
-    top: offset,
-    /* behavior: 'smooth' */ /* too slow? */
-  });
+  // Scrolling by hand releases the pin.
+  for (const type of ["wheel", "touchmove", "keydown", "pointerdown"]) {
+    window.addEventListener(
+      type,
+      () => {
+        pinnedEntry = null;
+      },
+      { passive: true },
+    );
+  }
+  window.addEventListener("scroll", updateShortcuts, { passive: true });
+  window.addEventListener("resize", updateShortcuts);
+  window.addEventListener("hashchange", syncShortcutsToHash);
+  syncShortcutsToHash();
 }
