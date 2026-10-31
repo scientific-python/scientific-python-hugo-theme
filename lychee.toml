@@ -1,0 +1,30 @@
+# Configuration for lychee (https://lychee.cli.rs)
+# Run locally with: lychee --config lychee.toml 'doc/content/**/*.md' README.md
+
+# Don't fail on these; 403/429 are usually bot-blocking, not dead links
+accept = ["200..=299", "403", "429"]
+
+max_retries = 3
+retry_wait_time = 5
+timeout = 20
+max_concurrency = 16
+
+# Hugo template syntax in layouts is not a URL
+exclude = [
+  "^https?://fonts\\.gstatic\\.com",
+  "^https?://fonts\\.googleapis\\.com",
+  "^https?://cdn\\.jsdelivr\\.net",
+  "^https?://cdnjs\\.cloudflare\\.com",
+  "\\{\\{.*\\}\\}",
+  "^https?://localhost",
+  "^https?://127\\.0\\.0\\.1",
+  "^https?://example\\.(com|org)",
+]
+
+# Relative links can't resolve without a built site
+exclude_path = []
+include_fragments = false
+exclude_all_private = true
+
+# Use GitHub API for github.com links (avoids rate limits; needs GITHUB_TOKEN)
+github_token = ""
